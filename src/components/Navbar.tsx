@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
 import { SearchDialog } from "@/components/SearchDialog";
 import { useSection } from "@/hooks/usePageContent";
+import logoLight from "@/assets/infodot-logo-light.png";
 
 interface NavItem { label: string; href: string }
 interface NavContent { items: NavItem[]; ctaLabel: string; ctaHref: string }
@@ -31,10 +32,12 @@ export const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center group cursor-pointer">
-            <span className="text-2xl font-bold tracking-tight">
-              <span className="text-primary">i</span>nfodot
-            </span>
-            <span className="ml-1 text-[10px] font-semibold text-muted-foreground align-super">UK</span>
+            <img
+              src={logoLight}
+              alt="Infodot Technologies logo"
+              className="h-9 w-auto group-hover:scale-105 transition-transform"
+            />
+            <span className="ml-2 text-[10px] font-semibold text-muted-foreground align-super">UK</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
