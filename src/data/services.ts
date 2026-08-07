@@ -70,14 +70,16 @@ export const servicesData: ServiceItem[] = [
     icon: "LineChart",
     title: "Backup & Disaster Recovery",
     shortDescription:
-      "Monitored, restore-tested, immutable backups — plus a tested DR plan to get the business back.",
+      "Get your files back. Get your business back.",
     description:
-      "Backups only count if they restore. We run monitored, restore-tested and immutable backups across your critical systems and data, and pair them with a tested disaster recovery plan built around clear recovery time and recovery point objectives (RTO/RPO), so you know exactly how fast — and how completely — the business comes back after an incident.",
+      "Monitored, tested backups plus a real disaster-recovery plan — so you can recover a deleted file or a whole business after ransomware or outage. Backup answers 'can I get my file back'; DR answers 'can I get my business back'. Untested backups fail exactly when you need them, so we test restores monthly and prove recovery — which is precisely what insurers now require.",
     features: [
-      "Monitored, immutable backups across critical systems",
-      "Scheduled restore testing, not just backup verification",
-      "Documented DR plan with defined RTO/RPO",
-      "Coverage for M365/Workspace, servers and endpoints",
+      "Backups monitored daily",
+      "Monthly restore testing — proof, not hope",
+      "Immutable copies where supported",
+      "Documented DR plan with agreed RTO/RPO",
+      "Ransomware-resilient design",
+      "Recovery evidence for auditors and insurers",
     ],
     benefits: [
       "Confidence that backups will actually restore when needed",
