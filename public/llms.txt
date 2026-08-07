@@ -28,6 +28,10 @@ Entity: Infodot Technologies Pvt Ltd, Bangalore, India — serving UK & EU remot
 - [Cyber Insurance Readiness](https://infodot.co.uk/services/cyber-insurance-readiness)
 - [IT Transition & Exit](https://infodot.co.uk/services/it-transition-exit)
 - [Co-Managed IT](https://infodot.co.uk/services/co-managed-it)
+- [Cloud Management](https://infodot.co.uk/services/cloud-management)
+- [Data Protection](https://infodot.co.uk/services/data-protection)
+- [Asset, Licence & Domain Management](https://infodot.co.uk/services/asset-licence-domain)
+- [Continuous Controls & Evidence](https://infodot.co.uk/services/continuous-controls-evidence)
 
 ## Policies
 - [Legal & Privacy](https://infodot.co.uk/privacy-policy)

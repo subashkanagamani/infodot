@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Target, Eye, ShieldCheck, Users, Zap, Globe, KeyRound, FileCheck2 } from "lucide-react";
+import { Target, Eye, ShieldCheck, Users, Zap, Globe, KeyRound, FileCheck2, Check } from "lucide-react";
 import teamNaren from "@/assets/team-naren.png";
 import { useSection } from "@/hooks/usePageContent";
 
@@ -33,6 +33,15 @@ const values = [
   }
 ];
 
+const included = [
+  "Managed IT provider since 1996",
+  "ISO 27001:2022 certified; SOC 2 in progress",
+  "Access-only model — we work inside your tenancy",
+  "Named, background-checked engineers on UK hours",
+  "Your data stays in your environment, never copied out",
+  "Regulated SMBs: fintech, financial and professional services",
+];
+
 const stats = [
   { value: "1996", label: "Serving clients since" },
   { value: "ISO 27001:2022", label: "Certified team" },
@@ -45,10 +54,10 @@ const About = () => {
     "about",
     "hero",
     {
-      badge: "About Us",
-      headingHtml: 'We Run Your IT. <span class="text-gradient-primary">You Own It.</span>',
+      badge: "Company",
+      headingHtml: 'We run your IT. <span class="text-gradient-primary">You own your IT.</span>',
       subheading:
-        "Infodot UK is a managed IT provider for the regulated UK industries we serve — accountancy, legal and financial services — run end to end and remotely by an ISO 27001:2022 certified team.",
+        "Infodot is a managed IT provider serving regulated UK and EU SMBs remotely from an ISO 27001-certified team in Bangalore. Since 1996 we've run IT for organisations where getting it wrong has consequences.",
     },
   );
   const story = useSection<{ headingHtml: string; paragraphs: string[]; quote: string; founderName: string; founderRole: string }>(
@@ -57,9 +66,9 @@ const About = () => {
     {
       headingHtml: 'Our <span class="text-gradient-primary">Story</span>',
       paragraphs: [
-        "Infodot Technologies Pvt Ltd has been running IT for clients since 1996. Over that time we have built a delivery model designed specifically for regulated UK firms that need their technology to be secure, evidenced, and simply out of their way.",
-        "We are based in Bangalore, India, and serve accountancy, legal and financial services firms across the UK and EU entirely remotely, backed by an ISO 27001:2022 certified team and our own delivery platform, Z360.",
-        "Our promise is simple: we run your IT completely, but you always own it. Your accounts, your data, your documentation — never locked to us. If you ever choose to leave, we hand over a full exit pack and complete reverse knowledge transfer within 10 working days.",
+        "We're remote by design, and honest about what that means: your engineers are a named team in our ISO 27001-certified Bangalore centre, working UK business hours, operating inside your own tenancy — your data doesn't move to us.",
+        "Since 1996 we've run IT for organisations where getting it wrong has consequences: fintech, financial and professional services SMBs across the UK and EU, backed by our own delivery platform, Z360.",
+        "We compete on low risk, not low price, and we make ourselves easy to leave. You stay because the service is good — a full exit pack and complete reverse knowledge transfer are yours within 10 working days, whenever you ask.",
       ],
       quote:
         "We run your IT. You own your IT.",
@@ -113,6 +122,23 @@ const About = () => {
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
                 <div className="text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What's included */}
+      <section className="py-20">
+        <div className="container-custom max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            What's <span className="text-gradient-primary">included</span>
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {included.map((item) => (
+              <div key={item} className="flex items-start gap-3 rounded-xl border border-border/60 bg-card p-4">
+                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm md:text-base">{item}</span>
               </div>
             ))}
           </div>

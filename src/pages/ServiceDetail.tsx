@@ -18,6 +18,10 @@ import {
   Palette,
   FileText,
   Share2,
+  Boxes,
+  Cloud,
+  ClipboardCheck,
+  Lock,
   CheckCircle2,
   ArrowRight,
   ArrowLeft,
@@ -33,6 +37,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Palette,
   FileText,
   Share2,
+  Boxes,
+  Cloud,
+  ClipboardCheck,
+  Lock,
 };
 
 const ServiceDetail = () => {

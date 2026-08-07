@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: "Do you offer a free discovery call?",
-    answer: "Yes. Book a 30-minute discovery call — no cost, no obligation — and we'll follow up with an exact quote within 48 hours.",
+    answer: "Yes — 30 minutes, no obligation and no hard sell. We'll map your gaps, tell you the two that matter most, and follow up with an exact quote within 48 hours. It's genuinely useful whether or not you work with us.",
   },
   {
     question: "What industries do you work with?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "How is IT delivered if you're based in Bangalore?",
-    answer: "Infodot Technologies Pvt Ltd is based in Bangalore, India, and has run IT for clients since 1996. We serve UK and EU clients entirely remotely, with a UK business-hours desk backed by our ISO 27001:2022 certified team and our Z360 delivery platform.",
+    answer: "We're remote by design. Your engineers are a named, background-checked team in our ISO 27001:2022 certified Bangalore centre, working UK business hours inside your own tenancy — an access-only model, so your data never gets copied out to us. We've run IT this way since 1996.",
   },
   {
     question: "Do you work with large enterprises?",

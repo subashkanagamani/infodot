@@ -70,14 +70,16 @@ export const servicesData: ServiceItem[] = [
     icon: "LineChart",
     title: "Backup & Disaster Recovery",
     shortDescription:
-      "Monitored, restore-tested, immutable backups — plus a tested DR plan to get the business back.",
+      "Get your files back. Get your business back.",
     description:
-      "Backups only count if they restore. We run monitored, restore-tested and immutable backups across your critical systems and data, and pair them with a tested disaster recovery plan built around clear recovery time and recovery point objectives (RTO/RPO), so you know exactly how fast — and how completely — the business comes back after an incident.",
+      "Monitored, tested backups plus a real disaster-recovery plan — so you can recover a deleted file or a whole business after ransomware or outage. Backup answers 'can I get my file back'; DR answers 'can I get my business back'. Untested backups fail exactly when you need them, so we test restores monthly and prove recovery — which is precisely what insurers now require.",
     features: [
-      "Monitored, immutable backups across critical systems",
-      "Scheduled restore testing, not just backup verification",
-      "Documented DR plan with defined RTO/RPO",
-      "Coverage for M365/Workspace, servers and endpoints",
+      "Backups monitored daily",
+      "Monthly restore testing — proof, not hope",
+      "Immutable copies where supported",
+      "Documented DR plan with agreed RTO/RPO",
+      "Ransomware-resilient design",
+      "Recovery evidence for auditors and insurers",
     ],
     benefits: [
       "Confidence that backups will actually restore when needed",
@@ -122,14 +124,16 @@ export const servicesData: ServiceItem[] = [
     icon: "Users",
     title: "Cyber Essentials Readiness",
     shortDescription:
-      "All five Cyber Essentials controls implemented to v3.3 and certified via an accredited body.",
+      "Certified to Cyber Essentials — and kept that way.",
     description:
-      "We implement and maintain all five Cyber Essentials controls — firewalls, secure configuration, access control, malware protection and patch management — to the current v3.3 standard, then take you through certification via an accredited certification body. Because we run the underlying IT ourselves, the controls stay true between assessments, not just on certification day.",
+      "We get you ready for Cyber Essentials and Cyber Essentials Plus to the current v3.3 requirements, and keep the controls in place year-round so recertification isn't a scramble. Cyber Essentials is the front door to public-sector and enterprise supply chains — and the 2026 requirements are stricter: all-user MFA, cloud in scope, auto-fail patching. We make certification a by-product of how we run your IT, not an annual panic.",
     features: [
-      "All five Cyber Essentials controls, implemented to v3.3",
-      "Certification managed via an accredited body",
-      "Controls maintained continuously between assessments",
-      "Applicable to Cyber Essentials and Cyber Essentials Plus",
+      "Gap assessment against the five controls",
+      "All-user MFA and cloud services in scope",
+      "Patching inside the required window",
+      "Secure configuration",
+      "Certification via an accredited body",
+      "Controls maintained continuously",
     ],
     benefits: [
       "Meets a common client and tender requirement without extra admin",
@@ -148,18 +152,21 @@ export const servicesData: ServiceItem[] = [
     icon: "Palette",
     title: "Cyber Insurance Readiness",
     shortDescription:
-      "Keep the controls insurers ask about enforced and evidenced all year, not just at renewal.",
+      "Insurers don't just want the controls. They want proof they stayed on.",
     description:
-      "Cyber cover is now underwritten on controls you attest to and must maintain continuously. When a claim is investigated, a gap between what you attested and what was actually running is a common reason cover is disputed — even when the gap didn't cause the incident. We keep the controls insurers ask about — MFA everywhere, EDR on every endpoint, tested backups, patching — enforced and evidenced through the year, with drift alerts if a control slips, and a renewal-ready evidence pack, so your questionnaire answers are true and provable when it matters.",
+      "Cyber cover is now underwritten on controls you attest to and must maintain continuously. We keep those controls enforced and evidenced through the year, so when a claim is investigated your answers were true and provable. Claims are disputed on misrepresentation, failure to maintain a stated control, or late notice — and the gap needn't have caused the incident. The fix: controls kept true, evidence kept current, drift caught early — via Assess → Remediate → Validate → Monitor. Honest scope: we make controls true and provable so a claim is less likely to be disputed — we don't advise on your policy or promise a payout. Your broker advises; you attest; we supply and maintain the evidence.",
     features: [
-      "MFA, EDR, tested backups and patching kept enforced year-round",
-      "Drift alerting if a control slips between renewals",
-      "Renewal-ready evidence pack for the insurer questionnaire",
-      "Continuous alignment between attested and actual controls",
+      "MFA enforced on every user and remote path, monitored",
+      "EDR on every endpoint, agent-health checked",
+      "Tested, immutable backups with monthly restore evidence",
+      "Critical patching inside the window, evidenced",
+      "Documented incident-response and notification process",
+      "Drift alerting when a control slips",
+      "Renewal-ready evidence pack",
     ],
     benefits: [
-      "Coalition data shows 82% of denied claims lacked full MFA — closing that gap protects your cover",
-      "NAIC data shows only around 1 in 4 closed cyber claims resulted in a payout — accurate attestations matter",
+      "Most denied claims involve incomplete MFA — closing that gap protects your cover",
+      "Only about 1 in 4 cyber claims pay out — accurate, provable attestations matter",
       "Reduces the risk of a disputed claim over a control gap",
       "Confidence at renewal time instead of a last-minute scramble",
     ],
@@ -220,6 +227,115 @@ export const servicesData: ServiceItem[] = [
       "Infodot UK runs the security and operations layer alongside your in-house IT team, with a clear ownership matrix — your tools or ours.",
     keywords:
       "co-managed IT, IT support for in-house teams, shared IT support, managed security services",
+  },
+  {
+    slug: "asset-licence-domain",
+    icon: "Boxes",
+    title: "Asset, Licence & Domain Management",
+    shortDescription: "Know exactly what you own, and when it renews.",
+    description:
+      "A live register of every device, software licence, subscription, domain and DNS record — with renewals visible so nothing lapses by surprise. You can't secure or budget what you can't see. An accurate register underpins licence compliance, renewals, audit readiness and clean onboarding — and it's the first thing an auditor or acquirer asks for.",
+    features: [
+      "Complete asset register with specs and ownership",
+      "Software licence and subscription mapping",
+      "Shadow-IT detection",
+      "Domain and DNS ownership and renewal tracking",
+      "Cost and compliance visibility",
+      "Kept current continuously",
+    ],
+    benefits: [
+      "No surprise lapses on licences, domains or certificates",
+      "Clear cost visibility across software and subscriptions",
+      "Shadow IT surfaced before it becomes a risk",
+      "Audit and due-diligence questions answered from one register",
+    ],
+    metaTitle: "IT Asset, Licence & Domain Management | Infodot UK",
+    metaDescription:
+      "A live register of every device, licence, subscription, domain and DNS record — renewals tracked and shadow IT surfaced. Infodot UK, ISO 27001:2022 certified.",
+    keywords:
+      "IT asset management, software licence management, domain and DNS management, renewal tracking, shadow IT",
+  },
+  {
+    slug: "cloud-management",
+    icon: "Cloud",
+    title: "Cloud Management",
+    shortDescription: "Your cloud, run well and kept secure.",
+    description:
+      "Operation and hardening of your cloud environments — Microsoft 365, Azure and AWS — with cost, security and configuration kept under control. Cloud is easy to start and easy to sprawl, in cost and in risk. We keep it configured, secured and accountable, so it stays an asset rather than a surprise bill or an open door.",
+    features: [
+      "Tenant and subscription administration",
+      "Identity and access control",
+      "Security baselines and hardening",
+      "Cost visibility and right-sizing",
+      "Backup and resilience configuration",
+      "Monitoring and alerting",
+    ],
+    benefits: [
+      "Cloud spend stays predictable instead of drifting upward",
+      "Consistent security baselines across every environment",
+      "Configuration and access stay accountable and documented",
+      "Issues surfaced by monitoring, not by users",
+    ],
+    metaTitle: "Cloud Management: Microsoft 365, Azure & AWS | Infodot UK",
+    metaDescription:
+      "Infodot UK operates and hardens your Microsoft 365, Azure and AWS environments — identity, baselines, cost control, backup and monitoring.",
+    keywords:
+      "cloud management, Microsoft 365 management, Azure management, AWS management, cloud cost optimisation, cloud security baselines",
+  },
+  {
+    slug: "continuous-controls-evidence",
+    icon: "ClipboardCheck",
+    title: "Continuous Controls & Evidence",
+    shortDescription:
+      "Do it once and leave? That's what fails audits and claims.",
+    description:
+      "The engine behind Always Audit-Ready — the controls we run are kept enforced and captured as evidence every month, with drift alerts when something slips. Being ready once is easy; staying ready — and proving it — is the hard part, and where audits and insurance claims come undone. We treat evidence as a by-product of doing the work, so 'yes' is always provable.",
+    features: [
+      "Continuous control enforcement",
+      "Monthly evidence generation",
+      "Drift alerting when a control lapses",
+      "Mapping to your frameworks and questionnaires",
+      "A single, current evidence pack",
+      "Ready for audit, insurer or board",
+    ],
+    benefits: [
+      "No pre-audit scramble — the pack is already current",
+      "Control drift caught early, not at renewal",
+      "One evidence set answers auditors, insurers and boards",
+      "Questionnaire answers stay true and provable",
+    ],
+    metaTitle: "Continuous Controls & Compliance Evidence | Infodot UK",
+    metaDescription:
+      "Controls kept enforced and captured as monthly evidence, with drift alerting — Infodot UK keeps regulated UK firms provably audit-ready all year.",
+    keywords:
+      "continuous controls monitoring, compliance evidence, drift alerting, audit evidence pack, ISO 27001, SOC 2",
+  },
+  {
+    slug: "data-protection",
+    icon: "Lock",
+    title: "Data Protection",
+    shortDescription: "Your data, controlled — wherever it lives.",
+    description:
+      "Protection for your data across its life — encryption, secure sharing, retention and loss prevention — inside your own tenancy. Regulated buyers and their clients care where data goes and who can reach it. Sensible controls — sharing limits, retention, DLP — protect it without getting in your team's way.",
+    features: [
+      "Encryption at rest and in transit",
+      "Secure external-sharing controls",
+      "Retention and deletion policies",
+      "Data-loss prevention where appropriate",
+      "Sensitivity labelling",
+      "Access logging",
+    ],
+    benefits: [
+      "Client and regulator questions about data handling answered clearly",
+      "Sharing controlled without blocking day-to-day work",
+      "Retention and deletion handled by policy, not memory",
+      "Access is logged, so exposure can be investigated",
+    ],
+    metaTitle: "Data Protection & DLP Services | Infodot UK",
+    metaDescription:
+      "Encryption, secure sharing, retention, sensitivity labelling and DLP — Infodot UK protects your data inside your own tenancy for regulated UK firms.",
+    keywords:
+      "data protection, DLP, data loss prevention, encryption, retention policy, sensitivity labels, UK GDPR",
   },
 ];
 
