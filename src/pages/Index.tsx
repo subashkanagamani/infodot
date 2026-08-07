@@ -8,7 +8,7 @@ import { Process } from "@/components/Process";
 import { Portfolio } from "@/components/Portfolio";
 import { TeamProfiles } from "@/components/TeamProfiles";
 import { FAQ, faqs } from "@/components/FAQ";
-import { BookingSection } from "@/components/BookingSection";
+
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -129,11 +129,6 @@ const Index = () => {
             </ParallaxSection>
           </ScrollAnimationWrapper>
           
-          <ScrollAnimationWrapper animation="scale-in" threshold={0.2}>
-            <ParallaxSection speed={0.4} direction="down">
-              <BookingSection />
-            </ParallaxSection>
-          </ScrollAnimationWrapper>
           
           <ScrollAnimationWrapper animation="slide-up" threshold={0.2}>
             <ParallaxSection speed={0.3} direction="up">
