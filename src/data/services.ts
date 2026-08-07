@@ -228,6 +228,115 @@ export const servicesData: ServiceItem[] = [
     keywords:
       "co-managed IT, IT support for in-house teams, shared IT support, managed security services",
   },
+  {
+    slug: "asset-licence-domain",
+    icon: "Boxes",
+    title: "Asset, Licence & Domain Management",
+    shortDescription: "Know exactly what you own, and when it renews.",
+    description:
+      "A live register of every device, software licence, subscription, domain and DNS record — with renewals visible so nothing lapses by surprise. You can't secure or budget what you can't see. An accurate register underpins licence compliance, renewals, audit readiness and clean onboarding — and it's the first thing an auditor or acquirer asks for.",
+    features: [
+      "Complete asset register with specs and ownership",
+      "Software licence and subscription mapping",
+      "Shadow-IT detection",
+      "Domain and DNS ownership and renewal tracking",
+      "Cost and compliance visibility",
+      "Kept current continuously",
+    ],
+    benefits: [
+      "No surprise lapses on licences, domains or certificates",
+      "Clear cost visibility across software and subscriptions",
+      "Shadow IT surfaced before it becomes a risk",
+      "Audit and due-diligence questions answered from one register",
+    ],
+    metaTitle: "IT Asset, Licence & Domain Management | Infodot UK",
+    metaDescription:
+      "A live register of every device, licence, subscription, domain and DNS record — renewals tracked and shadow IT surfaced. Infodot UK, ISO 27001:2022 certified.",
+    keywords:
+      "IT asset management, software licence management, domain and DNS management, renewal tracking, shadow IT",
+  },
+  {
+    slug: "cloud-management",
+    icon: "Cloud",
+    title: "Cloud Management",
+    shortDescription: "Your cloud, run well and kept secure.",
+    description:
+      "Operation and hardening of your cloud environments — Microsoft 365, Azure and AWS — with cost, security and configuration kept under control. Cloud is easy to start and easy to sprawl, in cost and in risk. We keep it configured, secured and accountable, so it stays an asset rather than a surprise bill or an open door.",
+    features: [
+      "Tenant and subscription administration",
+      "Identity and access control",
+      "Security baselines and hardening",
+      "Cost visibility and right-sizing",
+      "Backup and resilience configuration",
+      "Monitoring and alerting",
+    ],
+    benefits: [
+      "Cloud spend stays predictable instead of drifting upward",
+      "Consistent security baselines across every environment",
+      "Configuration and access stay accountable and documented",
+      "Issues surfaced by monitoring, not by users",
+    ],
+    metaTitle: "Cloud Management: Microsoft 365, Azure & AWS | Infodot UK",
+    metaDescription:
+      "Infodot UK operates and hardens your Microsoft 365, Azure and AWS environments — identity, baselines, cost control, backup and monitoring.",
+    keywords:
+      "cloud management, Microsoft 365 management, Azure management, AWS management, cloud cost optimisation, cloud security baselines",
+  },
+  {
+    slug: "continuous-controls-evidence",
+    icon: "ClipboardCheck",
+    title: "Continuous Controls & Evidence",
+    shortDescription:
+      "Do it once and leave? That's what fails audits and claims.",
+    description:
+      "The engine behind Always Audit-Ready — the controls we run are kept enforced and captured as evidence every month, with drift alerts when something slips. Being ready once is easy; staying ready — and proving it — is the hard part, and where audits and insurance claims come undone. We treat evidence as a by-product of doing the work, so 'yes' is always provable.",
+    features: [
+      "Continuous control enforcement",
+      "Monthly evidence generation",
+      "Drift alerting when a control lapses",
+      "Mapping to your frameworks and questionnaires",
+      "A single, current evidence pack",
+      "Ready for audit, insurer or board",
+    ],
+    benefits: [
+      "No pre-audit scramble — the pack is already current",
+      "Control drift caught early, not at renewal",
+      "One evidence set answers auditors, insurers and boards",
+      "Questionnaire answers stay true and provable",
+    ],
+    metaTitle: "Continuous Controls & Compliance Evidence | Infodot UK",
+    metaDescription:
+      "Controls kept enforced and captured as monthly evidence, with drift alerting — Infodot UK keeps regulated UK firms provably audit-ready all year.",
+    keywords:
+      "continuous controls monitoring, compliance evidence, drift alerting, audit evidence pack, ISO 27001, SOC 2",
+  },
+  {
+    slug: "data-protection",
+    icon: "Lock",
+    title: "Data Protection",
+    shortDescription: "Your data, controlled — wherever it lives.",
+    description:
+      "Protection for your data across its life — encryption, secure sharing, retention and loss prevention — inside your own tenancy. Regulated buyers and their clients care where data goes and who can reach it. Sensible controls — sharing limits, retention, DLP — protect it without getting in your team's way.",
+    features: [
+      "Encryption at rest and in transit",
+      "Secure external-sharing controls",
+      "Retention and deletion policies",
+      "Data-loss prevention where appropriate",
+      "Sensitivity labelling",
+      "Access logging",
+    ],
+    benefits: [
+      "Client and regulator questions about data handling answered clearly",
+      "Sharing controlled without blocking day-to-day work",
+      "Retention and deletion handled by policy, not memory",
+      "Access is logged, so exposure can be investigated",
+    ],
+    metaTitle: "Data Protection & DLP Services | Infodot UK",
+    metaDescription:
+      "Encryption, secure sharing, retention, sensitivity labelling and DLP — Infodot UK protects your data inside your own tenancy for regulated UK firms.",
+    keywords:
+      "data protection, DLP, data loss prevention, encryption, retention policy, sensitivity labels, UK GDPR",
+  },
 ];
 
 export const getServiceBySlug = (slug: string) =>
