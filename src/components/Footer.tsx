@@ -190,60 +190,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mt-12">
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-bold mb-6 text-primary">CONTACT</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 group">
-                <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <Phone className="w-4 h-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground mb-1">Call Us</p>
-                  <a
-                    href={`tel:${settings.company.phone.replace(/\s/g, "")}`}
-                    className="text-sm hover:text-primary transition-colors"
-                  >
-                    {settings.company.phone}
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3 group">
-                <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <Mail className="w-4 h-4 text-primary" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="text-xs text-muted-foreground mb-1">Email Us</p>
-                  <a
-                    href={`mailto:${settings.company.email}`}
-                    className="text-sm hover:text-primary transition-colors break-all leading-snug block"
-                  >
-                    {settings.company.email}
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3 group">
-                <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <MapPin className="w-4 h-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground mb-1">Visit Us</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {settings.company.address}
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          {/* Quick Contact Form */}
-          <div>
-            <h4 className="font-bold mb-6 text-primary">{f.quickMessageTitle || FOOTER_DEFAULTS.quickMessageTitle}</h4>
-            <FooterContactForm />
-          </div>
-        </div>
-
         {/* Copyright */}
         <div className="border-t border-border/50 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
