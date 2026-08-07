@@ -18,8 +18,8 @@ export default function PrivacyPolicy() {
       <BackToTop />
       
       <SEOHead 
-        title="Privacy Policy | CWP Marketing"
-        description="Read CWP Marketing's privacy policy to understand how we collect, use, and protect your personal information."
+        title="Privacy Policy | Infodot UK"
+        description="Read Infodot UK's privacy policy to understand how we collect, use, and protect your personal information."
         keywords="privacy policy, data protection, personal information"
       />
 
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
             <div>
               <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>
               <p className="text-muted-foreground">
-                Welcome to our Privacy Policy. Your privacy is critically important to us. This Privacy Policy document contains types of information that is collected and recorded by our website and how we use it.
+                This Privacy Policy explains how Infodot Technologies Pvt Ltd ("Infodot UK", "we", "us", "our"), the data controller for personal data collected through this website, processes your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Infodot UK provides managed IT services to regulated UK industries and serves clients across the UK and EU remotely from our delivery centre in Bangalore, India.
               </p>
             </div>
 
@@ -97,8 +97,9 @@ export default function PrivacyPolicy() {
                 <li>Correct inaccurate data</li>
                 <li>Request deletion of your data</li>
                 <li>Object to processing of your data</li>
-                <li>Request transfer of your data</li>
+                <li>Request transfer of your data (data portability)</li>
                 <li>Withdraw consent</li>
+                <li>Lodge a complaint with the UK Information Commissioner's Office (ICO) at ico.org.uk if you believe your data protection rights have been infringed</li>
               </ul>
             </div>
 
@@ -122,8 +123,7 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4 mt-4">
-                <li>By email: privacy@yourcompany.com</li>
-                <li>By phone: +91 98765 43210</li>
+                <li>By email: hello@infodot.uk</li>
                 <li>By visiting this page on our website: Contact Us</li>
               </ul>
             </div>

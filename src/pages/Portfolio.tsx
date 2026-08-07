@@ -25,7 +25,7 @@ const portfolioItems = [
       { icon: Target, label: "ROAS", value: "8.5x" }
     ],
     tags: ["Meta Ads", "Email Marketing", "CRO"],
-    testimonial: "CWP transformed our business. We went from struggling to thriving in just 6 months."
+    testimonial: "Infodot transformed our business. We went from struggling to thriving in just 6 months."
   },
   {
     title: "SaaS Lead Generation",
@@ -81,7 +81,7 @@ const portfolioItems = [
       { icon: Target, label: "CAC Reduction", value: "-40%" }
     ],
     tags: ["Performance Marketing", "Email Automation", "Retention"],
-    testimonial: "CWP didn't just help us grow, they helped us build a sustainable business model."
+    testimonial: "Infodot didn't just help us grow, they helped us build a sustainable business model."
   },
   {
     title: "B2B Market Expansion",
@@ -95,7 +95,7 @@ const portfolioItems = [
       { icon: Target, label: "Deal Size", value: "+65%" }
     ],
     tags: ["B2B Marketing", "LinkedIn", "Content Strategy"],
-    testimonial: "We couldn't have entered these markets without CWP's strategic guidance and execution."
+    testimonial: "We couldn't have entered these markets without Infodot's strategic guidance and execution."
   }
 ];
 
@@ -135,7 +135,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Portfolio - Our Success Stories | CWP Marketing"
+        title="Portfolio - Our Success Stories | Infodot UK"
         description="Explore our portfolio of successful marketing campaigns. See how we've helped D2C, SaaS, and B2B brands achieve 10x ROAS, generate leads, and scale revenue."
         keywords="marketing portfolio, case studies, success stories, ROAS, lead generation, brand growth"
       />
@@ -145,8 +145,8 @@ const Portfolio = () => {
           id: "portfolio-collection",
           data: {
             "@type": "CollectionPage",
-            name: "CWP Marketing Portfolio & Case Studies",
-            url: "https://consultwithprofessionals.com/portfolio",
+            name: "Infodot UK Portfolio & Case Studies",
+            url: "https://infodot.co.uk/portfolio",
             description: "Marketing case studies showing measurable growth for D2C, SaaS, and B2B brands.",
             hasPart: filteredItems.map((item) => ({
               "@type": "CreativeWork",

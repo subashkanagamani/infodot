@@ -139,12 +139,12 @@ export default function CaseStudyDetail() {
       <BackToTop />
       
       <SEOHead 
-        title={`${study.client || study.title} — Case Study | CWP`}
-        description={study.description || `See how CWP Marketing helped ${study.client} achieve remarkable results.`}
+        title={`${study.client || study.title} — Case Study | Infodot`}
+        description={study.description || `See how Infodot UK helped ${study.client} achieve remarkable results.`}
         keywords={study.technologies?.join(", ")}
         ogType="article"
         ogImage={study.cover_image || undefined}
-        canonicalUrl={`https://consultwithprofessionals.com/case-studies/${study.slug || id}`}
+        canonicalUrl={`https://infodot.co.uk/case-studies/${study.slug || id}`}
       />
       
       <JsonLd 
@@ -153,7 +153,7 @@ export default function CaseStudyDetail() {
           headline: `${study.client || study.title} Case Study`,
           description: study.description || "",
           image: study.cover_image || undefined,
-          author: "CWP Team",
+          author: "Infodot Team",
           datePublished: study.created_at || new Date().toISOString()
         }}
       />

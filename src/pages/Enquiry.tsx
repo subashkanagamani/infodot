@@ -26,7 +26,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import { InteractiveParticles } from "@/components/InteractiveParticles";
-import { row1Logos, row2Logos, row3Logos } from "@/components/ClientLogos";
+import { industries as trustIndustries } from "@/components/ClientLogos";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -202,9 +202,9 @@ const Enquiry = () => {
   return (
     <>
       <SEOHead
-        title="Get a Free Marketing Growth Audit — CWP Marketing"
-        description="Book a free 30-minute strategy call with CWP Marketing. Performance ads, SEO, and growth consulting for brands ready to scale."
-        canonicalUrl="https://consultwithprofessionals.com/enquiry"
+        title="Get a Free Marketing Growth Audit — Infodot UK"
+        description="Book a free 30-minute strategy call with Infodot UK. Performance ads, SEO, and growth consulting for brands ready to scale."
+        canonicalUrl="https://infodot.co.uk/enquiry"
       />
 
       <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
@@ -215,7 +215,7 @@ const Enquiry = () => {
           <header className="border-b border-border/50 bg-background/70 backdrop-blur-lg sticky top-0 z-40 animate-slide-up">
             <div className="container-custom flex items-center justify-between h-16">
               <Link to="/" className="flex items-center group">
-                <img src={logo} alt="CWP" className="w-9 h-9 rounded-[5%] group-hover:scale-110 transition-transform" />
+                <img src={logo} alt="Infodot" className="w-9 h-9 rounded-[5%] group-hover:scale-110 transition-transform" />
               </Link>
               <a href="tel:+918610986622" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                 <Phone className="h-4 w-4" /> <span className="hidden sm:inline">+91 86109 86622</span>
@@ -428,33 +428,23 @@ const Enquiry = () => {
                       <span className="text-xs font-semibold tracking-widest uppercase text-primary">Trusted by</span>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold">
-                      100+ brands we've helped <span className="text-gradient-primary">grow</span>
+                      Built for the regulated industries we <span className="text-gradient-primary">serve</span>
                     </h2>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  {[row1Logos, row2Logos, row3Logos].map((row, i) => (
-                    <div key={i} className="relative overflow-hidden py-4">
-                      <div className={`flex gap-8 md:gap-12 ${i % 2 === 0 ? "animate-scroll-rtl" : "animate-scroll-ltr"} items-center`}>
-                        {[...row, ...row, ...row, ...row].map((logo, index) => (
-                          <div
-                            key={index}
-                            className={`flex-shrink-0 flex items-center justify-center h-16 px-4 py-3 rounded-xl border ${
-                              logo.dark ? "bg-black/60 border-border/60" : "bg-card/60 backdrop-blur-sm border-border/60"
-                            }`}
-                          >
-                            <img
-                              src={logo.src}
-                              alt={logo.alt}
-                              loading="lazy"
-                              className="h-8 md:h-10 w-auto max-w-[120px] object-contain"
-                            />
-                          </div>
-                        ))}
+                <div className="container-custom">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                    {trustIndustries.map((industry, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-center justify-center gap-3 h-28 px-4 py-4 rounded-xl border bg-card/60 backdrop-blur-sm border-border/60 hover:border-primary/50 transition-colors"
+                      >
+                        <industry.icon className="w-7 h-7 text-primary" />
+                        <span className="text-sm font-medium text-center">{industry.label}</span>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </section>
             </ParallaxSection>
@@ -568,7 +558,7 @@ const Enquiry = () => {
               <div className="container-custom relative">
                 <div className="max-w-2xl mb-14 mx-auto text-center">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-4">
-                    <span className="text-xs font-semibold tracking-widest uppercase text-primary">Why CWP</span>
+                    <span className="text-xs font-semibold tracking-widest uppercase text-primary">Why Infodot</span>
                   </div>
                   <h2 className="text-3xl md:text-5xl font-bold">
                     Not just another agency. A <span className="text-gradient-primary">growth partner.</span>
@@ -657,8 +647,8 @@ const Enquiry = () => {
                   </Button>
                 </div>
                 <div className="mt-10 text-sm text-muted-foreground flex items-center justify-center gap-6 flex-wrap">
-                  <a href="mailto:hello@consultwithprofessionals.com" className="hover:text-primary transition-colors flex items-center gap-2">
-                    <Mail className="h-4 w-4" /> hello@consultwithprofessionals.com
+                  <a href="mailto:hello@infodot.co.uk" className="hover:text-primary transition-colors flex items-center gap-2">
+                    <Mail className="h-4 w-4" /> hello@infodot.co.uk
                   </a>
                 </div>
               </div>
@@ -666,7 +656,7 @@ const Enquiry = () => {
           </ScrollAnimationWrapper>
 
           <footer className="py-6 border-t border-border/50 text-center text-xs text-muted-foreground">
-            © {new Date().getFullYear()} CWP Marketing. All rights reserved. ·{" "}
+            © {new Date().getFullYear()} Infodot UK. All rights reserved. ·{" "}
             <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link>
           </footer>
         </div>

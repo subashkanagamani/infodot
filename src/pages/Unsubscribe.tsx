@@ -43,7 +43,7 @@ const Unsubscribe = () => {
 
   return (
     <>
-      <SEOHead title="Unsubscribe — CWP Marketing" description="Manage your email preferences." />
+      <SEOHead title="Unsubscribe — Infodot UK" description="Manage your email preferences." />
       <div className="min-h-screen flex items-center justify-center bg-background p-6">
         <div className="max-w-md w-full bg-card/80 backdrop-blur-xl border border-border/60 rounded-2xl p-8 text-center">
           {state === "loading" && <><Loader2 className="mx-auto h-8 w-8 animate-spin text-primary mb-4" /><p className="text-muted-foreground">Verifying your request…</p></>}

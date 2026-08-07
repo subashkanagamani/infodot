@@ -9,11 +9,11 @@ interface SEOHeadProps {
   canonicalUrl?: string;
 }
 
-const SITE_ORIGIN = "https://consultwithprofessionals.com";
+const SITE_ORIGIN = "https://infodot.co.uk";
 const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/og-image.png`;
 
 export const SEOHead = ({
-  title = "CWP Marketing — Growth, SEO & Performance Marketing Agency",
+  title = "Infodot UK — Growth, SEO & Performance Marketing Agency",
   description = "Strategic marketing, SEO, paid ads, and growth consulting for D2C, SaaS, and B2B brands. 100+ brands served with 3x average growth.",
   keywords = "marketing agency, growth consulting, digital marketing, SEO, social media marketing, brand strategy, Chennai",
   ogImage = DEFAULT_OG_IMAGE,

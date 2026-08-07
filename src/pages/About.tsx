@@ -6,38 +6,38 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Target, Eye, Heart, Award, Users, Zap, Globe, TrendingUp } from "lucide-react";
+import { Target, Eye, ShieldCheck, Users, Zap, Globe, KeyRound, FileCheck2 } from "lucide-react";
 import teamNaren from "@/assets/team-naren.png";
 import { useSection } from "@/hooks/usePageContent";
 
 const values = [
   {
-    icon: Target,
-    title: "Results' Driven",
-    description: "Every strategy we build is focused on measurable outcomes and real business growth."
+    icon: ShieldCheck,
+    title: "Secure by Default",
+    description: "MFA, EDR, hardening and tested backup are standard from day one, not a premium add-on."
   },
   {
-    icon: Heart,
-    title: "Client' Centric",
-    description: "Your success is our success. We treat every client's business like our own."
+    icon: FileCheck2,
+    title: "Always Audit-Ready",
+    description: "The controls we run produce the evidence auditors and insurers ask for, kept current."
   },
   {
-    icon: Zap,
-    title: "Innovation",
-    description: "We stay ahead of trends and leverage cutting' edge tools to give you a competitive edge."
+    icon: KeyRound,
+    title: "You Own Your IT",
+    description: "Your data, your accounts, your documentation. We run it — you always own it, no lock-in."
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "We work as an extension of your team, ensuring seamless communication and alignment."
+    title: "One Accountable Team",
+    description: "One team runs the whole stack and coordinates your vendors. Nobody to ping-pong to."
   }
 ];
 
 const stats = [
-  { value: "50+", label: "Brands Transformed" },
-  { value: "10x", label: "Average ROAS" },
-  { value: "95%", label: "Client Retention" },
-  { value: "₹50Cr+", label: "Revenue Generated" }
+  { value: "1996", label: "Serving clients since" },
+  { value: "ISO 27001:2022", label: "Certified team" },
+  { value: "UK & EU", label: "Remotely served" },
+  { value: "48 hrs", label: "For an exact quote" }
 ];
 
 const About = () => {
@@ -46,9 +46,9 @@ const About = () => {
     "hero",
     {
       badge: "About Us",
-      headingHtml: 'We Help Brands <span class="text-gradient-primary">Scale & Thrive</span>',
+      headingHtml: 'We Run Your IT. <span class="text-gradient-primary">You Own It.</span>',
       subheading:
-        "CWP is a full-stack growth partner for D2C, SaaS, and B2B brands. We combine strategic marketing expertise with creative excellence to deliver exceptional results.",
+        "Infodot UK is a managed IT provider for the regulated UK industries we serve — accountancy, legal and financial services — run end to end and remotely by an ISO 27001:2022 certified team.",
     },
   );
   const story = useSection<{ headingHtml: string; paragraphs: string[]; quote: string; founderName: string; founderRole: string }>(
@@ -57,29 +57,29 @@ const About = () => {
     {
       headingHtml: 'Our <span class="text-gradient-primary">Story</span>',
       paragraphs: [
-        "Founded with a vision to bridge the gap between creative marketing and measurable growth, CWP has evolved into a trusted growth partner for businesses across industries.",
-        "We started with a simple belief: every brand deserves access to world' class marketing strategies that deliver real results. Today, we've helped 100+ brands generate over ₹50 Crores in revenue.",
-        "Our team of strategists, creatives, and growth experts work together to create comprehensive marketing solutions that drive sustainable business growth.",
+        "Infodot Technologies Pvt Ltd has been running IT for clients since 1996. Over that time we have built a delivery model designed specifically for regulated UK firms that need their technology to be secure, evidenced, and simply out of their way.",
+        "We are based in Bangalore, India, and serve accountancy, legal and financial services firms across the UK and EU entirely remotely, backed by an ISO 27001:2022 certified team and our own delivery platform, Z360.",
+        "Our promise is simple: we run your IT completely, but you always own it. Your accounts, your data, your documentation — never locked to us. If you ever choose to leave, we hand over a full exit pack and complete reverse knowledge transfer within 10 working days.",
       ],
       quote:
-        "Our mission is simple: help brands unlock their true potential through strategic, data' driven marketing that delivers measurable results.",
-      founderName: "Naren",
-      founderRole: "Founder & CEO",
+        "We run your IT. You own your IT.",
+      founderName: "Infodot UK",
+      founderRole: "Managed IT, run remotely",
     },
   );
   const mission = useSection<{ mission: string; vision: string }>("about", "mission_vision", {
     mission:
-      "To empower businesses with strategic marketing solutions that drive sustainable growth, increase brand visibility, and deliver exceptional ROI through data' driven methodologies.",
+      "To run IT completely for the regulated UK industries we serve — secure by default, always audit-ready — so our clients' teams can focus on their business, not their infrastructure.",
     vision:
-      "To become the most trusted growth partner for ambitious brands, known for our innovative strategies, creative excellence, and unwavering commitment to client success.",
+      "To be the managed IT partner regulated UK firms trust for the long term, precisely because ownership, evidence and an honest exit are built into how we work.",
   });
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="About CWP Marketing — Our Story, Mission & Values"
-        description="Learn about CWP Marketing — a full-stack growth partner for D2C, SaaS, and B2B brands. Discover our mission, values, and team."
-        keywords="about CWP, marketing agency story, growth partner, brand transformation, marketing team"
-        canonicalUrl="https://consultwithprofessionals.com/about"
+        title="About Infodot UK — Managed IT Since 1996, Run Remotely"
+        description="Infodot UK (Infodot Technologies Pvt Ltd) has run managed IT since 1996. ISO 27001:2022 certified, based in Bangalore, serving UK & EU regulated industries remotely."
+        keywords="about Infodot UK, managed IT provider, ISO 27001 IT company, remote IT delivery, Infodot Technologies"
+        canonicalUrl="https://infodot.co.uk/about"
       />
       <Navbar />
       
@@ -111,7 +111,7 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
                 <div className="text-muted-foreground">{stat.label}</div>
               </div>
             ))}
@@ -136,7 +136,7 @@ const About = () => {
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
               <Card className="relative p-8 bg-card border-border/50">
                 <div className="flex items-center gap-4 mb-6">
-                  <img src={teamNaren} alt={`${story.founderName}, ${story.founderRole} of CWP Marketing`} className="w-20 h-20 rounded-full object-cover" />
+                  <img src={teamNaren} alt="Infodot UK delivery team" className="w-20 h-20 rounded-full object-cover" />
                   <div>
                     <h3 className="text-xl font-bold">{story.founderName}</h3>
                     <p className="text-primary">{story.founderRole}</p>
@@ -177,10 +177,10 @@ const About = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our <span className="text-gradient-primary">Values</span>
+              What We <span className="text-gradient-primary">Stand On</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              These core values guide everything we do and shape how we work with our clients.
+              These principles guide everything we do and how we work with regulated UK clients.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -208,26 +208,29 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Award className="w-8 h-8 text-primary" />
+                <ShieldCheck className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Proven Track Record</h3>
-              <p className="text-muted-foreground">50+ successful brand transformations with measurable results</p>
+              <h3 className="text-xl font-bold mb-2">ISO 27001:2022 Certified</h3>
+              <p className="text-muted-foreground">Security and evidence built into how we operate, not bolted on</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <Globe className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Full' Stack Expertise</h3>
-              <p className="text-muted-foreground">From strategy to execution, we handle every aspect of your growth</p>
+              <h3 className="text-xl font-bold mb-2">Remote Delivery, UK Hours</h3>
+              <p className="text-muted-foreground">A UK business-hours desk backed by our Z360 delivery platform</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <TrendingUp className="w-8 h-8 text-primary" />
+                <KeyRound className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Data' Driven Results</h3>
-              <p className="text-muted-foreground">Every decision backed by analytics and performance data</p>
+              <h3 className="text-xl font-bold mb-2">An Honest Exit</h3>
+              <p className="text-muted-foreground">A full exit pack and reverse knowledge transfer within 10 working days, whenever you need it</p>
             </div>
           </div>
+          <p className="text-center text-sm text-muted-foreground mt-12 max-w-3xl mx-auto">
+            Who we're not for: we don't take on large enterprise estates, and we don't offer vCISO services. We focus on running IT completely for accountancy, legal and financial services firms.
+          </p>
         </div>
       </section>
 

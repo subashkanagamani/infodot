@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle2, Phone, Sparkles, ArrowRight } from "lucide-react";
+import { CheckCircle2, Mail, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
 import { InteractiveParticles } from "@/components/InteractiveParticles";
@@ -20,9 +20,9 @@ const ThankYou = () => {
   return (
     <>
       <SEOHead
-        title="Thank You — CWP Marketing"
+        title="Thank You — Infodot UK"
         description="Thanks for reaching out. A senior strategist will be in touch within 24 hours."
-        canonicalUrl="https://consultwithprofessionals.com/thank-you"
+        canonicalUrl="https://infodot.co.uk/thank-you"
       />
 
       <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
@@ -32,10 +32,10 @@ const ThankYou = () => {
           <header className="border-b border-border/50 bg-background/70 backdrop-blur-lg sticky top-0 z-40">
             <div className="container-custom flex items-center justify-between h-16">
               <Link to="/" className="flex items-center group">
-                <img src={logo} alt="CWP" className="w-9 h-9 rounded-[5%] group-hover:scale-110 transition-transform" />
+                <img src={logo} alt="Infodot" className="w-9 h-9 rounded-[5%] group-hover:scale-110 transition-transform" />
               </Link>
-              <a href="tel:+918610986622" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                <Phone className="h-4 w-4" /> <span className="hidden sm:inline">+91 86109 86622</span>
+              <a href="mailto:hello@infodot.uk" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+                <Mail className="h-4 w-4" /> <span className="hidden sm:inline">hello@infodot.uk</span>
               </a>
             </div>
           </header>
@@ -82,16 +82,16 @@ const ThankYou = () => {
 
                   <div className="flex flex-col sm:flex-row gap-3 mb-6">
                     <Button asChild size="lg" className="flex-1 gap-2 hover-lift">
-                      <a href="tel:+918610986622"><Phone className="h-4 w-4" /> Call us now</a>
+                      <a href="mailto:hello@infodot.uk"><Mail className="h-4 w-4" /> Email us</a>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="flex-1 gap-2">
-                      <a href="https://wa.me/918610986622" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                      <Link to="/services">Explore our services</Link>
                     </Button>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3 justify-center text-sm">
-                    <Link to="/case-studies" className="text-primary hover:underline inline-flex items-center gap-1">
-                      Browse case studies <ArrowRight className="h-3.5 w-3.5" />
+                    <Link to="/services" className="text-primary hover:underline inline-flex items-center gap-1">
+                      Browse our services <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
                     <span className="hidden sm:inline text-muted-foreground">·</span>
                     <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">

@@ -39,23 +39,23 @@ const Index = () => {
   return (
     <>
       <SEOHead 
-        title="CWP Marketing — Growth, SEO & Performance Marketing Agency"
-        description="Strategic marketing, SEO, paid ads, and growth consulting for D2C, SaaS, and B2B brands. 100+ brands served with 3x average growth."
-        keywords="marketing agency, growth consulting, digital marketing, SEO, social media marketing, brand strategy, Chennai"
-        canonicalUrl="https://consultwithprofessionals.com/"
+        title="Infodot UK — Managed IT for Regulated UK Industries, Run Remotely"
+        description="Infodot UK runs managed IT end-to-end for accountancy, legal and financial services firms in the UK — secure by default, always audit-ready, delivered remotely by an ISO 27001:2022 certified team since 1996."
+        keywords="managed IT UK, IT support for accountants, IT support for law firms, IT support for financial services, managed IT provider UK, ISO 27001 IT provider, co-managed IT, remote IT support UK"
+        canonicalUrl="https://infodot.co.uk/"
       />
       <JsonLd 
         schema={{
           type: "Organization",
-          name: "CWP Marketing",
-          url: "https://consultwithprofessionals.com",
-          logo: "https://consultwithprofessionals.com/og-image.png",
-          description: "Strategic marketing and growth consulting agency trusted by 100+ brands",
+          name: "Infodot UK",
+          url: "https://infodot.co.uk",
+          logo: "https://infodot.co.uk/og-image.png",
+          description: "Managed IT for the regulated UK industries we serve, run remotely",
           contactPoint: {
-            telephone: "+918610986622",
+            email: "hello@infodot.uk",
             contactType: "sales"
           },
-          sameAs: ["https://www.linkedin.com/in/naren-ethiraj-14834514b/"]
+          sameAs: []
         }}
       />
       <JsonLd

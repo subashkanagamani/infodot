@@ -8,53 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
+    --background: 219 49% 9%;
+    --foreground: 214 27% 93%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 219 45% 13%;
+    --card-foreground: 214 27% 93%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 219 45% 13%;
+    --popover-foreground: 214 27% 93%;
 
-    --primary: 48 100% 50%;
-    --primary-foreground: 0 0% 7%;
-    --primary-glow: 48 100% 60%;
+    --primary: 172 66% 50%;
+    --primary-foreground: 172 76% 10%;
+    --primary-glow: 172 72% 62%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 220 44% 15%;
+    --secondary-foreground: 214 27% 93%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 220 44% 15%;
+    --muted-foreground: 213 15% 66%;
 
-    --accent: 48 100% 50%;
-    --accent-foreground: 0 0% 7%;
+    --accent: 172 66% 50%;
+    --accent-foreground: 172 76% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 48 100% 50%;
+    --border: 218 37% 21%;
+    --input: 218 37% 21%;
+    --ring: 172 66% 50%;
 
     --radius: 0.5rem;
 
-    /* Tech-Forward Design Tokens */
-    --neon-cyan: 180 100% 50%;
-    --neon-purple: 270 100% 60%;
-    --neon-pink: 330 100% 60%;
+    /* Brand accent tokens */
+    --neon-cyan: 180 72% 52%;
+    --neon-purple: 199 80% 55%;
+    --neon-pink: 172 66% 50%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(48 100% 50%), hsl(48 100% 60%));
-    --gradient-tech: linear-gradient(135deg, hsl(180 100% 50%), hsl(270 100% 60%));
-    --gradient-radial: radial-gradient(circle at 50% 50%, hsl(48 100% 50% / 0.1), transparent 70%);
+    --gradient-primary: linear-gradient(135deg, hsl(172 66% 50%), hsl(172 72% 62%));
+    --gradient-tech: linear-gradient(135deg, hsl(172 66% 50%), hsl(199 80% 55%));
+    --gradient-radial: radial-gradient(circle at 50% 50%, hsl(172 66% 50% / 0.1), transparent 70%);
     
     /* Shadows & Glows */
-    --shadow-glow-primary: 0 0 40px hsl(48 100% 50% / 0.3);
-    --shadow-glow-cyan: 0 0 30px hsl(180 100% 50% / 0.2);
-    --shadow-glow-purple: 0 0 30px hsl(270 100% 60% / 0.2);
-    --shadow-card: 0 10px 40px hsl(0 0% 0% / 0.5);
-    --shadow-card-hover: 0 20px 60px hsl(48 100% 50% / 0.2);
+    --shadow-glow-primary: 0 0 40px hsl(172 66% 50% / 0.3);
+    --shadow-glow-cyan: 0 0 30px hsl(180 72% 52% / 0.2);
+    --shadow-glow-purple: 0 0 30px hsl(199 80% 55% / 0.2);
+    --shadow-card: 0 10px 40px hsl(219 60% 3% / 0.55);
+    --shadow-card-hover: 0 20px 60px hsl(172 66% 50% / 0.18);
     
     /* Geometric Patterns */
     --grid-size: 40px;
@@ -79,6 +79,11 @@ All colors MUST be HSL.
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 

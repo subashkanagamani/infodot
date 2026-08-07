@@ -1,36 +1,36 @@
 import { Card } from "@/components/ui/card";
-import { Search, Lightbulb, Rocket, TrendingUp } from "lucide-react";
+import { Search, ArrowRightLeft, ShieldCheck, FileCheck2 } from "lucide-react";
 
 const steps = [
   {
     icon: Search,
+    number: "00",
+    title: "Discovery",
+    description: "We map your current stack, licences, risks and priorities — accountancy, legal or financial-services context included — so scope and pricing are exact, not estimated."
+  },
+  {
+    icon: ArrowRightLeft,
     number: "01",
-    title: "Discovery & Audit",
-    description: "We deep-dive into your business, analyze your current marketing efforts, understand your target audience, and identify growth opportunities and bottlenecks."
+    title: "Transition & Onboarding",
+    description: "We take on your tools or ours, no rip-and-replace. Assets, licences and access are registered; your team knows their named engineers from day one."
   },
   {
-    icon: Lightbulb,
+    icon: ShieldCheck,
     number: "02",
-    title: "Strategy Development",
-    description: "Based on insights, we create a data-driven roadmap with clear objectives, channel selection, budget allocation, and timeline. Every decision is backed by research and market analysis."
+    title: "Run & Secure",
+    description: "One team runs the whole stack — helpdesk, patching, backup, EDR, MFA and hardening — as UK business-hours desk delivered remotely, standard from day one."
   },
   {
-    icon: Rocket,
+    icon: FileCheck2,
     number: "03",
-    title: "Execution & Launch",
-    description: "Our team implements the strategy across chosen channels - setting up campaigns, creating content, designing assets, and launching with precision. We test, iterate, and optimize continuously."
-  },
-  {
-    icon: TrendingUp,
-    number: "04",
-    title: "Optimization & Scale",
-    description: "We monitor performance daily, analyze data weekly, and optimize monthly. As campaigns mature, we double down on what works and scale winning strategies for exponential growth."
+    title: "Monthly Evidence & Review",
+    description: "Controls are packaged into a monthly evidence pack for auditors, insurers and boards, with drift alerting — audit-ready every month, not once a year."
   }
 ];
 
 export const Process = () => {
   return (
-    <section className="section-spacing relative overflow-hidden">
+    <section id="process" className="section-spacing relative overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
       
@@ -57,7 +57,7 @@ export const Process = () => {
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our proven 4-step process ensures your marketing delivers measurable results, not just vanity metrics.
+            From first call to monthly evidence, a clear engagement journey for 25–300 user businesses — with an exact quote within 48 hours.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export const Process = () => {
                 </div>
                 
                 <div className="text-sm font-bold text-primary mb-2 group-hover:text-primary-glow transition-colors">
-                  STEP {step.number}
+                  PHASE {step.number}
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary-glow transition-colors">{step.title}</h3>

@@ -7,13 +7,13 @@ export const ContactHero = () => {
     "contact",
     "hero",
     {
-      badge: "Let's Start a Conversation",
-      headingHtml: 'Get in <span class="text-gradient-primary">Touch</span>',
+      badge: "Book a Discovery Call",
+      headingHtml: 'Let\'s Talk About <span class="text-gradient-primary">Your IT</span>',
       subheading:
-        "Ready to transform your business? We're here to help you achieve your marketing goals with strategic solutions tailored to your needs.",
+        "Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours.",
       primaryLabel: "Send a Message",
-      phoneLabel: "Call Us Now",
-      phoneHref: "tel:+918610986622",
+      phoneLabel: "Email Us",
+      phoneHref: "mailto:hello@infodot.uk",
     },
   );
   const scrollToForm = () => {

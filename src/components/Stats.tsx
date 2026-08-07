@@ -1,9 +1,9 @@
 export const Stats = () => {
   const stats = [
-    { number: "5+", label: "Years of Full Stack Marketing" },
-    { number: "10K+", label: "Monthly Queries" },
-    { number: "3X", label: "Increase in Revenue, Traffic & Engagement" },
-    { number: "100+", label: "Brands Served" }
+    { number: "1996", label: "Running UK Managed IT Since" },
+    { number: "ISO 27001:2022", label: "Certified Operations" },
+    { number: "48hr", label: "Exact Quote Within" },
+    { number: "10 days", label: "Documented Exit Pack & Handover" }
   ];
 
   return (

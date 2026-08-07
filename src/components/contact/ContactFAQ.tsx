@@ -9,27 +9,27 @@ import { HelpCircle } from "lucide-react";
 const faqs = [
   {
     question: "How quickly can I expect a response?",
-    answer: "We typically respond to all inquiries within 24 hours during business days. For urgent matters, we recommend calling us directly or reaching out via WhatsApp for faster assistance.",
+    answer: "We typically respond to all inquiries within 24 hours during UK business days. For urgent matters, email us directly at hello@infodot.uk.",
   },
   {
-    question: "Do you offer free consultations?",
-    answer: "Yes! We offer a free 30-minute consultation call to understand your business needs and discuss how we can help you achieve your marketing goals. No strings attached.",
+    question: "Do you offer a free discovery call?",
+    answer: "Yes. Book a 30-minute discovery call — no cost, no obligation — and we'll follow up with an exact quote within 48 hours.",
   },
   {
     question: "What industries do you work with?",
-    answer: "We work with businesses across various industries including SaaS, E-commerce, Healthcare, Education, Finance, and Startups. Our strategies are customized based on your specific industry and target audience.",
+    answer: "We focus on the regulated UK industries we know best: accountancy, legal and financial services firms. Our controls and evidence are built around what auditors and insurers in these sectors ask for.",
   },
   {
-    question: "What is your typical project timeline?",
-    answer: "Project timelines vary based on scope and complexity. Most marketing campaigns show initial results within 2-3 months, while comprehensive strategies may take 6-12 months for full impact. We'll provide a detailed timeline during our consultation.",
+    question: "How is IT delivered if you're based in Bangalore?",
+    answer: "Infodot Technologies Pvt Ltd is based in Bangalore, India, and has run IT for clients since 1996. We serve UK and EU clients entirely remotely, with a UK business-hours desk backed by our ISO 27001:2022 certified team and our Z360 delivery platform.",
   },
   {
-    question: "Do you work with startups and small businesses?",
-    answer: "Absolutely! We love working with startups and small businesses. We have flexible packages designed specifically for businesses at different stages of growth, from early-stage startups to established enterprises.",
+    question: "Do you work with large enterprises?",
+    answer: "No — we deliberately focus on small and mid-sized regulated firms, and we don't offer vCISO services. If that's not the right fit for your firm, we'll tell you upfront.",
   },
   {
-    question: "Can I visit your office for a meeting?",
-    answer: "Yes, we welcome in-person meetings at our Chennai office. Please schedule an appointment in advance so we can ensure the right team members are available to meet with you.",
+    question: "What happens if we ever want to leave?",
+    answer: "You always own your accounts, data and documentation. If you choose to move on, we provide a full exit pack and complete reverse knowledge transfer within 10 working days.",
   },
 ];
 
@@ -48,7 +48,7 @@ export const ContactFAQ = () => {
               Frequently Asked <span className="text-gradient-primary">Questions</span>
             </h2>
             <p className="text-muted-foreground">
-              Find answers to common questions about working with us.
+              Find answers to common questions about working with Infodot UK.
             </p>
           </div>
 
@@ -79,7 +79,7 @@ export const ContactFAQ = () => {
               Can't find what you're looking for? We're here to help!
             </p>
             <a
-              href="mailto:support@consultwithprofessionals.com"
+              href="mailto:hello@infodot.uk"
               className="text-primary hover:underline font-medium"
             >
               Email us directly →

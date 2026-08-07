@@ -4,46 +4,59 @@ import { Newsletter } from "@/components/Newsletter";
 import { FooterContactForm } from "@/components/FooterContactForm";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 import { useSection } from "@/hooks/usePageContent";
-import logo from "@/assets/logo.png";
 
 interface FooterLink { label: string; href: string }
 interface FooterColumns {
-  usefulLinksTitle: string;
-  usefulLinks: FooterLink[];
+  brandBlurb: string;
+  certsLine: string;
+  poweredByLine: string;
+  industriesTitle: string;
+  industriesLinks: FooterLink[];
   servicesTitle: string;
   serviceLinks: FooterLink[];
-  contactTitle: string;
+  solutionsTitle: string;
+  solutionsLinks: FooterLink[];
+  companyTitle: string;
+  companyLinks: FooterLink[];
   quickMessageTitle: string;
   copyright: string;
+  sinceLine: string;
 }
 
 const FOOTER_DEFAULTS: FooterColumns = {
-  usefulLinksTitle: "USEFUL LINKS",
-  usefulLinks: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Blog", href: "/blog" },
-    { label: "Case Studies", href: "/case-studies" },
-    { label: "Resources", href: "/resources" },
-    { label: "Careers", href: "/careers" },
+  brandBlurb: "Managed IT for the regulated UK & EU industries we serve, run remotely. We run your IT. You own your IT.",
+  certsLine: "ISO 27001:2022 certified · GDPR-aligned · SOC 2 in progress",
+  poweredByLine: "Powered by Z360.",
+  industriesTitle: "INDUSTRIES",
+  industriesLinks: [
+    { label: "Accountants", href: "/industries/accountants" },
+    { label: "Law firms", href: "/industries/law-firms" },
+    { label: "Financial services", href: "/industries/financial-services" },
   ],
   servicesTitle: "SERVICES",
   serviceLinks: [
-    { label: "Strategy & Planning", href: "/services/strategy-planning" },
-    { label: "Performance Marketing", href: "/services/performance-marketing" },
-    { label: "SEO & Organic Growth", href: "/services/seo-organic-growth" },
-    { label: "CRM & Marketing Automation", href: "/services/crm-marketing-automation" },
-    { label: "Content Marketing", href: "/services/content-marketing" },
-    { label: "Social Media Management", href: "/services/social-media-management" },
-    { label: "Creative & Branding", href: "/services/creative-branding" },
-    { label: "Outreach & Demand Gen", href: "/services/outreach-demand-generation" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Managed IT", href: "/services" },
+    { label: "Secure by Default", href: "/services" },
+    { label: "Always Audit-Ready", href: "/services" },
+    { label: "Transition & Exit", href: "/services/it-transition-exit" },
   ],
-  contactTitle: "CONTACT",
+  solutionsTitle: "SOLUTIONS",
+  solutionsLinks: [
+    { label: "Small Office", href: "/small-office" },
+    { label: "Cyber Insurance", href: "/cyber-insurance-readiness" },
+    { label: "Cyber Essentials", href: "/cyber-essentials-readiness" },
+    { label: "Powered by Z360", href: "/z360" },
+  ],
+  companyTitle: "COMPANY",
+  companyLinks: [
+    { label: "About", href: "/about" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Contact", href: "/contact" },
+    { label: "Legal & Privacy", href: "/privacy-policy" },
+  ],
   quickMessageTitle: "QUICK MESSAGE",
-  copyright: "Copyright © {year} CWP Marketing. All Rights Reserved.",
+  copyright: "© {year} Infodot Technologies Pvt Ltd · Bangalore, India — serving UK & EU remotely.",
+  sinceLine: "Since 1996 · infodot.co.uk",
 };
 
 export const Footer = () => {
@@ -75,11 +88,20 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-          <Link to="/" className="flex items-center mb-4 group">
-            <img src={logo} alt="CWP Marketing agency logo" className="w-10 h-10 object-contain rounded-[5%] group-hover:scale-110 transition-transform" />
-          </Link>
-            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              {settings.company.description || "CWP MARKETING STRATEGY & GROWTH CO LTD/PRIVATED LIMITED - GXR-2024 (NOT REGISTERED)"}
+            <Link to="/" className="flex items-center mb-4 group">
+              <span className="text-2xl font-bold tracking-tight">
+                <span className="text-primary">i</span>nfodot
+              </span>
+              <span className="ml-1 text-[10px] font-semibold text-muted-foreground align-super">UK</span>
+            </Link>
+            <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+              {settings.company.description || f.brandBlurb || FOOTER_DEFAULTS.brandBlurb}
+            </p>
+            <p className="text-xs text-muted-foreground mb-2 leading-relaxed">
+              {f.certsLine || FOOTER_DEFAULTS.certsLine}
+            </p>
+            <p className="text-xs font-semibold text-primary mb-6">
+              {f.poweredByLine || FOOTER_DEFAULTS.poweredByLine}
             </p>
             {socialLinks.length > 0 && (
               <div className="flex gap-3">
@@ -99,11 +121,11 @@ export const Footer = () => {
             )}
           </div>
 
-          {/* Useful Links */}
+          {/* Industries */}
           <div>
-            <h4 className="font-bold mb-6 text-primary">{f.usefulLinksTitle}</h4>
+            <h4 className="font-bold mb-6 text-primary">{f.industriesTitle || FOOTER_DEFAULTS.industriesTitle}</h4>
             <ul className="space-y-3">
-              {(f.usefulLinks?.length ? f.usefulLinks : FOOTER_DEFAULTS.usefulLinks).map((link) => (
+              {(f.industriesLinks?.length ? f.industriesLinks : FOOTER_DEFAULTS.industriesLinks).map((link) => (
                 <li key={link.href + link.label}>
                   <Link
                     to={link.href}
@@ -118,7 +140,7 @@ export const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-bold mb-6 text-primary">{f.servicesTitle}</h4>
+            <h4 className="font-bold mb-6 text-primary">{f.servicesTitle || FOOTER_DEFAULTS.servicesTitle}</h4>
             <ul className="space-y-3">
               {(f.serviceLinks?.length ? f.serviceLinks : FOOTER_DEFAULTS.serviceLinks).map((link) => (
                 <li key={link.href + link.label}>
@@ -133,9 +155,45 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Solutions */}
+          <div>
+            <h4 className="font-bold mb-6 text-primary">{f.solutionsTitle || FOOTER_DEFAULTS.solutionsTitle}</h4>
+            <ul className="space-y-3">
+              {(f.solutionsLinks?.length ? f.solutionsLinks : FOOTER_DEFAULTS.solutionsLinks).map((link) => (
+                <li key={link.href + link.label}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="font-bold mb-6 text-primary">{f.companyTitle || FOOTER_DEFAULTS.companyTitle}</h4>
+            <ul className="space-y-3 mb-8">
+              {(f.companyLinks?.length ? f.companyLinks : FOOTER_DEFAULTS.companyLinks).map((link) => (
+                <li key={link.href + link.label}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 mt-12">
           {/* Contact Info */}
           <div>
-            <h4 className="font-bold mb-6 text-primary">{f.contactTitle}</h4>
+            <h4 className="font-bold mb-6 text-primary">CONTACT</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 group">
                 <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -181,7 +239,7 @@ export const Footer = () => {
 
           {/* Quick Contact Form */}
           <div>
-            <h4 className="font-bold mb-6 text-primary">{f.quickMessageTitle}</h4>
+            <h4 className="font-bold mb-6 text-primary">{f.quickMessageTitle || FOOTER_DEFAULTS.quickMessageTitle}</h4>
             <FooterContactForm />
           </div>
         </div>
@@ -192,14 +250,9 @@ export const Footer = () => {
             <p className="text-sm text-muted-foreground text-center md:text-left">
               {(f.copyright || FOOTER_DEFAULTS.copyright).replace("{year}", String(new Date().getFullYear()))}
             </p>
-            <div className="flex gap-6">
-              <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/careers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Careers
-              </Link>
-            </div>
+            <p className="text-sm text-muted-foreground text-center md:text-right">
+              {f.sinceLine || FOOTER_DEFAULTS.sinceLine}
+            </p>
           </div>
         </div>
       </div>

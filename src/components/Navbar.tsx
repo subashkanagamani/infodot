@@ -5,21 +5,20 @@ import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
 import { SearchDialog } from "@/components/SearchDialog";
 import { useSection } from "@/hooks/usePageContent";
-import logo from "@/assets/logo.png";
 
 interface NavItem { label: string; href: string }
 interface NavContent { items: NavItem[]; ctaLabel: string; ctaHref: string }
 
 const NAV_DEFAULTS: NavContent = {
   items: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
+    { label: "Industries", href: "/industries" },
+    { label: "Powered by Z360", href: "/z360" },
+    { label: "Small Office", href: "/small-office" },
+    { label: "How It Works", href: "/how-it-works" },
+    { label: "Pricing", href: "/pricing" },
   ],
-  ctaLabel: "Contact Us",
+  ctaLabel: "Talk to Us",
   ctaHref: "/contact",
 };
 
@@ -32,7 +31,10 @@ export const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center group cursor-pointer">
-            <img src={logo} alt="CWP Marketing agency logo" className="w-10 h-10 object-contain rounded-[5%] group-hover:scale-110 transition-transform duration-300" />
+            <span className="text-2xl font-bold tracking-tight">
+              <span className="text-primary">i</span>nfodot
+            </span>
+            <span className="ml-1 text-[10px] font-semibold text-muted-foreground align-super">UK</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -49,7 +51,7 @@ export const Navbar = () => {
               <Search className="h-5 w-5" />
             </Button>
             <Button className="hidden md:inline-flex" asChild>
-              <Link to={nav.ctaHref || "/contact"}>{nav.ctaLabel || "Contact Us"}</Link>
+              <Link to={nav.ctaHref || "/contact"}>{nav.ctaLabel || "Talk to Us"}</Link>
             </Button>
             <MobileMenu />
           </div>

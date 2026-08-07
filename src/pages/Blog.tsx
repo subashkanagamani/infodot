@@ -100,14 +100,14 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Marketing Blog - CWP Marketing Insights & Strategies"
+        title="Marketing Blog - Infodot UK Insights & Strategies"
         description="Expert marketing advice, case studies, and proven tactics to help your business grow faster. Learn SEO, social media, content marketing and more."
         keywords="marketing blog, SEO tips, social media marketing, content strategy, digital marketing insights"
       />
       <JsonLd 
         schema={{
           type: "Organization",
-          name: "CWP Marketing",
+          name: "Infodot UK",
           url: window.location.origin,
           description: "Strategic marketing and growth consulting agency",
           logo: `${window.location.origin}/og-image.png`,

@@ -1,33 +1,27 @@
-# CWP Marketing (Consult With Professionals)
+# Infodot UK
 
-> CWP Marketing is a strategic marketing and growth consulting agency based in Chennai, India. We help startups, D2C brands, and enterprises scale through performance marketing, SEO, content, creative branding, CRM automation, and demand generation.
+> Infodot UK is a managed IT provider for the regulated UK industries we serve — accountancy, legal and financial services. We run IT end to end and remotely from an ISO 27001-certified team, with security built in by default and the evidence auditors, insurers and boards ask for produced as a matter of course. We run your IT. You own your IT.
 
-Website: https://consultwithprofessionals.com
-Contact: info@consultwithprofessionals.com
-Phone: +91-9962834800
-Location: SIDCO Electronics Complex, Guindy Industrial Estate, Chennai, Tamil Nadu 600032, India
+Website: https://infodot.co.uk
+Contact: hello@infodot.uk
+Entity: Infodot Technologies Pvt Ltd, Bangalore, India — serving UK & EU remotely. Operating since 1996.
 
 ## Core Pages
-- [Home](https://consultwithprofessionals.com/): Overview of CWP Marketing services and value proposition.
-- [About](https://consultwithprofessionals.com/about): Our story, mission, team, and approach.
-- [Services](https://consultwithprofessionals.com/services): All marketing service offerings.
-- [Portfolio](https://consultwithprofessionals.com/portfolio): Client work and brand showcase.
-- [Case Studies](https://consultwithprofessionals.com/case-studies): Detailed growth case studies and results.
-- [Pricing](https://consultwithprofessionals.com/pricing): Engagement models and pricing tiers.
-- [Blog](https://consultwithprofessionals.com/blog): Marketing insights, guides, and thought leadership.
-- [Resources](https://consultwithprofessionals.com/resources): Downloadable templates and tools.
-- [Careers](https://consultwithprofessionals.com/careers): Open roles at CWP.
-- [Contact](https://consultwithprofessionals.com/contact): Get in touch.
+- [Home](https://infodot.co.uk/): Managed, secure by default, always audit-ready IT.
+- [About](https://infodot.co.uk/about): Our story, delivery model and ownership/exit promise.
+- [Services](https://infodot.co.uk/services): Every capability, independently buyable.
+- [Pricing](https://infodot.co.uk/pricing): Engagement models — Co-Managed, Fully Managed, Fully Remote.
+- [Contact](https://infodot.co.uk/contact): Book a 30-minute discovery call.
 
 ## Services
-- [Strategy & Planning](https://consultwithprofessionals.com/services/strategy-planning)
-- [CRM & Marketing Automation](https://consultwithprofessionals.com/services/crm-marketing-automation)
-- [Outreach & Demand Generation](https://consultwithprofessionals.com/services/outreach-demand-generation)
-- [Performance Marketing](https://consultwithprofessionals.com/services/performance-marketing)
-- [SEO & Organic Growth](https://consultwithprofessionals.com/services/seo-organic-growth)
-- [Creative & Full Branding](https://consultwithprofessionals.com/services/creative-branding)
-- [Content Marketing & Thought Leadership](https://consultwithprofessionals.com/services/content-marketing)
-- [Social Media Management](https://consultwithprofessionals.com/services/social-media-management)
+- [Managed IT](https://infodot.co.uk/services/managed-it)
+- [Secure by Default](https://infodot.co.uk/services/secure-by-default)
+- [Backup & Disaster Recovery](https://infodot.co.uk/services/backup-disaster-recovery)
+- [Always Audit-Ready](https://infodot.co.uk/services/always-audit-ready)
+- [Cyber Essentials Readiness](https://infodot.co.uk/services/cyber-essentials-readiness)
+- [Cyber Insurance Readiness](https://infodot.co.uk/services/cyber-insurance-readiness)
+- [IT Transition & Exit](https://infodot.co.uk/services/it-transition-exit)
+- [Co-Managed IT](https://infodot.co.uk/services/co-managed-it)
 
 ## Policies
-- [Privacy Policy](https://consultwithprofessionals.com/privacy-policy)
+- [Legal & Privacy](https://infodot.co.uk/privacy-policy)

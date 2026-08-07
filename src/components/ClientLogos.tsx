@@ -1,3 +1,5 @@
+import { Landmark, Scale, BadgePoundSterling, Rocket, Building2, Banknote } from "lucide-react";
+
 import aadicuraLogo from "@/assets/logos/aadicura.png";
 import zeoniusLogo from "@/assets/logos/zeonius.png";
 import cognisLogo from "@/assets/logos/cognis.png";
@@ -29,6 +31,10 @@ import bokaapLogo from "@/assets/logos/bokaap.svg";
 import revassureLogo from "@/assets/logos/revassure.png";
 import qblueLogo from "@/assets/logos/qblue.webp";
 
+// NOTE: These logo rows are retained only for backwards compatibility with
+// other pages (e.g. Enquiry) that still import them. They are no longer
+// rendered by the ClientLogos section itself, which now shows the
+// industries we serve instead of third-party marketing-client logos.
 export const row1Logos = [
   { src: zeoniusLogo, alt: "Zeonius IT Services logo" },
   { src: aadicuraLogo, alt: "Aadicura logo" },
@@ -68,73 +74,42 @@ export const row3Logos = [
   { src: qblueLogo, alt: "QBlue logo", dark: true },
 ];
 
+export const industries = [
+  { icon: Landmark, label: "Accountants" },
+  { icon: Scale, label: "Law firms" },
+  { icon: Banknote, label: "Financial services" },
+  { icon: BadgePoundSterling, label: "Fintech" },
+  { icon: Building2, label: "Professional services" },
+  { icon: Rocket, label: "Funded startups" },
+];
 
 export const ClientLogos = () => {
-  // Mark logos that are white/light-on-transparent with `dark: true` to render on a dark card
-  const cardClass = (dark?: boolean) =>
-    `flex-shrink-0 flex items-center justify-center h-14 md:h-16 px-4 md:px-5 py-2.5 md:py-3 rounded-xl shadow-sm border ${
-      dark
-        ? "bg-slate-900 border-slate-800"
-        : "bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700"
-    }`;
-
-  const edgeMask =
-    "[mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]";
-
-  const renderRow = (logos: typeof row1Logos, direction: "rtl" | "ltr", key: string, rowLabel: string) => (
-    <div
-      className={`relative overflow-hidden py-4 md:py-6 group/marquee ${edgeMask}`}
-      role="group"
-      aria-label={rowLabel}
-    >
-      <ul
-        className={`flex w-max gap-6 sm:gap-10 md:gap-16 items-center list-none m-0 p-0 ${
-          direction === "rtl" ? "animate-scroll-rtl" : "animate-scroll-ltr"
-        }`}
-      >
-        {[...logos, ...logos].map((logo, index) => {
-          const isClone = index >= logos.length;
-          return (
-            <li
-              key={`${key}-${index}`}
-              className={cardClass(logo.dark)}
-              aria-hidden={isClone || undefined}
-            >
-              <img
-                src={logo.src}
-                alt={isClone ? "" : logo.alt}
-                aria-label={isClone ? undefined : logo.alt}
-                role="img"
-                loading="lazy"
-                decoding="async"
-                className="h-8 md:h-10 lg:h-12 w-auto max-w-[110px] md:max-w-[140px] object-contain"
-              />
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-
   return (
-    <section
-      className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 overflow-hidden"
-      aria-labelledby="client-logos-heading"
-    >
+    <section className="section-spacing overflow-hidden" aria-labelledby="client-logos-heading">
       <div className="mb-10 md:mb-12 text-center px-4">
-        <h3 id="client-logos-heading" className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-100">
-          Trusted by 100+ Brands
+        <h3 id="client-logos-heading" className="text-2xl md:text-3xl font-bold">
+          Built for regulated UK industries
         </h3>
-        <p className="text-slate-500 dark:text-slate-400 mt-2">Leading companies trust us with their growth</p>
+        <p className="text-muted-foreground mt-2">
+          25–300 user businesses that need security, evidence and accountability built in
+        </p>
       </div>
 
-      <div className="space-y-2 md:space-y-3">
-        {renderRow(row1Logos, "rtl", "r1", "Client logos, row 1")}
-        {renderRow(row2Logos, "ltr", "r2", "Client logos, row 2")}
-        {renderRow(row3Logos, "rtl", "r3", "Client logos, row 3")}
+      <div className="container-custom">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+          {industries.map((industry, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center gap-3 h-28 md:h-32 px-4 py-4 rounded-xl border bg-card border-border/60 hover:border-primary/50 transition-colors"
+            >
+              <industry.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
+              <span className="text-sm md:text-base font-medium text-center">
+                {industry.label}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
-
-

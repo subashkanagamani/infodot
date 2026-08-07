@@ -220,10 +220,10 @@ export default function CustomPage() {
   return (
     <>
       <SEOHead
-        title={`${page.title} | CWP Marketing`}
+        title={`${page.title} | Infodot UK`}
         description={page.meta_description || page.title}
         ogImage={page.og_image || undefined}
-        canonicalUrl={`https://consultwithprofessionals.com/${page.slug}`}
+        canonicalUrl={`https://infodot.co.uk/${page.slug}`}
       />
       <Navbar />
       <main className="pt-20">

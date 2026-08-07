@@ -149,12 +149,12 @@ export default function BlogPost() {
       <BackToTop />
       
       <SEOHead 
-        title={post.title.length > 50 ? post.title : `${post.title} | CWP Blog`}
-        description={post.excerpt || `Read ${post.title} on the CWP Marketing blog.`}
+        title={post.title.length > 50 ? post.title : `${post.title} | Infodot Blog`}
+        description={post.excerpt || `Read ${post.title} on the Infodot UK blog.`}
         keywords={post.tags?.join(", ")}
         ogType="article"
         ogImage={post.cover_image || undefined}
-        canonicalUrl={`https://consultwithprofessionals.com/blog/${post.slug || id}`}
+        canonicalUrl={`https://infodot.co.uk/blog/${post.slug || id}`}
       />
       
       <JsonLd 
@@ -163,7 +163,7 @@ export default function BlogPost() {
           headline: post.title,
           description: post.excerpt || "",
           image: post.cover_image || undefined,
-          author: post.author_name || "CWP Team",
+          author: post.author_name || "Infodot Team",
           datePublished: post.created_at || new Date().toISOString()
         }}
       />
@@ -210,7 +210,7 @@ export default function BlogPost() {
                   </div>
                 )}
                 <div>
-                  <p className="font-semibold">{post.author_name || "CWP Team"}</p>
+                  <p className="font-semibold">{post.author_name || "Infodot Team"}</p>
                   <p className="text-sm text-muted-foreground">{formatDate(post.created_at)}</p>
                 </div>
               </div>

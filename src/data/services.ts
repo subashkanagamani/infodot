@@ -13,172 +13,213 @@ export interface ServiceItem {
 
 export const servicesData: ServiceItem[] = [
   {
-    slug: "strategy-planning",
+    slug: "managed-it",
     icon: "Target",
-    title: "Strategy & Planning",
+    title: "Managed IT / Helpdesk & IT Operations",
     shortDescription:
-      "Build a data-backed marketing strategy that gets your brand exactly where you want to be.",
+      "One team runs your whole IT stack — helpdesk, M365/Workspace, devices and licences — so nothing falls through the cracks.",
     description:
-      "Make your D2C brand a strategic powerhouse with a growth roadmap built on data, research, and proven frameworks. We turn ambitious goals into measurable, executable plans.",
-    features: ["Market Analysis", "Competitor Research", "Growth Roadmap", "KPI Framework"],
-    benefits: [
-      "Clear go-to-market plan tailored to your stage",
-      "Quarterly roadmaps with measurable KPIs",
-      "Competitor benchmarking and positioning",
-      "Budget allocation aligned to ROI goals",
+      "Named engineers, a 30-minute first response and one tracked channel take the day-to-day off your plate. We run RMM and patch management around the clock across Windows and Mac, manage your Microsoft 365 or Google Workspace tenant end to end, and handle the full device lifecycle from enrolment and encryption to remote wipe and refresh. Joiners, movers and leavers are handled cleanly and on time, and we keep a live register of assets, licences, subscriptions, domains and renewals — so your IT estate is never a mystery.",
+    features: [
+      "Helpdesk with named engineers & 30-min first response",
+      "24/7 RMM & patch management (Windows and Mac)",
+      "Microsoft 365 & Google Workspace administration",
+      "Device lifecycle & Joiners/Movers/Leavers (JML)",
+      "Asset, licence, subscription & domain register",
     ],
-    metaTitle: "Marketing Strategy & Planning Services | CWP Marketing",
+    benefits: [
+      "One accountable team instead of ping-ponging between vendors",
+      "Predictable response times and a single tracked channel",
+      "Devices, tenants and licences kept current automatically",
+      "Clean joiner/leaver process reduces security and access risk",
+    ],
+    metaTitle: "Managed IT & Helpdesk Support | Infodot UK",
     metaDescription:
-      "Data-driven marketing strategy, competitor research, and growth roadmaps for scaling D2C brands, startups, and enterprises.",
+      "Infodot UK runs your helpdesk, Microsoft 365/Google Workspace, device lifecycle and IT asset management — delivered remotely from an ISO 27001-certified team.",
     keywords:
-      "marketing strategy, growth strategy, marketing planning, GTM strategy, competitor research",
+      "managed IT, IT helpdesk, IT operations, Microsoft 365 management, device lifecycle, JML, IT asset management",
   },
   {
-    slug: "crm-marketing-automation",
+    slug: "secure-by-default",
     icon: "Megaphone",
-    title: "CRM & Marketing Automation",
+    title: "Secure by Default",
     shortDescription:
-      "Generate more qualified leads with optimized email, SMS, and lifecycle automation.",
+      "MFA, EDR, hardening and email security — standard from day one, not a premium add-on.",
     description:
-      "Complete email marketing setup, lifecycle automation, and CRM workflows that nurture leads and accelerate conversions across every stage of the funnel.",
-    features: ["Email Campaigns", "SMS Marketing", "Automation Flows", "Segmentation"],
-    benefits: [
-      "Increase repeat purchases and LTV",
-      "Recover abandoned carts automatically",
-      "Personalized journeys by segment",
-      "Integrated CRM + ESP setup",
+      "Security is the gap clients name most, so we close it by default. Managed EDR gives you engineers who contain threats, not just alert on them. IT hardening applies MFA, conditional access, CIS baselines and encryption across your estate. Email security stops phishing before it lands with SPF/DKIM/DMARC, safe-link and attachment scanning, and identity & access management enforces MFA everywhere with role-based and privileged access control.",
+    features: [
+      "Managed EDR with active containment, not just alerts",
+      "IT hardening: MFA, conditional access, CIS baselines, encryption",
+      "Email security: anti-phishing, SPF/DKIM/DMARC, safe links",
+      "Identity & access: MFA everywhere, role-based & privileged access",
     ],
-    metaTitle: "CRM & Marketing Automation Services | CWP Marketing",
+    benefits: [
+      "Coalition data shows 82% of denied cyber claims lacked full MFA — we make sure yours doesn't",
+      "Security built in from the outset, not bolted on later",
+      "Reduced attack surface across endpoints, email and identity",
+      "Consistent baseline across every device and user",
+    ],
+    metaTitle: "Secure by Default IT Security | Infodot UK",
     metaDescription:
-      "Email marketing, SMS automation, and CRM workflows that nurture leads and drive repeat revenue.",
+      "Managed EDR, IT hardening, email security and identity & access management, run as standard by Infodot UK — a managed IT provider for regulated UK industries.",
     keywords:
-      "marketing automation, CRM, email marketing, lifecycle marketing, klaviyo, hubspot",
+      "managed EDR, IT hardening, email security, identity and access management, MFA, conditional access",
   },
   {
-    slug: "outreach-demand-generation",
+    slug: "backup-disaster-recovery",
     icon: "LineChart",
-    title: "Outreach & Demand Generation",
+    title: "Backup & Disaster Recovery",
     shortDescription:
-      "Multichannel outreach that powers up qualified pipeline and lead generation.",
+      "Monitored, restore-tested, immutable backups — plus a tested DR plan to get the business back.",
     description:
-      "Targeted cold outreach, LinkedIn automation, and nurture sequences designed to build a steady stream of sales-qualified leads for your business.",
-    features: ["Cold Outreach", "LinkedIn Automation", "Lead Nurturing", "Pipeline Building"],
-    benefits: [
-      "Predictable inbound and outbound pipeline",
-      "Personalized multichannel sequences",
-      "Sales-ready meetings on your calendar",
-      "Higher reply and conversion rates",
+      "Backups only count if they restore. We run monitored, restore-tested and immutable backups across your critical systems and data, and pair them with a tested disaster recovery plan built around clear recovery time and recovery point objectives (RTO/RPO), so you know exactly how fast — and how completely — the business comes back after an incident.",
+    features: [
+      "Monitored, immutable backups across critical systems",
+      "Scheduled restore testing, not just backup verification",
+      "Documented DR plan with defined RTO/RPO",
+      "Coverage for M365/Workspace, servers and endpoints",
     ],
-    metaTitle: "B2B Outreach & Demand Generation Services | CWP Marketing",
+    benefits: [
+      "Confidence that backups will actually restore when needed",
+      "Clear recovery targets agreed in advance, not discovered mid-incident",
+      "Immutability protects against ransomware and deletion",
+      "A tested-backup control that insurers and auditors ask about",
+    ],
+    metaTitle: "Backup & Disaster Recovery Services | Infodot UK",
     metaDescription:
-      "Cold outreach, LinkedIn automation, and demand generation to build qualified B2B pipeline.",
+      "Monitored, restore-tested, immutable backups and a tested DR plan (RTO/RPO) from Infodot UK, run remotely for regulated UK businesses.",
     keywords:
-      "demand generation, B2B outreach, LinkedIn outreach, lead generation, pipeline marketing",
+      "backup and disaster recovery, immutable backup, restore testing, RTO RPO, business continuity",
   },
   {
-    slug: "performance-marketing",
+    slug: "always-audit-ready",
     icon: "TrendingUp",
-    title: "Performance Marketing",
+    title: "Always Audit-Ready",
     shortDescription:
-      "Make every ad rupee work harder with full-funnel performance marketing.",
+      "Continuous controls and evidence, so audits and renewals never mean a scramble.",
     description:
-      "10x your brand with comprehensive paid ad strategies across Meta, Google, and programmatic — optimized for ROAS, CAC, and scalable growth.",
-    features: ["Meta Ads", "Google Ads", "Retargeting", "Analytics"],
-    benefits: [
-      "Lower CAC and improved ROAS",
-      "Creative testing frameworks",
-      "Full-funnel attribution",
-      "Weekly optimization and reporting",
+      "The controls we run produce the evidence auditors, insurers and boards ask for — packaged monthly and kept current, not assembled the week before an audit. We run continuous controls and evidence collection with drift alerting, prepare ISO 27001 and SOC 2 evidence (certification delivered via accredited partners), and handle the operational side of GDPR — DPA, sub-processor register, DSAR and breach process — so compliance is a by-product of how we run IT, not a separate project.",
+    features: [
+      "Continuous controls monitoring with drift alerting",
+      "Monthly evidence packs, always current",
+      "ISO 27001 / SOC 2 evidence (certification via accredited partners)",
+      "GDPR operations: DPA, sub-processor register, DSAR, breach process",
     ],
-    metaTitle: "Performance Marketing Agency | Meta & Google Ads | CWP",
+    benefits: [
+      "No pre-audit scramble — evidence is ready every month",
+      "Readiness handled in-house; certification via accredited bodies",
+      "Reduces risk of drift between what's attested and what's running",
+      "Gives boards and clients confidence in your compliance posture",
+    ],
+    metaTitle: "Always Audit-Ready: Continuous Compliance Evidence | Infodot UK",
     metaDescription:
-      "Performance marketing services for Meta Ads, Google Ads, retargeting, and analytics. Scale with measurable ROAS.",
+      "Infodot UK keeps continuous controls and evidence for ISO 27001, SOC 2 and GDPR — so accountancy, legal and financial services firms are always audit-ready.",
     keywords:
-      "performance marketing, paid ads, meta ads, google ads, ppc agency, ROAS",
+      "continuous compliance, ISO 27001 evidence, SOC 2 evidence, GDPR compliance, audit ready, controls monitoring",
   },
   {
-    slug: "seo-organic-growth",
+    slug: "cyber-essentials-readiness",
     icon: "Users",
-    title: "SEO & Organic Growth",
+    title: "Cyber Essentials Readiness",
     shortDescription:
-      "Dominate Google search with technical SEO and a content strategy that ranks.",
+      "All five Cyber Essentials controls implemented to v3.3 and certified via an accredited body.",
     description:
-      "Technical SEO, on-page optimization, link building, and content strategy that drive sustainable, compounding organic traffic and qualified leads.",
-    features: ["Technical SEO", "Content Strategy", "Link Building", "Local SEO"],
-    benefits: [
-      "Higher rankings for high-intent keywords",
-      "Site-wide technical fixes",
-      "Authority-building backlinks",
-      "Local SEO for Google Business Profile",
+      "We implement and maintain all five Cyber Essentials controls — firewalls, secure configuration, access control, malware protection and patch management — to the current v3.3 standard, then take you through certification via an accredited certification body. Because we run the underlying IT ourselves, the controls stay true between assessments, not just on certification day.",
+    features: [
+      "All five Cyber Essentials controls, implemented to v3.3",
+      "Certification managed via an accredited body",
+      "Controls maintained continuously between assessments",
+      "Applicable to Cyber Essentials and Cyber Essentials Plus",
     ],
-    metaTitle: "SEO Services & Organic Growth Agency | CWP Marketing",
+    benefits: [
+      "Meets a common client and tender requirement without extra admin",
+      "Controls are lived day to day, not just demonstrated at assessment",
+      "Straightforward path to certification via accredited partners",
+      "Builds the foundation for wider security and insurance readiness",
+    ],
+    metaTitle: "Cyber Essentials Readiness & Certification | Infodot UK",
     metaDescription:
-      "Technical SEO, content strategy, link building, and local SEO services to grow organic traffic and rankings.",
+      "Infodot UK implements all five Cyber Essentials controls to v3.3 and manages certification via an accredited body — for regulated UK businesses.",
     keywords:
-      "SEO services, organic growth, technical SEO, link building, local SEO, content strategy",
+      "Cyber Essentials, Cyber Essentials Plus, v3.3, cyber essentials certification, accredited certification body",
   },
   {
-    slug: "creative-branding",
+    slug: "cyber-insurance-readiness",
     icon: "Palette",
-    title: "Creative & Full Branding",
+    title: "Cyber Insurance Readiness",
     shortDescription:
-      "Stand out with a full-spectrum brand identity, design system, and UX.",
+      "Keep the controls insurers ask about enforced and evidenced all year, not just at renewal.",
     description:
-      "Brand identity, logo design, website design, and UI/UX that transform your online presence into a growth-centric business and create lasting brand equity.",
-    features: ["Brand Identity", "Logo Design", "Website Design", "UI/UX"],
-    benefits: [
-      "Cohesive brand identity across channels",
-      "Conversion-focused web design",
-      "Design systems built to scale",
-      "UX that turns visitors into customers",
+      "Cyber cover is now underwritten on controls you attest to and must maintain continuously. When a claim is investigated, a gap between what you attested and what was actually running is a common reason cover is disputed — even when the gap didn't cause the incident. We keep the controls insurers ask about — MFA everywhere, EDR on every endpoint, tested backups, patching — enforced and evidenced through the year, with drift alerts if a control slips, and a renewal-ready evidence pack, so your questionnaire answers are true and provable when it matters.",
+    features: [
+      "MFA, EDR, tested backups and patching kept enforced year-round",
+      "Drift alerting if a control slips between renewals",
+      "Renewal-ready evidence pack for the insurer questionnaire",
+      "Continuous alignment between attested and actual controls",
     ],
-    metaTitle: "Branding & Creative Design Agency | CWP Marketing",
+    benefits: [
+      "Coalition data shows 82% of denied claims lacked full MFA — closing that gap protects your cover",
+      "NAIC data shows only around 1 in 4 closed cyber claims resulted in a payout — accurate attestations matter",
+      "Reduces the risk of a disputed claim over a control gap",
+      "Confidence at renewal time instead of a last-minute scramble",
+    ],
+    metaTitle: "Cyber Insurance Readiness Services | Infodot UK",
     metaDescription:
-      "Brand identity, logo design, website design, and UI/UX services to build a memorable, conversion-focused brand.",
+      "Infodot UK keeps the controls cyber insurers require — MFA, EDR, backups, patching — enforced and evidenced year-round, so renewal answers stay true.",
     keywords:
-      "branding agency, brand identity, logo design, website design, UI UX agency",
+      "cyber insurance readiness, cyber insurance renewal, insurer questionnaire, MFA, EDR, cyber cover",
   },
   {
-    slug: "content-marketing",
+    slug: "it-transition-exit",
     icon: "FileText",
-    title: "Content Marketing & Thought Leadership",
+    title: "IT Transition & Exit",
     shortDescription:
-      "Establish authority with strategic content and thought leadership programs.",
+      "A clean switch from your incumbent provider, with discovery, migration and a full exit pack.",
     description:
-      "Blogs, whitepapers, case studies, and newsletters that build authority, drive organic growth, and position your founders as category leaders.",
-    features: ["Blog Writing", "Whitepapers", "Case Studies", "Newsletters"],
-    benefits: [
-      "Authority content that earns backlinks",
-      "Founder-led thought leadership",
-      "Conversion-ready case studies",
-      "Editorial calendars aligned to SEO",
+      "Switching IT provider shouldn't mean lost knowledge or a rocky handover. We run a structured Discovery / Phase 0 to map your assets, complete reverse knowledge transfer and document everything, then manage email migration (tenant-to-tenant, or Exchange/Google to Microsoft 365) and domain migration cleanly into your control — all fixed-fee, with no data lost.",
+    features: [
+      "Discovery / Phase 0: asset discovery, reverse-KT, documentation",
+      "Email migration: tenant-to-tenant or to Microsoft 365, fixed-fee",
+      "Domain & DNS migration into your control",
+      "Full exit pack and clean handover from your incumbent",
     ],
-    metaTitle: "Content Marketing & Thought Leadership Services | CWP",
+    benefits: [
+      "No knowledge lost in the switch from your current provider",
+      "Fixed-fee migrations with no data loss",
+      "Domain and DNS moved cleanly into your own control",
+      "A documented, low-drama transition project",
+    ],
+    metaTitle: "IT Transition, Exit & Migration Services | Infodot UK",
     metaDescription:
-      "Strategic content marketing, blog writing, whitepapers, and thought leadership to build authority and drive organic growth.",
+      "Infodot UK manages IT provider transitions, Phase 0 discovery, and email and domain migration — a clean, fixed-fee switch with no data lost.",
     keywords:
-      "content marketing, thought leadership, blog writing, whitepapers, case studies, newsletter",
+      "IT transition, IT provider switch, phase 0 discovery, email migration, domain migration, reverse knowledge transfer",
   },
   {
-    slug: "social-media-management",
+    slug: "co-managed-it",
     icon: "Share2",
-    title: "Social Media Management",
+    title: "Co-Managed IT",
     shortDescription:
-      "Build a strong social presence that engages and converts.",
+      "We run the security and operations layer alongside your in-house team, with a clear who-owns-what matrix.",
     description:
-      "Monthly content calendars, community management, influencer partnerships, and analytics to build a social presence that drives engagement and revenue.",
-    features: ["Content Calendar", "Community Management", "Influencer Marketing", "Analytics"],
-    benefits: [
-      "Consistent, on-brand content",
-      "Active community engagement",
-      "Influencer collaborations that convert",
-      "Performance-led reporting",
+      "Co-Managed IT is the front door for teams who already have IT staff but need the specialist layer they can't build alone — secure-by-default operations, patching discipline and audit evidence. We run that layer alongside your in-house team, with a clear who-owns-what matrix from day one, using your tools or ours. It's designed to land quickly and expand into a fully managed engagement whenever you're ready.",
+    features: [
+      "Runs alongside your existing in-house IT team",
+      "Clear who-owns-what responsibility matrix",
+      "Works with your existing tools, or ours",
+      "Scales into fully managed IT when you're ready",
     ],
-    metaTitle: "Social Media Management Services | CWP Marketing",
+    benefits: [
+      "Adds specialist security and compliance capability without replacing your team",
+      "No rip-and-replace of tools you've already invested in",
+      "Clear boundaries avoid duplicated effort or gaps",
+      "A low-risk way to start working with Infodot UK",
+    ],
+    metaTitle: "Co-Managed IT Services | Infodot UK",
     metaDescription:
-      "Social media management, content calendars, community management, and influencer marketing for growing brands.",
+      "Infodot UK runs the security and operations layer alongside your in-house IT team, with a clear ownership matrix — your tools or ours.",
     keywords:
-      "social media management, social media agency, instagram marketing, influencer marketing",
+      "co-managed IT, IT support for in-house teams, shared IT support, managed security services",
   },
 ];
 

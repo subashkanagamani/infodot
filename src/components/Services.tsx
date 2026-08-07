@@ -157,14 +157,17 @@ export const Services = () => {
 
       <div className="container-custom relative">
         <div className="text-center mb-16 animate-slide-up">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+            What we do
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="text-gradient-primary relative">
-              Services
+            Every capability, <span className="text-gradient-primary relative">
+              independently buyable.
               <span className="absolute -inset-2 bg-primary/10 blur-2xl -z-10" />
             </span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            We bring a unique blend of strategic marketing and creative services to help your brand stand out and scale effectively in today's competitive landscape.
+            Start with one function as a front door; expand into a managed engagement when you're ready. Your tools or ours.
           </p>
         </div>
 

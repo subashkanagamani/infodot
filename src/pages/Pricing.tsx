@@ -13,55 +13,47 @@ export default function Pricing() {
   const { settings } = useSiteSettings();
   const plans = [
     {
-      name: "Starter",
-      price: "$2,500",
-      period: "/month",
-      description: "Perfect for small businesses looking to establish their digital presence",
+      name: "Co-Managed IT",
+      price: "Custom quote",
+      period: "",
+      description: "For firms with an internal IT team that needs a layer of security-by-default discipline, patching and audit evidence alongside them.",
       features: [
-        "Social Media Management (2 platforms)",
-        "Content Creation (8 posts/month)",
-        "Basic SEO Optimization",
-        "Monthly Performance Report",
-        "Email Support",
-        "Brand Guidelines Setup"
+        "Works alongside your existing IT team",
+        "MFA, EDR and hardening applied as standard",
+        "Patch management and tested backup",
+        "Audit-ready evidence, packaged monthly",
+        "No rip-and-replace of your existing tools",
+        "UK business-hours desk, delivered remotely"
       ],
       popular: false
     },
     {
-      name: "Growth",
-      price: "$5,500",
-      period: "/month",
-      description: "Ideal for growing businesses ready to scale their marketing efforts",
+      name: "Fully Managed IT",
+      price: "Custom quote",
+      period: "",
+      description: "One team runs your entire IT stack end to end — endpoints, M365/Workspace, patching, backup, security and the desk.",
       features: [
-        "Social Media Management (4 platforms)",
-        "Content Creation (16 posts/month)",
-        "Advanced SEO & Content Marketing",
-        "Paid Advertising Management ($2k ad spend)",
-        "Bi' weekly Performance Reports",
-        "Email & Phone Support",
-        "A/B Testing & Optimization",
-        "Lead Generation Campaigns",
-        "Dedicated Account Manager"
+        "One accountable team for your whole stack",
+        "Secure by default from day one — not a premium tier",
+        "Vendor coordination handled for you",
+        "Audit and insurer-ready evidence, kept current",
+        "ISO 27001:2022 certified delivery team",
+        "Exit pack and reverse KT within 10 working days if you ever leave"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "Custom",
+      name: "Fully Remote",
+      price: "Custom quote",
       period: "",
-      description: "Comprehensive solutions for established businesses seeking maximum growth",
+      description: "For firms that operate entirely remotely and need IT run end to end with no on-site presence required.",
       features: [
-        "Full' Stack Marketing Management",
-        "Unlimited Content Creation",
-        "Enterprise SEO Strategy",
-        "Multi' Channel Paid Advertising",
-        "Weekly Strategy Meetings",
-        "24/7 Priority Support",
-        "Advanced Analytics & BI",
-        "Marketing Automation",
-        "Custom CRM Integration",
-        "Dedicated Marketing Team",
-        "Quarterly Strategy Reviews"
+        "Fully remote delivery from an ISO 27001:2022 team",
+        "Same security-by-default standards as our other models",
+        "Delivered via our Z360 delivery platform",
+        "UK & EU coverage during business hours",
+        "Audit-ready evidence produced as a matter of course",
+        "You always own your accounts, data and documentation"
       ],
       popular: false
     }
@@ -73,8 +65,12 @@ export default function Pricing() {
   ];
 
   const handleBookCall = () => {
-    const calendlyLink = settings.integrations.calendlyLink || "https://calendly.com/narenethiraj";
-    window.open(calendlyLink, "_blank");
+    const calendlyLink = settings.integrations.calendlyLink;
+    if (calendlyLink) {
+      window.open(calendlyLink, "_blank");
+    } else {
+      window.location.href = "/contact";
+    }
   };
 
   return (
@@ -84,9 +80,10 @@ export default function Pricing() {
       <BackToTop />
       
       <SEOHead 
-        title="Pricing - Marketing Plans"
-        description="Choose the perfect marketing plan for your business. Transparent pricing with proven strategies and dedicated support."
-        keywords="marketing pricing, digital marketing plans, marketing packages"
+        title="Pricing — Infodot UK Managed IT Engagement Models"
+        description="Co-Managed IT, Fully Managed IT and Fully Remote engagement models from Infodot UK. Exact quotes within 48 hours of a discovery call — no invented numbers, just the model that fits."
+        keywords="managed IT pricing UK, co-managed IT, fully managed IT, IT support quote, Infodot UK pricing"
+        canonicalUrl="https://infodot.co.uk/pricing"
       />
 
       {/* Hero Section */}
@@ -96,15 +93,15 @@ export default function Pricing() {
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
-              Simple, Transparent Pricing
+              Engagement Models, Not Guesswork
             </h1>
             <p className="text-xl text-muted-foreground">
-              Choose the perfect plan for your business growth. All plans include our proven strategies and dedicated support.
+              Every firm's IT estate is different, so we don't publish invented numbers. Choose the model that fits, book a discovery call, and get an exact quote within 48 hours.
             </p>
           </div>
 
           {/* Pricing Cards */}
-          <h2 className="sr-only">Pricing Plans</h2>
+          <h2 className="sr-only">Engagement Models</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {plans.map((plan, index) => (
               <Card 
@@ -113,14 +110,14 @@ export default function Pricing() {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
+                    Most Common
                   </div>
                 )}
                 
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center gap-1 mb-3">
-                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-3xl font-bold">{plan.price}</span>
                     {plan.period && <span className="text-muted-foreground">{plan.period}</span>}
                   </div>
                   <p className="text-sm text-muted-foreground">{plan.description}</p>
@@ -140,7 +137,7 @@ export default function Pricing() {
                   className="w-full"
                   variant={plan.popular ? "default" : "outline"}
                 >
-                  {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
+                  Book a Discovery Call
                 </Button>
               </Card>
             ))}
@@ -148,12 +145,12 @@ export default function Pricing() {
 
           {/* FAQ Note */}
           <div className="text-center mt-16 p-8 bg-muted/30 rounded-2xl max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Not sure which plan is right for you?</h2>
+            <h2 className="text-2xl font-bold mb-4">Not sure which model fits your firm?</h2>
             <p className="text-muted-foreground mb-6">
-              Book a free strategy call and we'll help you choose the perfect package for your business goals and budget.
+              Book a 30-minute discovery call — no cost, no obligation — and we'll recommend the right engagement model with an exact quote within 48 hours.
             </p>
             <Button size="lg" onClick={handleBookCall}>
-              Schedule Free Consultation
+              Book a Discovery Call
             </Button>
           </div>
         </div>
