@@ -581,6 +581,114 @@ export const servicesData: ServiceItem[] = [
     keywords:
       "domain migration, DNS migration, domain transfer, SPF DKIM DMARC, zero downtime cutover, domain ownership",
   },
+  {
+    slug: "managed-edr",
+    icon: "ShieldAlert",
+    title: "Managed EDR",
+    shortDescription: "Detection and response — with people who act, not just alert.",
+    description:
+      "Endpoint detection and response across every device, with our team triaging, isolating and remediating threats — not just forwarding you an alert. Antivirus tells you something happened; EDR lets someone stop it. The value isn't the tool — it's the team behind it acting fast, and the evidence that every endpoint is actually covered, which is the gap insurers check.",
+    features: [
+      "EDR on every managed endpoint",
+      "24/7 threat detection",
+      "Engineer triage and investigation",
+      "Automated isolation of compromised devices",
+      "Remediation and root-cause analysis",
+      "Agent-health monitoring so coverage doesn't slip",
+    ],
+    benefits: [
+      "Threats contained by people, not just flagged",
+      "Compromised devices isolated automatically",
+      "Root cause found so the same gap doesn't reopen",
+      "Coverage evidenced for insurers and auditors",
+    ],
+    metaTitle: "Managed EDR & 24/7 Threat Response | Infodot UK",
+    metaDescription:
+      "EDR on every endpoint with engineer triage, automated isolation, remediation and agent-health monitoring — managed detection and response from Infodot UK.",
+    keywords:
+      "managed EDR, endpoint detection and response, MDR, threat containment, 24/7 detection, endpoint security UK",
+  },
+  {
+    slug: "it-hardening",
+    icon: "ShieldCheck",
+    title: "IT Hardening",
+    shortDescription: "Close the doors before anyone tries them.",
+    description:
+      "Security baselines applied to devices and email that shrink your attack surface — the configuration that stops the most common ways firms get breached. Most breaches exploit weak configuration, not clever attacks. Hardening removes the easy paths in — and it's the foundation every compliance framework and insurer questionnaire starts from.",
+    features: [
+      "MFA and conditional access",
+      "Disk encryption",
+      "CIS-aligned device baselines",
+      "Email authentication (SPF/DKIM/DMARC)",
+      "Safe-link and safe-attachment protection",
+      "Secure defaults enforced, not assumed",
+    ],
+    benefits: [
+      "The easy paths in are closed by configuration",
+      "A consistent baseline on every device",
+      "The foundation compliance frameworks start from",
+      "Insurer questionnaires answered from real settings",
+    ],
+    metaTitle: "IT Hardening & Security Baselines | Infodot UK",
+    metaDescription:
+      "MFA, conditional access, encryption, CIS-aligned device baselines and email authentication enforced as standard — IT hardening from Infodot UK.",
+    keywords:
+      "IT hardening, CIS baselines, security configuration, conditional access, disk encryption, secure defaults",
+  },
+  {
+    slug: "microsoft365-google-workspace",
+    icon: "Server",
+    title: "Microsoft 365 & Google Workspace Management",
+    shortDescription: "Your whole productivity platform — run and secured.",
+    description:
+      "Full administration of your Microsoft 365 or Google Workspace tenant — email, files, identity, collaboration and licensing — operated inside your own environment. The tenant is where your identity, data and collaboration all live, so it's where good administration matters most. We run it end to end and keep it secure by default, always inside your ownership.",
+    features: [
+      "Mailboxes, shared mailboxes, groups and lists",
+      "OneDrive/SharePoint or Drive, with secure sharing",
+      "Identity, MFA and conditional access",
+      "Licence management and right-sizing",
+      "Mail-flow health and deliverability",
+      "Tenant security baselines",
+    ],
+    benefits: [
+      "One team owns the tenant end to end",
+      "Licences right-sized instead of quietly stacking up",
+      "Sharing stays secure without blocking collaboration",
+      "The tenancy stays in your ownership throughout",
+    ],
+    metaTitle: "Microsoft 365 & Google Workspace Management | Infodot UK",
+    metaDescription:
+      "Full tenant administration for Microsoft 365 and Google Workspace — email, files, identity, licensing and security baselines, run by Infodot UK inside your own tenancy.",
+    keywords:
+      "Microsoft 365 management, Google Workspace management, tenant administration, SharePoint, Entra identity, licence management",
+  },
+  {
+    slug: "iso27001-soc2-evidence",
+    icon: "Award",
+    title: "ISO 27001 & SOC 2 Evidence",
+    shortDescription: "Make the audit a formality.",
+    description:
+      "Continuous control operation and evidence collection so your ISO 27001 or SOC 2 audit is a confirmation, not a fire drill — with certification through an accredited body. Auditors don't fail you for lacking controls — they fail you for not evidencing them consistently. We keep the evidence flowing so the audit confirms what's already true. Certification itself is issued by an accredited body, as it must be — we don't self-certify.",
+    features: [
+      "Control mapping to the standard",
+      "Continuous evidence collection",
+      "Policy and process support",
+      "Gap remediation",
+      "Audit preparation",
+      "Certification/attestation via accredited bodies",
+    ],
+    benefits: [
+      "No pre-audit fire drill",
+      "Evidence collected continuously, not reconstructed",
+      "Gaps remediated before an auditor finds them",
+      "Certification through accredited bodies, never self-certified",
+    ],
+    metaTitle: "ISO 27001 & SOC 2 Evidence and Audit Readiness | Infodot UK",
+    metaDescription:
+      "Control mapping, continuous evidence collection, gap remediation and audit preparation for ISO 27001 and SOC 2 — audit readiness support from Infodot UK.",
+    keywords:
+      "ISO 27001, SOC 2, audit readiness, control mapping, compliance evidence, certification support UK",
+  },
 ];
 
 export const getServiceBySlug = (slug: string) =>
