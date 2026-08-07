@@ -7,10 +7,10 @@ export const ContactHero = () => {
     "contact",
     "hero",
     {
-      badge: "Book a Discovery Call",
-      headingHtml: 'Let\'s Talk About <span class="text-gradient-primary">Your IT</span>',
+      badge: "Company · Contact",
+      headingHtml: 'Book a 30-minute discovery call — <span class="text-gradient-primary">no pitch.</span>',
       subheading:
-        "Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours.",
+        "Tell us where your IT hurts. We'll map the gaps, tell you the two that matter most, and send an exact quote within 48 hours.",
       primaryLabel: "Send a Message",
       phoneLabel: "Email Us",
       phoneHref: "mailto:hello@infodot.uk",
