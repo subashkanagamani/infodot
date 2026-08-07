@@ -42,16 +42,14 @@ const ThankYou = () => {
 
           <section className="relative py-16 md:py-24">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary to-background">
-              <div className="absolute inset-0 grid-pattern opacity-40" />
-              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
+              <div className="absolute inset-0 grid-pattern opacity-[0.07]" />
             </div>
 
             <div className="container-custom relative z-10 max-w-2xl">
               <div className="relative animate-scale-in">
                 <div className="absolute -inset-1 bg-gradient-to-br from-primary/30 via-neon-cyan/20 to-neon-purple/30 rounded-2xl blur-xl opacity-60" />
                 <div className="relative bg-card/80 backdrop-blur-xl border border-border/60 rounded-2xl p-8 md:p-12 shadow-2xl text-center">
-                  <div className="w-20 h-20 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center mx-auto mb-6 animate-pulse-glow">
+                  <div className="w-20 h-20 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center mx-auto mb-6">
                     <CheckCircle2 className="h-10 w-10 text-primary" />
                   </div>
 
