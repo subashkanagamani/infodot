@@ -52,6 +52,8 @@ Entity: Infodot Technologies Pvt Ltd, Bangalore, India — serving UK & EU remot
 - [Penetration Testing & VAPT](https://infodot.co.uk/services/penetration-testing-vapt)
 - [Network Security](https://infodot.co.uk/services/network-security)
 - [Security Awareness Training](https://infodot.co.uk/services/security-awareness)
+- [Vulnerability Management](https://infodot.co.uk/services/vulnerability-management)
+- [Z360 — the engine behind your managed IT](https://infodot.co.uk/z360)
 - [Small Office IT — fixed monthly fee](https://infodot.co.uk/small-office)
 - [Legal, privacy & data processing](https://infodot.co.uk/legal)
 

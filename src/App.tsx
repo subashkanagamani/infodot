@@ -12,6 +12,7 @@ import Industries from "./pages/Industries";
 import HowItWorks from "./pages/HowItWorks";
 import SmallOffice from "./pages/SmallOffice";
 import Legal from "./pages/Legal";
+import Z360 from "./pages/Z360";
 import IndustryDetail from "./pages/IndustryDetail";
 import Portfolio from "./pages/Portfolio";
 import Pricing from "./pages/Pricing";
@@ -75,6 +76,7 @@ const App = () => (
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/small-office" element={<SmallOffice />} />
               <Route path="/legal" element={<Legal />} />
+              <Route path="/z360" element={<Z360 />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/blog" element={<Blog />} />

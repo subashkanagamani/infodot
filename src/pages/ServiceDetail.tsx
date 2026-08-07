@@ -40,6 +40,7 @@ import {
   Crosshair,
   Network,
   GraduationCap,
+  Bug,
   CheckCircle2,
   ArrowRight,
   ArrowLeft,
@@ -77,6 +78,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Crosshair,
   Network,
   GraduationCap,
+  Bug,
 };
 
 const ServiceDetail = () => {
