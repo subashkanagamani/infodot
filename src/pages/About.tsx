@@ -2,11 +2,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Target, Eye, ShieldCheck, Users, Zap, Globe, KeyRound, FileCheck2, Check } from "lucide-react";
+import { Target, Eye, ShieldCheck, Users, Globe, KeyRound, FileCheck2, Check } from "lucide-react";
 import teamNaren from "@/assets/team-naren.png";
 import { useSection } from "@/hooks/usePageContent";
 
@@ -49,13 +47,19 @@ const stats = [
   { value: "48 hrs", label: "For an exact quote" }
 ];
 
+const whyChoose = [
+  { icon: ShieldCheck, title: "ISO 27001:2022 Certified", description: "Security and evidence built into how we operate, not bolted on" },
+  { icon: Globe, title: "Remote Delivery, UK Hours", description: "A UK business-hours desk backed by our Z360 delivery platform" },
+  { icon: KeyRound, title: "An Honest Exit", description: "A full exit pack and reverse knowledge transfer within 10 working days, whenever you need it" },
+];
+
 const About = () => {
   const hero = useSection<{ badge: string; headingHtml: string; subheading: string }>(
     "about",
     "hero",
     {
       badge: "Company",
-      headingHtml: 'We run your IT. <span class="text-gradient-primary">You own your IT.</span>',
+      headingHtml: 'We run your IT. <span class="text-primary">You own your IT.</span>',
       subheading:
         "Infodot is a managed IT provider serving regulated UK and EU SMBs remotely from an ISO 27001-certified team in Bangalore. Since 1996 we've run IT for organisations where getting it wrong has consequences.",
     },
@@ -64,7 +68,7 @@ const About = () => {
     "about",
     "story",
     {
-      headingHtml: 'Our <span class="text-gradient-primary">Story</span>',
+      headingHtml: 'Our <span class="text-primary">Story</span>',
       paragraphs: [
         "We're remote by design, and honest about what that means: your engineers are a named team in our ISO 27001-certified Bangalore centre, working UK business hours, operating inside your own tenancy — your data doesn't move to us.",
         "Since 1996 we've run IT for organisations where getting it wrong has consequences: fintech, financial and professional services SMBs across the UK and EU, backed by our own delivery platform, Z360.",
@@ -91,37 +95,42 @@ const About = () => {
         canonicalUrl="https://infodot.co.uk/about"
       />
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none opacity-20">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-neon-cyan/20 rounded-full blur-3xl" />
-        </div>
-        
-        <div className="container-custom relative">
+
+      {/* Hero Section — bento */}
+      <section className="bg-secondary pt-28 pb-10 md:pt-32 md:pb-14">
+        <div className="container-custom">
           <Breadcrumbs />
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4 text-primary border-primary/30">
-              {hero.badge}
-            </Badge>
-            <h1
-              className="text-4xl md:text-6xl font-bold mb-6"
-              dangerouslySetInnerHTML={{ __html: hero.headingHtml }}
-            />
-            <p className="text-xl text-muted-foreground mb-8">{hero.subheading}</p>
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">{hero.badge}</span>
+              <h1
+                className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] mt-4 mb-6"
+                dangerouslySetInnerHTML={{ __html: hero.headingHtml }}
+              />
+              <p className="text-muted-foreground text-base md:text-lg max-w-2xl font-medium">{hero.subheading}</p>
+            </div>
+            <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <div className="font-display text-5xl font-bold">1996</div>
+              <p className="mt-2 font-medium text-accent-foreground/70">
+                Running IT for regulated UK businesses for nearly three decades.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-card/50">
+      <section className="py-16 bg-background">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
+              <div
+                key={index}
+                className="rounded-3xl border border-border bg-card p-6 text-center shadow-[var(--shadow-card)] animate-slide-up"
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                <div className="font-display text-2xl md:text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-muted-foreground text-sm font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -129,16 +138,23 @@ const About = () => {
       </section>
 
       {/* What's included */}
-      <section className="py-20">
-        <div className="container-custom max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            What's <span className="text-gradient-primary">included</span>
-          </h2>
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container-custom">
+          <div className="max-w-3xl mb-12 animate-slide-up">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">What's included</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1]">
+              Everything <span className="text-primary">built in.</span>
+            </h2>
+          </div>
           <div className="grid sm:grid-cols-2 gap-4">
-            {included.map((item) => (
-              <div key={item} className="flex items-start gap-3 rounded-xl border border-border/60 bg-card p-4">
+            {included.map((item, i) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 rounded-3xl border border-border bg-card p-5 shadow-[var(--shadow-card)] animate-slide-up"
+                style={{ animationDelay: `${i * 0.06}s` }}
+              >
                 <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm md:text-base">{item}</span>
+                <span className="text-sm md:text-base font-medium">{item}</span>
               </div>
             ))}
           </div>
@@ -146,117 +162,114 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="grid grid-cols-12 gap-4 items-stretch">
+            <div className="col-span-12 lg:col-span-7 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
               <h2
-                className="text-3xl md:text-4xl font-bold mb-6"
+                className="font-display text-3xl md:text-4xl font-bold mb-6 leading-[1.1]"
                 dangerouslySetInnerHTML={{ __html: story.headingHtml }}
               />
               {story.paragraphs.map((p, i) => (
                 <p key={i} className="text-muted-foreground mb-4 last:mb-0">{p}</p>
               ))}
             </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-              <Card className="relative p-8 bg-card border-border/50">
-                <div className="flex items-center gap-4 mb-6">
-                  <img src={teamNaren} alt="Infodot UK delivery team" className="w-20 h-20 rounded-full object-cover" />
-                  <div>
-                    <h3 className="text-xl font-bold">{story.founderName}</h3>
-                    <p className="text-primary">{story.founderRole}</p>
-                  </div>
+            <div className="col-span-12 lg:col-span-5 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <div className="flex items-center gap-4 mb-6">
+                <img src={teamNaren} alt="Infodot UK delivery team" className="w-16 h-16 rounded-full object-cover border-2 border-accent-foreground/20" />
+                <div>
+                  <h3 className="font-display text-xl font-bold">{story.founderName}</h3>
+                  <p className="text-primary">{story.founderRole}</p>
                 </div>
-                <p className="text-muted-foreground italic">"{story.quote}"</p>
-              </Card>
+              </div>
+              <p className="text-accent-foreground/80 italic">"{story.quote}"</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-card/50">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="container-custom">
           <h2 className="sr-only">Mission and Vision</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 bg-background border-border/50 hover:border-primary/50 transition-all group">
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <Target className="w-7 h-7 text-primary" />
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] animate-slide-up">
+              <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-6 border border-border">
+                <Target className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <h3 className="font-display text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-muted-foreground">{mission.mission}</p>
-            </Card>
-            <Card className="p-8 bg-background border-border/50 hover:border-primary/50 transition-all group">
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <Eye className="w-7 h-7 text-primary" />
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-6 border border-border">
+                <Eye className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+              <h3 className="font-display text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-muted-foreground">{mission.vision}</p>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What We <span className="text-gradient-primary">Stand On</span>
+          <div className="max-w-3xl mb-12 animate-slide-up">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Our principles</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 leading-[1.1]">
+              What We <span className="text-primary">Stand On</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground">
               These principles guide everything we do and how we work with regulated UK clients.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {values.map((value, index) => (
-              <Card key={index} className="p-6 bg-card border-border/50 hover:border-primary/50 transition-all group text-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
-                  <value.icon className="w-6 h-6 text-primary" />
+              <div
+                key={index}
+                className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up"
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                <div className="w-11 h-11 bg-secondary rounded-xl flex items-center justify-center mb-4 border border-border">
+                  <value.icon className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+                <h3 className="font-display text-lg font-bold mb-2">{value.title}</h3>
                 <p className="text-muted-foreground text-sm">{value.description}</p>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-card/50">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why <span className="text-gradient-primary">Choose Us</span>
+          <div className="max-w-3xl mb-12 animate-slide-up">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Why us</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1]">
+              Why <span className="text-primary">Choose Us</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <ShieldCheck className="w-8 h-8 text-primary" />
+          <div className="grid md:grid-cols-3 gap-4">
+            {whyChoose.map((w, i) => (
+              <div
+                key={w.title}
+                className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] animate-slide-up"
+                style={{ animationDelay: `${i * 0.08}s` }}
+              >
+                <div className="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mb-6 border border-border">
+                  <w.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display text-xl font-bold mb-2">{w.title}</h3>
+                <p className="text-muted-foreground">{w.description}</p>
               </div>
-              <h3 className="text-xl font-bold mb-2">ISO 27001:2022 Certified</h3>
-              <p className="text-muted-foreground">Security and evidence built into how we operate, not bolted on</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Globe className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Remote Delivery, UK Hours</h3>
-              <p className="text-muted-foreground">A UK business-hours desk backed by our Z360 delivery platform</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <KeyRound className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">An Honest Exit</h3>
-              <p className="text-muted-foreground">A full exit pack and reverse knowledge transfer within 10 working days, whenever you need it</p>
-            </div>
+            ))}
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-12 max-w-3xl mx-auto">
-            Who we're not for: we don't take on large enterprise estates, and we don't offer vCISO services. We focus on running IT completely for accountancy, legal and financial services firms.
-          </p>
+          <div className="mt-4 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.32s" }}>
+            <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto">
+              Who we're not for: we don't take on large enterprise estates, and we don't offer vCISO services. We focus on running IT completely for accountancy, legal and financial services firms.
+            </p>
+          </div>
         </div>
       </section>
 

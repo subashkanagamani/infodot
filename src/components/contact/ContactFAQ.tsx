@@ -35,17 +35,17 @@ const faqs = [
 
 export const ContactFAQ = () => {
   return (
-    <section className="section-spacing">
+    <section className="py-16 md:py-24 bg-background">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
+          <div className="mb-12 animate-slide-up">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full">
               <HelpCircle className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Common Questions</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.14em]">Common Questions</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Frequently Asked <span className="text-gradient-primary">Questions</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-4 leading-[1.1]">
+              Frequently Asked <span className="text-primary">Questions</span>
             </h2>
             <p className="text-muted-foreground">
               Find answers to common questions about working with Infodot UK.
@@ -53,13 +53,13 @@ export const ContactFAQ = () => {
           </div>
 
           {/* FAQ Accordion */}
-          <div className="bg-card border border-border/50 rounded-2xl p-6 md:p-8">
+          <div className="rounded-3xl border border-border bg-card p-6 md:p-8 shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.08s" }}>
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border border-border/50 rounded-xl px-6 data-[state=open]:bg-primary/5 transition-colors"
+                  className="border border-border rounded-2xl px-6 data-[state=open]:bg-secondary transition-colors"
                 >
                   <AccordionTrigger className="hover:no-underline py-5 text-left">
                     <span className="font-semibold pr-4">{faq.question}</span>
@@ -73,14 +73,14 @@ export const ContactFAQ = () => {
           </div>
 
           {/* Still Have Questions */}
-          <div className="mt-8 text-center bg-gradient-to-r from-primary/10 via-neon-purple/10 to-primary/10 rounded-2xl p-8 border border-primary/20">
-            <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
-            <p className="text-muted-foreground mb-4">
+          <div className="mt-4 text-center rounded-3xl bg-accent text-accent-foreground p-8 animate-slide-up" style={{ animationDelay: "0.16s" }}>
+            <h3 className="font-display text-xl font-bold mb-2">Still have questions?</h3>
+            <p className="text-accent-foreground/70 mb-4">
               Can't find what you're looking for? We're here to help!
             </p>
             <a
               href="mailto:hello@infodot.uk"
-              className="text-primary hover:underline font-medium"
+              className="text-primary hover:underline font-bold"
             >
               Email us directly →
             </a>

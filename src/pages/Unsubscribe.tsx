@@ -44,22 +44,22 @@ const Unsubscribe = () => {
   return (
     <>
       <SEOHead title="Unsubscribe — Infodot UK" description="Manage your email preferences." />
-      <div className="min-h-screen flex items-center justify-center bg-background p-6">
-        <div className="max-w-md w-full bg-card/80 backdrop-blur-xl border border-border/60 rounded-2xl p-8 text-center">
+      <div className="min-h-screen flex items-center justify-center bg-secondary p-6">
+        <div className="max-w-md w-full rounded-3xl border border-border bg-card p-8 text-center shadow-[var(--shadow-card)] animate-slide-up">
           {state === "loading" && <><Loader2 className="mx-auto h-8 w-8 animate-spin text-primary mb-4" /><p className="text-muted-foreground">Verifying your request…</p></>}
-          {state === "invalid" && <><XCircle className="mx-auto h-10 w-10 text-destructive mb-4" /><h1 className="text-xl font-bold mb-2">Invalid or expired link</h1><p className="text-sm text-muted-foreground">This unsubscribe link is no longer valid.</p></>}
-          {state === "already" && <><CheckCircle2 className="mx-auto h-10 w-10 text-primary mb-4" /><h1 className="text-xl font-bold mb-2">You're already unsubscribed</h1><p className="text-sm text-muted-foreground">{email} will no longer receive these emails.</p></>}
+          {state === "invalid" && <><XCircle className="mx-auto h-10 w-10 text-destructive mb-4" /><h1 className="font-display text-xl font-bold mb-2">Invalid or expired link</h1><p className="text-sm text-muted-foreground">This unsubscribe link is no longer valid.</p></>}
+          {state === "already" && <><CheckCircle2 className="mx-auto h-10 w-10 text-primary mb-4" /><h1 className="font-display text-xl font-bold mb-2">You're already unsubscribed</h1><p className="text-sm text-muted-foreground">{email} will no longer receive these emails.</p></>}
           {(state === "valid" || state === "submitting") && (
             <>
-              <h1 className="text-xl font-bold mb-2">Unsubscribe from emails</h1>
+              <h1 className="font-display text-xl font-bold mb-2">Unsubscribe from emails</h1>
               <p className="text-sm text-muted-foreground mb-6">Confirm you want to stop receiving emails at <strong className="text-foreground">{email}</strong>.</p>
-              <Button onClick={confirm} disabled={state === "submitting"} size="lg" className="w-full">
+              <Button onClick={confirm} disabled={state === "submitting"} size="lg" className="w-full rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90">
                 {state === "submitting" ? <><Loader2 className="h-4 w-4 animate-spin mr-2" /> Unsubscribing…</> : "Confirm unsubscribe"}
               </Button>
             </>
           )}
-          {state === "done" && <><CheckCircle2 className="mx-auto h-10 w-10 text-primary mb-4" /><h1 className="text-xl font-bold mb-2">You're unsubscribed</h1><p className="text-sm text-muted-foreground">{email} won't receive further emails.</p></>}
-          {state === "error" && <><XCircle className="mx-auto h-10 w-10 text-destructive mb-4" /><h1 className="text-xl font-bold mb-2">Something went wrong</h1><p className="text-sm text-muted-foreground">Please try again in a moment.</p></>}
+          {state === "done" && <><CheckCircle2 className="mx-auto h-10 w-10 text-primary mb-4" /><h1 className="font-display text-xl font-bold mb-2">You're unsubscribed</h1><p className="text-sm text-muted-foreground">{email} won't receive further emails.</p></>}
+          {state === "error" && <><XCircle className="mx-auto h-10 w-10 text-destructive mb-4" /><h1 className="font-display text-xl font-bold mb-2">Something went wrong</h1><p className="text-sm text-muted-foreground">Please try again in a moment.</p></>}
         </div>
       </div>
     </>

@@ -32,17 +32,25 @@ const RESERVED = new Set([
 
 function Hero({ c }: { c: any }) {
   return (
-    <section className="container-custom py-16 md:py-24">
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-        <div className="space-y-5">
-          {c.eyebrow && <p className="text-sm uppercase tracking-wider text-primary">{c.eyebrow}</p>}
-          {c.heading && <h1 className="text-4xl md:text-6xl font-bold leading-tight">{c.heading}</h1>}
-          {c.subheading && <p className="text-lg text-muted-foreground">{c.subheading}</p>}
-          {c.ctaLabel && c.ctaHref && (
-            <Button asChild size="lg"><a href={c.ctaHref}>{c.ctaLabel}</a></Button>
+    <section className="bg-secondary py-16 md:py-24">
+      <div className="container-custom">
+        <div className="grid md:grid-cols-2 gap-4 items-center">
+          <div className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] space-y-5 animate-slide-up">
+            {c.eyebrow && <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">{c.eyebrow}</p>}
+            {c.heading && <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.08]">{c.heading}</h1>}
+            {c.subheading && <p className="text-lg text-muted-foreground">{c.subheading}</p>}
+            {c.ctaLabel && c.ctaHref && (
+              <Button asChild size="lg" className="rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90">
+                <a href={c.ctaHref}>{c.ctaLabel}</a>
+              </Button>
+            )}
+          </div>
+          {c.image && (
+            <div className="rounded-3xl border border-border bg-card p-4 shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <img src={c.image} alt={c.heading || ""} className="rounded-2xl w-full" />
+            </div>
           )}
         </div>
-        {c.image && <img src={c.image} alt={c.heading || ""} className="rounded-xl w-full" />}
       </div>
     </section>
   );
@@ -50,43 +58,13 @@ function Hero({ c }: { c: any }) {
 
 function TextBlock({ c }: { c: any }) {
   return (
-    <section className="container-custom py-12">
-      <div className="max-w-3xl mx-auto space-y-4">
-        {c.heading && <h2 className="text-3xl font-bold">{c.heading}</h2>}
-        {c.body && (
-          <div
-            className="prose prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(c.body) }}
-          />
-        )}
-      </div>
-    </section>
-  );
-}
-
-function ImageBlock({ c }: { c: any }) {
-  if (!c.src) return null;
-  return (
-    <section className="container-custom py-12">
-      <figure className="max-w-4xl mx-auto">
-        <img src={c.src} alt={c.alt || ""} className="rounded-xl w-full" />
-        {c.caption && <figcaption className="text-center text-sm text-muted-foreground mt-3">{c.caption}</figcaption>}
-      </figure>
-    </section>
-  );
-}
-
-function ImageText({ c }: { c: any }) {
-  const reverse = c.imagePosition === "right";
-  return (
-    <section className="container-custom py-12">
-      <div className={`grid md:grid-cols-2 gap-10 items-center ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
-        {c.image && <img src={c.image} alt={c.heading || ""} className="rounded-xl w-full" />}
-        <div className="space-y-4">
-          {c.heading && <h2 className="text-3xl font-bold">{c.heading}</h2>}
+    <section className="py-12">
+      <div className="container-custom max-w-3xl mx-auto">
+        <div className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] space-y-4 animate-slide-up">
+          {c.heading && <h2 className="font-display text-3xl font-bold">{c.heading}</h2>}
           {c.body && (
             <div
-              className="prose prose-invert max-w-none"
+              className="prose max-w-none"
               dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(c.body) }}
             />
           )}
@@ -96,15 +74,59 @@ function ImageText({ c }: { c: any }) {
   );
 }
 
+function ImageBlock({ c }: { c: any }) {
+  if (!c.src) return null;
+  return (
+    <section className="py-12">
+      <div className="container-custom max-w-4xl mx-auto">
+        <figure className="rounded-3xl border border-border bg-card p-4 shadow-[var(--shadow-card)] animate-slide-up">
+          <img src={c.src} alt={c.alt || ""} className="rounded-2xl w-full" />
+          {c.caption && <figcaption className="text-center text-sm text-muted-foreground mt-3">{c.caption}</figcaption>}
+        </figure>
+      </div>
+    </section>
+  );
+}
+
+function ImageText({ c }: { c: any }) {
+  const reverse = c.imagePosition === "right";
+  return (
+    <section className="py-12">
+      <div className="container-custom">
+        <div className={`grid md:grid-cols-2 gap-4 items-center ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
+          {c.image && (
+            <div className="rounded-3xl border border-border bg-card p-4 shadow-[var(--shadow-card)] animate-slide-up">
+              <img src={c.image} alt={c.heading || ""} className="rounded-2xl w-full" />
+            </div>
+          )}
+          <div className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] space-y-4 animate-slide-up" style={{ animationDelay: "0.08s" }}>
+            {c.heading && <h2 className="font-display text-3xl font-bold">{c.heading}</h2>}
+            {c.body && (
+              <div
+                className="prose max-w-none"
+                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(c.body) }}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function CTA({ c }: { c: any }) {
   return (
-    <section className="container-custom py-16">
-      <div className="bg-primary/10 border border-primary/30 rounded-2xl p-10 text-center space-y-4">
-        {c.heading && <h2 className="text-3xl md:text-4xl font-bold">{c.heading}</h2>}
-        {c.body && <p className="text-muted-foreground max-w-2xl mx-auto">{c.body}</p>}
-        {c.ctaLabel && c.ctaHref && (
-          <Button asChild size="lg"><a href={c.ctaHref}>{c.ctaLabel}</a></Button>
-        )}
+    <section className="py-16">
+      <div className="container-custom">
+        <div className="rounded-3xl bg-accent text-accent-foreground p-10 text-center space-y-4 animate-slide-up">
+          {c.heading && <h2 className="font-display text-3xl md:text-4xl font-bold">{c.heading}</h2>}
+          {c.body && <p className="text-accent-foreground/70 max-w-2xl mx-auto">{c.body}</p>}
+          {c.ctaLabel && c.ctaHref && (
+            <Button asChild size="lg" className="rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90">
+              <a href={c.ctaHref}>{c.ctaLabel}</a>
+            </Button>
+          )}
+        </div>
       </div>
     </section>
   );
@@ -113,13 +135,13 @@ function CTA({ c }: { c: any }) {
 function FAQBlock({ c }: { c: any }) {
   const items = Array.isArray(c.items) ? c.items : [];
   return (
-    <section className="container-custom py-12">
-      <div className="max-w-3xl mx-auto space-y-6">
-        {c.heading && <h2 className="text-3xl font-bold text-center">{c.heading}</h2>}
-        <div className="divide-y divide-border border border-border rounded-xl">
+    <section className="py-12">
+      <div className="container-custom max-w-3xl mx-auto space-y-6">
+        {c.heading && <h2 className="font-display text-3xl font-bold text-center">{c.heading}</h2>}
+        <div className="rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] divide-y divide-border overflow-hidden animate-slide-up">
           {items.map((it: any, i: number) => (
             <details key={i} className="p-5 group">
-              <summary className="cursor-pointer font-medium">{it.q}</summary>
+              <summary className="cursor-pointer font-bold">{it.q}</summary>
               <p className="mt-2 text-muted-foreground">{it.a}</p>
             </details>
           ))}
@@ -132,12 +154,16 @@ function FAQBlock({ c }: { c: any }) {
 function Gallery({ c }: { c: any }) {
   const imgs = Array.isArray(c.images) ? c.images : [];
   return (
-    <section className="container-custom py-12">
-      {c.heading && <h2 className="text-3xl font-bold text-center mb-8">{c.heading}</h2>}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {imgs.map((im: any, i: number) => (
-          <img key={i} src={im.src} alt={im.alt || ""} className="rounded-lg w-full h-full object-cover" />
-        ))}
+    <section className="py-12">
+      <div className="container-custom">
+        {c.heading && <h2 className="font-display text-3xl font-bold text-center mb-8">{c.heading}</h2>}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {imgs.map((im: any, i: number) => (
+            <div key={i} className="rounded-2xl border border-border bg-card p-2 shadow-[var(--shadow-card)]">
+              <img src={im.src} alt={im.alt || ""} className="rounded-xl w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -145,11 +171,13 @@ function Gallery({ c }: { c: any }) {
 
 function EmbedHtml({ c }: { c: any }) {
   return (
-    <section className="container-custom py-12">
-      <div
-        className="prose prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(c.html || "") }}
-      />
+    <section className="py-12">
+      <div className="container-custom">
+        <div
+          className="prose max-w-none"
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(c.html || "") }}
+        />
+      </div>
     </section>
   );
 }

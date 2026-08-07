@@ -168,20 +168,20 @@ export default function BlogPost() {
         }}
       />
 
-      <article className="section-spacing pt-32">
+      <article className="bg-secondary pt-24 pb-10 md:pt-28 md:pb-14">
         <div className="container-custom">
           <Breadcrumbs />
           
           {/* Back Button */}
-          <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6">
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
           </Link>
 
           {/* Header */}
-          <header className="max-w-4xl mx-auto mb-12">
+          <header className="bg-card rounded-3xl border border-border shadow-[var(--shadow-card)] p-8 md:p-10 max-w-5xl mx-auto mb-8 animate-slide-up">
             <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-              {post.category && <span className="text-primary font-semibold">{post.category}</span>}
+              {post.category && <span className="text-primary font-bold">{post.category}</span>}
               <div className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
                 <span>{formatDate(post.created_at)}</span>
@@ -192,11 +192,11 @@ export default function BlogPost() {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{post.title}</h1>
+            <h1 className="font-display text-4xl md:text-5xl font-bold leading-[1.08] mb-6">{post.title}</h1>
             {post.excerpt && <p className="text-xl text-muted-foreground mb-8">{post.excerpt}</p>}
 
             {/* Author & Share */}
-            <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-border">
               <div className="flex items-center gap-4">
                 {post.author_avatar ? (
                   <img 
@@ -205,12 +205,12 @@ export default function BlogPost() {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                 ) : (
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center border border-border">
                     <User className="w-6 h-6 text-primary" />
                   </div>
                 )}
                 <div>
-                  <p className="font-semibold">{post.author_name || "Infodot Team"}</p>
+                  <p className="font-bold">{post.author_name || "Infodot Team"}</p>
                   <p className="text-sm text-muted-foreground">{formatDate(post.created_at)}</p>
                 </div>
               </div>
@@ -221,14 +221,19 @@ export default function BlogPost() {
 
           {/* Featured Image */}
           {post.cover_image && (
-            <div className="max-w-4xl mx-auto mb-12">
+            <div className="max-w-5xl mx-auto mb-4">
               <img 
                 src={post.cover_image} 
                 alt={post.title}
-                className="w-full aspect-video object-cover rounded-2xl"
+                className="w-full aspect-video object-cover rounded-3xl border border-border"
               />
             </div>
           )}
+        </div>
+      </article>
+
+      <section className="section-spacing bg-background">
+        <div className="container-custom">
 
           {/* Content with TOC */}
           {post.content && (
@@ -239,9 +244,9 @@ export default function BlogPost() {
               </aside>
               
               {/* Main Content */}
-              <div className="flex-1 min-w-0">
+              <div className="flex-1 min-w-0 bg-card rounded-3xl border border-border shadow-[var(--shadow-card)] p-8 md:p-10">
                 <div 
-                  className="prose prose-invert prose-lg prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary max-w-none"
+                  className="prose prose-lg prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary max-w-none"
                   dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
                 />
               </div>
@@ -250,9 +255,9 @@ export default function BlogPost() {
 
           {/* Tags */}
           {post.tags && post.tags.length > 0 && (
-            <div className="max-w-3xl mx-auto mt-12 flex flex-wrap gap-2">
+            <div className="max-w-3xl mx-auto mt-8 flex flex-wrap gap-2">
               {post.tags.map((tag, idx) => (
-                <span key={idx} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                <span key={idx} className="px-3 py-1.5 rounded-lg border border-border bg-secondary text-xs font-bold">
                   {tag}
                 </span>
               ))}
@@ -260,7 +265,7 @@ export default function BlogPost() {
           )}
 
           {/* Share at bottom */}
-          <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-border">
+          <div className="max-w-3xl mx-auto mt-8 rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <p className="text-muted-foreground">Enjoyed this article? Share it!</p>
               <SocialShareButtons url={currentUrl} title={post.title} />
@@ -269,11 +274,12 @@ export default function BlogPost() {
 
           {/* Related Posts */}
           {relatedPosts.length > 0 && (
-            <section className="mt-20 max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8">Related Articles</h2>
-              <div className="grid md:grid-cols-3 gap-8">
+            <section className="mt-16 max-w-6xl mx-auto">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Keep reading</p>
+              <h2 className="font-display text-3xl font-bold mb-8">Related Articles</h2>
+              <div className="grid grid-cols-12 gap-4">
                 {relatedPosts.map((relatedPost) => (
-                  <Card key={relatedPost.id} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
+                  <Card key={relatedPost.id} className="col-span-12 md:col-span-4 group overflow-hidden rounded-3xl border-border bg-card shadow-[var(--shadow-card)] hover-lift p-0">
                     <Link to={`/blog/${relatedPost.slug}`}>
                       {relatedPost.cover_image && (
                         <div className="aspect-video overflow-hidden">
@@ -287,10 +293,10 @@ export default function BlogPost() {
                       )}
                       <div className="p-6">
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                          {relatedPost.category && <span className="text-primary font-semibold">{relatedPost.category}</span>}
+                          {relatedPost.category && <span className="text-primary font-bold">{relatedPost.category}</span>}
                           {relatedPost.read_time && <span>{relatedPost.read_time}</span>}
                         </div>
-                        <h3 className="text-lg font-bold group-hover:text-primary transition-colors line-clamp-2">
+                        <h3 className="font-display text-lg font-bold group-hover:text-primary transition-colors line-clamp-2">
                           {relatedPost.title}
                         </h3>
                       </div>
@@ -302,17 +308,17 @@ export default function BlogPost() {
           )}
 
           {/* CTA */}
-          <div className="mt-16 text-center p-12 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4">Ready to Grow Your Business?</h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <div className="mt-16 rounded-3xl border border-border bg-accent text-accent-foreground p-10 md:p-12 text-center max-w-4xl mx-auto">
+            <h3 className="font-display text-3xl font-bold mb-4">Ready to Grow Your Business?</h3>
+            <p className="text-accent-foreground/70 mb-6 max-w-2xl mx-auto">
               Let's discuss how these strategies can be applied to your unique situation.
             </p>
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90">
               <Link to="/#contact">Get Free Consultation</Link>
             </Button>
           </div>
         </div>
-      </article>
+      </section>
 
       <Footer />
     </div>

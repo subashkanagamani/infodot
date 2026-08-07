@@ -3,13 +3,11 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
-import { ShieldCheck, Server, Cloud, LifeBuoy, FileCheck2, Lock, Laptop, Building2, CheckCircle2, ArrowRight, Loader2 } from "lucide-react";
+import { ShieldCheck, Server, Cloud, LifeBuoy, FileCheck2, Lock, Laptop, Building2, ArrowRight, Loader2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { servicesData } from "@/data/services";
@@ -116,7 +114,7 @@ const Services = () => {
     "hero",
     {
       badge: "Our Services",
-      headingHtml: 'Managed IT, <span class="text-gradient-primary">Run Completely</span>',
+      headingHtml: 'Managed IT, <span class="text-primary">Run Completely</span>',
       subheading:
         "We run your IT end to end for the regulated UK industries we serve — secure by default, always audit-ready, delivered remotely by an ISO 27001:2022 certified team.",
       ctaLabel: "Book a Discovery Call",
@@ -126,7 +124,7 @@ const Services = () => {
     "services",
     "cta",
     {
-      headingHtml: 'Ready to Let Us <span class="text-gradient-primary">Run Your IT</span>?',
+      headingHtml: 'Ready to Let Us <span class="text-primary">Run Your IT</span>?',
       subheading:
         "Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours.",
       ctaLabel: "Book a Discovery Call",
@@ -191,73 +189,78 @@ const Services = () => {
         }}
       />
       <Navbar />
-      
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none opacity-20">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-neon-cyan/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-neon-purple/20 rounded-full blur-3xl" />
-        </div>
-        
-        <div className="container-custom relative">
+      <section className="pt-32 pb-16">
+        <div className="container-custom">
           <Breadcrumbs />
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4 text-primary border-primary/30">
-              {hero.badge}
-            </Badge>
-            <h1
-              className="text-4xl md:text-6xl font-bold mb-6"
-              dangerouslySetInnerHTML={{ __html: hero.headingHtml }}
-            />
-            <p className="text-xl text-muted-foreground mb-8">{hero.subheading}</p>
-            <Button size="lg" onClick={handleContactClick}>
-              {hero.ctaLabel} <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+          <div className="grid grid-cols-12 gap-4">
+            <div
+              className="col-span-12 lg:col-span-8 rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up"
+            >
+              <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">
+                {hero.badge}
+              </p>
+              <h1
+                className="font-display text-4xl md:text-6xl font-bold mb-6 leading-[1.08]"
+                dangerouslySetInnerHTML={{ __html: hero.headingHtml }}
+              />
+              <p className="text-xl text-muted-foreground mb-8">{hero.subheading}</p>
+              <Button size="lg" className="rounded-xl press" onClick={handleContactClick}>
+                {hero.ctaLabel} <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </div>
+            <div
+              className="col-span-12 lg:col-span-4 rounded-3xl border border-accent bg-accent text-accent-foreground p-8 shadow-[var(--shadow-card)] animate-slide-up flex flex-col justify-center"
+              style={{ animationDelay: "0.08s" }}
+            >
+              <p className="font-display text-4xl font-bold mb-2">8</p>
+              <p className="text-accent-foreground/75">
+                independently buyable capabilities — start with one, expand when ready.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="container-custom">
           {loading ? (
             <div className="flex justify-center py-20">
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div>
           ) : (
-            <div className="space-y-16">
+            <div className="grid grid-cols-12 gap-4">
               {services.map((service, index) => {
                 const IconComponent = getIcon(service.icon);
                 return (
-                  <Card 
+                  <div
                     key={service.id}
-                    className="p-8 md:p-12 bg-card border-border/50 hover:border-primary/50 transition-all group relative overflow-hidden"
+                    className="col-span-12 rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] hover-lift transition-all duration-500 animate-slide-up"
+                    style={{ animationDelay: `${Math.min(index, 8) * 0.06}s` }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
-                    <div className="relative z-10 grid lg:grid-cols-2 gap-8 items-start">
+                    <div className="grid lg:grid-cols-2 gap-8 items-start">
                       <div>
                         <div className="flex items-center gap-4 mb-6">
-                          <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                          <div className="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center border border-border">
                             <IconComponent className="w-7 h-7 text-primary" />
                           </div>
-                          <div>
-                            <h2 className="text-2xl md:text-3xl font-bold group-hover:text-primary-glow transition-colors">{service.title}</h2>
-                          </div>
+                          <h2 className="font-display text-2xl md:text-3xl font-bold">{service.title}</h2>
                         </div>
-                        
+
                         <p className="text-muted-foreground mb-6 text-lg">{service.description}</p>
                       </div>
-                      
+
                       <div className="lg:pl-8">
                         {service.features && service.features.length > 0 && (
                           <>
-                            <h3 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">What's Included</h3>
+                            <h3 className="font-display text-xs font-bold text-primary mb-4 uppercase tracking-[0.2em]">What's Included</h3>
                             <div className="grid grid-cols-2 gap-3">
                               {service.features.map((feature, i) => (
-                                <div 
+                                <div
                                   key={i}
-                                  className="px-4 py-3 bg-background/50 border border-border/50 rounded-lg text-sm text-center hover:border-primary/50 transition-colors"
+                                  className="px-4 py-3 bg-secondary border border-border rounded-xl text-sm text-center"
                                 >
                                   {feature}
                                 </div>
@@ -265,14 +268,14 @@ const Services = () => {
                             </div>
                           </>
                         )}
-                        <Button variant="outline" className="mt-6 w-full" asChild>
+                        <Button variant="outline" className="mt-6 w-full rounded-xl border-2 border-accent text-accent press" asChild>
                           <Link to={`/services/${slugify(service.title)}`} aria-label={`View ${service.title} details`}>
                             View {service.title} details
                           </Link>
                         </Button>
                       </div>
                     </div>
-                  </Card>
+                  </div>
                 );
               })}
             </div>
@@ -281,16 +284,18 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-card/50">
-        <div className="container-custom text-center">
-          <h2
-            className="text-3xl md:text-4xl font-bold mb-4"
-            dangerouslySetInnerHTML={{ __html: cta.headingHtml }}
-          />
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">{cta.subheading}</p>
-          <Button size="lg" onClick={handleContactClick}>
-            {cta.ctaLabel} <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+      <section className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="rounded-3xl border border-accent bg-accent text-accent-foreground p-8 md:p-12 text-center animate-slide-up">
+            <h2
+              className="font-display text-3xl md:text-4xl font-bold mb-4"
+              dangerouslySetInnerHTML={{ __html: cta.headingHtml }}
+            />
+            <p className="text-accent-foreground/75 max-w-2xl mx-auto mb-8">{cta.subheading}</p>
+            <Button size="lg" className="rounded-xl press" onClick={handleContactClick}>
+              {cta.ctaLabel} <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </div>
         </div>
       </section>
 

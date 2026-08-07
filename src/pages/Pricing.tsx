@@ -1,6 +1,5 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -59,11 +58,6 @@ export default function Pricing() {
     }
   ];
 
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Pricing" }
-  ];
-
   const handleBookCall = () => {
     const calendlyLink = settings.integrations.calendlyLink;
     if (calendlyLink) {
@@ -78,7 +72,7 @@ export default function Pricing() {
       <Navbar />
       <WhatsAppButton />
       <BackToTop />
-      
+
       <SEOHead 
         title="Pricing — Priced on Scope, Not Surprises | Infodot UK"
         description="Per-user managed IT pricing by scope, with a fixed monthly fee for small offices. Essentials, Secured and Audit-Ready — exact quote within 48 hours of a discovery call."
@@ -87,40 +81,67 @@ export default function Pricing() {
       />
 
       {/* Hero Section */}
-      <section className="section-spacing pt-32">
+      <section className="pt-32 pb-16">
         <div className="container-custom">
           <Breadcrumbs />
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
-              Priced on Scope, Not Surprises
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              We price per user by scope, with a fixed-fee option for small offices — and we give you an exact quote within 48 hours of a discovery call. No fixed packages, no discount games.
-            </p>
-          </div>
 
-          {/* Pricing Cards */}
+          <div className="grid grid-cols-12 gap-4 mb-4">
+            <div className="col-span-12 lg:col-span-8 rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Pricing</p>
+              <h1 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-[1.08]">
+                Priced on Scope, <span className="text-primary">Not Surprises</span>
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                We price per user by scope, with a fixed-fee option for small offices — and we give you an exact quote within 48 hours of a discovery call. No fixed packages, no discount games.
+              </p>
+            </div>
+            <div
+              className="col-span-12 lg:col-span-4 rounded-3xl border border-accent bg-accent text-accent-foreground p-8 shadow-[var(--shadow-card)] animate-slide-up flex flex-col justify-center"
+              style={{ animationDelay: "0.08s" }}
+            >
+              <p className="font-display text-4xl font-bold mb-2">48h</p>
+              <p className="text-accent-foreground/75">
+                turnaround from discovery call to an exact quote.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Cards */}
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container-custom">
           <h2 className="sr-only">Scope Tiers</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-12 gap-4">
             {plans.map((plan, index) => (
-              <Card 
+              <div
                 key={index}
-                className={`p-8 relative ${plan.popular ? 'border-primary border-2 shadow-lg' : ''}`}
+                className={`col-span-12 md:col-span-4 rounded-3xl border p-8 shadow-[var(--shadow-card)] hover-lift transition-all duration-500 animate-slide-up relative ${
+                  plan.popular
+                    ? "border-accent bg-accent text-accent-foreground"
+                    : "border-border bg-card"
+                }`}
+                style={{ animationDelay: `${index * 0.08}s` }}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
                     Most Common
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <h3 className="font-display text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center gap-1 mb-3">
-                    <span className="text-3xl font-bold">{plan.price}</span>
-                    {plan.period && <span className="text-muted-foreground">{plan.period}</span>}
+                    <span className="font-display text-3xl font-bold">{plan.price}</span>
+                    {plan.period && (
+                      <span className={plan.popular ? "text-accent-foreground/75" : "text-muted-foreground"}>
+                        {plan.period}
+                      </span>
+                    )}
                   </div>
-                  <p className="text-sm text-muted-foreground">{plan.description}</p>
+                  <p className={`text-sm ${plan.popular ? "text-accent-foreground/75" : "text-muted-foreground"}`}>
+                    {plan.description}
+                  </p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -132,20 +153,24 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                <Button 
+                <Button
                   onClick={handleBookCall}
-                  className="w-full"
+                  className={`w-full rounded-xl press ${plan.popular ? "" : ""}`}
                   variant={plan.popular ? "default" : "outline"}
                 >
                   Book a Discovery Call
                 </Button>
-              </Card>
+              </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* How we quote */}
-          <div className="mt-16 max-w-4xl mx-auto p-8 rounded-2xl border bg-muted/30">
-            <h2 className="text-2xl font-bold mb-3">How we quote</h2>
+      {/* How we quote */}
+      <section className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up">
+            <h2 className="font-display text-2xl font-bold mb-3">How we quote</h2>
             <p className="text-muted-foreground mb-4">
               Your price reflects the scope you actually need run — not a discount off a rate card. We share indicative pricing on a discovery call and confirm an exact quote within 48 hours.
             </p>
@@ -165,12 +190,15 @@ export default function Pricing() {
           </div>
 
           {/* FAQ Note */}
-          <div className="text-center mt-16 p-8 bg-muted/30 rounded-2xl max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Not sure which scope fits your firm?</h2>
-            <p className="text-muted-foreground mb-6">
+          <div
+            className="mt-4 rounded-3xl border border-accent bg-accent text-accent-foreground p-8 md:p-10 text-center animate-slide-up"
+            style={{ animationDelay: "0.08s" }}
+          >
+            <h2 className="font-display text-2xl font-bold mb-4">Not sure which scope fits your firm?</h2>
+            <p className="text-accent-foreground/75 mb-6">
               Book a 30-minute discovery call — no cost, no obligation — and we'll scope it with you, then confirm an exact quote within 48 hours.
             </p>
-            <Button size="lg" onClick={handleBookCall}>
+            <Button size="lg" className="rounded-xl press" onClick={handleBookCall}>
               Book a Discovery Call
             </Button>
           </div>

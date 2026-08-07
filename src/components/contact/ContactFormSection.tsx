@@ -125,41 +125,31 @@ export const ContactFormSection = () => {
   };
 
   return (
-    <section id="contact-form" className="section-spacing relative">
-      {/* Background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-neon-purple/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="container-custom relative z-10">
+    <section id="contact-form" className="py-16 md:py-24 bg-background">
+      <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
+          <div className="mb-12 animate-slide-up">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">No Cost, No Obligation</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.14em]">No Cost, No Obligation</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Book Your <span className="text-gradient-primary">Discovery Call</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-4 leading-[1.1]">
+              Book Your <span className="text-primary">Discovery Call</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground">
               Tell us about your firm and we'll book a 30-minute discovery call — no cost, no obligation — and follow up with an exact quote within 48 hours.
             </p>
           </div>
 
           {/* Form Card */}
-          <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12 shadow-lg relative overflow-hidden">
-            {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-neon-purple/10 to-transparent rounded-tr-full pointer-events-none" />
-
+          <div className="rounded-3xl border border-border bg-card p-8 md:p-12 shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.08s" }}>
             {isSuccess ? (
               <div className="text-center py-12 animate-scale-in">
-                <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle2 className="w-10 h-10 text-green-500" />
+                <div className="w-20 h-20 bg-secondary border border-border rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle2 className="w-10 h-10 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Thank You!</h3>
+                <h3 className="font-display text-2xl font-bold mb-3">Thank You!</h3>
                 <p className="text-muted-foreground">
                   Your message has been sent. We'll be in touch to book your discovery call and follow up with an exact quote within 48 hours.
                 </p>
@@ -178,7 +168,7 @@ export const ContactFormSection = () => {
                           <FormControl>
                             <Input
                               placeholder="John Doe"
-                              className="h-12 bg-background/50"
+                              className="h-12 bg-secondary/50 rounded-xl"
                               {...field}
                               disabled={isSubmitting}
                             />
@@ -197,7 +187,7 @@ export const ContactFormSection = () => {
                             <Input
                               type="email"
                               placeholder="john@example.com"
-                              className="h-12 bg-background/50"
+                              className="h-12 bg-secondary/50 rounded-xl"
                               {...field}
                               disabled={isSubmitting}
                             />
@@ -218,7 +208,7 @@ export const ContactFormSection = () => {
                           <FormControl>
                             <Input
                               placeholder="+91 98765 43210"
-                              className="h-12 bg-background/50"
+                              className="h-12 bg-secondary/50 rounded-xl"
                               {...field}
                               disabled={isSubmitting}
                             />
@@ -236,7 +226,7 @@ export const ContactFormSection = () => {
                           <FormControl>
                             <Input
                               placeholder="Your Company"
-                              className="h-12 bg-background/50"
+                              className="h-12 bg-secondary/50 rounded-xl"
                               {...field}
                               disabled={isSubmitting}
                             />
@@ -256,7 +246,7 @@ export const ContactFormSection = () => {
                           <FormLabel>IT Engagement Interested In *</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="h-12 bg-background/50">
+                              <SelectTrigger className="h-12 bg-secondary/50 rounded-xl">
                                 <SelectValue placeholder="Select a service" />
                               </SelectTrigger>
                             </FormControl>
@@ -280,7 +270,7 @@ export const ContactFormSection = () => {
                           <FormLabel>Approximate Team Size</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="h-12 bg-background/50">
+                              <SelectTrigger className="h-12 bg-secondary/50 rounded-xl">
                                 <SelectValue placeholder="Select team size" />
                               </SelectTrigger>
                             </FormControl>
@@ -307,7 +297,7 @@ export const ContactFormSection = () => {
                         <FormControl>
                           <Textarea
                             placeholder="Tell us about your firm, current IT setup, and any specific requirements..."
-                            className="min-h-[150px] bg-background/50 resize-none"
+                            className="min-h-[150px] bg-secondary/50 rounded-xl resize-none"
                             {...field}
                             disabled={isSubmitting}
                           />
@@ -320,7 +310,7 @@ export const ContactFormSection = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full h-14 text-lg gap-2 hover-glow"
+                    className="w-full h-14 text-lg gap-2 rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

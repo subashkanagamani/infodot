@@ -118,18 +118,30 @@ export default function CaseStudies() {
       <BackToTop />
 
       {/* Hero Section */}
-      <section className="section-spacing pt-32">
+      <section className="bg-secondary pt-24 pb-10 md:pt-28 md:pb-14">
         <div className="container-custom">
           <Breadcrumbs />
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
-              Real Results, Real Growth
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              See how we've helped businesses across industries achieve remarkable growth through data' driven marketing strategies.
-            </p>
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Case Studies</span>
+              <h1 className="font-display text-4xl md:text-5xl font-bold leading-[1.08] mt-4">
+                Real Results, <span className="text-primary">Real Growth</span>
+              </h1>
+              <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl font-medium">
+                See how we've helped businesses across industries achieve remarkable growth through data-driven marketing strategies.
+              </p>
+            </div>
+            <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <div className="font-display text-5xl font-bold">{caseStudies.length || "—"}</div>
+              <p className="mt-2 font-medium text-accent-foreground/70">Documented engagements with measurable outcomes.</p>
+            </div>
           </div>
 
+        </div>
+      </section>
+
+      <section className="section-spacing bg-background">
+        <div className="container-custom">
           {/* Loading State */}
           {loading ? (
             <div className="flex justify-center py-20">
@@ -137,9 +149,9 @@ export default function CaseStudies() {
             </div>
           ) : (
             /* Case Studies Grid */
-            <div className="space-y-16">
+            <div className="space-y-6">
               {caseStudies.map((study, index) => (
-                <Card key={study.id} className="overflow-hidden">
+                <Card key={study.id} className="overflow-hidden rounded-3xl border-border bg-card shadow-[var(--shadow-card)] hover-lift">
                   <div className={`grid md:grid-cols-2 gap-8 ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
                     <div className={`aspect-[4/3] ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                       <LazyImage 
@@ -154,7 +166,7 @@ export default function CaseStudies() {
                           <span className="text-sm font-semibold text-muted-foreground">{study.industry}</span>
                         )}
                       </div>
-                      <h2 className="text-3xl font-bold mb-4">{study.client || study.title}</h2>
+                      <h2 className="font-display text-3xl font-bold mb-4">{study.client || study.title}</h2>
                       
                       <div className="space-y-4 mb-6">
                         {study.challenge && (
@@ -176,7 +188,7 @@ export default function CaseStudies() {
                           {study.metrics.map((metric, idx) => {
                             const IconComponent = iconMap[metric.icon || "TrendingUp"] || TrendingUp;
                             return (
-                              <div key={idx} className="text-center p-4 bg-muted/30 rounded-lg">
+                              <div key={idx} className="text-center p-4 bg-secondary rounded-xl border border-border">
                                 <IconComponent className="w-6 h-6 text-primary mx-auto mb-2" />
                                 <div className="text-2xl font-bold text-primary mb-1">{metric.value}</div>
                                 <div className="text-xs text-muted-foreground">{metric.label}</div>
@@ -189,14 +201,14 @@ export default function CaseStudies() {
                       {study.technologies && study.technologies.length > 0 && (
                         <div className="flex flex-wrap gap-2 mb-6">
                           {study.technologies.map((tag, idx) => (
-                            <span key={idx} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                            <span key={idx} className="px-3 py-1.5 rounded-lg border border-border text-xs font-bold">
                               {tag}
                             </span>
                           ))}
                         </div>
                       )}
 
-                      <Button asChild className="w-full md:w-auto">
+                      <Button asChild className="w-full md:w-auto rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90">
                         <Link to={`/case-studies/${study.slug}`}>
                           View Full Case Study <ArrowRight className="w-4 h-4 ml-2" />
                         </Link>
@@ -209,14 +221,14 @@ export default function CaseStudies() {
           )}
 
           {/* CTA Section */}
-          <div className="mt-20 text-center p-12 bg-gradient-to-r from-primary via-primary to-accent rounded-2xl text-primary-foreground">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="mt-16 rounded-3xl border border-border bg-accent text-accent-foreground p-10 md:p-12 text-center animate-slide-up">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
               Ready to Be Our Next Success Story?
             </h2>
-            <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-accent-foreground/70 max-w-2xl mx-auto">
               Let's discuss how we can achieve similar results for your business.
             </p>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" className="rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90" asChild>
               <a href="/#contact">Get Your Free Strategy Session</a>
             </Button>
           </div>

@@ -117,19 +117,31 @@ export default function Blog() {
       <WhatsAppButton />
       <BackToTop />
 
-      <section className="section-spacing pt-32">
+      {/* Hero */}
+      <section className="bg-secondary pt-24 pb-10 md:pt-28 md:pb-14">
         <div className="container-custom">
           <Breadcrumbs />
-          
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              IT & Compliance <span className="text-primary">Insights</span>
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Practical guidance on managed IT, security and audit-readiness for accountancy, legal and financial services firms.
-            </p>
-          </div>
 
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Insights</span>
+              <h1 className="font-display text-4xl md:text-5xl font-bold leading-[1.08] mt-4">
+                IT & Compliance <span className="text-primary">Insights</span>
+              </h1>
+              <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl font-medium">
+                Practical guidance on managed IT, security and audit-readiness for accountancy, legal and financial services firms.
+              </p>
+            </div>
+            <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <div className="font-display text-5xl font-bold">{posts.length || "—"}</div>
+              <p className="mt-2 font-medium text-accent-foreground/70">Articles published on managed IT, security and compliance evidence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-background">
+        <div className="container-custom">
           {/* Search */}
           <BlogSearch 
             value={searchQuery} 
@@ -138,14 +150,14 @@ export default function Blog() {
           />
 
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 justify-center mb-12">
+          <div className="flex flex-wrap gap-3 justify-center mb-12 mt-8">
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={category === activeCategory ? "default" : "outline"}
                 size="sm"
                 onClick={() => setActiveCategory(category as string)}
-                className="transition-all"
+                className="rounded-xl press transition-all"
               >
                 {category}
               </Button>
@@ -167,14 +179,20 @@ export default function Blog() {
           ) : filteredPosts.length === 0 ? (
             <div className="text-center py-16">
               <p className="text-xl text-muted-foreground mb-4">No articles found</p>
-              <Button variant="outline" onClick={() => { setSearchQuery(""); setActiveCategory("All"); }}>
+              <Button variant="outline" className="rounded-xl press" onClick={() => { setSearchQuery(""); setActiveCategory("All"); }}>
                 Clear filters
               </Button>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <Card key={post.id} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="grid grid-cols-12 gap-4">
+              {filteredPosts.map((post, index) => (
+                <Card
+                  key={post.id}
+                  className={`group overflow-hidden rounded-3xl border-border bg-card shadow-[var(--shadow-card)] hover-lift animate-slide-up p-0 ${
+                    index === 0 ? "col-span-12 lg:col-span-8" : "col-span-12 md:col-span-6 lg:col-span-4"
+                  }`}
+                  style={{ animationDelay: `${Math.min(index, 8) * 0.06}s` }}
+                >
                   <Link to={`/blog/${post.slug}`}>
                     <LazyImage 
                       src={post.cover_image || "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80"} 
@@ -183,7 +201,7 @@ export default function Blog() {
                     />
                     <div className="p-6">
                       <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                        <span className="text-primary font-semibold">{post.category}</span>
+                        <span className="text-primary font-bold">{post.category}</span>
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
                           <span>{new Date(post.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
@@ -193,13 +211,13 @@ export default function Blog() {
                           <span>{post.read_time || "5 min read"}</span>
                         </div>
                       </div>
-                      <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                      <h2 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
                         {post.title}
                       </h2>
                       <p className="text-muted-foreground mb-4 line-clamp-2">
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center gap-2 text-primary font-semibold">
+                      <div className="flex items-center gap-2 text-primary font-bold">
                         <span>Read full article<span className="sr-only">: {post.title}</span></span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                       </div>
@@ -211,9 +229,9 @@ export default function Blog() {
           )}
 
           {/* Newsletter CTA */}
-          <div className="mt-16 text-center p-12 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl">
-            <h3 className="text-3xl font-bold mb-4">Never Miss an Update</h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <div className="mt-16 rounded-3xl border border-border bg-accent text-accent-foreground p-10 md:p-12 text-center animate-slide-up">
+            <h3 className="font-display text-3xl font-bold mb-4">Never Miss an Update</h3>
+            <p className="text-accent-foreground/70 mb-6 max-w-2xl mx-auto">
               Get the latest guidance on managed IT, security and compliance evidence delivered to your inbox.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -223,9 +241,9 @@ export default function Blog() {
                 value={newsletterEmail}
                 onChange={(e) => setNewsletterEmail(e.target.value)}
                 required
-                className="flex-1"
+                className="flex-1 rounded-xl bg-card text-foreground"
               />
-              <Button type="submit" disabled={subscribing}>
+              <Button type="submit" disabled={subscribing} className="rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90">
                 {subscribing ? "Subscribing..." : "Subscribe"}
               </Button>
             </form>

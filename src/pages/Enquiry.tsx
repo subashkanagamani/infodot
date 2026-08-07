@@ -25,9 +25,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { useHoneypot } from "@/hooks/useHoneypot";
 import { SEOHead } from "@/components/SEOHead";
-import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
-import { ParallaxSection } from "@/components/ParallaxSection";
-import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 import { industries as trustIndustries } from "@/components/ClientLogos";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "@/assets/infodot-logo.png";
@@ -209,423 +206,385 @@ const Enquiry = () => {
         canonicalUrl="https://infodot.co.uk/enquiry"
       />
 
-      <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-        <AmbientBackdrop />
+      <div className="min-h-screen bg-background text-foreground">
+        {/* Minimal top bar */}
+        <header className="border-b border-border bg-background sticky top-0 z-40">
+          <div className="container-custom flex items-center justify-between h-16">
+            <Link to="/" className="flex items-center group">
+              <img src={logo} alt="Infodot" className="h-9 w-auto group-hover:scale-110 transition-transform" />
+            </Link>
+            <a href="tel:+918610986622" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+              <Phone className="h-4 w-4" /> <span className="hidden sm:inline">+91 86109 86622</span>
+            </a>
+          </div>
+        </header>
 
-        <div className="relative z-10">
-          {/* Minimal top bar */}
-          <header className="border-b border-border/50 bg-background/70 backdrop-blur-lg sticky top-0 z-40 animate-slide-up">
-            <div className="container-custom flex items-center justify-between h-16">
-              <Link to="/" className="flex items-center group">
-                <img src={logo} alt="Infodot" className="h-9 w-auto group-hover:scale-110 transition-transform" />
-              </Link>
-              <a href="tel:+918610986622" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                <Phone className="h-4 w-4" /> <span className="hidden sm:inline">+91 86109 86622</span>
-              </a>
-            </div>
-          </header>
-
-          {/* HERO */}
-          <section className="relative overflow-hidden py-16 md:py-24">
-            {/* Animated background — matches home hero */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/40 to-background">
-              <AmbientBackdrop intensity="bold" />
-            </div>
-
-            <div className="container-custom relative z-10 grid lg:grid-cols-[1fr_460px] gap-12 items-start">
-              {/* LEFT COPY */}
-              <div className="order-2 lg:order-1">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-primary/30 backdrop-blur-sm animate-slide-up hover:border-primary/50 transition-colors mb-6">
+        {/* HERO */}
+        <section className="bg-secondary pt-12 pb-10 md:pt-16 md:pb-14">
+          <div className="container-custom grid lg:grid-cols-[1fr_460px] gap-4 items-start">
+            {/* LEFT COPY */}
+            <div className="order-2 lg:order-1 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] flex flex-col justify-between h-full animate-slide-up">
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full">
                   <Sparkles className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-muted-foreground">Free IT Discovery Session — limited slots</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.14em]">Free IT Discovery Session — limited slots</span>
                 </div>
 
-                <h1
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-slide-up"
-                  style={{ animationDelay: "0.1s" }}
-                >
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08]">
                   Is Your IT Setup{" "}
-                  <span className="text-gradient-primary">Slowing Your Firm Down?</span>
+                  <span className="text-primary">Slowing Your Firm Down?</span>
                 </h1>
 
-                <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                  We run IT completely for regulated UK firms — <span className="text-foreground font-medium">secure by default, always audit-ready, and delivered remotely</span>.
+                <p className="text-muted-foreground text-base md:text-lg max-w-xl font-medium">
+                  We run IT completely for regulated UK firms — <span className="text-foreground font-bold">secure by default, always audit-ready, and delivered remotely</span>.
                 </p>
 
-                <ul className="space-y-3 mb-8 animate-slide-up" style={{ animationDelay: "0.25s" }}>
+                <ul className="space-y-3">
                   {socialProof.map(({ icon: Icon, text }) => (
                     <li key={text} className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center shrink-0">
-                        <Icon className="h-3.5 w-3.5 text-primary" />
+                      <span className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center border border-border shrink-0">
+                        <Icon className="h-4 w-4 text-primary" />
                       </span>
-                      <span className="text-foreground/90 text-sm md:text-base">{text}</span>
+                      <span className="text-foreground/90 text-sm md:text-base font-medium">{text}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="grid sm:grid-cols-2 gap-3 mb-10 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+                <div className="grid sm:grid-cols-2 gap-3">
                   {benefits.map((b) => (
-                    <div key={b} className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-card/40 border border-border/50">
+                    <div key={b} className="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-secondary border border-border">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
-                      <span className="text-sm text-foreground/90">{b}</span>
+                      <span className="text-sm text-foreground/90 font-medium">{b}</span>
                     </div>
                   ))}
                 </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: "0.4s" }}>
-                  <Button
-                    size="lg"
-                    onClick={scrollToForm}
-                    className="gap-2 text-base px-6 py-6 hover-lift hover-glow group relative overflow-hidden"
-                  >
-                    <span className="relative z-10">Get a FREE IT Discovery Session</span>
-                    <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Button>
-                  <Button size="lg" variant="outline" className="text-base px-6 py-6 hover-lift glow-border" onClick={scrollToForm}>
-                    Get an Exact Quote
-                  </Button>
-                </div>
               </div>
 
-              {/* RIGHT FORM */}
-              <div
-                id="lead-form"
-                className="relative order-1 lg:order-2 lg:sticky lg:top-24 animate-scale-in"
-                style={{ animationDelay: "0.3s" }}
-              >
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/60 via-neon-purple/40 to-primary/60 rounded-2xl blur-2xl opacity-60" />
-                <div className="absolute -inset-[2px] bg-gradient-to-br from-primary via-neon-purple to-primary rounded-2xl opacity-70" />
-                <div className="relative bg-card/95 backdrop-blur-xl border-2 border-primary/40 rounded-2xl p-6 md:p-8 shadow-[0_0_60px_hsl(358_84%_53%_/_0.12)]">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  onClick={scrollToForm}
+                  className="gap-2 text-base px-6 py-6 rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90"
+                >
+                  Get a FREE IT Discovery Session
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+                <Button size="lg" variant="outline" className="text-base px-6 py-6 rounded-xl press border-2 border-accent text-accent hover:bg-secondary" onClick={scrollToForm}>
+                  Get an Exact Quote
+                </Button>
+              </div>
+            </div>
 
-                      <div className="flex items-center gap-2 mb-1">
-                        <Sparkles className="h-4 w-4 text-primary" />
-                        <span className="text-xs font-semibold tracking-wider text-primary uppercase">Free Discovery Session</span>
-                      </div>
-                      <h2 className="text-2xl font-bold mb-1">Book your free IT discovery call.</h2>
-                      <p className="text-sm text-muted-foreground mb-6">No obligation. We respond within 24 hours.</p>
-                      <Form {...form}>
-                        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
-                          <honeypot.HoneypotField />
-                          <FormField control={form.control} name="name" render={({ field }) => (
+            {/* RIGHT FORM */}
+            <div
+              id="lead-form"
+              className="order-1 lg:order-2 lg:sticky lg:top-24 animate-scale-in"
+              style={{ animationDelay: "0.08s" }}
+            >
+              <div className="bg-card border border-border rounded-3xl p-6 md:p-8 shadow-[var(--shadow-card)]">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Sparkles className="h-4 w-4 text-primary" />
+                      <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Free Discovery Session</span>
+                    </div>
+                    <h2 className="font-display text-2xl font-bold mb-1">Book your free IT discovery call.</h2>
+                    <p className="text-sm text-muted-foreground mb-6">No obligation. We respond within 24 hours.</p>
+                    <Form {...form}>
+                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
+                        <honeypot.HoneypotField />
+                        <FormField control={form.control} name="name" render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Name</FormLabel>
+                            <FormControl><Input placeholder="Jane Doe" {...field} className="bg-secondary/50 border-border rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all" /></FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )} />
+                        <FormField control={form.control} name="email" render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Business Email</FormLabel>
+                            <FormControl><Input type="email" placeholder="jane@firm.co.uk" {...field} className="bg-secondary/50 border-border rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all" /></FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )} />
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <FormField control={form.control} name="phone" render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Name</FormLabel>
-                              <FormControl><Input placeholder="Jane Doe" {...field} className="bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" /></FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )} />
-                          <FormField control={form.control} name="email" render={({ field }) => (
-                            <FormItem>
-                              <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Business Email</FormLabel>
-                              <FormControl><Input type="email" placeholder="jane@firm.co.uk" {...field} className="bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" /></FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )} />
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <FormField control={form.control} name="phone" render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Phone</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    type="tel"
-                                    inputMode="numeric"
-                                    maxLength={10}
-                                    placeholder="98765 43210"
-                                    {...field}
-                                    onChange={(e) => {
-                                      const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
-                                      field.onChange(digits);
-                                    }}
-                                    className="bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all"
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )} />
-                            <FormField control={form.control} name="company" render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Company</FormLabel>
-                                <FormControl><Input placeholder="Your firm" {...field} className="bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" /></FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )} />
-                          </div>
-                          <FormField control={form.control} name="message" render={({ field }) => (
-                            <FormItem>
-                              <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Tell us about your IT setup</FormLabel>
+                              <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Phone</FormLabel>
                               <FormControl>
-                                <Textarea placeholder="What are your current IT challenges? Share your firm size, tools and any compliance requirements..." {...field} className="min-h-[100px] resize-y bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" />
+                                <Input
+                                  type="tel"
+                                  inputMode="numeric"
+                                  maxLength={10}
+                                  placeholder="98765 43210"
+                                  {...field}
+                                  onChange={(e) => {
+                                    const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+                                    field.onChange(digits);
+                                  }}
+                                  className="bg-secondary/50 border-border rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all"
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
                           )} />
-                          <Button
-                            type="submit"
-                            disabled={submitting}
-                            size="lg"
-                            className="w-full gap-2 hover-lift hover-glow group relative overflow-hidden mt-2"
-                          >
-                            {submitting ? (
-                              <><Loader2 className="h-4 w-4 animate-spin" /> Sending…</>
-                            ) : (
-                              <>
-                                <span className="relative z-10">Get My Free IT Discovery</span>
-                                <ArrowRight className="h-4 w-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-                                <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                              </>
-                            )}
-                          </Button>
-                          <p className="text-xs text-muted-foreground text-center pt-1">
-                            By submitting, you agree to be contacted about your enquiry.
-                          </p>
-                        </form>
-                      </Form>
-                </div>
+                          <FormField control={form.control} name="company" render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Company</FormLabel>
+                              <FormControl><Input placeholder="Your firm" {...field} className="bg-secondary/50 border-border rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all" /></FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )} />
+                        </div>
+                        <FormField control={form.control} name="message" render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Tell us about your IT setup</FormLabel>
+                            <FormControl>
+                              <Textarea placeholder="What are your current IT challenges? Share your firm size, tools and any compliance requirements..." {...field} className="min-h-[100px] resize-y bg-secondary/50 border-border rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )} />
+                        <Button
+                          type="submit"
+                          disabled={submitting}
+                          size="lg"
+                          className="w-full gap-2 rounded-xl press mt-2 bg-accent text-accent-foreground hover:bg-accent/90"
+                        >
+                          {submitting ? (
+                            <><Loader2 className="h-4 w-4 animate-spin" /> Sending…</>
+                          ) : (
+                            <>
+                              Get My Free IT Discovery
+                              <ArrowRight className="h-4 w-4" />
+                            </>
+                          )}
+                        </Button>
+                        <p className="text-xs text-muted-foreground text-center pt-1">
+                          By submitting, you agree to be contacted about your enquiry.
+                        </p>
+                      </form>
+                    </Form>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* BRANDS */}
-          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
-            <ParallaxSection speed={0.3} direction="up">
-              <section className="relative py-16 md:py-20 border-t border-border/50 overflow-hidden">
-                <div className="container-custom">
-                  <div className="max-w-2xl mb-12 text-center mx-auto">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-4">
-                      <span className="text-xs font-semibold tracking-widest uppercase text-primary">Trusted by</span>
+        {/* BRANDS */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container-custom">
+            <div className="max-w-2xl mb-12 text-center mx-auto animate-slide-up">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full mb-4">
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">Trusted by</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold">
+                Built for the regulated industries we <span className="text-primary">serve</span>
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+              {trustIndustries.map((industry, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center gap-3 h-28 px-4 py-4 rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] hover:border-primary/40 transition-colors animate-slide-up"
+                  style={{ animationDelay: `${Math.min(index, 6) * 0.06}s` }}
+                >
+                  <industry.icon className="w-7 h-7 text-primary" />
+                  <span className="text-sm font-bold text-center">{industry.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* RESULTS — Before vs After */}
+        <section className="py-16 md:py-20 bg-secondary">
+          <div className="container-custom">
+            <div className="max-w-2xl mb-12 text-center mx-auto animate-slide-up">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-card border border-border rounded-full mb-4">
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">Real Results</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold">
+                Before vs. <span className="text-primary">After</span>
+              </h2>
+              <p className="text-muted-foreground mt-3">A snapshot of how we transform IT for regulated UK firms.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {results.map((r, i) => (
+                <div key={r.brand} className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up" style={{ animationDelay: `${i * 0.08}s` }}>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-bold">{r.brand}</p>
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex-1">
+                      <div className="text-xs text-muted-foreground mb-1">Before</div>
+                      <div className="text-lg font-semibold text-foreground/70 line-through decoration-muted-foreground/50">{r.before}</div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold">
-                      Built for the regulated industries we <span className="text-gradient-primary">serve</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div className="container-custom">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
-                    {trustIndustries.map((industry, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center justify-center gap-3 h-28 px-4 py-4 rounded-xl border bg-card/60 backdrop-blur-sm border-border/60 hover:border-primary/50 transition-colors"
-                      >
-                        <industry.icon className="w-7 h-7 text-primary" />
-                        <span className="text-sm font-medium text-center">{industry.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            </ParallaxSection>
-          </ScrollAnimationWrapper>
-
-          {/* RESULTS — Before vs After */}
-          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
-            <section className="relative py-16 md:py-20 border-t border-border/50">
-              <div className="container-custom">
-                <div className="max-w-2xl mb-12 text-center mx-auto">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-4">
-                    <span className="text-xs font-semibold tracking-widest uppercase text-primary">Real Results</span>
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">
-                    Before vs. <span className="text-gradient-primary">After</span>
-                  </h2>
-                  <p className="text-muted-foreground mt-3">A snapshot of how we transform IT for regulated UK firms.</p>
-                </div>
-                <div className="grid md:grid-cols-3 gap-5">
-                  {results.map((r) => (
-                    <div key={r.brand} className="relative bg-card/60 backdrop-blur-sm border border-border/60 rounded-2xl p-6 hover-lift transition-all">
-                      <p className="text-xs uppercase tracking-wider text-muted-foreground mb-4">{r.brand}</p>
-                      <div className="flex items-center justify-between gap-3">
-                        <div className="flex-1">
-                          <div className="text-xs text-muted-foreground mb-1">Before</div>
-                          <div className="text-lg font-semibold text-foreground/70 line-through decoration-muted-foreground/50">{r.before}</div>
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-primary shrink-0" />
-                        <div className="flex-1 text-right">
-                          <div className="text-xs text-primary mb-1">After</div>
-                          <div className="text-lg font-bold text-gradient-primary">{r.after}</div>
-                        </div>
-                      </div>
-                      <p className="text-xs text-muted-foreground mt-4">{r.note}</p>
+                    <ArrowRight className="w-5 h-5 text-primary shrink-0" />
+                    <div className="flex-1 text-right">
+                      <div className="text-xs text-primary mb-1">After</div>
+                      <div className="text-lg font-bold text-foreground">{r.after}</div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </ScrollAnimationWrapper>
-
-          {/* INDUSTRIES SERVED */}
-          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
-            <section className="relative py-16 md:py-20 border-t border-border/50">
-              <div className="container-custom">
-                <div className="max-w-2xl mb-10 text-center mx-auto">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-4">
-                    <span className="text-xs font-semibold tracking-widest uppercase text-primary">Industries Served</span>
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">
-                    IT services for <span className="text-gradient-primary">regulated industries</span>
-                  </h2>
+                  <p className="text-xs text-muted-foreground mt-4">{r.note}</p>
                 </div>
-                <div className="flex flex-wrap justify-center gap-3">
-                  {industries.map((ind) => (
-                    <span
-                      key={ind}
-                      className="px-4 py-2 rounded-full bg-card/60 backdrop-blur-sm border border-border/60 text-sm text-foreground/90 hover:border-primary/50 transition-colors"
-                    >
-                      {ind}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </ScrollAnimationWrapper>
+              ))}
+            </div>
+          </div>
+        </section>
 
-          {/* SERVICES */}
-          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
-            <ParallaxSection speed={0.3} direction="up">
-              <section className="relative py-20 border-t border-border/50">
-                <div className="container-custom">
-                  <div className="max-w-2xl mb-14 text-center mx-auto">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-4">
-                      <Sparkles className="w-3.5 h-3.5 text-primary" />
-                      <span className="text-xs font-semibold tracking-widest uppercase text-primary">What we do</span>
+        {/* INDUSTRIES SERVED */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container-custom">
+            <div className="max-w-2xl mb-10 text-center mx-auto animate-slide-up">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full mb-4">
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">Industries Served</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold">
+                IT services for <span className="text-primary">regulated industries</span>
+              </h2>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {industries.map((ind) => (
+                <span
+                  key={ind}
+                  className="px-4 py-2 rounded-xl bg-card border border-border text-sm font-bold text-foreground/90 hover:border-primary/40 transition-colors"
+                >
+                  {ind}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <section className="py-16 md:py-24 bg-secondary">
+          <div className="container-custom">
+            <div className="max-w-2xl mb-14 text-center mx-auto animate-slide-up">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-card border border-border rounded-full mb-4">
+                <Sparkles className="w-3.5 h-3.5 text-primary" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">What we do</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+                Managed IT, <span className="text-primary">end to end.</span>
+              </h2>
+              <p className="text-muted-foreground">
+                Six connected capabilities, run by one accountable team that treats your firm like a long-term partner.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {services.map(({ icon: Icon, title, desc }, i) => (
+                <div
+                  key={title}
+                  className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up"
+                  style={{ animationDelay: `${i * 0.08}s` }}
+                >
+                  <div className="w-11 h-11 rounded-xl bg-secondary border border-border flex items-center justify-center mb-4">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-display font-bold mb-2">{title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* WHY US */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container-custom">
+            <div className="max-w-2xl mb-14 mx-auto text-center animate-slide-up">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full mb-4">
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">Why Infodot</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-5xl font-bold">
+                Not just another provider. A <span className="text-primary">managed IT partner.</span>
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {why.map((w, i) => (
+                <div
+                  key={w.t}
+                  className={`rounded-3xl p-6 border transition-all hover-lift animate-slide-up ${
+                    i === 0 ? "bg-accent text-accent-foreground border-accent" : "bg-card border-border shadow-[var(--shadow-card)]"
+                  }`}
+                  style={{ animationDelay: `${i * 0.08}s` }}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="h-5 w-5 text-primary" />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                      Managed IT, <span className="text-gradient-primary">end to end.</span>
-                    </h2>
-                    <p className="text-muted-foreground">
-                      Six connected capabilities, run by one accountable team that treats your firm like a long-term partner.
-                    </p>
-                  </div>
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {services.map(({ icon: Icon, title, desc }, i) => (
-                      <div
-                        key={title}
-                        className="group relative bg-card/60 backdrop-blur-sm border border-border/60 rounded-2xl p-6 hover-lift hover:border-primary/40 transition-all animate-slide-up"
-                        style={{ animationDelay: `${i * 0.08}s` }}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
-                        <div className="relative w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                          <Icon className="h-5 w-5 text-primary" />
-                        </div>
-                        <h3 className="font-semibold mb-2 relative">{title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed relative">{desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            </ParallaxSection>
-          </ScrollAnimationWrapper>
-
-          {/* WHY US */}
-          <ScrollAnimationWrapper animation="slide-in-left" threshold={0.15}>
-            <section className="relative py-20 border-t border-border/50 overflow-hidden">
-              <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[500px] h-[500px] bg-neon-purple/10 rounded-full blur-3xl pointer-events-none" />
-              <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-              <div className="container-custom relative">
-                <div className="max-w-2xl mb-14 mx-auto text-center">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-4">
-                    <span className="text-xs font-semibold tracking-widest uppercase text-primary">Why Infodot</span>
-                  </div>
-                  <h2 className="text-3xl md:text-5xl font-bold">
-                    Not just another provider. A <span className="text-gradient-primary">managed IT partner.</span>
-                  </h2>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-5">
-                  {why.map((w, i) => (
-                    <div
-                      key={w.t}
-                      className="group relative bg-card/60 backdrop-blur-sm border border-border/60 rounded-2xl p-6 hover-lift transition-all"
-                      style={{ animationDelay: `${i * 0.1}s` }}
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                          <CheckCircle2 className="h-5 w-5 text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold mb-2">{w.t}</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">{w.d}</p>
-                        </div>
-                      </div>
+                    <div>
+                      <h3 className="font-display font-bold mb-2">{w.t}</h3>
+                      <p className={`text-sm leading-relaxed ${i === 0 ? "text-accent-foreground/75" : "text-muted-foreground"}`}>{w.d}</p>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </ScrollAnimationWrapper>
-
-          {/* FAQ */}
-          <ScrollAnimationWrapper animation="slide-up" threshold={0.15}>
-            <section className="py-20 border-t border-border/50">
-              <div className="container-custom max-w-3xl">
-                <div className="text-center mb-12">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-4">
-                    <span className="text-xs font-semibold tracking-widest uppercase text-primary">FAQ</span>
                   </div>
-                  <h2 className="text-3xl md:text-5xl font-bold">
-                    Common <span className="text-gradient-primary">questions</span>
-                  </h2>
                 </div>
-                <div className="space-y-3">
-                  {faqs.map((f) => (
-                    <details
-                      key={f.q}
-                      className="group bg-card/60 backdrop-blur-sm border border-border/60 rounded-2xl p-5 open:border-primary/40 transition-colors"
-                    >
-                      <summary className="cursor-pointer font-medium flex items-center justify-between gap-4 list-none">
-                        <span>{f.q}</span>
-                        <span className="text-primary text-2xl leading-none transition-transform group-open:rotate-45">+</span>
-                      </summary>
-                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{f.a}</p>
-                    </details>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </ScrollAnimationWrapper>
+              ))}
+            </div>
+          </div>
+        </section>
 
-          {/* FINAL CTA */}
-          <ScrollAnimationWrapper animation="scale-in" threshold={0.2}>
-            <section className="relative py-24 border-t border-border/50 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/50 to-background">
-                <div className="absolute inset-0 grid-pattern opacity-[0.07]" />
+        {/* FAQ */}
+        <section className="py-16 md:py-24 bg-secondary">
+          <div className="container-custom max-w-3xl">
+            <div className="text-center mb-12 animate-slide-up">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-card border border-border rounded-full mb-4">
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">FAQ</span>
               </div>
-              <div className="container-custom relative z-10 text-center max-w-2xl">
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                  Ready to <span className="text-gradient-primary">run your IT properly?</span>
-                </h2>
-                <p className="text-muted-foreground mb-8">
-                  Book a free 30-minute discovery call — we'll review your current setup and share three specific ways to make your IT secure, evidenced and out of your way.
-                </p>
-                <div className="flex flex-wrap justify-center gap-3">
-                  <Button
-                    size="lg"
-                    onClick={scrollToForm}
-                    className="gap-2 text-base px-8 py-6 hover-lift hover-glow group relative overflow-hidden"
-                  >
-                    <span className="relative z-10">Get my free discovery call</span>
-                    <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Button>
-                  <Button size="lg" variant="outline" className="text-base px-8 py-6 hover-lift glow-border" asChild>
-                    <a href="tel:+918610986622"><Phone className="mr-2 h-4 w-4" /> Call us</a>
-                  </Button>
-                </div>
-                <div className="mt-10 text-sm text-muted-foreground flex items-center justify-center gap-6 flex-wrap">
-                  <a href="mailto:hello@infodot.co.uk" className="hover:text-primary transition-colors flex items-center gap-2">
-                    <Mail className="h-4 w-4" /> hello@infodot.co.uk
-                  </a>
-                </div>
-              </div>
-            </section>
-          </ScrollAnimationWrapper>
+              <h2 className="font-display text-3xl md:text-5xl font-bold">
+                Common <span className="text-primary">questions</span>
+              </h2>
+            </div>
+            <div className="space-y-3">
+              {faqs.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-3xl border border-border bg-card p-5 open:border-primary/40 shadow-[var(--shadow-card)] transition-colors"
+                >
+                  <summary className="cursor-pointer font-semibold flex items-center justify-between gap-4 list-none">
+                    <span>{f.q}</span>
+                    <span className="text-primary text-2xl leading-none transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
 
-          <footer className="py-6 border-t border-border/50 text-center text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Infodot UK. All rights reserved. ·{" "}
-            <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link>
-          </footer>
-        </div>
+        {/* FINAL CTA */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container-custom">
+            <div className="rounded-3xl bg-accent text-accent-foreground p-10 md:p-16 text-center max-w-3xl mx-auto animate-scale-in">
+              <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+                Ready to <span className="text-primary">run your IT properly?</span>
+              </h2>
+              <p className="text-accent-foreground/70 mb-8">
+                Book a free 30-minute discovery call — we'll review your current setup and share three specific ways to make your IT secure, evidenced and out of your way.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button
+                  size="lg"
+                  onClick={scrollToForm}
+                  className="gap-2 text-base px-8 py-6 rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                  Get my free discovery call
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+                <Button size="lg" variant="outline" className="text-base px-8 py-6 rounded-xl press border-2 border-accent-foreground/40 text-accent-foreground hover:bg-accent-foreground/10" asChild>
+                  <a href="tel:+918610986622"><Phone className="mr-2 h-4 w-4" /> Call us</a>
+                </Button>
+              </div>
+              <div className="mt-10 text-sm text-accent-foreground/70 flex items-center justify-center gap-6 flex-wrap">
+                <a href="mailto:hello@infodot.co.uk" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Mail className="h-4 w-4" /> hello@infodot.co.uk
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer className="py-6 border-t border-border text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Infodot UK. All rights reserved. ·{" "}
+          <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link>
+        </footer>
       </div>
     </>
   );
