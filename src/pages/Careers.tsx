@@ -15,44 +15,44 @@ export default function Careers() {
 
   const openPositions = [
     {
-      title: "Senior Digital Marketing Strategist",
-      department: "Strategy",
-      location: "Remote / Hybrid",
+      title: "Senior Systems Engineer",
+      department: "Managed IT",
+      location: "Bangalore / Hybrid",
       type: "Full-time",
-      description: "Lead comprehensive digital marketing strategies for our top-tier clients across multiple industries.",
-      requirements: ["5+ years in digital marketing", "Proven track record of successful campaigns", "Strong analytical skills"]
+      description: "Own the technical delivery of managed IT engagements for UK accountancy, legal and financial services clients — endpoints, Microsoft 365, patching and backup.",
+      requirements: ["5+ years in managed IT / systems administration", "Strong Microsoft 365 and Windows/Mac endpoint experience", "Comfortable working UK business hours remotely"]
     },
     {
-      title: "Social Media Manager",
-      department: "Social Media",
-      location: "Remote",
+      title: "Service Desk Engineer",
+      department: "Helpdesk & IT Operations",
+      location: "Bangalore",
       type: "Full-time",
-      description: "Create and manage engaging social media campaigns that drive brand awareness and conversions.",
-      requirements: ["3+ years social media experience", "Content creation skills", "Platform expertise (Meta, LinkedIn, TikTok)"]
+      description: "Be a named point of contact for client end users, resolving tickets with a 30-minute first response target across a single tracked channel.",
+      requirements: ["2+ years in a service desk / IT support role", "Clear written and spoken English", "ITIL awareness a plus"]
     },
     {
-      title: "SEO Specialist",
-      department: "SEO",
-      location: "On-site",
+      title: "Security & Compliance Analyst",
+      department: "Always Audit-Ready",
+      location: "Bangalore / Hybrid",
       type: "Full-time",
-      description: "Optimize websites and content to achieve top rankings and drive organic traffic growth.",
-      requirements: ["2+ years SEO experience", "Technical SEO knowledge", "Analytics proficiency"]
+      description: "Maintain continuous controls and evidence for clients — Cyber Essentials, ISO 27001 evidence, cyber insurance readiness and GDPR data protection operations.",
+      requirements: ["2+ years in IT security or compliance", "Familiarity with Cyber Essentials or ISO 27001 controls", "Detail-oriented and comfortable with documentation"]
     },
     {
-      title: "Content Writer",
-      department: "Content",
+      title: "Cloud & Migrations Engineer",
+      department: "Switch Projects",
       location: "Remote",
       type: "Full-time / Contract",
-      description: "Craft compelling content that educates, engages, and converts across various formats and industries.",
-      requirements: ["Excellent writing skills", "B2B/B2C experience", "SEO knowledge preferred"]
+      description: "Deliver fixed-fee email, tenant and domain migrations, and IT transition/exit projects for clients switching providers.",
+      requirements: ["Experience with Microsoft 365 / Google Workspace migrations", "Project delivery experience", "DNS and domain management knowledge"]
     },
     {
-      title: "Paid Ads Specialist",
-      department: "Performance Marketing",
+      title: "Network & Security Engineer",
+      department: "Secure by Default",
       location: "Hybrid",
       type: "Full-time",
-      description: "Manage and optimize paid advertising campaigns across Google, Meta, and LinkedIn platforms.",
-      requirements: ["Google Ads & Meta Ads certified", "3+ years experience", "Strong analytical mindset"]
+      description: "Manage cloud-managed firewalls, VPN and Wi-Fi remotely, and run EDR, vulnerability management and penetration testing coordination for clients.",
+      requirements: ["Experience with cloud-managed networking (firewalls, VPN, Wi-Fi)", "3+ years experience in a security or network engineering role", "Strong analytical mindset"]
     }
   ];
 
@@ -60,22 +60,22 @@ export default function Careers() {
     {
       icon: Heart,
       title: "Work-Life Balance",
-      description: "Flexible hours, remote work options, and generous PTO"
+      description: "Flexible hours, remote/hybrid work options, and generous PTO"
     },
     {
       icon: TrendingUp,
       title: "Career Growth",
-      description: "Continuous learning budget and clear advancement paths"
+      description: "Continuous learning budget and clear advancement paths in IT and security"
     },
     {
       icon: Users,
       title: "Amazing Team",
-      description: "Collaborative culture with talented, passionate people"
+      description: "Collaborative culture with experienced engineers who take ownership"
     },
     {
       icon: Zap,
       title: "Competitive Package",
-      description: "Top market salary, health benefits, and performance bonuses"
+      description: "Competitive salary, health benefits, and performance bonuses"
     }
   ];
 
@@ -86,9 +86,9 @@ export default function Careers() {
       <BackToTop />
       
       <SEOHead 
-        title="Careers - Join Our Team"
-        description="Join our growing team and help revolutionize digital marketing. Explore open positions and grow your career with us."
-        keywords="marketing careers, digital marketing jobs, marketing agency jobs"
+        title="Careers - Join Infodot UK's Managed IT Team"
+        description="Join our growing managed IT team in Bangalore. Explore open engineering, service desk and security/compliance roles supporting UK accountancy, legal and financial services clients."
+        keywords="managed IT careers, IT engineer jobs Bangalore, service desk jobs, cyber security careers, IT support jobs"
       />
 
       {/* Hero Section */}
@@ -101,7 +101,7 @@ export default function Careers() {
               Join Our Growing Team
             </h1>
             <p className="text-xl text-muted-foreground">
-              Help us revolutionize digital marketing for businesses worldwide. Work with cutting-edge strategies, amazing clients, and a passionate team.
+              Help us run managed IT for regulated UK industries. Work with named clients, real ownership, and an ISO 27001-certified team, delivered remotely from Bangalore.
             </p>
           </div>
 
@@ -164,7 +164,7 @@ export default function Careers() {
           <div className="mt-20 text-center p-12 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl">
             <h2 className="text-3xl font-bold mb-4">Don't See a Perfect Fit?</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              We're always looking for talented individuals. Send us your resume and let's talk about how you can contribute to our team.
+              We're always looking for talented IT engineers and analysts. Send us your resume and let's talk about how you can contribute to our team.
             </p>
             <Button size="lg" onClick={() => setSelectedPosition("General Application")}>
               Send Your Resume

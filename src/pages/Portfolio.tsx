@@ -9,93 +9,57 @@ import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { TrendingUp, Users, Target, ArrowRight, Quote, Search, X } from "lucide-react";
+import { ShieldCheck, ArrowRight, Search, X, CheckCircle2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 const portfolioItems = [
   {
-    title: "D2C Fashion Brand Scale-Up",
-    category: "E-commerce",
-    description: "Helped a fashion D2C brand scale from 50K to 5M monthly revenue through strategic performance marketing and conversion optimization.",
-    challenge: "The brand was struggling with low ROAS and inconsistent revenue despite significant ad spend.",
-    solution: "We implemented a comprehensive strategy including audience segmentation, creative testing, and conversion rate optimization.",
-    metrics: [
-      { icon: TrendingUp, label: "Revenue Growth", value: "10x" },
-      { icon: Users, label: "Customer Base", value: "15K+" },
-      { icon: Target, label: "ROAS", value: "8.5x" }
-    ],
-    tags: ["Meta Ads", "Email Marketing", "CRO"],
-    testimonial: "Infodot transformed our business. We went from struggling to thriving in just 6 months."
+    title: "Accountancy Practice — Co-Managed IT & Security Baseline",
+    category: "Accountancy",
+    description: "A 90-user accountancy practice needed security and evidence brought up to a consistent standard alongside its existing in-house team, without disrupting day-to-day operations.",
+    challenge: "MFA, patching and backup were inconsistently applied across the practice, and there was no evidence pack ready for cyber insurance renewal or client due-diligence requests.",
+    solution: "We ran the security and operations layer alongside the in-house team under a clear who-owns-what matrix — MFA everywhere, managed EDR, tested backups and monthly evidence packs.",
+    tags: ["Co-Managed IT", "Cyber Insurance Readiness", "Backup & DR"]
   },
   {
-    title: "SaaS Lead Generation",
-    category: "B2B SaaS",
-    description: "Generated 1000+ qualified enterprise leads for a B2B SaaS platform through multi-channel demand generation and cold outreach.",
-    challenge: "The SaaS company needed to fill their sales pipeline with qualified enterprise leads.",
-    solution: "We developed a multi-channel approach combining LinkedIn ads, cold email sequences, and content marketing.",
-    metrics: [
-      { icon: Users, label: "Qualified Leads", value: "1000+" },
-      { icon: Target, label: "Conversion Rate", value: "35%" },
-      { icon: TrendingUp, label: "Pipeline Value", value: "$2.5M" }
-    ],
-    tags: ["LinkedIn Ads", "Cold Email", "Content Marketing"],
-    testimonial: "The quality of leads we received exceeded our expectations. Our sales team was finally able to focus on closing."
+    title: "Law Firm — Cyber Essentials Readiness & Hardening",
+    category: "Legal",
+    description: "A regional law firm needed to achieve Cyber Essentials certification to satisfy client and insurer requirements, without a dedicated internal IT security function.",
+    challenge: "The firm's endpoints and identity controls were not aligned to the Cyber Essentials control set, and there was no process for keeping evidence current.",
+    solution: "We implemented all five Cyber Essentials controls to the current standard, coordinated certification through an accredited body, and set up continuous controls and evidence to keep the pack audit-ready.",
+    tags: ["Cyber Essentials Readiness", "IT Hardening", "Continuous Controls & Evidence"]
   },
   {
-    title: "Organic SEO Dominance",
-    category: "Tech Startup",
-    description: "Positioned a tech startup on page 1 of Google for 50+ target keywords, driving 200K+ monthly organic traffic.",
-    challenge: "Zero organic visibility in a highly competitive tech niche with strong incumbent players.",
-    solution: "Comprehensive SEO overhaul including technical fixes, content strategy, and strategic link building.",
-    metrics: [
-      { icon: Users, label: "Monthly Traffic", value: "200K+" },
-      { icon: Target, label: "Keywords Ranked", value: "50+" },
-      { icon: TrendingUp, label: "Organic Leads", value: "3x" }
-    ],
-    tags: ["SEO", "Content Strategy", "Technical SEO"],
-    testimonial: "We went from invisible to dominant in our space. The organic traffic now drives 60% of our revenue."
+    title: "Financial Services Firm — Full IT Migration & Fully Managed IT",
+    category: "Financial Services",
+    description: "A financial services firm was exiting an underperforming incumbent provider and needed a clean transition with minimal disruption to regulated operations.",
+    challenge: "Documentation from the outgoing provider was incomplete, and the firm needed operational resilience evidence for FCA-related reporting.",
+    solution: "We ran a structured discovery and transition project — asset discovery, knowledge transfer and a clean switch — followed by fully managed IT with monthly evidence and FCA operational resilience readiness.",
+    tags: ["IT Transition & Exit", "Fully Managed IT", "FCA Operational Resilience"]
   },
   {
-    title: "Complete Brand Transformation",
-    category: "Healthcare",
-    description: "Rebuilt brand identity and digital presence for a healthcare company, resulting in 5x increase in patient inquiries.",
-    challenge: "Outdated brand image and poor digital presence affecting patient acquisition.",
-    solution: "Full brand overhaul including new visual identity, website redesign, and targeted social media campaigns.",
-    metrics: [
-      { icon: Users, label: "Patient Inquiries", value: "5x" },
-      { icon: Target, label: "Brand Awareness", value: "+250%" },
-      { icon: TrendingUp, label: "Engagement Rate", value: "45%" }
-    ],
-    tags: ["Branding", "Website Design", "Social Media"],
-    testimonial: "Our new brand resonates with patients. We've seen a dramatic increase in trust and inquiries."
+    title: "Accountancy Group — Microsoft 365 & Email Migration",
+    category: "Accountancy",
+    description: "A multi-office accountancy group needed to consolidate onto Microsoft 365 from a mix of legacy email systems ahead of a wider security uplift.",
+    challenge: "Multiple domains and mailboxes across offices, with a hard requirement of zero data loss during the move.",
+    solution: "We ran a fixed-fee, tenant-to-tenant email migration and domain migration, moving DNS cleanly under the firm's control, followed by identity and access hardening across the estate.",
+    tags: ["Email Migration", "Domain Migration", "Identity & Access"]
   },
   {
-    title: "E-commerce Revenue Explosion",
-    category: "Consumer Goods",
-    description: "Scaled a consumer goods brand from ₹10L to ₹2Cr monthly revenue through integrated marketing campaigns.",
-    challenge: "Stagnant growth despite having great products and decent market fit.",
-    solution: "Implemented full-funnel marketing strategy with focus on customer retention and LTV optimization.",
-    metrics: [
-      { icon: TrendingUp, label: "Revenue Growth", value: "20x" },
-      { icon: Users, label: "Repeat Customers", value: "45%" },
-      { icon: Target, label: "CAC Reduction", value: "-40%" }
-    ],
-    tags: ["Performance Marketing", "Email Automation", "Retention"],
-    testimonial: "Infodot didn't just help us grow, they helped us build a sustainable business model."
+    title: "Law Firm — Backup, Disaster Recovery & Incident Response",
+    category: "Legal",
+    description: "A litigation-focused firm needed a tested disaster recovery plan and monitored, immutable backups after identifying single points of failure in its existing setup.",
+    challenge: "Backups existed but had never been restore-tested, and there was no documented incident response plan.",
+    solution: "We deployed monitored, restore-tested, immutable backups with a defined RTO/RPO, and documented an incident response plan alongside central logging and monitoring.",
+    tags: ["Backup & Disaster Recovery", "Monitoring & Incident Response", "Vulnerability Management"]
   },
   {
-    title: "B2B Market Expansion",
-    category: "Manufacturing",
-    description: "Helped a manufacturing company enter new markets and generate ₹5Cr in new business within 12 months.",
-    challenge: "Needed to expand into new geographic markets with zero existing presence or relationships.",
-    solution: "Strategic content marketing, LinkedIn outreach, and partnership development strategy.",
-    metrics: [
-      { icon: TrendingUp, label: "New Revenue", value: "₹5Cr" },
-      { icon: Users, label: "New Markets", value: "5" },
-      { icon: Target, label: "Deal Size", value: "+65%" }
-    ],
-    tags: ["B2B Marketing", "LinkedIn", "Content Strategy"],
-    testimonial: "We couldn't have entered these markets without Infodot's strategic guidance and execution."
+    title: "Financial Services Firm — Cyber Insurance Renewal Readiness",
+    category: "Financial Services",
+    description: "Ahead of a cyber insurance renewal, a financial services firm needed to demonstrate that the controls in its questionnaire answers were actually running.",
+    challenge: "Controls had been implemented at some point but drifted over time, creating a risk of disputed cover at claim time.",
+    solution: "We enforced and evidenced the controls insurers ask about — MFA everywhere, EDR on every endpoint, tested backups and patching — with drift alerting and a renewal-ready evidence pack.",
+    tags: ["Cyber Insurance Readiness", "Managed EDR", "GDPR / Data Protection Ops"]
   }
 ];
 
@@ -108,12 +72,10 @@ const Portfolio = () => {
   const filteredItems = useMemo(() => {
     let result = portfolioItems;
 
-    // Filter by category
     if (activeCategory !== "All") {
       result = result.filter((item) => item.category === activeCategory);
     }
 
-    // Filter by search
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       result = result.filter(
@@ -135,9 +97,9 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Portfolio - Our Success Stories | Infodot UK"
-        description="Explore our portfolio of successful marketing campaigns. See how we've helped D2C, SaaS, and B2B brands achieve 10x ROAS, generate leads, and scale revenue."
-        keywords="marketing portfolio, case studies, success stories, ROAS, lead generation, brand growth"
+        title="Client Outcomes - Managed IT Engagements | Infodot UK"
+        description="Engagement snapshots showing how Infodot UK runs managed IT, security and compliance evidence for accountancy, legal and financial services firms."
+        keywords="managed IT case studies, Cyber Essentials, cyber insurance readiness, IT support for accountants, IT support for law firms, IT support for financial services"
       />
       <JsonLd
         schema={{
@@ -145,9 +107,9 @@ const Portfolio = () => {
           id: "portfolio-collection",
           data: {
             "@type": "CollectionPage",
-            name: "Infodot UK Portfolio & Case Studies",
+            name: "Infodot UK Client Outcomes",
             url: "https://infodot.co.uk/portfolio",
-            description: "Marketing case studies showing measurable growth for D2C, SaaS, and B2B brands.",
+            description: "Engagement snapshots showing managed IT, security and compliance outcomes for accountancy, legal and financial services firms.",
             hasPart: filteredItems.map((item) => ({
               "@type": "CreativeWork",
               name: item.title,
@@ -170,13 +132,13 @@ const Portfolio = () => {
           <Breadcrumbs />
           <div className="text-center max-w-4xl mx-auto">
             <Badge variant="secondary" className="mb-4 text-primary border-primary/30">
-              Our Work
+              Client Outcomes
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Success <span className="text-gradient-primary">Stories</span>
+              Engagement <span className="text-gradient-primary">Snapshots</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Real results for real businesses. See how we've helped brands achieve exceptional growth through strategic marketing.
+              Generic, anonymised snapshots showing how we run managed IT, security and compliance evidence for regulated UK firms.
             </p>
           </div>
         </div>
@@ -192,7 +154,7 @@ const Portfolio = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search projects..."
+              placeholder="Search engagements..."
               className="pl-10 pr-10"
             />
             {searchQuery && (
@@ -225,7 +187,7 @@ const Portfolio = () => {
           {/* Results count */}
           {(searchQuery || activeCategory !== "All") && (
             <p className="text-center text-muted-foreground mt-4">
-              {filteredItems.length} project{filteredItems.length !== 1 ? "s" : ""} found
+              {filteredItems.length} engagement{filteredItems.length !== 1 ? "s" : ""} found
             </p>
           )}
         </div>
@@ -236,7 +198,7 @@ const Portfolio = () => {
         <div className="container-custom">
           {filteredItems.length === 0 ? (
             <div className="text-center py-16">
-              <p className="text-xl text-muted-foreground mb-4">No projects found</p>
+              <p className="text-xl text-muted-foreground mb-4">No engagements found</p>
               <Button
                 variant="outline"
                 onClick={() => {
@@ -277,34 +239,18 @@ const Portfolio = () => {
                     
                     <div className="grid md:grid-cols-2 gap-8 mb-8">
                       <div>
-                        <h3 className="font-semibold text-primary mb-2">The Challenge</h3>
+                        <h3 className="font-semibold text-primary mb-2">The Situation</h3>
                         <p className="text-muted-foreground">{item.challenge}</p>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-primary mb-2">Our Solution</h3>
+                        <h3 className="font-semibold text-primary mb-2">How We Ran It</h3>
                         <p className="text-muted-foreground">{item.solution}</p>
                       </div>
                     </div>
-                    
-                    {/* Metrics */}
-                    <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-background/50 rounded-lg border border-border/50">
-                      {item.metrics.map((metric, i) => (
-                        <div key={i} className="text-center">
-                          <metric.icon className="w-6 h-6 text-primary mx-auto mb-2" />
-                          <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
-                            {metric.value}
-                          </div>
-                          <div className="text-sm text-muted-foreground">
-                            {metric.label}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* Testimonial */}
+
                     <div className="flex items-start gap-4 p-6 bg-primary/5 rounded-lg border border-primary/20">
-                      <Quote className="w-8 h-8 text-primary flex-shrink-0" />
-                      <p className="text-muted-foreground italic">{item.testimonial}</p>
+                      <ShieldCheck className="w-8 h-8 text-primary flex-shrink-0" />
+                      <p className="text-muted-foreground">Outcome details are described generically to protect client confidentiality.</p>
                     </div>
                   </div>
                 </Card>
@@ -318,13 +264,13 @@ const Portfolio = () => {
       <section className="py-20 bg-card/50">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Be Our Next <span className="text-gradient-primary">Success Story</span>?
+            Ready for Your Own <span className="text-gradient-primary">Engagement Snapshot</span>?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Let's discuss how we can help you achieve similar results for your business.
+            Let's discuss how we can run your IT completely — securely, and with the evidence to prove it.
           </p>
           <Button size="lg" onClick={handleContactClick}>
-            Start Your Journey <ArrowRight className="ml-2 w-4 h-4" />
+            Book a Discovery Call <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </div>
       </section>

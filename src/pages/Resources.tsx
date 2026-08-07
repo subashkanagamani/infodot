@@ -1,4 +1,4 @@
-import { FileText, Download, BookOpen, Video, Headphones } from "lucide-react";
+import { FileText, Download, BookOpen, Video, Headphones, ShieldCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
@@ -11,76 +11,60 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export default function Resources() {
   const resources = [
     {
-      type: "eBook",
-      icon: BookOpen,
-      title: "The Complete Digital Marketing Playbook 2025",
-      description: "A comprehensive 50-page guide covering every aspect of modern digital marketing strategy.",
-      format: "PDF",
-      size: "8.2 MB",
-      downloads: "2,431"
-    },
-    {
-      type: "Template",
-      icon: FileText,
-      title: "Social Media Content Calendar Template",
-      description: "Plan and organize your social media content for maximum engagement and consistency.",
-      format: "Excel",
-      size: "1.5 MB",
-      downloads: "3,892"
-    },
-    {
       type: "Guide",
+      icon: BookOpen,
+      title: "Cyber Essentials Readiness Guide",
+      description: "A practical walkthrough of the five Cyber Essentials controls and what accountancy, legal and financial services firms need to have in place.",
+      format: "PDF"
+    },
+    {
+      type: "Checklist",
       icon: FileText,
-      title: "SEO Checklist: 100+ Points for Perfect Optimization",
-      description: "The ultimate checklist to ensure your website is fully optimized for search engines.",
-      format: "PDF",
-      size: "2.1 MB",
-      downloads: "5,234"
+      title: "Cyber Insurance Renewal Checklist",
+      description: "The controls insurers ask about most — MFA, EDR, tested backups and patching — and how to keep evidence current between renewals.",
+      format: "PDF"
+    },
+    {
+      type: "Checklist",
+      icon: ShieldCheck,
+      title: "IT Security Baseline Checklist for Regulated Firms",
+      description: "A control-by-control checklist covering identity, endpoint hardening, email security and backup for accountancy, legal and financial services practices.",
+      format: "PDF"
     },
     {
       type: "Webinar",
       icon: Video,
-      title: "Mastering Paid Advertising ROI",
-      description: "60-minute recorded masterclass on optimizing your ad spend across all major platforms.",
-      format: "Video",
-      size: "450 MB",
-      downloads: "1,567"
+      title: "Understanding Continuous Controls & Evidence",
+      description: "A recorded session on why point-in-time compliance isn't enough, and how continuous evidence keeps you audit-ready year-round.",
+      format: "Video"
     },
     {
-      type: "Podcast",
+      type: "Guide",
       icon: Headphones,
-      title: "Marketing Growth Stories - Full Season 1",
-      description: "12 episodes featuring interviews with marketing leaders sharing their growth strategies.",
-      format: "MP3",
-      size: "320 MB",
-      downloads: "892"
+      title: "FCA Operational Resilience — A Plain-English Guide",
+      description: "What third-party risk and incident reporting readiness under PS26/2 means in practice for financial services firms.",
+      format: "PDF"
     },
     {
       type: "Toolkit",
       icon: FileText,
-      title: "Email Marketing Conversion Kit",
-      description: "15+ proven email templates for welcome series, nurture campaigns, and promotions.",
-      format: "ZIP",
-      size: "5.4 MB",
-      downloads: "2,156"
+      title: "IT Transition & Exit Toolkit",
+      description: "A framework for a clean switch from an incumbent IT provider — discovery, reverse knowledge transfer and an exit pack.",
+      format: "PDF"
     },
     {
-      type: "Report",
+      type: "Guide",
       icon: FileText,
-      title: "2025 Digital Marketing Trends Report",
-      description: "Industry analysis and predictions for the year ahead, backed by data from 1000+ businesses.",
-      format: "PDF",
-      size: "12.8 MB",
-      downloads: "4,671"
+      title: "GDPR & Data Protection Operations Guide",
+      description: "Practical guidance on DPAs, sub-processor registers, DSAR handling and breach process for regulated UK firms.",
+      format: "PDF"
     },
     {
-      type: "Worksheet",
+      type: "Checklist",
       icon: FileText,
-      title: "Marketing Budget Calculator & Planner",
-      description: "Calculate optimal marketing spend allocation across channels based on your goals and industry.",
-      format: "Excel",
-      size: "2.3 MB",
-      downloads: "1,982"
+      title: "Backup & Disaster Recovery Readiness Checklist",
+      description: "How to know whether your backups are actually restorable, and what a tested DR plan with defined RTO/RPO should include.",
+      format: "PDF"
     }
   ];
 
@@ -100,9 +84,9 @@ export default function Resources() {
       <BackToTop />
       
       <SEOHead 
-        title="Free Marketing Resources"
-        description="Download free marketing guides, templates, and tools to accelerate your business growth. Expert resources 100% free."
-        keywords="marketing resources, free marketing templates, digital marketing guides"
+        title="Free IT & Compliance Resources - Infodot UK"
+        description="Download free guides and checklists on managed IT, Cyber Essentials, cyber insurance readiness, backup/DR and GDPR for accountancy, legal and financial services firms."
+        keywords="Cyber Essentials checklist, cyber insurance readiness, IT security checklist, GDPR guide, backup disaster recovery checklist"
       />
 
       {/* Hero Section */}
@@ -112,10 +96,10 @@ export default function Resources() {
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
-              Free Marketing Resources
+              Free IT & Compliance Resources
             </h1>
             <p className="text-xl text-muted-foreground">
-              Download our expert guides, templates, and tools to accelerate your marketing success. All 100% free.
+              Practical guides and checklists on managed IT, security and audit-readiness for regulated UK firms. All free.
             </p>
           </div>
 
@@ -140,8 +124,7 @@ export default function Resources() {
                 </p>
 
                 <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
-                  <span>{resource.format} • {resource.size}</span>
-                  <span>{resource.downloads} downloads</span>
+                  <span>{resource.format}</span>
                 </div>
 
                 <Button 
@@ -162,7 +145,7 @@ export default function Resources() {
               Want More Free Resources?
             </h2>
             <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-              Subscribe to our newsletter and get new guides, templates, and exclusive content every week.
+              Subscribe to get new guides and checklists on managed IT, security and compliance evidence.
             </p>
             <Button size="lg" variant="secondary" onClick={() => window.location.href = '/#contact'}>
               Subscribe Now
