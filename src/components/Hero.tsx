@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Clock, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useSection } from "@/hooks/usePageContent";
-import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 
 interface HeroContent {
   badge: string;
@@ -36,78 +36,108 @@ const DEFAULTS: HeroContent = {
 
 export const Hero = () => {
   const c = useSection<HeroContent>("home", "hero", DEFAULTS);
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Ambient backdrop */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/40 to-background">
-        <AmbientBackdrop intensity="bold" />
-      </div>
+  const chipIcons = [ShieldCheck, Clock, Zap];
+  const chips = (c.tags?.length ? c.tags : DEFAULTS.tags).slice(1, 4);
 
-      <div className="relative z-10 container-custom text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-primary/30 backdrop-blur-sm animate-slide-up hover:border-primary/50 transition-colors group">
-            <ShieldCheck className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{c.badge}</span>
+  return (
+    <section id="home" className="relative bg-secondary pt-24 pb-10 md:pt-28 md:pb-14">
+      <div className="container-custom">
+        <div className="grid grid-cols-12 gap-4">
+          {/* Main hero tile */}
+          <div className="col-span-12 lg:col-span-8 lg:row-span-2 bg-card rounded-3xl p-8 md:p-10 flex flex-col justify-between border border-border shadow-[var(--shadow-card)] animate-slide-up">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.14em]">{c.badge}</span>
+              </div>
+
+              <h1
+                className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08]"
+                dangerouslySetInnerHTML={{ __html: c.headingHtml }}
+              />
+
+              <p className="text-muted-foreground text-base md:text-lg max-w-2xl font-medium">
+                {c.subheading}
+              </p>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button size="lg" variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-base rounded-xl press" asChild>
+                <Link to={c.primaryCtaHref}>
+                  {c.primaryCtaLabel}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-secondary px-8 py-6 text-base rounded-xl press" asChild>
+                <Link to="/how-it-works">{c.secondaryCtaLabel}</Link>
+              </Button>
+            </div>
           </div>
 
-          <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-slide-up"
-            style={{ animationDelay: '0.1s' }}
-            dangerouslySetInnerHTML={{ __html: c.headingHtml }}
-          />
-
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            {c.subheading}
-          </p>
-
-          <p className="text-xl md:text-2xl font-bold animate-slide-up" style={{ animationDelay: '0.25s' }}>
-            {c.tagsLabel}
-          </p>
-
-          {c.tags?.length > 0 && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {c.tags.map((tag, i) => (
-                  <span
-                    key={tag}
-                    className="px-4 py-1.5 bg-muted/30 rounded-full text-sm border border-border/30 hover:border-primary/50 hover:bg-muted/50 transition-all cursor-default hover-lift"
-                    style={{ animationDelay: `${0.4 + i * 0.1}s` }}
-                  >
-                    {tag}
-                  </span>
-                ))}
+          {/* Heritage tile */}
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 relative overflow-hidden animate-slide-up" style={{ animationDelay: "0.08s" }}>
+            <div className="relative z-10">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Heritage</span>
+              <div className="mt-4">
+                <div className="font-display text-5xl font-bold">1996</div>
+                <p className="mt-2 font-medium text-accent-foreground/70">
+                  Running IT for regulated UK businesses for nearly three decades.
+                </p>
               </div>
             </div>
-          )}
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 animate-slide-up" style={{ animationDelay: '0.5s' }}>
-            <Button
-              size="lg"
-              className="gap-2 text-lg px-8 py-6 hover-lift hover-glow group relative overflow-hidden"
-              onClick={() => window.open(c.primaryCtaHref, c.primaryCtaHref.startsWith('http') ? '_blank' : '_self')}
-            >
-              <span className="relative z-10">{c.primaryCtaLabel}</span>
-              <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 hover-lift glow-border group"
-              onClick={() => {
-                if (c.secondaryCtaHref.startsWith('#')) {
-                  document.querySelector(c.secondaryCtaHref)?.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.open(c.secondaryCtaHref, c.secondaryCtaHref.startsWith('http') ? '_blank' : '_self');
-                }
-              }}
-            >
-              {c.secondaryCtaLabel}
-              <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
-            </Button>
+            <div className="absolute -right-8 -bottom-8 opacity-10" aria-hidden>
+              <div className="w-32 h-32 border-[16px] border-current rounded-full" />
+            </div>
           </div>
 
+          {/* Service standards tile */}
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-card rounded-3xl p-8 border border-border shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.16s" }}>
+            <h2 className="font-display font-bold mb-6">Service standards</h2>
+            <div className="space-y-3">
+              {chips.map((chip, i) => {
+                const Icon = chipIcons[i] ?? ShieldCheck;
+                return (
+                  <div key={chip} className="flex items-center gap-3 p-3 bg-secondary rounded-xl">
+                    <span className="w-8 h-8 rounded-lg bg-card flex items-center justify-center border border-border shrink-0">
+                      <Icon className="w-4 h-4 text-primary" />
+                    </span>
+                    <span className="text-sm font-bold leading-tight">{chip}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
+          {/* Regulated expertise tile */}
+          <div className="col-span-12 md:col-span-6 bg-card rounded-3xl p-8 border border-border shadow-[var(--shadow-card)] flex flex-col justify-between animate-slide-up" style={{ animationDelay: "0.24s" }}>
+            <div>
+              <h2 className="font-display font-bold text-xl mb-2">Regulated expertise</h2>
+              <p className="text-muted-foreground text-sm">Sector-specific controls and evidence for high-stakes UK firms.</p>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["Accountancy", "Legal", "Financial Services", "Small Office"].map((t) => (
+                <span key={t} className="px-3 py-1.5 rounded-lg border border-border text-xs font-bold">{t}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Services tile */}
+          <div className="col-span-12 md:col-span-6 bg-card rounded-3xl p-8 border border-border shadow-[var(--shadow-card)] flex flex-col justify-between animate-slide-up" style={{ animationDelay: "0.32s" }}>
+            <div>
+              <h2 className="font-display font-bold text-xl mb-2">{c.tagsLabel}</h2>
+              <p className="text-muted-foreground text-sm">From the helpdesk and device lifecycle to EDR, hardening and audit evidence.</p>
+            </div>
+            <div className="mt-6 flex items-center justify-between">
+              <div className="flex -space-x-2" aria-hidden>
+                <span className="w-8 h-8 rounded-full bg-accent border-2 border-card" />
+                <span className="w-8 h-8 rounded-full bg-primary border-2 border-card" />
+                <span className="w-8 h-8 rounded-full bg-secondary border-2 border-card" />
+              </div>
+              <Link to="/services" className="text-sm font-bold underline underline-offset-4 decoration-primary decoration-2">
+                View all services
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
