@@ -27,7 +27,7 @@ import { useHoneypot } from "@/hooks/useHoneypot";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import { InteractiveParticles } from "@/components/InteractiveParticles";
+import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 import { industries as trustIndustries } from "@/components/ClientLogos";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "@/assets/infodot-logo.png";
@@ -210,7 +210,7 @@ const Enquiry = () => {
       />
 
       <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-        <InteractiveParticles />
+        <AmbientBackdrop />
 
         <div className="relative z-10">
           {/* Minimal top bar */}
@@ -228,49 +228,15 @@ const Enquiry = () => {
           {/* HERO */}
           <section className="relative overflow-hidden py-16 md:py-24">
             {/* Animated background — matches home hero */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary to-background">
-              <div className="absolute inset-0 grid-pattern opacity-30" />
-              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
-              <div className="absolute inset-0 opacity-10">
-                {[...Array(5)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute h-px bg-gradient-to-r from-transparent via-primary to-transparent"
-                    style={{ top: `${20 + i * 15}%`, left: "-10%", right: "-10%", transform: "rotate(-15deg)" }}
-                  />
-                ))}
-              </div>
-              {/* Floating shapes */}
-              <div className="absolute inset-0 pointer-events-none">
-                {[...Array(12)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute animate-float"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 5}s`,
-                      animationDuration: `${5 + Math.random() * 5}s`,
-                    }}
-                  >
-                    {i % 3 === 0 ? (
-                      <div className="w-2 h-2 bg-primary/30 rounded-full" />
-                    ) : i % 3 === 1 ? (
-                      <div className="w-3 h-3 border border-neon-purple/30 rotate-45" />
-                    ) : (
-                      <div className="w-2 h-2 bg-primary/30" style={{ clipPath: "polygon(50% 0%, 100% 100%, 0% 100%)" }} />
-                    )}
-                  </div>
-                ))}
-              </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/40 to-background">
+              <AmbientBackdrop intensity="bold" />
             </div>
 
             <div className="container-custom relative z-10 grid lg:grid-cols-[1fr_460px] gap-12 items-start">
               {/* LEFT COPY */}
               <div className="order-2 lg:order-1">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-primary/30 backdrop-blur-sm animate-slide-up hover:border-primary/50 transition-colors mb-6">
-                  <Sparkles className="w-4 h-4 text-primary animate-pulse-glow" />
+                  <Sparkles className="w-4 h-4 text-primary" />
                   <span className="text-sm text-muted-foreground">Free IT Discovery Session — limited slots</span>
                 </div>
 
@@ -328,7 +294,7 @@ const Enquiry = () => {
                 className="relative order-1 lg:order-2 lg:sticky lg:top-24 animate-scale-in"
                 style={{ animationDelay: "0.3s" }}
               >
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/60 via-neon-purple/40 to-primary/60 rounded-2xl blur-2xl opacity-60 animate-pulse-glow" />
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary/60 via-neon-purple/40 to-primary/60 rounded-2xl blur-2xl opacity-60" />
                 <div className="absolute -inset-[2px] bg-gradient-to-br from-primary via-neon-purple to-primary rounded-2xl opacity-70" />
                 <div className="relative bg-card/95 backdrop-blur-xl border-2 border-primary/40 rounded-2xl p-6 md:p-8 shadow-[0_0_60px_hsl(358_84%_53%_/_0.12)]">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
@@ -539,7 +505,7 @@ const Enquiry = () => {
                         style={{ animationDelay: `${i * 0.08}s` }}
                       >
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
-                        <div className="relative w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:animate-pulse-glow">
+                        <div className="relative w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                           <Icon className="h-5 w-5 text-primary" />
                         </div>
                         <h3 className="font-semibold mb-2 relative">{title}</h3>
@@ -574,7 +540,7 @@ const Enquiry = () => {
                       style={{ animationDelay: `${i * 0.1}s` }}
                     >
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0 group-hover:animate-pulse-glow">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                           <CheckCircle2 className="h-5 w-5 text-primary" />
                         </div>
                         <div>
@@ -623,9 +589,7 @@ const Enquiry = () => {
           <ScrollAnimationWrapper animation="scale-in" threshold={0.2}>
             <section className="relative py-24 border-t border-border/50 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/50 to-background">
-                <div className="absolute inset-0 grid-pattern opacity-30" />
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-primary/15 blur-3xl animate-pulse-glow" />
-                <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] rounded-full bg-neon-purple/10 blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
+                <div className="absolute inset-0 grid-pattern opacity-[0.07]" />
               </div>
               <div className="container-custom relative z-10 text-center max-w-2xl">
                 <h2 className="text-3xl md:text-5xl font-bold mb-4">

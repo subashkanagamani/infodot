@@ -13,7 +13,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
-import { InteractiveParticles } from "@/components/InteractiveParticles";
+import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
 import { ParallaxSection } from "@/components/ParallaxSection";
@@ -69,7 +69,7 @@ const Index = () => {
       <PageTransition />
       <ScrollProgressBar />
       <div className="min-h-screen relative">
-        <InteractiveParticles />
+        <AmbientBackdrop />
         <div className="relative z-10">
           <Navbar />
           <Hero />
