@@ -1,6 +1,7 @@
-import { Mail, Phone, MessageCircle, ArrowDown } from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useSection } from "@/hooks/usePageContent";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const ContactHero = () => {
   const c = useSection<{ badge: string; headingHtml: string; subheading: string; primaryLabel: string; phoneLabel: string; phoneHref: string }>(
@@ -8,7 +9,7 @@ export const ContactHero = () => {
     "hero",
     {
       badge: "Company · Contact",
-      headingHtml: 'Book a 30-minute discovery call — <span class="text-gradient-primary">no pitch.</span>',
+      headingHtml: 'Book a 30-minute discovery call — <span class="text-primary">no pitch.</span>',
       subheading:
         "Tell us where your IT hurts. We'll map the gaps, tell you the two that matter most, and send an exact quote within 48 hours.",
       primaryLabel: "Send a Message",
@@ -20,72 +21,51 @@ export const ContactHero = () => {
     document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-
-
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-30">
-          <div className="absolute inset-0 border border-primary/20 rounded-full animate-[spin_60s_linear_infinite]" />
-          <div className="absolute inset-8 border border-primary/15 rounded-full animate-[spin_45s_linear_infinite_reverse]" />
-          <div className="absolute inset-16 border border-primary/10 rounded-full animate-[spin_30s_linear_infinite]" />
-        </div>
-      </div>
+    <section className="bg-secondary pt-28 pb-10 md:pt-32 md:pb-14">
+      <div className="container-custom">
+        <Breadcrumbs />
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full">
+              <MessageCircle className="w-4 h-4 text-primary" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.14em]">{c.badge}</span>
+            </div>
 
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 grid-pattern opacity-20" />
+            <h1
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] mt-6 mb-6"
+              dangerouslySetInnerHTML={{ __html: c.headingHtml }}
+            />
 
-      <div className="container-custom relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-8 animate-fade-in">
-            <MessageCircle className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">{c.badge}</span>
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl font-medium">
+              {c.subheading}
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-base rounded-xl press gap-2" onClick={scrollToForm}>
+                <Mail className="w-5 h-5" />
+                {c.primaryLabel}
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-secondary px-8 py-6 text-base rounded-xl press gap-2" asChild>
+                <a href={c.phoneHref}>
+                  <Phone className="w-5 h-5" />
+                  {c.phoneLabel}
+                </a>
+              </Button>
+            </div>
           </div>
 
-          {/* Main Heading */}
-          <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up"
-            dangerouslySetInnerHTML={{ __html: c.headingHtml }}
-          />
-
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            {c.subheading}
-          </p>
-
-          {/* Quick Contact Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <Button size="lg" className="gap-2 hover-glow" onClick={scrollToForm}>
-              <Mail className="w-5 h-5" />
-              {c.primaryLabel}
-            </Button>
-            <Button size="lg" variant="outline" className="gap-2 glow-border" asChild>
-              <a href={c.phoneHref}>
-                <Phone className="w-5 h-5" />
-                {c.phoneLabel}
-              </a>
-            </Button>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="animate-bounce">
-            <button 
-              onClick={scrollToForm}
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/50 hover:border-primary/50 transition-colors"
-            >
-              <ArrowDown className="w-5 h-5 text-muted-foreground" />
-            </button>
+          <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+            <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">No pitch, no cost</span>
+            <div className="mt-4">
+              <div className="font-display text-4xl font-bold">48 hrs</div>
+              <p className="mt-2 font-medium text-accent-foreground/70">
+                For an exact quote after your discovery call.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Floating Elements */}
-      <div className="absolute bottom-10 left-10 w-20 h-20 border border-primary/20 rotate-45 animate-float hidden lg:block" />
-      <div className="absolute top-40 right-20 w-12 h-12 bg-primary/10 rounded-full animate-float hidden lg:block" style={{ animationDelay: '2s' }} />
-      <div className="absolute bottom-32 right-32 w-8 h-8 border border-neon-cyan/30 rotate-12 animate-float hidden lg:block" style={{ animationDelay: '4s' }} />
     </section>
   );
 };

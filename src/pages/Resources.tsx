@@ -90,46 +90,61 @@ export default function Resources() {
       />
 
       {/* Hero Section */}
-      <section className="section-spacing pt-32">
+      <section className="bg-secondary pt-24 pb-10 md:pt-28 md:pb-14">
         <div className="container-custom">
           <Breadcrumbs />
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
-              Readiness, in Plain English
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Guides and explainers on the things regulated buyers actually get asked about — Cyber Essentials, cyber-insurance readiness, GDPR, and the evidence that backs them. New guides added regularly.
-            </p>
-          </div>
 
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Resources</span>
+              <h1 className="font-display text-4xl md:text-5xl font-bold leading-[1.08] mt-4">
+                Readiness, in <span className="text-primary">Plain English</span>
+              </h1>
+              <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl font-medium">
+                Guides and explainers on the things regulated buyers actually get asked about — Cyber Essentials, cyber-insurance readiness, GDPR, and the evidence that backs them. New guides added regularly.
+              </p>
+            </div>
+            <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <div className="font-display text-5xl font-bold">{resources.length}</div>
+              <p className="mt-2 font-medium text-accent-foreground/70">Free guides, checklists and toolkits, all downloadable.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-background">
+        <div className="container-custom">
           {/* Resources Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-12 gap-4">
             {resources.map((resource, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 group">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <resource.icon className="w-6 h-6 text-primary" />
+              <Card
+                key={index}
+                className="col-span-12 md:col-span-6 lg:col-span-4 p-7 rounded-3xl bg-card border-border shadow-[var(--shadow-card)] hover:border-primary/40 transition-all duration-500 group hover-lift animate-slide-up"
+                style={{ animationDelay: `${Math.min(index, 8) * 0.06}s` }}
+              >
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-11 h-11 bg-secondary rounded-xl flex items-center justify-center border border-border group-hover:bg-accent transition-colors duration-300">
+                    <resource.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-xs font-semibold px-2 py-1 bg-muted rounded-full">
+                  <span className="text-xs font-bold px-2 py-1 bg-secondary rounded-lg border border-border">
                     {resource.type}
                   </span>
                 </div>
 
-                <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <h2 className="font-display text-lg font-bold mb-2 group-hover:text-primary transition-colors">
                   {resource.title}
                 </h2>
                 <p className="text-muted-foreground text-sm mb-4">
                   {resource.description}
                 </p>
 
-                <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
+                <div className="flex items-center justify-between text-xs text-muted-foreground mb-4 pt-4 border-t border-border">
                   <span>{resource.format}</span>
                 </div>
 
                 <Button 
                   onClick={() => handleDownload(resource.title)}
-                  className="w-full"
+                  className="w-full rounded-xl press border-2 border-accent text-accent hover:bg-secondary"
                   variant="outline"
                 >
                   <Download className="w-4 h-4 mr-2" />
@@ -140,14 +155,14 @@ export default function Resources() {
           </div>
 
           {/* Newsletter CTA */}
-          <div className="mt-20 text-center p-12 bg-gradient-to-r from-primary via-primary to-accent rounded-2xl text-primary-foreground">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="mt-16 rounded-3xl border border-border bg-accent text-accent-foreground p-10 md:p-12 text-center animate-slide-up">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
               Want More Free Resources?
             </h2>
-            <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-accent-foreground/70 max-w-2xl mx-auto">
               Subscribe to get new guides and checklists on managed IT, security and compliance evidence.
             </p>
-            <Button size="lg" variant="secondary" onClick={() => window.location.href = '/#contact'}>
+            <Button size="lg" className="rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = '/#contact'}>
               Subscribe Now
             </Button>
           </div>

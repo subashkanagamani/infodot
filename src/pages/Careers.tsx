@@ -92,27 +92,42 @@ export default function Careers() {
       />
 
       {/* Hero Section */}
-      <section className="section-spacing pt-32">
+      <section className="bg-secondary pt-24 pb-10 md:pt-28 md:pb-14">
         <div className="container-custom">
           <Breadcrumbs />
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
-              Join Our Growing Team
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Help us run managed IT for regulated UK industries. Work with named clients, real ownership, and an ISO 27001-certified team, delivered remotely from Bangalore.
-            </p>
-          </div>
 
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Careers</span>
+              <h1 className="font-display text-4xl md:text-5xl font-bold leading-[1.08] mt-4">
+                Join Our <span className="text-primary">Growing Team</span>
+              </h1>
+              <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl font-medium">
+                Help us run managed IT for regulated UK industries. Work with named clients, real ownership, and an ISO 27001-certified team, delivered remotely from Bangalore.
+              </p>
+            </div>
+            <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <div className="font-display text-5xl font-bold">{openPositions.length}</div>
+              <p className="mt-2 font-medium text-accent-foreground/70">Open roles across engineering, security and delivery.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-background">
+        <div className="container-custom">
           {/* Benefits Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <div className="grid grid-cols-12 gap-4 mb-16">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Card
+                key={index}
+                className="col-span-12 md:col-span-6 lg:col-span-3 p-6 text-center rounded-3xl bg-card border-border shadow-[var(--shadow-card)] hover-lift animate-slide-up"
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-4 border border-border">
                   <benefit.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-bold mb-2">{benefit.title}</h3>
+                <h3 className="font-display font-bold mb-2">{benefit.title}</h3>
                 <p className="text-sm text-muted-foreground">{benefit.description}</p>
               </Card>
             ))}
@@ -120,13 +135,20 @@ export default function Careers() {
 
           {/* Open Positions */}
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-center">Open Positions</h2>
-            <div className="space-y-6 max-w-4xl mx-auto">
+            <div className="max-w-3xl mb-10">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Open Positions</p>
+              <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1]">Roles we're hiring for</h2>
+            </div>
+            <div className="space-y-4 max-w-4xl">
               {openPositions.map((position, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <Card
+                  key={index}
+                  className="p-6 rounded-3xl bg-card border-border shadow-[var(--shadow-card)] hover-lift animate-slide-up"
+                  style={{ animationDelay: `${Math.min(index, 8) * 0.06}s` }}
+                >
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold mb-2">{position.title}</h3>
+                      <h3 className="font-display text-2xl font-bold mb-2">{position.title}</h3>
                       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
                           <Briefcase className="w-4 h-4" />
@@ -142,13 +164,13 @@ export default function Careers() {
                         </div>
                       </div>
                     </div>
-                    <Button onClick={() => setSelectedPosition(position.title)}>
+                    <Button className="rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => setSelectedPosition(position.title)}>
                       Apply Now <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </div>
                   <p className="text-muted-foreground mb-4">{position.description}</p>
-                  <div>
-                    <h4 className="font-semibold text-sm mb-2">Key Requirements:</h4>
+                  <div className="pt-4 border-t border-border">
+                    <h4 className="font-display font-bold text-sm mb-2">Key Requirements:</h4>
                     <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
                       {position.requirements.map((req, idx) => (
                         <li key={idx}>{req}</li>
@@ -161,12 +183,12 @@ export default function Careers() {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-20 text-center p-12 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl">
-            <h2 className="text-3xl font-bold mb-4">Don't See a Perfect Fit?</h2>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <div className="mt-16 rounded-3xl border border-border bg-accent text-accent-foreground p-10 md:p-12 text-center animate-slide-up">
+            <h2 className="font-display text-3xl font-bold mb-4">Don't See a Perfect Fit?</h2>
+            <p className="text-accent-foreground/70 mb-6 max-w-2xl mx-auto">
               We're always looking for talented IT engineers and analysts. Send us your resume and let's talk about how you can contribute to our team.
             </p>
-            <Button size="lg" onClick={() => setSelectedPosition("General Application")}>
+            <Button size="lg" className="rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => setSelectedPosition("General Application")}>
               Send Your Resume
             </Button>
           </div>
