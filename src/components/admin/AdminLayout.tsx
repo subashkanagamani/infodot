@@ -132,7 +132,7 @@ export const AdminLayout = ({ children }: AdminLayoutProps) => {
       >
         <div className="p-6 shrink-0">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-primary">CWP</span>
+            <span className="text-xl font-bold text-primary">Infodot</span>
             <span className="text-sm text-muted-foreground">Admin</span>
           </Link>
         </div>

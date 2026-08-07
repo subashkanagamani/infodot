@@ -100,16 +100,16 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Marketing Blog - CWP Marketing Insights & Strategies"
-        description="Expert marketing advice, case studies, and proven tactics to help your business grow faster. Learn SEO, social media, content marketing and more."
-        keywords="marketing blog, SEO tips, social media marketing, content strategy, digital marketing insights"
+        title="IT & Compliance Insights - Infodot UK"
+        description="Practical guidance on managed IT, cyber security, Cyber Essentials, cyber insurance readiness and compliance evidence for accountancy, legal and financial services firms."
+        keywords="managed IT blog, cyber security, Cyber Essentials, ISO 27001, compliance evidence, IT support for accountants, IT support for law firms"
       />
       <JsonLd 
         schema={{
           type: "Organization",
-          name: "CWP Marketing",
+          name: "Infodot UK",
           url: window.location.origin,
-          description: "Strategic marketing and growth consulting agency",
+          description: "Managed IT provider for regulated UK industries, run remotely by an ISO 27001-certified team",
           logo: `${window.location.origin}/og-image.png`,
         }}
       />
@@ -123,10 +123,10 @@ export default function Blog() {
           
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Marketing <span className="text-primary">Insights</span> & Strategies
+              IT & Compliance <span className="text-primary">Insights</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Expert advice, case studies, and proven tactics to help your business grow faster.
+              Practical guidance on managed IT, security and audit-readiness for accountancy, legal and financial services firms.
             </p>
           </div>
 
@@ -214,7 +214,7 @@ export default function Blog() {
           <div className="mt-16 text-center p-12 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl">
             <h3 className="text-3xl font-bold mb-4">Never Miss an Update</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Get the latest marketing insights, growth strategies, and exclusive tips delivered to your inbox weekly.
+              Get the latest guidance on managed IT, security and compliance evidence delivered to your inbox.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <Input 

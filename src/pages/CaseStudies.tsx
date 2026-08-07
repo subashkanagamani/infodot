@@ -109,7 +109,7 @@ export default function CaseStudies() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Case Studies - Marketing Success Stories | CWP"
+        title="Case Studies - Marketing Success Stories | Infodot"
         description="Explore our detailed case studies showcasing real results. See how we helped businesses achieve 400%+ traffic growth, generate leads, and increase revenue."
         keywords="marketing case studies, success stories, SEO results, lead generation, revenue growth"
       />

@@ -33,30 +33,30 @@ interface SiteSettings {
 
 const defaultSettings: SiteSettings = {
   company: {
-    name: "CWP Marketing",
-    tagline: "We Help Brands Grow Strategically",
-    description: "Full-service digital marketing agency specializing in performance marketing, SEO, and brand strategy.",
-    email: "support@consultwithprofessionals.com",
-    phone: "+91 8610986622",
-    address: "G2, Venkateswara Flat, No: 9A, 1st Main Rd, Venkateswara Nagar, Velachery, Chennai, Tamil Nadu 600042",
+    name: "Infodot UK",
+    tagline: "We run your IT. You own your IT.",
+    description: "Managed IT for the regulated UK industries we serve — accountancy, legal and financial services. Secure by default, always audit-ready, delivered remotely since 1996.",
+    email: "hello@infodot.uk",
+    phone: "",
+    address: "Infodot Technologies Pvt Ltd, Bangalore, India — serving UK & EU remotely",
     logo: "",
   },
   social: {
-    linkedin: "https://www.linkedin.com/company/100370885",
+    linkedin: "",
     twitter: "",
     facebook: "",
     instagram: "",
     youtube: "",
   },
   integrations: {
-    whatsappNumber: "+918610986622",
-    calendlyLink: "https://calendly.com/narenethiraj",
+    whatsappNumber: "",
+    calendlyLink: "",
     googleAnalyticsId: "",
   },
   seo: {
-    metaTitle: "CWP Marketing - Digital Marketing Agency",
-    metaDescription: "Transform your business with data-driven digital marketing strategies.",
-    keywords: "digital marketing, SEO, PPC, social media marketing",
+    metaTitle: "Infodot UK — Managed IT for Regulated UK Industries",
+    metaDescription: "Managed IT, secure by default and always audit-ready, for UK accountancy, legal and financial services firms.",
+    keywords: "managed IT UK, IT support for accountants, IT support for law firms, Cyber Essentials, ISO 27001, co-managed IT",
     ogImage: "",
   },
 };

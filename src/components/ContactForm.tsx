@@ -99,7 +99,7 @@ export const ContactForm = () => {
               Get in <span className="text-primary">Touch</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ready to scale your business? Let's discuss how we can help you achieve your marketing goals.
+              Book a 30-minute discovery call — no cost, no obligation — and we'll follow up with an exact quote within 48 hours.
             </p>
           </div>
 
@@ -195,7 +195,7 @@ export const ContactForm = () => {
                       <FormItem>
                         <FormLabel>Company</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your Company Name" {...field} disabled={isSubmitting} />
+                          <Input placeholder="Your Firm Name" {...field} disabled={isSubmitting} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -209,7 +209,7 @@ export const ContactForm = () => {
                         <FormLabel>Message</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Tell us about your project..." 
+                            placeholder="Tell us about your firm and current IT setup..." 
                             className="min-h-[120px]"
                             {...field}
                             disabled={isSubmitting}

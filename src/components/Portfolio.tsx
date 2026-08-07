@@ -1,53 +1,37 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, TrendingUp, Users, Target } from "lucide-react";
+import { ArrowUpRight, ShieldCheck, ClipboardCheck, RefreshCcw } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const portfolioItems = [
   {
-    title: "D2C Fashion Brand Scale' Up",
-    category: "E-commerce",
-    description: "Helped a fashion D2C brand scale from 50K to 5M monthly revenue through strategic performance marketing and conversion optimization.",
-    metrics: [
-      { icon: TrendingUp, label: "Revenue Growth", value: "10x" },
-      { icon: Users, label: "Customer Base", value: "15K+" },
-      { icon: Target, label: "ROAS", value: "8.5x" }
-    ],
-    tags: ["Meta Ads", "Email Marketing", "CRO"]
+    title: "Accountancy Practice — Co-Managed IT & Security Baseline",
+    category: "Accountancy",
+    description: "A 90-user accountancy practice needed security and evidence brought up to a consistent standard alongside its existing in-house team.",
+    icon: ShieldCheck,
+    tags: ["Co-Managed IT", "Cyber Insurance Readiness", "Backup & DR"]
   },
   {
-    title: "SaaS Lead Generation",
-    category: "B2B SaaS",
-    description: "Generated 1000+ qualified enterprise leads for a B2B SaaS platform through multi' channel demand generation and cold outreach.",
-    metrics: [
-      { icon: Users, label: "Qualified Leads", value: "1000+" },
-      { icon: Target, label: "Conversion Rate", value: "35%" },
-      { icon: TrendingUp, label: "Pipeline Value", value: "$2.5M" }
-    ],
-    tags: ["LinkedIn Ads", "Cold Email", "Content Marketing"]
+    title: "Law Firm — Cyber Essentials Readiness & Hardening",
+    category: "Legal",
+    description: "A regional law firm achieved Cyber Essentials certification and set up continuous evidence to satisfy client and insurer requirements.",
+    icon: ClipboardCheck,
+    tags: ["Cyber Essentials Readiness", "IT Hardening", "Continuous Controls & Evidence"]
   },
   {
-    title: "Organic SEO Dominance",
-    category: "Tech Startup",
-    description: "Positioned a tech startup on page 1 of Google for 50+ target keywords, driving 200K+ monthly organic traffic.",
-    metrics: [
-      { icon: Users, label: "Monthly Traffic", value: "200K+" },
-      { icon: Target, label: "Keywords Ranked", value: "50+" },
-      { icon: TrendingUp, label: "Organic Leads", value: "3x" }
-    ],
-    tags: ["SEO", "Content Strategy", "Technical SEO"]
+    title: "Financial Services Firm — Full IT Migration & Fully Managed IT",
+    category: "Financial Services",
+    description: "A structured, documented transition off an underperforming incumbent, followed by fully managed IT with monthly evidence.",
+    icon: RefreshCcw,
+    tags: ["IT Transition & Exit", "Fully Managed IT", "FCA Operational Resilience"]
   },
   {
-    title: "Complete Brand Transformation",
-    category: "Healthcare",
-    description: "Rebuilt brand identity and digital presence for a healthcare company, resulting in 5x increase in patient inquiries.",
-    metrics: [
-      { icon: Users, label: "Patient Inquiries", value: "5x" },
-      { icon: Target, label: "Brand Awareness", value: "+250%" },
-      { icon: TrendingUp, label: "Engagement Rate", value: "45%" }
-    ],
-    tags: ["Branding", "Website Design", "Social Media"]
+    title: "Law Firm — Backup, Disaster Recovery & Incident Response",
+    category: "Legal",
+    description: "Monitored, restore-tested, immutable backups with a defined RTO/RPO, plus a documented incident response plan.",
+    icon: ShieldCheck,
+    tags: ["Backup & Disaster Recovery", "Monitoring & Incident Response", "Vulnerability Management"]
   }
 ];
 
@@ -60,16 +44,16 @@ export const Portfolio = () => {
       <div className="container-custom relative">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Success <span className="text-gradient-primary relative">
-              Stories
+            Engagement <span className="text-gradient-primary relative">
+              Snapshots
               <span className="absolute -inset-2 bg-primary/10 blur-2xl -z-10 animate-pulse-glow" />
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Real results for real businesses. See how we've helped brands achieve exceptional growth.
+            Generic, anonymised snapshots of how we run managed IT, security and compliance evidence for accountancy, legal and financial services firms.
           </p>
           <Button asChild variant="outline" size="lg">
-            <Link to="/case-studies">View All Case Studies</Link>
+            <Link to="/portfolio">View All Engagement Snapshots</Link>
           </Button>
         </div>
 
@@ -94,26 +78,11 @@ export const Portfolio = () => {
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                 </div>
 
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary-glow transition-colors">{item.title}</h3>
-                <p className="text-muted-foreground mb-6 group-hover:text-foreground/90 transition-colors">{item.description}</p>
-
-                <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-border/50 group-hover:border-primary/30 transition-colors">
-                  {item.metrics.map((metric, i) => (
-                    <div 
-                      key={i} 
-                      className="text-center transform group-hover:scale-105 transition-transform"
-                      style={{ transitionDelay: `${i * 50}ms` }}
-                    >
-                      <metric.icon className="w-5 h-5 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                      <div className="text-2xl font-bold text-primary mb-1 group-hover:text-primary-glow transition-colors">
-                        {metric.value}
-                      </div>
-                      <div className="text-xs text-muted-foreground group-hover:text-foreground/70 transition-colors">
-                        {metric.label}
-                      </div>
-                    </div>
-                  ))}
+                <div className="flex items-center gap-3 mb-3">
+                  <item.icon className="w-6 h-6 text-primary flex-shrink-0" />
+                  <h3 className="text-2xl font-bold group-hover:text-primary-glow transition-colors">{item.title}</h3>
                 </div>
+                <p className="text-muted-foreground mb-6 group-hover:text-foreground/90 transition-colors">{item.description}</p>
 
                 <div className="flex flex-wrap gap-2">
                   {item.tags.map((tag, i) => (

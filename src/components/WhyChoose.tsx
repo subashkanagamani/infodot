@@ -1,25 +1,25 @@
-import { CheckCircle2, Users, Target, TrendingUp } from "lucide-react";
+import { LayoutGrid, ShieldCheck, FileCheck2, KeyRound } from "lucide-react";
 
 const benefits = [
   {
-    icon: CheckCircle2,
-    title: "Revenue' Centric Mindset",
-    description: "Every marketing dollar spent is designed to give you more and help you generate in return"
+    icon: LayoutGrid,
+    title: "Managed",
+    description: "One team runs the whole stack — endpoints, M365 and Workspace, patching, backup, security and the desk — and coordinates your vendors. Nobody to ping-pong to."
   },
   {
-    icon: Users,
-    title: "Multi' Channel Expertise",
-    description: "We lead you across SEO, paid ads, email, social media, and much more"
+    icon: ShieldCheck,
+    title: "Secure by default",
+    description: "MFA, EDR, hardening and tested backup are standard from day one — not a premium tier. It's the gap clients name most; we close it by default."
   },
   {
-    icon: Target,
-    title: "Founder' Friendly Systems",
-    description: "Easy, flexible processes so you can focus on scaling - not on tech stack confusion"
+    icon: FileCheck2,
+    title: "Always audit-ready",
+    description: "The controls we run produce the evidence auditors and insurers ask for — packaged monthly, kept current. Readiness in-house; certification via accredited partners."
   },
   {
-    icon: TrendingUp,
-    title: "Sustainable & Scalable Results",
-    description: "We bring profitable growth not just the traffic - real ROI, not vanity metrics"
+    icon: KeyRound,
+    title: "We run your IT. You own your IT.",
+    description: "Your domains, tenancy, licences and admin rights stay yours, in your name, throughout. Whenever you leave, you get a documented exit pack and full reverse knowledge-transfer within 10 working days."
   }
 ];
 
@@ -38,11 +38,12 @@ export const WhyChoose = () => {
       <div className="container-custom relative">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why <span className="text-gradient-primary relative">
-              Choose CWP?
+            What we <span className="text-gradient-primary relative">
+              stand on
               <span className="absolute -inset-2 bg-primary/10 blur-2xl -z-10 animate-pulse-glow" />
             </span>
           </h2>
+          <p className="text-muted-foreground">Three pillars. One promise.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -65,7 +66,7 @@ export const WhyChoose = () => {
 
         <div className="mt-16 text-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-            CWP doesn't do one' size' fits' all. We tailor every strategy - from messaging to media channels - so it reflects your brand's unique strengths and aligns with your business goals. The whole point: Strategic alignment. Real results. And a partner that's got your back as you scale up.
+            Most providers quietly make themselves impossible to leave. We do the opposite, in writing. Your domains, tenancy, licences and admin rights stay yours, in your name, throughout — we operate them, we never own them. Notice is 1–3 months by agreement; the exit stays clean either way, for businesses of 25–300 users, without a rip-and-replace of the tools you already run.
           </p>
         </div>
       </div>

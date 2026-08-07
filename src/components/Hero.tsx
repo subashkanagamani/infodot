@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { useSection } from "@/hooks/usePageContent";
 
 interface HeroContent {
@@ -15,17 +15,22 @@ interface HeroContent {
 }
 
 const DEFAULTS: HeroContent = {
-  badge: "Trusted by 100+ Brands",
+  badge: "Managed · Secure by Default · Always Audit-Ready",
   headingHtml:
-    'End-to-end marketing that <span class="text-gradient-primary">builds</span><br/>and <span class="text-gradient-primary">scales</span> your brand',
+    'We run your IT <span class="text-gradient-primary">completely</span> — so it never <span class="text-gradient-primary">breaks</span> your business.',
   subheading:
-    "Strategy, creative, performance, and retention — everything ambitious D2C, SaaS and B2B brands need to grow.",
-  tagsLabel: "For:",
-  tags: ["Startups", "D2C Brands", "Founders and Growth' focused Enterprises"],
-  primaryCtaLabel: "Book a Strategy Call",
-  primaryCtaHref: "https://calendly.com/narenethiraj",
-  secondaryCtaLabel: "View Our Work",
-  secondaryCtaHref: "#portfolio",
+    "A managed IT provider for the regulated UK industries we serve — accountancy, legal and financial services — run end to end and remotely from an ISO 27001-certified team. Security built in by default, and the evidence auditors, insurers and boards ask for produced as a matter of course.",
+  tagsLabel: "We run your IT. You own your IT.",
+  tags: [
+    "Since 1996",
+    "ISO 27001:2022 certified",
+    "UK business-hours desk, delivered remotely",
+    "Exact quote within 48 hours",
+  ],
+  primaryCtaLabel: "Book a 30-minute discovery call — no pitch",
+  primaryCtaHref: "/contact",
+  secondaryCtaLabel: "How It Works",
+  secondaryCtaHref: "#process",
 };
 
 export const Hero = () => {
@@ -85,7 +90,7 @@ export const Hero = () => {
       <div className="relative z-10 container-custom text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-primary/30 backdrop-blur-sm animate-slide-up hover:border-primary/50 transition-colors group">
-            <Sparkles className="w-4 h-4 text-primary animate-pulse-glow" />
+            <ShieldCheck className="w-4 h-4 text-primary animate-pulse-glow" />
             <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{c.badge}</span>
           </div>
 
@@ -99,9 +104,12 @@ export const Hero = () => {
             {c.subheading}
           </p>
 
+          <p className="text-xl md:text-2xl font-bold animate-slide-up" style={{ animationDelay: '0.25s' }}>
+            {c.tagsLabel}
+          </p>
+
           {c.tags?.length > 0 && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <span className="text-sm text-muted-foreground">{c.tagsLabel}</span>
               <div className="flex flex-wrap gap-3 justify-center">
                 {c.tags.map((tag, i) => (
                   <span

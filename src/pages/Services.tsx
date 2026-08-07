@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
-import { Target, Megaphone, LineChart, TrendingUp, Users, Palette, FileText, Share2, CheckCircle2, ArrowRight, Loader2 } from "lucide-react";
+import { ShieldCheck, Server, Cloud, LifeBuoy, FileCheck2, Lock, Laptop, Building2, CheckCircle2, ArrowRight, Loader2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { servicesData } from "@/data/services";
@@ -29,73 +29,73 @@ const slugify = (title: string) => {
 
 // Icon mapping for database services
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Target,
-  Megaphone,
-  LineChart,
-  TrendingUp,
-  Users,
-  Palette,
-  FileText,
-  Share2,
+  ShieldCheck,
+  Server,
+  Cloud,
+  LifeBuoy,
+  FileCheck2,
+  Lock,
+  Laptop,
+  Building2,
 };
 
 // Fallback services data
 const fallbackServices = [
   {
     id: "1",
-    icon: "Target",
-    title: "Strategy & Planning",
-    description: "Make your D2C Brand a strategic powerhouse by providing growth. Build a data' based strategy that gets you exactly where you want to be.",
-    features: ["Market Analysis", "Competitor Research", "Growth Roadmap", "KPI Framework"]
+    icon: "ShieldCheck",
+    title: "Secure by Default",
+    description: "MFA, EDR, hardening and tested backup applied as standard from day one — not a premium tier. It's the gap regulated firms name most, and we close it by default.",
+    features: ["Multi-Factor Authentication", "Endpoint Detection & Response", "Device Hardening", "Tested Backup"]
   },
   {
     id: "2",
-    icon: "Megaphone",
-    title: "CRM & Marketing Automation",
-    description: "Generate more qualified leads with the most optimized conversion. Complete email marketing setup and automation workflows.",
-    features: ["Email Campaigns", "SMS Marketing", "Automation Flows", "Segmentation"]
+    icon: "Server",
+    title: "Fully Managed IT",
+    description: "One team runs your whole stack — endpoints, M365 and Workspace, patching, backup, security and the desk — and coordinates your vendors.",
+    features: ["Endpoint Management", "Patch Management", "Vendor Coordination", "UK-Hours Desk"]
   },
   {
     id: "3",
-    icon: "LineChart",
-    title: "Outreach & Demand Generation",
-    description: "Generate more qualified leads through targeted outreach. Multichannel strategy to power up lead generation.",
-    features: ["Cold Outreach", "LinkedIn Automation", "Lead Nurturing", "Pipeline Building"]
+    icon: "Cloud",
+    title: "Co-Managed IT",
+    description: "Already have an internal IT team? We add the security-by-default layer and audit discipline alongside them, no rip-and-replace.",
+    features: ["Works With Your Team", "Your Tools or Ours", "Shared Escalation", "No Lock-In"]
   },
   {
     id: "4",
-    icon: "TrendingUp",
-    title: "Performance Marketing",
-    description: "Make your ad investment work for you. 10x your brand with comprehensive ad strategies.",
-    features: ["Meta Ads", "Google Ads", "Retargeting", "Analytics"]
+    icon: "FileCheck2",
+    title: "Audit & Compliance Evidence",
+    description: "The controls we run produce the evidence auditors, insurers and boards ask for — packaged monthly and kept current.",
+    features: ["Monthly Evidence Packs", "Insurer-Ready Reporting", "Control Mapping", "Audit Support"]
   },
   {
     id: "5",
-    icon: "Users",
-    title: "SEO & Organic Growth",
-    description: "Dominate your organic presence and stand out in Google searches with technical SEO and content strategy.",
-    features: ["Technical SEO", "Content Strategy", "Link Building", "Local SEO"]
+    icon: "Lock",
+    title: "Cyber Insurance Readiness",
+    description: "We help you meet and evidence the controls cyber insurers increasingly require, so renewal isn't a scramble.",
+    features: ["Insurer Questionnaire Support", "Control Gap Review", "Remediation", "Ongoing Evidence"]
   },
   {
     id: "6",
-    icon: "Palette",
-    title: "Creative & Full Branding",
-    description: "Stand out with full spectrum user experience & branding. Transform your online presence into a growth' centric business.",
-    features: ["Brand Identity", "Logo Design", "Website Design", "UI/UX"]
+    icon: "Building2",
+    title: "Accountancy, Legal & Financial Services IT",
+    description: "IT run specifically for the regulated UK industries we serve, with the compliance and confidentiality needs of each sector understood.",
+    features: ["Sector-Specific Controls", "Client Confidentiality", "Regulatory Awareness", "Practice Software Support"]
   },
   {
     id: "7",
-    icon: "FileText",
-    title: "Content Marketing & Thought Leadership",
-    description: "Establish authority and drive organic growth through strategic content and thought leadership.",
-    features: ["Blog Writing", "Whitepapers", "Case Studies", "Newsletters"]
+    icon: "Laptop",
+    title: "Small Office IT",
+    description: "A right-sized version of our managed service for smaller regulated offices that still need security by default and audit-ready evidence.",
+    features: ["Right-Sized Support", "Secure by Default", "Simple Onboarding", "UK-Hours Desk"]
   },
   {
     id: "8",
-    icon: "Share2",
-    title: "Social Media Management",
-    description: "Build a strong social presence that engages and converts with monthly content calendars and community management.",
-    features: ["Content Calendar", "Community Management", "Influencer Marketing", "Analytics"]
+    icon: "LifeBuoy",
+    title: "Fully Remote Delivery",
+    description: "Delivered end to end via our Z360 platform by an ISO 27001:2022 certified team — no on-site presence required.",
+    features: ["Z360 Delivery Platform", "ISO 27001:2022 Certified", "UK & EU Coverage", "Remote-First Since 1996"]
   }
 ];
 
@@ -116,20 +116,20 @@ const Services = () => {
     "hero",
     {
       badge: "Our Services",
-      headingHtml: 'Full\' Stack <span class="text-gradient-primary">Growth Solutions</span>',
+      headingHtml: 'Managed IT, <span class="text-gradient-primary">Run Completely</span>',
       subheading:
-        "We bring a unique blend of strategic marketing and creative services to help your brand stand out and scale effectively in today's competitive landscape.",
-      ctaLabel: "Get Started",
+        "We run your IT end to end for the regulated UK industries we serve — secure by default, always audit-ready, delivered remotely by an ISO 27001:2022 certified team.",
+      ctaLabel: "Book a Discovery Call",
     },
   );
   const cta = useSection<{ headingHtml: string; subheading: string; ctaLabel: string }>(
     "services",
     "cta",
     {
-      headingHtml: 'Ready to <span class="text-gradient-primary">Transform</span> Your Brand?',
+      headingHtml: 'Ready to Let Us <span class="text-gradient-primary">Run Your IT</span>?',
       subheading:
-        "Let's discuss how we can help you achieve your growth goals with our comprehensive marketing solutions.",
-      ctaLabel: "Schedule a Consultation",
+        "Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours.",
+      ctaLabel: "Book a Discovery Call",
     },
   );
 
@@ -157,17 +157,17 @@ const Services = () => {
   };
 
   const getIcon = (iconName: string | null) => {
-    if (!iconName) return Target;
-    return iconMap[iconName] || Target;
+    if (!iconName) return ShieldCheck;
+    return iconMap[iconName] || ShieldCheck;
   };
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Marketing Services — CWP Full-Stack Growth Solutions"
-        description="Performance marketing, SEO, content, social, CRM automation, and creative branding services for ambitious D2C, SaaS, and B2B brands."
-        keywords="marketing services, performance marketing, SEO services, content marketing, social media management, brand identity"
-        canonicalUrl="https://consultwithprofessionals.com/services"
+        title="IT Services — Managed, Secure and Audit-Ready | Infodot UK"
+        description="Every capability, independently buyable: managed IT, secure by default, backup and disaster recovery, audit readiness, Cyber Essentials and cyber insurance readiness, transition and exit."
+        keywords="managed IT services UK, co-managed IT, backup and disaster recovery, Cyber Essentials readiness, cyber insurance readiness, IT audit evidence"
+        canonicalUrl="https://infodot.co.uk/services"
       />
       <JsonLd
         schema={{
@@ -175,7 +175,7 @@ const Services = () => {
           id: "services-itemlist",
           data: {
             "@type": "ItemList",
-            name: "CWP Marketing Services",
+            name: "Infodot UK Services",
             itemListElement: services.map((s, i) => ({
               "@type": "ListItem",
               position: i + 1,
@@ -183,8 +183,8 @@ const Services = () => {
                 "@type": "Service",
                 name: s.title,
                 description: s.description,
-                provider: { "@type": "Organization", name: "CWP Marketing" },
-                url: `https://consultwithprofessionals.com/services/${slugify(s.title)}`,
+                provider: { "@type": "Organization", name: "Infodot UK" },
+                url: `https://infodot.co.uk/services/${slugify(s.title)}`,
               },
             })),
           },

@@ -14,10 +14,10 @@ const Contact = () => {
   return (
     <>
       <SEOHead
-        title="Contact CWP Marketing — Get in Touch"
-        description="Talk to CWP Marketing about growing your business with strategic marketing, SEO, and paid media. Call, email, or send us a message."
-        keywords="contact, marketing agency, get in touch, consultation, Chennai, digital marketing"
-        canonicalUrl="https://consultwithprofessionals.com/contact"
+        title="Contact Infodot UK — Book a Discovery Call"
+        description="Talk to Infodot UK about running your IT completely. Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours."
+        keywords="contact Infodot UK, managed IT provider UK, book a discovery call, IT support quote, hello@infodot.uk"
+        canonicalUrl="https://infodot.co.uk/contact"
       />
       <div className="min-h-screen">
         <Navbar />

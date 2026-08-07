@@ -43,13 +43,13 @@ interface SiteSettings {
 
 const defaultSettings: SiteSettings = {
   company: {
-    name: "CWP Marketing",
+    name: "Infodot UK",
     tagline: "We Help Brands Grow Strategically",
-    description: "Full-service digital marketing agency specializing in performance marketing, SEO, and brand strategy.",
+    description: "Managed IT services and support for regulated UK industries, delivered remotely with ISO 27001:2022-certified security.",
     logo: "",
-    email: "hello@cwpmarketing.com",
-    phone: "+91 98765 43210",
-    address: "123 Business Street, City, Country"
+    email: "hello@infodot.uk",
+    phone: "",
+    address: "Infodot Technologies Pvt Ltd, Bangalore, India — serving the UK & EU remotely"
   },
   social: {
     linkedin: "",
@@ -59,14 +59,14 @@ const defaultSettings: SiteSettings = {
     youtube: ""
   },
   seo: {
-    metaTitle: "CWP Marketing - Digital Marketing Agency",
-    metaDescription: "Transform your business with data-driven digital marketing strategies. SEO, PPC, Social Media, and more.",
+    metaTitle: "Infodot UK - Managed IT Services",
+    metaDescription: "Managed IT services and support for regulated UK industries, delivered remotely by Infodot UK. ISO 27001:2022 certified, serving clients since 1996.",
     ogImage: "",
-    keywords: "digital marketing, SEO, PPC, social media marketing"
+    keywords: "managed IT services, IT support UK, regulated industries, ISO 27001"
   },
   integrations: {
     calendlyLink: "",
-    whatsappNumber: "+919876543210",
+    whatsappNumber: "",
     googleAnalyticsId: ""
   }
 };

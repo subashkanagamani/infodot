@@ -9,13 +9,13 @@ interface SEOHeadProps {
   canonicalUrl?: string;
 }
 
-const SITE_ORIGIN = "https://consultwithprofessionals.com";
+const SITE_ORIGIN = "https://infodot.co.uk";
 const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/og-image.png`;
 
 export const SEOHead = ({
-  title = "CWP Marketing — Growth, SEO & Performance Marketing Agency",
-  description = "Strategic marketing, SEO, paid ads, and growth consulting for D2C, SaaS, and B2B brands. 100+ brands served with 3x average growth.",
-  keywords = "marketing agency, growth consulting, digital marketing, SEO, social media marketing, brand strategy, Chennai",
+  title = "Infodot UK — Managed IT for Regulated UK Industries",
+  description = "Managed IT for the regulated UK industries we serve — accountancy, legal and financial services — run remotely from an ISO 27001:2022-certified team since 1996. We run your IT. You own your IT.",
+  keywords = "managed IT UK, IT support for accountants, IT support for law firms, IT support for financial services, Cyber Essentials, ISO 27001, cyber insurance readiness, co-managed IT",
   ogImage = DEFAULT_OG_IMAGE,
   ogType = "website",
   canonicalUrl,

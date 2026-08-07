@@ -36,21 +36,20 @@ const formSchema = z.object({
 });
 
 const services = [
-  "Growth Marketing",
-  "Performance Marketing",
-  "SEO & Organic Growth",
-  "Social Media Marketing",
-  "Content Marketing",
-  "Brand Strategy",
-  "Full Stack Marketing",
+  "Co-Managed IT",
+  "Fully Managed IT",
+  "Fully Remote IT",
+  "Cyber Insurance Readiness",
+  "Audit & Compliance Evidence",
+  "Small Office IT",
   "Other",
 ];
 
 const budgetRanges = [
-  "Under ₹50,000",
-  "₹50,000 - ₹1,00,000",
-  "₹1,00,000 - ₹5,00,000",
-  "Above ₹5,00,000",
+  "Not sure yet — need a quote",
+  "Under 50 seats",
+  "50 - 150 seats",
+  "150+ seats",
   "Let's Discuss",
 ];
 
@@ -139,13 +138,13 @@ export const ContactFormSection = () => {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Free Consultation</span>
+              <span className="text-sm font-medium text-primary">No Cost, No Obligation</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Tell Us About Your <span className="text-gradient-primary">Project</span>
+              Book Your <span className="text-gradient-primary">Discovery Call</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Fill out the form below and we'll get back to you within 24 hours with a customized marketing strategy.
+              Tell us about your firm and we'll book a 30-minute discovery call — no cost, no obligation — and follow up with an exact quote within 48 hours.
             </p>
           </div>
 
@@ -162,7 +161,7 @@ export const ContactFormSection = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Thank You!</h3>
                 <p className="text-muted-foreground">
-                  Your message has been sent successfully. We'll be in touch soon!
+                  Your message has been sent. We'll be in touch to book your discovery call and follow up with an exact quote within 48 hours.
                 </p>
               </div>
             ) : (
@@ -254,7 +253,7 @@ export const ContactFormSection = () => {
                       name="service"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Service Interested In *</FormLabel>
+                          <FormLabel>IT Engagement Interested In *</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger className="h-12 bg-background/50">
@@ -278,11 +277,11 @@ export const ContactFormSection = () => {
                       name="budget"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Estimated Budget</FormLabel>
+                          <FormLabel>Approximate Team Size</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger className="h-12 bg-background/50">
-                                <SelectValue placeholder="Select budget range" />
+                                <SelectValue placeholder="Select team size" />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
@@ -307,7 +306,7 @@ export const ContactFormSection = () => {
                         <FormLabel>Project Details *</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Tell us about your project, goals, and any specific requirements..."
+                            placeholder="Tell us about your firm, current IT setup, and any specific requirements..."
                             className="min-h-[150px] bg-background/50 resize-none"
                             {...field}
                             disabled={isSubmitting}

@@ -14,12 +14,12 @@ export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Blog", href: "/blog" },
-    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Contact", href: "/contact" },
+    { label: "Industries", href: "/industries" },
+    { label: "Powered by Z360", href: "/z360" },
+    { label: "Small Office", href: "/small-office" },
+    { label: "How It Works", href: "/how-it-works" },
+    { label: "Pricing", href: "/pricing" },
   ];
 
   return (
@@ -31,11 +31,11 @@ export const MobileMenu = () => {
       </SheetTrigger>
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
         <SheetHeader>
-          <SheetTitle className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-lg font-bold text-primary-foreground">C</span>
-            </div>
-            <span className="text-lg font-bold">CWP</span>
+          <SheetTitle className="flex items-center gap-1">
+            <span className="text-lg font-bold">
+              <span className="text-primary">i</span>nfodot
+            </span>
+            <span className="ml-1 text-[10px] font-semibold text-muted-foreground align-super">UK</span>
           </SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col gap-4 mt-8">
@@ -50,7 +50,7 @@ export const MobileMenu = () => {
             </Link>
           ))}
           <Button className="mt-4" asChild>
-            <Link to="/contact" onClick={() => setOpen(false)}>Contact Us</Link>
+            <Link to="/contact" onClick={() => setOpen(false)}>Talk to Us</Link>
           </Button>
         </nav>
       </SheetContent>

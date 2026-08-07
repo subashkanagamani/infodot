@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Target, Megaphone, LineChart, TrendingUp, Users, Palette, FileText, Share2, Loader2 } from "lucide-react";
+import { Headset, ShieldCheck, ClipboardCheck, RefreshCcw, Server, Lock, FileCheck, Network, Loader2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -12,104 +12,104 @@ interface Service {
 }
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Target,
-  Megaphone,
-  LineChart,
-  TrendingUp,
-  Users,
-  Palette,
-  FileText,
-  Share2
+  Headset,
+  ShieldCheck,
+  ClipboardCheck,
+  RefreshCcw,
+  Server,
+  Lock,
+  FileCheck,
+  Network
 };
 
 // Fallback services
 const fallbackServices = [
   {
     id: "1",
-    icon: "Target",
-    title: "Strategy & Planning",
-    description: "Make your D2C Brand a strategic powerhouse by providing growth",
+    icon: "Headset",
+    title: "Helpdesk & IT Operations",
+    description: "Named engineers, 30-minute first response, one tracked channel",
     features: [
-      "Build a data' based strategy that gets you exactly where you want to be",
-      "Enhance UX & conversion optimization",
-      "Break down your objectives into a simplified, actionable road map"
+      "Named engineers who know your setup, not a rotating queue",
+      "24/7 monitoring and OS + app patching, Windows and Mac",
+      "Onboarding and exit (JML) handled cleanly, on time"
     ]
   },
   {
     id: "2",
-    icon: "Megaphone",
-    title: "CRM & Marketing Automation",
-    description: "Generate more qualified leads with the most optimized conversion",
+    icon: "Server",
+    title: "Microsoft 365 & Workspace",
+    description: "Tenant, mailboxes, identity and collaboration, fully managed",
     features: [
-      "Complete email marketing setup (2-3 templates)",
-      "Email and SMS marketing audit",
-      "Implement email & SMS segmentation",
-      "Devise Email/SMS automation & workflows"
+      "Device lifecycle: enrolment, encryption, remote wipe, refresh",
+      "Asset, licence, domain and DNS renewals tracked and managed",
+      "Managed alongside your existing tools — no rip-and-replace"
     ]
   },
   {
     id: "3",
-    icon: "LineChart",
-    title: "Outreach & Demand Generation",
-    description: "Generate more qualified leads with the most optimized conversion",
+    icon: "ShieldCheck",
+    title: "Secure by Default",
+    description: "MFA, EDR, hardening and tested backup, standard from day one",
     features: [
-      "Increase your conversion rate by 30%",
-      "Generate sales leads through targeted cold emails",
-      "Multichannel strategy to power up lead generation"
+      "Managed EDR — engineers who contain, not just alert",
+      "Email security: anti-phishing, SPF/DKIM/DMARC, safe-link",
+      "Backup & disaster recovery — monitored, restore-tested, immutable"
     ]
   },
   {
     id: "4",
-    icon: "TrendingUp",
-    title: "Performance Marketing",
-    description: "Make your ad investment work for you. 10x your brand with our guidance",
+    icon: "Lock",
+    title: "Identity & Access",
+    description: "MFA everywhere, role-based and privileged access control",
     features: [
-      "Increase your brand ROAS by 10x",
-      "Comprehensive ad strategies from landing page design to ad copies",
-      "Optimize campaigns and ad budgets"
+      "Conditional access and CIS baseline hardening",
+      "Vulnerability management on a managed remediation cycle",
+      "Penetration testing & VAPT, scoped and reported"
     ]
   },
   {
     id: "5",
-    icon: "Users",
-    title: "SEO & Organic Growth",
-    description: "Dominate your organic presence and stand out in Google searches",
+    icon: "ClipboardCheck",
+    title: "Always Audit-Ready",
+    description: "Cyber Essentials, ISO 27001 evidence and cyber insurance readiness",
     features: [
-      "Technical SEO overhaul to position your website on the first page",
-      "Keyword research (enable the search on SERPs)",
-      "Content strategy for organic long' term growth"
+      "Cyber Essentials readiness — all five controls, certified via accredited body",
+      "Cyber insurance readiness — controls kept true and evidenced for renewal",
+      "Continuous controls & evidence with monthly packs and drift alerting"
     ]
   },
   {
     id: "6",
-    icon: "Palette",
-    title: "Creative & Full Branding",
-    description: "Stand out. Make a full spectrum user experience & branding",
+    icon: "FileCheck",
+    title: "GDPR & Data Protection Ops",
+    description: "DPA, sub-processor register, DSAR and breach process",
     features: [
-      "Bring quality and imagination in your creative assets",
-      "Dynamic, brand consistency, and UX' friendly website",
-      "Transform your online presence into a growth' centric business"
+      "ISO 27001 / SOC 2 continuous evidence; certification via accredited partners",
+      "FCA operational resilience readiness (third-party + incident reporting, PS26/2)",
+      "Data protection: encryption, secure sharing, retention, DLP where relevant"
     ]
   },
   {
     id: "7",
-    icon: "FileText",
-    title: "Content Marketing & Thought Leadership",
-    description: "Establish authority with strategic content",
+    icon: "Network",
+    title: "Network Security (Remote)",
+    description: "Remote monitoring, hardening and config of cloud-managed firewalls",
     features: [
-      "Drip campaigns, newsletters, long' form content, and lead magnets",
-      "Thought leadership content to establish founders as industry authorities"
+      "Remote monitoring and hardening of firewalls, VPN and Wi-Fi",
+      "Physical work coordinated via smart-hands",
+      "Security awareness: phishing simulation and staff training"
     ]
   },
   {
     id: "8",
-    icon: "Share2",
-    title: "Social Media Management & Branding",
-    description: "Monthly content calendars, designs, and community management",
+    icon: "RefreshCcw",
+    title: "Migrations & IT Transition",
+    description: "A clean switch from your incumbent, or a co-managed / fully managed start",
     features: [
-      "Follower growth, engagement campaigns, reels, stories, and posts",
-      "Performance tracking and analytics for social growth",
-      "Influencer collaborations to boost credibility and reach"
+      "Email migration: tenant-to-tenant, fixed-fee, no data lost",
+      "Domain migration: DNS moved cleanly into your control",
+      "Co-managed IT alongside your team, or fully managed end to end"
     ]
   }
 ];
@@ -157,20 +157,23 @@ export const Services = () => {
 
       <div className="container-custom relative">
         <div className="text-center mb-16 animate-slide-up">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+            What we do
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="text-gradient-primary relative">
-              Services
+            Every capability, <span className="text-gradient-primary relative">
+              independently buyable.
               <span className="absolute -inset-2 bg-primary/10 blur-2xl -z-10" />
             </span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            We bring a unique blend of strategic marketing and creative services to help your brand stand out and scale effectively in today's competitive landscape.
+            Start with one function as a front door; expand into a managed engagement when you're ready. Your tools or ours.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
-            const IconComponent = iconMap[service.icon || "Target"] || Target;
+            const IconComponent = iconMap[service.icon || "ShieldCheck"] || ShieldCheck;
             return (
               <Card
                 key={service.id}

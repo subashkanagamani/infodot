@@ -69,7 +69,7 @@ const ServiceDetail = () => {
   }
 
   const Icon = iconMap[service.icon] || Target;
-  const canonical = `https://consultwithprofessionals.com/services/${service.slug}`;
+  const canonical = `https://infodot.co.uk/services/${service.slug}`;
   const related = servicesData.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   const serviceJsonLd = {
@@ -81,8 +81,8 @@ const ServiceDetail = () => {
     serviceType: service.title,
     provider: {
       "@type": "Organization",
-      name: "CWP Marketing",
-      url: "https://consultwithprofessionals.com",
+      name: "Infodot UK",
+      url: "https://infodot.co.uk",
     },
     areaServed: "Global",
   };
@@ -112,7 +112,7 @@ const ServiceDetail = () => {
           <Breadcrumbs />
           <div className="max-w-4xl">
             <Badge variant="secondary" className="mb-4 text-primary border-primary/30">
-              CWP Services
+              Infodot Services
             </Badge>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">

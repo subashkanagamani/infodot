@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Building2, Layers, Globe2, MessageSquare, TrendingUp } from "lucide-react";
+import { CalendarClock, ShieldCheck, Timer, FileClock, LogOut, AlertTriangle } from "lucide-react";
 
 interface StatProps {
   end: string;
@@ -27,7 +27,10 @@ const AnimatedStat = ({ end, label, Icon, index }: StatProps) => {
   useEffect(() => {
     if (!isVisible) return;
     const match = end.match(/^(\d+)(.*)$/);
-    if (!match) return;
+    if (!match) {
+      setCount(end);
+      return;
+    }
     const targetNumber = parseInt(match[1]);
     const suffix = match[2];
     const duration = 1800;
@@ -67,11 +70,12 @@ const AnimatedStat = ({ end, label, Icon, index }: StatProps) => {
 
 export const AnimatedStats = () => {
   const stats = [
-    { number: "100+", label: "Brands Trusted Us", Icon: Building2 },
-    { number: "15+", label: "Industries Covered", Icon: Layers },
-    { number: "36+", label: "Countries Reached", Icon: Globe2 },
-    { number: "10K+", label: "Monthly Queries", Icon: MessageSquare },
-    { number: "3X", label: "Revenue, Traffic & Engagement", Icon: TrendingUp },
+    { number: "1996", label: "Running UK IT Since", Icon: CalendarClock },
+    { number: "27001", label: "ISO 27001:2022 Certified", Icon: ShieldCheck },
+    { number: "30min", label: "First Response Time", Icon: Timer },
+    { number: "48hr", label: "Exact Quote Turnaround", Icon: FileClock },
+    { number: "10day", label: "Exit Pack & Handover", Icon: LogOut },
+    { number: "82%", label: "Denied Cyber Claims Lacked Full MFA", Icon: AlertTriangle },
   ];
 
   return (
@@ -90,7 +94,7 @@ export const AnimatedStats = () => {
           <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary-foreground/10 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-primary-foreground/10 blur-3xl" />
 
-          <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 divide-primary-foreground/15 md:divide-x">
+          <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-4 divide-primary-foreground/15 md:divide-x">
             {stats.map((stat, index) => (
               <AnimatedStat
                 key={index}

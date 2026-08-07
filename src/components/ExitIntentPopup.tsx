@@ -77,9 +77,9 @@ export const ExitIntentPopup = () => {
           <div className="mx-auto w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4">
             <Gift className="h-8 w-8 text-primary" />
           </div>
-          <DialogTitle className="text-2xl">Wait! Don't miss out</DialogTitle>
+          <DialogTitle className="text-2xl">Before you go</DialogTitle>
           <DialogDescription className="text-base">
-            Get exclusive marketing insights and a free growth strategy guide delivered to your inbox.
+            Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
@@ -92,7 +92,7 @@ export const ExitIntentPopup = () => {
             required
           />
           <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? "Subscribing..." : "Get Free Guide"}
+            {loading ? "Submitting..." : "Book a Discovery Call"}
           </Button>
           <p className="text-xs text-center text-muted-foreground">
             No spam. Unsubscribe anytime.

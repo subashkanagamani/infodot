@@ -17,7 +17,7 @@ export const WhatsAppButton = () => {
 
   const handleWhatsAppClick = () => {
     const whatsappNumber = settings.integrations.whatsappNumber.replace(/[^0-9]/g, "");
-    const message = encodeURIComponent("Hi! I'm interested in learning more about your marketing services.");
+    const message = encodeURIComponent("Hi! I'm interested in learning more about Infodot's managed IT services.");
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };

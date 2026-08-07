@@ -7,7 +7,8 @@ interface OrganizationSchema {
   logo?: string;
   description?: string;
   contactPoint?: {
-    telephone: string;
+    telephone?: string;
+    email?: string;
     contactType: string;
   };
   sameAs?: string[];
@@ -66,6 +67,7 @@ export const JsonLd = ({ schema }: JsonLdProps) => {
             ? {
                 "@type": "ContactPoint",
                 telephone: schema.contactPoint.telephone,
+                email: schema.contactPoint.email,
                 contactType: schema.contactPoint.contactType,
               }
             : undefined,
