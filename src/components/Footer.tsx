@@ -53,7 +53,7 @@ const FOOTER_DEFAULTS: FooterColumns = {
     { label: "About", href: "/about" },
     { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
-    { label: "Legal & Privacy", href: "/privacy-policy" },
+    { label: "Legal & Privacy", href: "/legal" },
   ],
   quickMessageTitle: "QUICK MESSAGE",
   copyright: "© {year} Infodot Technologies Pvt Ltd · Bangalore, India — serving UK & EU remotely.",
