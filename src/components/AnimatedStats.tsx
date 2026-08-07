@@ -52,16 +52,22 @@ const AnimatedStat = ({ end, label, Icon, index }: StatProps) => {
   return (
     <div
       ref={ref}
-      className="group relative flex flex-col items-center text-center px-4 py-6 transition-all duration-300"
-      style={{ animationDelay: `${index * 80}ms` }}
+      className="group relative flex flex-col justify-between rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 animate-slide-up"
+      style={{ animationDelay: `${index * 70}ms` }}
     >
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-foreground/10 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-        <Icon className="h-6 w-6 text-primary-foreground" />
+      <div className="flex items-start justify-between">
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-secondary">
+          <Icon className="h-5 w-5 text-primary" />
+        </span>
+        <span className="font-display text-[10px] font-bold tracking-[0.18em] text-muted-foreground">
+          {String(index + 1).padStart(2, "0")}
+        </span>
       </div>
-      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground tracking-tight leading-none mb-3">
+      <div className="mt-8 font-display text-4xl md:text-5xl font-bold tracking-tight leading-none tabular-nums">
         {count}
       </div>
-      <div className="text-xs md:text-sm font-medium uppercase tracking-wider text-primary-foreground/80 max-w-[14ch]">
+      <div className="mt-3 h-px w-8 bg-primary" aria-hidden />
+      <div className="mt-3 text-xs md:text-sm font-medium leading-snug text-muted-foreground">
         {label}
       </div>
     </div>
@@ -79,32 +85,30 @@ export const AnimatedStats = () => {
   ];
 
   return (
-    <section className="section-spacing">
+    <section className="section-spacing bg-secondary">
       <div className="container-custom">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-accent p-8 md:p-12 shadow-2xl">
-          {/* Decorative background pattern */}
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.07]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, hsl(var(--primary-foreground)) 1px, transparent 0)",
-              backgroundSize: "24px 24px",
-            }}
-          />
-          <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary-foreground/10 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-primary-foreground/10 blur-3xl" />
-
-          <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-4 divide-primary-foreground/15 md:divide-x">
-            {stats.map((stat, index) => (
-              <AnimatedStat
-                key={index}
-                end={stat.number}
-                label={stat.label}
-                Icon={stat.Icon}
-                index={index}
-              />
-            ))}
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4 animate-slide-up">
+          <div>
+            <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-2">By the numbers</p>
+            <h2 className="font-display text-2xl md:text-4xl font-bold leading-[1.1]">
+              Standards we <span className="text-primary">hold ourselves to.</span>
+            </h2>
           </div>
+          <p className="max-w-sm text-sm text-muted-foreground">
+            Commitments we publish, measure and report on — not aspirations.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          {stats.map((stat, index) => (
+            <AnimatedStat
+              key={index}
+              end={stat.number}
+              label={stat.label}
+              Icon={stat.Icon}
+              index={index}
+            />
+          ))}
         </div>
       </div>
     </section>
