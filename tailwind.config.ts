@@ -65,13 +65,16 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        display: ['Manrope', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      transitionTimingFunction: {
+        brand: "cubic-bezier(0.22, 1, 0.36, 1)",
       },
       keyframes: {
         "accordion-down": {
@@ -97,20 +100,28 @@ export default {
           },
         },
         "slide-up": {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": { opacity: "0", transform: "translateY(24px)", filter: "blur(6px)" },
+          "100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0)" },
         },
         "slide-in-left": {
-          "0%": { opacity: "0", transform: "translateX(-30px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+          "0%": { opacity: "0", transform: "translateX(-24px) skewX(3deg)" },
+          "100%": { opacity: "1", transform: "translateX(0) skewX(0)" },
         },
         "slide-in-right": {
-          "0%": { opacity: "0", transform: "translateX(30px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+          "0%": { opacity: "0", transform: "translateX(24px) skewX(-3deg)" },
+          "100%": { opacity: "1", transform: "translateX(0) skewX(0)" },
         },
         "scale-in": {
-          "0%": { opacity: "0", transform: "scale(0.9)" },
-          "100%": { opacity: "1", transform: "scale(1)" },
+          "0%": { opacity: "0", transform: "scale(0.94)", filter: "blur(4px)" },
+          "100%": { opacity: "1", transform: "scale(1)", filter: "blur(0)" },
+        },
+        "clip-reveal": {
+          "0%": { clipPath: "inset(0 100% 0 0)" },
+          "100%": { clipPath: "inset(0 0 0 0)" },
+        },
+        "rule-draw": {
+          "0%": { transform: "scaleX(0)" },
+          "100%": { transform: "scaleX(1)" },
         },
         "border-spin": {
           "0%": { transform: "rotate(0deg)" },
@@ -122,10 +133,12 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 6s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-        "slide-up": "slide-up 0.6s ease-out forwards",
-        "slide-in-left": "slide-in-left 0.6s ease-out forwards",
-        "slide-in-right": "slide-in-right 0.6s ease-out forwards",
-        "scale-in": "scale-in 0.5s ease-out forwards",
+        "slide-up": "slide-up 0.7s cubic-bezier(0.22,1,0.36,1) forwards",
+        "slide-in-left": "slide-in-left 0.7s cubic-bezier(0.22,1,0.36,1) forwards",
+        "slide-in-right": "slide-in-right 0.7s cubic-bezier(0.22,1,0.36,1) forwards",
+        "scale-in": "scale-in 0.6s cubic-bezier(0.22,1,0.36,1) forwards",
+        "clip-reveal": "clip-reveal 0.8s cubic-bezier(0.76,0,0.24,1) forwards",
+        "rule-draw": "rule-draw 0.6s cubic-bezier(0.22,1,0.36,1) forwards",
         "border-spin": "border-spin 3s linear infinite",
       },
     },
