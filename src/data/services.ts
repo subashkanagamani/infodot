@@ -337,6 +337,250 @@ export const servicesData: ServiceItem[] = [
     keywords:
       "data protection, DLP, data loss prevention, encryption, retention policy, sensitivity labels, UK GDPR",
   },
+  {
+    slug: "helpdesk-it-operations",
+    icon: "Headset",
+    title: "Helpdesk & IT Operations",
+    shortDescription: "One number for everything IT. Answered by people who know you.",
+    description:
+      "A single tracked channel for every request and incident — ticketed, owned, and driven to resolution against agreed response times, by named engineers who know your environment. Most IT frustration isn't the fault itself — it's the chase. We remove the chase: one accountable team, one clear record of what was asked and done, and requests often closed before your next morning.",
+    features: [
+      "Named engineers, not a rotating pool",
+      "30-minute first response in business hours",
+      "One channel — portal, email or phone",
+      "Full ticket tracking and history",
+      "Proactive follow-through to resolution",
+      "Monthly service reporting",
+    ],
+    benefits: [
+      "No chasing — one accountable team owns the outcome",
+      "Predictable response times your people can plan around",
+      "A clear record of what was asked and what was done",
+      "Monthly reporting shows where time actually goes",
+    ],
+    metaTitle: "IT Helpdesk & IT Operations Support | Infodot UK",
+    metaDescription:
+      "One tracked channel for every IT request, named engineers and a 30-minute first response in business hours — Infodot UK helpdesk for regulated UK firms.",
+    keywords:
+      "IT helpdesk, IT support desk, managed IT operations, named engineers, ticketing, service reporting",
+  },
+  {
+    slug: "device-lifecycle",
+    icon: "Laptop",
+    title: "Device Lifecycle Management",
+    shortDescription: "From unboxing to wipe — the whole device life, managed.",
+    description:
+      "Endpoint management across the full lifecycle — enrolment, configuration, encryption, compliance and secure retirement — for every managed device. Devices are where your people meet your data. Managing them properly — encrypted, compliant, recoverable — closes the gap that lost or stolen laptops otherwise open.",
+    features: [
+      "Automated enrolment and configuration",
+      "Disk encryption and compliance baselines",
+      "Remote lock and wipe",
+      "Software deployment and updates",
+      "Joiner/leaver device provisioning and recovery",
+      "Refresh and warranty tracking",
+    ],
+    benefits: [
+      "Lost or stolen devices stop being a data breach",
+      "Every endpoint holds the same secure baseline",
+      "New starters are productive on day one",
+      "Refresh and warranty planned, not reactive",
+    ],
+    metaTitle: "Device Lifecycle & Endpoint Management | Infodot UK",
+    metaDescription:
+      "Enrolment, encryption, compliance baselines, remote wipe and secure retirement for every managed device — endpoint lifecycle management from Infodot UK.",
+    keywords:
+      "device lifecycle management, endpoint management, Intune, disk encryption, remote wipe, device refresh",
+  },
+  {
+    slug: "email-security",
+    icon: "Mail",
+    title: "Email Security",
+    shortDescription: "Stop the phish before it reaches the inbox.",
+    description:
+      "Layered email protection — anti-phishing, anti-spam, authentication and safe-content controls — because email is still how most attacks arrive. Email is the number-one entry point for attacks on small firms. Getting authentication and filtering right stops the majority before a human ever has to make the wrong click.",
+    features: [
+      "Anti-phishing and anti-spam policies",
+      "SPF/DKIM/DMARC enforcement",
+      "Safe-link and safe-attachment protection",
+      "Impersonation and spoofing controls",
+      "Quarantine and reporting",
+      "User-report handling",
+    ],
+    benefits: [
+      "Most attacks stop before anyone has to judge them",
+      "Your domain can't be casually spoofed",
+      "Malicious links and attachments checked at click time",
+      "Reported messages get handled, not ignored",
+    ],
+    metaTitle: "Managed Email Security & Anti-Phishing | Infodot UK",
+    metaDescription:
+      "Anti-phishing, SPF/DKIM/DMARC enforcement, safe links and impersonation controls — managed email security from Infodot UK for regulated UK firms.",
+    keywords:
+      "email security, anti-phishing, SPF DKIM DMARC, safe links, spoofing protection, Microsoft 365 email security",
+  },
+  {
+    slug: "identity-access",
+    icon: "KeyRound",
+    title: "Identity & Access Management",
+    shortDescription: "The right people in. Everyone else out. Provably.",
+    description:
+      "Identity and access management built on MFA everywhere, least-privilege roles and controlled privileged access — the control that underpins everything else. Identity is the new perimeter — and the control insurers deny claims over when it's incomplete. We enforce MFA everywhere with no exception paths, keep access least-privilege, and evidence it.",
+    features: [
+      "MFA on every account and remote path",
+      "Role-based access control",
+      "Privileged access management with session logging",
+      "Conditional access policies",
+      "Access reviews and evidence",
+      "Joiner/leaver access lifecycle",
+    ],
+    benefits: [
+      "No MFA exception paths for an attacker to find",
+      "Least-privilege access limits the blast radius",
+      "Privileged sessions are logged and reviewable",
+      "Access reviews produce evidence insurers accept",
+    ],
+    metaTitle: "Identity & Access Management (MFA, PAM) | Infodot UK",
+    metaDescription:
+      "MFA everywhere, role-based access, conditional access and privileged access management with evidence — identity and access management from Infodot UK.",
+    keywords:
+      "identity and access management, MFA, conditional access, privileged access management, access reviews, least privilege",
+  },
+  {
+    slug: "gdpr-data-protection",
+    icon: "Scale",
+    title: "GDPR & Data Protection Operations",
+    shortDescription: "GDPR handled as an operating discipline, not a policy PDF.",
+    description:
+      "The day-to-day operation of data protection — the agreement, the register, the requests and the breach process — kept current, not filed and forgotten. GDPR isn't a document you write once; it's a set of things you must actually do, on time, provably. We operate those so you can answer a regulator, client or DSAR with evidence, not improvisation.",
+    features: [
+      "Data processing agreement and transfer mechanism",
+      "Current sub-processor register",
+      "Data-subject-request (DSAR) support",
+      "Breach-detection and notification process",
+      "Retention and minimisation",
+      "Access logging",
+    ],
+    benefits: [
+      "DSARs answered within the statutory window",
+      "A sub-processor register that's actually current",
+      "A breach process rehearsed before you need it",
+      "Regulator and client questions answered with evidence",
+    ],
+    metaTitle: "UK GDPR & Data Protection Operations | Infodot UK",
+    metaDescription:
+      "DPAs, sub-processor registers, DSAR support, breach notification and retention run as ongoing operations — UK GDPR data protection support from Infodot UK.",
+    keywords:
+      "UK GDPR, data protection operations, DSAR, data processing agreement, sub-processor register, breach notification",
+  },
+  {
+    slug: "fca-operational-resilience",
+    icon: "ClipboardCheck",
+    title: "FCA Operational Resilience & Third-Party Rules",
+    shortDescription:
+      "For the FCA's new third-party rules — be the supplier that's ready.",
+    description:
+      "Support for financial firms preparing for the FCA's operational-resilience and third-party reporting rules — mapping, evidence and exit planning for the services we provide you. Under the FCA's new rules, you must map, assess and report material third parties — and as your IT provider, we're one of them. We give you the due-diligence evidence and exit assurance that satisfy the questionnaire rather than stall it. Not legal advice: we support your operational-resilience compliance and give you the evidence a questionnaire asks for — we don't replace your compliance function or legal counsel.",
+    features: [
+      "Third-party arrangement documentation",
+      "Incident-reporting readiness",
+      "Impact-tolerance and continuity support",
+      "A documented exit plan and evidence",
+      "Audit rights and a due-diligence pack",
+      "Our own resilience posture, evidenced",
+    ],
+    benefits: [
+      "Third-party questionnaires answered, not stalled",
+      "Exit assurance documented before anyone asks",
+      "Incident reporting rehearsed against the timelines",
+      "Your provider's resilience posture already evidenced",
+    ],
+    metaTitle: "FCA Operational Resilience & Third-Party Support | Infodot UK",
+    metaDescription:
+      "Third-party mapping, due-diligence packs, incident-reporting readiness and documented exit plans for FCA operational resilience — support from Infodot UK.",
+    keywords:
+      "FCA operational resilience, critical third parties, third-party reporting, exit plan, due diligence pack, impact tolerance",
+  },
+  {
+    slug: "discovery-phase0",
+    icon: "Search",
+    title: "Discovery & Phase 0",
+    shortDescription: "Know exactly what you've got before anyone touches it.",
+    description:
+      "A one-time discovery, knowledge transfer and documentation phase that establishes a complete, accurate picture of your environment and brings it cleanly under your control. You can't run — or secure — what isn't documented. Phase 0 gives you and us an accurate map, surfaces the risks hiding in the environment, and sets up everything that follows. It's often the first, low-commitment step.",
+    features: [
+      "Agent-based asset and security discovery",
+      "Structured handover from your current provider",
+      "Complete asset and licence register",
+      "Domain, DNS and access inventory",
+      "Security-gap findings",
+      "Fixed fee by size",
+    ],
+    benefits: [
+      "A low-commitment way to start working with us",
+      "Hidden risks surfaced before they bite",
+      "Ownership of domains, licences and access confirmed",
+      "Everything that follows is planned on facts",
+    ],
+    metaTitle: "IT Discovery & Phase 0 Documentation | Infodot UK",
+    metaDescription:
+      "Agent-based discovery, provider handover, asset and licence registers and security-gap findings on a fixed fee — Phase 0 discovery from Infodot UK.",
+    keywords:
+      "IT discovery, phase 0, IT documentation, asset register, knowledge transfer, MSP handover",
+  },
+  {
+    slug: "email-migration",
+    icon: "ArrowRightLeft",
+    title: "Email Migration",
+    shortDescription: "Move email without losing a message.",
+    description:
+      "Planned, fixed-fee email migration — tenant-to-tenant, Exchange to Microsoft 365, or between Microsoft 365 and Google Workspace — executed with no data lost and minimal disruption. Email migrations go wrong when they're rushed or unplanned: lost mail, broken flow, downtime. We plan the cutover properly so the move is boring, which is exactly what you want from an email migration.",
+    features: [
+      "Migration planning and mailbox mapping",
+      "Tenant-to-tenant (M&A) moves",
+      "Exchange or Google to Microsoft 365",
+      "Co-existence during cutover",
+      "Mail-flow and DNS handling",
+      "Fixed fee by mailbox count",
+    ],
+    benefits: [
+      "No lost mail and no surprise downtime",
+      "Costs known up front, priced by mailbox",
+      "Co-existence keeps people working through cutover",
+      "Authentication and mail flow stay intact",
+    ],
+    metaTitle: "Email Migration to Microsoft 365 | Infodot UK",
+    metaDescription:
+      "Fixed-fee tenant-to-tenant, Exchange and Google Workspace email migrations with co-existence and mail-flow planning — email migration from Infodot UK.",
+    keywords:
+      "email migration, tenant to tenant migration, Exchange to Microsoft 365, Google Workspace migration, mailbox migration",
+  },
+  {
+    slug: "domain-migration",
+    icon: "Globe",
+    title: "Domain & DNS Migration",
+    shortDescription: "Take back control of your domain — cleanly.",
+    description:
+      "A one-time project to move your domain and DNS into your own control, correctly configured, distinct from the ongoing domain management we provide thereafter. Your domain is the root of your identity and email — mishandled, it takes both down. We move it carefully, keep authentication intact, and put ownership firmly in your name.",
+    features: [
+      "Domain transfer into your ownership",
+      "DNS records audited and migrated",
+      "Mail authentication (SPF/DKIM/DMARC) preserved",
+      "Zero-downtime cutover planning",
+      "Documentation of every record",
+      "Handover into ongoing management",
+    ],
+    benefits: [
+      "Your domain is registered in your name, not ours",
+      "Email keeps flowing and stays authenticated",
+      "Every DNS record documented, not guessed",
+      "A clean handover into ongoing management",
+    ],
+    metaTitle: "Domain & DNS Migration Services | Infodot UK",
+    metaDescription:
+      "Move your domain and DNS into your own ownership with SPF/DKIM/DMARC preserved and zero-downtime cutover planning — domain migration from Infodot UK.",
+    keywords:
+      "domain migration, DNS migration, domain transfer, SPF DKIM DMARC, zero downtime cutover, domain ownership",
+  },
 ];
 
 export const getServiceBySlug = (slug: string) =>
