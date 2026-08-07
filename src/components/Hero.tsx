@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { useSection } from "@/hooks/usePageContent";
+import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 
 interface HeroContent {
   badge: string;
