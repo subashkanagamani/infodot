@@ -4,12 +4,11 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ShieldCheck, ArrowRight, Search, X, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, ArrowRight, Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 const portfolioItems = [
@@ -120,32 +119,32 @@ const Portfolio = () => {
         }}
       />
       <Navbar />
-      
+      <WhatsAppButton />
+      <BackToTop />
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none opacity-20">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-neon-purple/20 rounded-full blur-3xl" />
-        </div>
-        
-        <div className="container-custom relative">
+      <section className="bg-secondary pt-24 pb-10 md:pt-28 md:pb-14">
+        <div className="container-custom">
           <Breadcrumbs />
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4 text-primary border-primary/30">
-              Client Outcomes
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Engagement <span className="text-gradient-primary">Snapshots</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Generic, anonymised snapshots showing how we run managed IT, security and compliance evidence for regulated UK firms.
-            </p>
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Client Outcomes</span>
+              <h1 className="font-display text-4xl md:text-5xl font-bold leading-[1.08] mt-4">
+                Engagement <span className="text-primary">Snapshots</span>
+              </h1>
+              <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl font-medium">
+                Generic, anonymised snapshots showing how we run managed IT, security and compliance evidence for regulated UK firms.
+              </p>
+            </div>
+            <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <div className="font-display text-5xl font-bold">{portfolioItems.length}</div>
+              <p className="mt-2 font-medium text-accent-foreground/70">Anonymised engagement snapshots across regulated sectors.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="py-8 border-b border-border">
+      <section className="section-spacing bg-background">
         <div className="container-custom">
           {/* Search */}
           <div className="relative max-w-md mx-auto mb-6">
@@ -155,7 +154,7 @@ const Portfolio = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search engagements..."
-              className="pl-10 pr-10"
+              className="pl-10 pr-10 rounded-xl"
             />
             {searchQuery && (
               <button
@@ -170,14 +169,14 @@ const Portfolio = () => {
           </div>
 
           {/* Category filter */}
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center mb-8">
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={category === activeCategory ? "default" : "outline"}
                 size="sm"
                 onClick={() => setActiveCategory(category)}
-                className="transition-all"
+                className="rounded-xl press transition-all"
               >
                 {category}
               </Button>
@@ -186,21 +185,18 @@ const Portfolio = () => {
 
           {/* Results count */}
           {(searchQuery || activeCategory !== "All") && (
-            <p className="text-center text-muted-foreground mt-4">
+            <p className="text-center text-muted-foreground mb-8">
               {filteredItems.length} engagement{filteredItems.length !== 1 ? "s" : ""} found
             </p>
           )}
-        </div>
-      </section>
 
-      {/* Portfolio Items */}
-      <section className="py-20">
-        <div className="container-custom">
+          {/* Portfolio Items */}
           {filteredItems.length === 0 ? (
             <div className="text-center py-16">
               <p className="text-xl text-muted-foreground mb-4">No engagements found</p>
               <Button
                 variant="outline"
+                className="rounded-xl press"
                 onClick={() => {
                   setSearchQuery("");
                   setActiveCategory("All");
@@ -210,74 +206,67 @@ const Portfolio = () => {
               </Button>
             </div>
           ) : (
-            <div className="space-y-12">
+            <div className="space-y-6">
               {filteredItems.map((item, index) => (
                 <Card 
                   key={index}
-                  className="p-8 md:p-12 bg-card border-border/50 hover:border-primary/50 transition-all group relative overflow-hidden"
+                  className="rounded-3xl border-border bg-card p-8 md:p-12 shadow-[var(--shadow-card)] hover-lift animate-slide-up"
+                  style={{ animationDelay: `${Math.min(index, 8) * 0.06}s` }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                      {item.category}
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag, i) => (
+                        <span key={i} className="px-3 py-1.5 rounded-lg border border-border text-xs font-bold">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   
-                  <div className="relative z-10">
-                    <div className="flex flex-wrap items-center gap-4 mb-6">
-                      <Badge variant="secondary" className="text-primary border-primary/30">
-                        {item.category}
-                      </Badge>
-                      <div className="flex flex-wrap gap-2">
-                        {item.tags.map((tag, i) => (
-                          <Badge key={i} variant="outline" className="text-xs">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
+                  <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
+                    {item.title}
+                  </h2>
+                  <p className="text-lg text-muted-foreground mb-8">{item.description}</p>
+                  
+                  <div className="grid grid-cols-12 gap-4 mb-6">
+                    <div className="col-span-12 md:col-span-6 rounded-2xl bg-secondary border border-border p-6">
+                      <h3 className="font-semibold text-primary mb-2">The Situation</h3>
+                      <p className="text-muted-foreground">{item.challenge}</p>
                     </div>
-                    
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-primary-glow transition-colors">
-                      {item.title}
-                    </h2>
-                    <p className="text-lg text-muted-foreground mb-8">{item.description}</p>
-                    
-                    <div className="grid md:grid-cols-2 gap-8 mb-8">
-                      <div>
-                        <h3 className="font-semibold text-primary mb-2">The Situation</h3>
-                        <p className="text-muted-foreground">{item.challenge}</p>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-primary mb-2">How We Ran It</h3>
-                        <p className="text-muted-foreground">{item.solution}</p>
-                      </div>
+                    <div className="col-span-12 md:col-span-6 rounded-2xl bg-secondary border border-border p-6">
+                      <h3 className="font-semibold text-primary mb-2">How We Ran It</h3>
+                      <p className="text-muted-foreground">{item.solution}</p>
                     </div>
+                  </div>
 
-                    <div className="flex items-start gap-4 p-6 bg-primary/5 rounded-lg border border-primary/20">
-                      <ShieldCheck className="w-8 h-8 text-primary flex-shrink-0" />
-                      <p className="text-muted-foreground">Outcome details are described generically to protect client confidentiality.</p>
-                    </div>
+                  <div className="flex items-start gap-4 p-6 rounded-2xl border border-border bg-accent text-accent-foreground">
+                    <ShieldCheck className="w-8 h-8 flex-shrink-0" />
+                    <p className="text-accent-foreground/70 font-medium">Outcome details are described generically to protect client confidentiality.</p>
                   </div>
                 </Card>
               ))}
             </div>
           )}
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-card/50">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready for Your Own <span className="text-gradient-primary">Engagement Snapshot</span>?
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Let's discuss how we can run your IT completely — securely, and with the evidence to prove it.
-          </p>
-          <Button size="lg" onClick={handleContactClick}>
-            Book a Discovery Call <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          {/* CTA Section */}
+          <div className="mt-16 rounded-3xl border border-border bg-accent text-accent-foreground p-10 md:p-12 text-center animate-slide-up">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+              Ready for Your Own Engagement Snapshot?
+            </h2>
+            <p className="text-xl mb-8 text-accent-foreground/70 max-w-2xl mx-auto">
+              Let's discuss how we can run your IT completely — securely, and with the evidence to prove it.
+            </p>
+            <Button size="lg" onClick={handleContactClick} className="rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90">
+              Book a Discovery Call <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </div>
         </div>
       </section>
 
       <Footer />
-      <WhatsAppButton />
-      <BackToTop />
     </div>
   );
 };

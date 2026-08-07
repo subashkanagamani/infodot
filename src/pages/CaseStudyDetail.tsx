@@ -115,9 +115,9 @@ export default function CaseStudyDetail() {
           description="The case study you're looking for doesn't exist."
         />
         <div className="container-custom py-32 text-center">
-          <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
+          <h1 className="font-display text-4xl font-bold mb-4">Case Study Not Found</h1>
           <p className="text-muted-foreground mb-8">The case study you're looking for doesn't exist.</p>
-          <Button asChild>
+          <Button asChild className="rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90">
             <Link to="/case-studies">Back to Case Studies</Link>
           </Button>
         </div>
@@ -158,128 +158,118 @@ export default function CaseStudyDetail() {
         }}
       />
 
-      <article className="section-spacing pt-32">
+      {/* Hero */}
+      <section className="bg-secondary pt-24 pb-10 md:pt-28 md:pb-14">
         <div className="container-custom">
           <Breadcrumbs />
-          
-          {/* Back Button */}
-          <Link to="/case-studies" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8">
+
+          <Link to="/case-studies" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6 font-medium">
             <ArrowLeft className="w-4 h-4" />
             Back to Case Studies
           </Link>
 
-          {/* Header */}
-          <header className="max-w-4xl mx-auto mb-12">
-            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
               {study.industry && (
-                <div className="flex items-center gap-1">
-                  <Building className="w-4 h-4" />
-                  <span>{study.industry}</span>
+                <div className="flex items-center gap-2 mb-4">
+                  <Building className="w-4 h-4 text-primary" />
+                  <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">{study.industry}</span>
                 </div>
               )}
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{study.client || study.title}</h1>
-            {study.description && <p className="text-xl text-muted-foreground mb-6">{study.description}</p>}
+              <h1 className="font-display text-4xl md:text-5xl font-bold leading-[1.08]">{study.client || study.title}</h1>
+              {study.description && (
+                <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl font-medium">{study.description}</p>
+              )}
 
-            <div className="flex flex-wrap items-center justify-between gap-4">
               {study.technologies && study.technologies.length > 0 && (
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-6">
                   {study.technologies.map((tag, idx) => (
-                    <span key={idx} className="px-4 py-2 bg-primary/10 text-primary text-sm rounded-full font-medium">
+                    <span key={idx} className="px-3 py-1.5 rounded-lg border border-border text-xs font-bold">
                       {tag}
                     </span>
                   ))}
                 </div>
               )}
+            </div>
+            <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              <p className="font-medium text-accent-foreground/70 mb-4">Share this case study</p>
               <SocialShareButtons url={window.location.href} title={study.client || study.title} />
             </div>
-          </header>
+          </div>
+        </div>
+      </section>
 
+      <section className="section-spacing bg-background">
+        <div className="container-custom">
           {/* Featured Image */}
           {study.cover_image && (
-            <div className="max-w-5xl mx-auto mb-12">
+            <div className="mb-6 rounded-3xl overflow-hidden border border-border shadow-[var(--shadow-card)] animate-slide-up">
               <img 
                 src={study.cover_image} 
                 alt={study.client || study.title}
-                className="w-full aspect-video object-cover rounded-2xl"
+                className="w-full aspect-video object-cover"
               />
             </div>
           )}
 
           {/* Key Metrics */}
           {study.metrics && Array.isArray(study.metrics) && (study.metrics as Metric[]).length > 0 && (
-            <div className="max-w-4xl mx-auto mb-16">
-              <h2 className="text-2xl font-bold mb-6 text-center">Key Results</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {(study.metrics as Metric[]).map((metric, idx) => {
-                  const IconComponent = iconMap[metric.icon || "TrendingUp"] || TrendingUp;
-                  return (
-                    <Card key={idx} className="p-6 text-center">
-                      <IconComponent className="w-8 h-8 text-primary mx-auto mb-3" />
-                      <div className="text-3xl font-bold text-primary mb-2">{metric.value}</div>
-                      <div className="text-sm text-muted-foreground">{metric.label}</div>
-                    </Card>
-                  );
-                })}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              {(study.metrics as Metric[]).map((metric, idx) => {
+                const IconComponent = iconMap[metric.icon || "TrendingUp"] || TrendingUp;
+                return (
+                  <div key={idx} className="rounded-3xl border border-border bg-card p-6 text-center shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: `${idx * 0.06}s` }}>
+                    <IconComponent className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <div className="font-display text-3xl font-bold text-primary mb-2">{metric.value}</div>
+                    <div className="text-sm text-muted-foreground font-medium">{metric.label}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Challenge / Solution / Results */}
+          <div className="grid grid-cols-12 gap-4 mb-6">
+            {study.challenge && (
+              <div className="col-span-12 md:col-span-4 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] animate-slide-up">
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Challenge</span>
+                <p className="text-foreground text-lg leading-relaxed mt-4">{study.challenge}</p>
               </div>
-            </div>
-          )}
-
-          {/* Challenge Section */}
-          {study.challenge && (
-            <div className="max-w-3xl mx-auto mb-12">
-              <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                {study.challenge}
-              </p>
-            </div>
-          )}
-
-          {/* Solution Section */}
-          {study.solution && (
-            <div className="max-w-3xl mx-auto mb-12">
-              <h2 className="text-2xl font-bold mb-4">Our Solution</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                {study.solution}
-              </p>
-            </div>
-          )}
-
-          {/* Results Section */}
-          {study.results && (
-            <div className="max-w-3xl mx-auto mb-12">
-              <h2 className="text-2xl font-bold mb-4">The Results</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                {study.results}
-              </p>
-            </div>
-          )}
+            )}
+            {study.solution && (
+              <div className="col-span-12 md:col-span-4 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.06s" }}>
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Solution</span>
+                <p className="text-foreground text-lg leading-relaxed mt-4">{study.solution}</p>
+              </div>
+            )}
+            {study.results && (
+              <div className="col-span-12 md:col-span-4 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.12s" }}>
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Results</span>
+                <p className="text-foreground text-lg leading-relaxed mt-4">{study.results}</p>
+              </div>
+            )}
+          </div>
 
           {/* Testimonial */}
           {study.testimonial && (
-            <div className="max-w-3xl mx-auto mb-16">
-              <Card className="p-8 bg-primary/5 border-primary/20">
-                <Quote className="w-10 h-10 text-primary mb-4" />
-                <p className="text-xl italic mb-6 text-foreground">
-                  "{study.testimonial}"
-                </p>
-                {study.testimonial_author && (
-                  <div>
-                    <p className="font-semibold">{study.testimonial_author}</p>
-                  </div>
-                )}
-              </Card>
+            <div className="mb-6 rounded-3xl border border-border bg-secondary p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up">
+              <Quote className="w-10 h-10 text-primary mb-4" />
+              <p className="font-display text-xl md:text-2xl font-bold leading-snug mb-6">
+                "{study.testimonial}"
+              </p>
+              {study.testimonial_author && (
+                <p className="font-semibold text-muted-foreground">{study.testimonial_author}</p>
+              )}
             </div>
           )}
 
           {/* Related Case Studies */}
           {relatedStudies.length > 0 && (
-            <section className="mt-20 max-w-5xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8">More Success Stories</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {relatedStudies.map((relatedStudy) => (
-                  <Card key={relatedStudy.id} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
+            <section className="mt-16">
+              <h2 className="font-display text-3xl font-bold mb-6">More Success Stories</h2>
+              <div className="grid grid-cols-12 gap-4">
+                {relatedStudies.map((relatedStudy, index) => (
+                  <Card key={relatedStudy.id} className="col-span-12 md:col-span-6 group overflow-hidden rounded-3xl border-border bg-card shadow-[var(--shadow-card)] hover-lift p-0 animate-slide-up" style={{ animationDelay: `${index * 0.08}s` }}>
                     <Link to={`/case-studies/${relatedStudy.slug}`}>
                       {relatedStudy.cover_image && (
                         <div className="aspect-video overflow-hidden">
@@ -292,12 +282,10 @@ export default function CaseStudyDetail() {
                         </div>
                       )}
                       <div className="p-6">
-                        <div className="flex items-center gap-3 mb-3">
-                          {relatedStudy.industry && (
-                            <span className="text-sm font-semibold text-muted-foreground">{relatedStudy.industry}</span>
-                          )}
-                        </div>
-                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        {relatedStudy.industry && (
+                          <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">{relatedStudy.industry}</span>
+                        )}
+                        <h3 className="font-display text-xl font-bold mb-2 mt-3 group-hover:text-primary transition-colors">
                           {relatedStudy.client || relatedStudy.title}
                         </h3>
                         {relatedStudy.description && (
@@ -312,17 +300,17 @@ export default function CaseStudyDetail() {
           )}
 
           {/* CTA */}
-          <div className="mt-16 text-center p-12 bg-gradient-to-r from-primary via-primary to-accent rounded-2xl text-primary-foreground max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4">Ready to Be Our Next Success Story?</h3>
-            <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
+          <div className="mt-16 rounded-3xl border border-border bg-accent text-accent-foreground p-10 md:p-12 text-center animate-slide-up">
+            <h3 className="font-display text-3xl md:text-4xl font-bold mb-4">Ready to Be Our Next Success Story?</h3>
+            <p className="text-xl mb-8 text-accent-foreground/70 max-w-2xl mx-auto">
               Let's discuss how we can achieve similar results for your business.
             </p>
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg" className="rounded-xl press bg-primary text-primary-foreground hover:bg-primary/90">
               <Link to="/#contact">Start Your Growth Journey</Link>
             </Button>
           </div>
         </div>
-      </article>
+      </section>
 
       <Footer />
     </div>
