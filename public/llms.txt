@@ -13,6 +13,12 @@ Entity: Infodot Technologies Pvt Ltd, Bangalore, India — serving UK & EU remot
 - [Pricing](https://infodot.co.uk/pricing): Engagement models — Co-Managed, Fully Managed, Fully Remote.
 - [Contact](https://infodot.co.uk/contact): Book a 30-minute discovery call.
 
+## Industries
+- [Industries overview](https://infodot.co.uk/industries)
+- [IT support for accountants](https://infodot.co.uk/industries/accountants): IRIS, CCH, Digita, Sage, Xero, QuickBooks, FreeAgent, TaxCalc, Microsoft 365, MTD. 30-minute first response, peak-season cover, Cyber Essentials Plus / ICAEW / ACCA alignment.
+- [IT support for law firms](https://infodot.co.uk/industries/law-firms): LEAP, Clio, Proclaim, PMS, document management, secure client portals. SRA-aligned security, encryption, DLP and audit trails.
+- [IT support for financial services](https://infodot.co.uk/industries/financial-services): Microsoft 365, Azure, back-office/portfolio, advisory & trading, comms archiving, Entra identity. FCA operational resilience (PS26/2), DR with agreed RTO/RPO, due-diligence evidence pack.
+
 ## Services
 - [Managed IT](https://infodot.co.uk/services/managed-it)
 - [Secure by Default](https://infodot.co.uk/services/secure-by-default)
