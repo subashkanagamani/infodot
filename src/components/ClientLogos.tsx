@@ -75,12 +75,12 @@ export const row3Logos = [
 ];
 
 export const industries = [
-  { icon: Landmark, label: "Accountants" },
-  { icon: Scale, label: "Law firms" },
-  { icon: Banknote, label: "Financial services" },
-  { icon: BadgePoundSterling, label: "Fintech" },
-  { icon: Building2, label: "Professional services" },
-  { icon: Rocket, label: "Funded startups" },
+  { icon: Landmark, label: "Accountants", href: "/industries/accountants" },
+  { icon: Scale, label: "Law firms", href: "/industries/law-firms" },
+  { icon: Banknote, label: "Financial services", href: "/industries/financial-services" },
+  { icon: BadgePoundSterling, label: "Fintech", href: "/industries/financial-services" },
+  { icon: Building2, label: "Professional services", href: "/industries" },
+  { icon: Rocket, label: "Funded startups", href: "/industries/financial-services" },
 ];
 
 export const ClientLogos = () => {
@@ -98,15 +98,16 @@ export const ClientLogos = () => {
       <div className="container-custom">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {industries.map((industry, index) => (
-            <div
+            <Link
+              to={industry.href}
               key={index}
-              className="flex flex-col items-center justify-center gap-3 h-28 md:h-32 px-4 py-4 rounded-xl border bg-card border-border/60 hover:border-primary/50 transition-colors"
+              className="group flex flex-col items-center justify-center gap-3 h-28 md:h-32 px-4 py-4 rounded-xl border bg-card border-border/60 hover:border-primary/50 transition-colors"
             >
               <industry.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
-              <span className="text-sm md:text-base font-medium text-center">
+              <span className="text-sm md:text-base font-medium text-center group-hover:text-primary transition-colors">
                 {industry.label}
               </span>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
