@@ -62,9 +62,9 @@ export const Newsletter = () => {
         <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
           <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold mb-2">Stay Updated with Growth Tips</h3>
+        <h3 className="text-xl sm:text-2xl font-bold mb-2">Stay Updated with IT Security Insights</h3>
         <p className="text-muted-foreground mb-6 text-sm sm:text-base">
-          Get exclusive marketing insights, growth strategies, and industry trends delivered to your inbox weekly.
+          Get practical guidance on managed IT, security by default, audit readiness and regulated-industry technology trends.
         </p>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">

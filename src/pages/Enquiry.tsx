@@ -5,16 +5,18 @@ import * as z from "zod";
 import {
   Loader2,
   CheckCircle2,
-  TrendingUp,
-  Target,
-  BarChart3,
-  Users,
-  Zap,
-  Award,
+  ShieldCheck,
+  Server,
+  Lock,
+  FileCheck2,
   Phone,
   Mail,
   Sparkles,
   ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Award,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,7 +30,7 @@ import { ParallaxSection } from "@/components/ParallaxSection";
 import { InteractiveParticles } from "@/components/InteractiveParticles";
 import { industries as trustIndustries } from "@/components/ClientLogos";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "@/assets/infodot-logo-light.png";
+import logo from "@/assets/infodot-logo.png";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(100),
@@ -40,47 +42,47 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>;
 
 const benefits = [
-  "Increase Qualified Leads",
-  "Improve Conversion Rates",
-  "Lower Customer Acquisition Cost",
-  "Transparent Monthly Reporting",
+  "Secure by Default from Day One",
+  "Audit-Ready Evidence Monthly",
+  "Named Engineers, No Rotating Queue",
+  "Exact Quote Within 48 Hours",
 ];
 
 const socialProof = [
-  { icon: Award, text: "Trusted by 100+ Businesses" },
-  { icon: TrendingUp, text: "10+ Years of Growth Marketing Experience" },
-  { icon: Users, text: "Dedicated Team of Marketing Specialists" },
+  { icon: Award, text: "ISO 27001:2022 Certified Team" },
+  { icon: Clock, text: "Running IT for Clients Since 1996" },
+  { icon: Users, text: "One Accountable Team for Your Whole Stack" },
 ];
 
 const services = [
-  { icon: Target, title: "Performance Marketing", desc: "Google & Meta Ads tuned for real business results, not vanity metrics." },
-  { icon: TrendingUp, title: "SEO & Content", desc: "Rank higher and build durable, compounding organic traffic." },
-  { icon: BarChart3, title: "Growth Analytics", desc: "Attribution, tracking, and dashboards that drive decisions." },
-  { icon: Users, title: "Social Media", desc: "Communities and creatives that convert followers to buyers." },
-  { icon: Zap, title: "Conversion Optimization", desc: "Landing pages and funnels engineered to convert traffic." },
-  { icon: Award, title: "Brand Strategy", desc: "Positioning and identity that scale with your business." },
+  { icon: ShieldCheck, title: "Secure by Default", desc: "MFA, EDR, hardening and tested backup applied as standard — not a premium tier." },
+  { icon: Server, title: "Fully Managed IT", desc: "One team runs endpoints, M365/Workspace, patching, backup, security and the desk." },
+  { icon: Lock, title: "Co-Managed IT", desc: "We add the security and audit discipline alongside your existing in-house team." },
+  { icon: FileCheck2, title: "Audit & Compliance Evidence", desc: "Monthly evidence packs for auditors, insurers and boards — kept current." },
+  { icon: TrendingUp, title: "Cyber Insurance Readiness", desc: "Meet and evidence the controls insurers increasingly require at renewal." },
+  { icon: CheckCircle2, title: "IT Transition & Exit", desc: "A clean switch from your incumbent, with an honest exit pack whenever you need it." },
 ];
 
-const industries = ["D2C & E-commerce", "SaaS", "B2B Services", "Healthcare", "Education", "Real Estate", "Fintech", "Hospitality"];
+const industries = ["Accountancy", "Legal", "Financial Services", "Fintech", "Professional Services", "Funded Startups"];
 
 const results = [
-  { brand: "D2C skincare brand", before: "1.4x ROAS", after: "4.6x ROAS", note: "in 90 days" },
-  { brand: "B2B SaaS", before: "38 MQLs/mo", after: "212 MQLs/mo", note: "in 6 months" },
-  { brand: "Healthcare clinic chain", before: "₹820 CPL", after: "₹190 CPL", note: "in 120 days" },
+  { brand: "Accountancy practice", before: "No EDR", after: "EDR + MFA live", note: "in 30 days" },
+  { brand: "Law firm", before: "No audit evidence", after: "Monthly evidence pack", note: "in 60 days" },
+  { brand: "Financial services firm", before: "Underperforming MSP", after: "Fully managed IT", note: "in 90 days" },
 ];
 
 const why = [
-  { t: "Data-driven from day one", d: "Every campaign starts with tracking, attribution, and KPIs — not guesses." },
-  { t: "Senior team, no hand-offs", d: "You work directly with strategists who've run 8-figure campaigns." },
-  { t: "Transparent reporting", d: "Live dashboards. Weekly calls. No jargon, no hidden fees." },
-  { t: "Full-funnel expertise", d: "Awareness to retention — we own the whole growth loop, not just clicks." },
+  { t: "Secure by default", d: "MFA, EDR, hardening and tested backup are standard — not paid extras." },
+  { t: "Always audit-ready", d: "Controls are packaged into monthly evidence packs for auditors and insurers." },
+  { t: "You own your IT", d: "Your domains, tenancy, licences and admin rights stay yours throughout." },
+  { t: "Remote delivery, UK hours", d: "ISO 27001:2022-certified team working UK business hours from Bangalore." },
 ];
 
 const faqs = [
-  { q: "How quickly can we get started?", a: "Onboarding takes 3–5 business days. Most campaigns go live in week 2." },
-  { q: "What's your minimum engagement?", a: "We start with a 90-day growth sprint, then continue month-to-month." },
-  { q: "Do you work with international brands?", a: "Yes — clients across India, US, UK, Middle East and Southeast Asia." },
-  { q: "What industries do you specialize in?", a: "D2C, SaaS, B2B services, healthcare, education, and real estate." },
+  { q: "How quickly can we get started?", a: "Discovery call this week, exact quote within 48 hours, and onboarding typically starts within 2–3 weeks." },
+  { q: "What's your minimum engagement?", a: "We typically work with regulated firms of 25–300 users. There's no long-term lock-in — notice is 1–3 months by agreement." },
+  { q: "Do you work with international firms?", a: "We serve UK and EU regulated firms remotely from our Bangalore delivery centre." },
+  { q: "What industries do you specialise in?", a: "Accountancy, legal, financial services, fintech and professional services — the regulated industries we know best." },
 ];
 
 const Enquiry = () => {
@@ -202,8 +204,8 @@ const Enquiry = () => {
   return (
     <>
       <SEOHead
-        title="Get a Free Marketing Growth Audit — Infodot UK"
-        description="Book a free 30-minute strategy call with Infodot UK. Performance ads, SEO, and growth consulting for brands ready to scale."
+        title="Get a Free IT Discovery Call — Infodot UK"
+        description="Book a free 30-minute IT discovery call with Infodot UK. Managed IT, security by default and audit readiness for regulated UK firms."
         canonicalUrl="https://infodot.co.uk/enquiry"
       />
 
@@ -227,10 +229,10 @@ const Enquiry = () => {
           <section className="relative overflow-hidden py-16 md:py-24">
             {/* Animated background — matches home hero */}
             <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary to-background">
-              <div className="absolute inset-0 grid-pattern opacity-40" />
+              <div className="absolute inset-0 grid-pattern opacity-30" />
               <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
-              <div className="absolute inset-0 opacity-20">
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
+              <div className="absolute inset-0 opacity-10">
                 {[...Array(5)].map((_, i) => (
                   <div
                     key={i}
@@ -253,11 +255,11 @@ const Enquiry = () => {
                     }}
                   >
                     {i % 3 === 0 ? (
-                      <div className="w-2 h-2 bg-primary/40 rounded-full" />
+                      <div className="w-2 h-2 bg-primary/30 rounded-full" />
                     ) : i % 3 === 1 ? (
-                      <div className="w-3 h-3 border border-neon-cyan/40 rotate-45" />
+                      <div className="w-3 h-3 border border-neon-purple/30 rotate-45" />
                     ) : (
-                      <div className="w-2 h-2 bg-neon-purple/40" style={{ clipPath: "polygon(50% 0%, 100% 100%, 0% 100%)" }} />
+                      <div className="w-2 h-2 bg-primary/30" style={{ clipPath: "polygon(50% 0%, 100% 100%, 0% 100%)" }} />
                     )}
                   </div>
                 ))}
@@ -269,19 +271,19 @@ const Enquiry = () => {
               <div className="order-2 lg:order-1">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-primary/30 backdrop-blur-sm animate-slide-up hover:border-primary/50 transition-colors mb-6">
                   <Sparkles className="w-4 h-4 text-primary animate-pulse-glow" />
-                  <span className="text-sm text-muted-foreground">Free Growth Strategy Session — limited slots</span>
+                  <span className="text-sm text-muted-foreground">Free IT Discovery Session — limited slots</span>
                 </div>
 
                 <h1
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-slide-up"
                   style={{ animationDelay: "0.1s" }}
                 >
-                  Struggling to Generate{" "}
-                  <span className="text-gradient-primary">Qualified Leads?</span>
+                  Is Your IT Setup{" "}
+                  <span className="text-gradient-primary">Slowing Your Firm Down?</span>
                 </h1>
 
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                  We help businesses generate more leads, more sales, and higher ROI with <span className="text-foreground font-medium">data-driven marketing</span>.
+                  We run IT completely for regulated UK firms — <span className="text-foreground font-medium">secure by default, always audit-ready, and delivered remotely</span>.
                 </p>
 
                 <ul className="space-y-3 mb-8 animate-slide-up" style={{ animationDelay: "0.25s" }}>
@@ -310,12 +312,12 @@ const Enquiry = () => {
                     onClick={scrollToForm}
                     className="gap-2 text-base px-6 py-6 hover-lift hover-glow group relative overflow-hidden"
                   >
-                    <span className="relative z-10">Get a FREE Growth Strategy Session</span>
+                    <span className="relative z-10">Get a FREE IT Discovery Session</span>
                     <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Button>
                   <Button size="lg" variant="outline" className="text-base px-6 py-6 hover-lift glow-border" onClick={scrollToForm}>
-                    Get a FREE Marketing Audit
+                    Get an Exact Quote
                   </Button>
                 </div>
               </div>
@@ -326,16 +328,16 @@ const Enquiry = () => {
                 className="relative order-1 lg:order-2 lg:sticky lg:top-24 animate-scale-in"
                 style={{ animationDelay: "0.3s" }}
               >
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/60 via-neon-cyan/40 to-neon-purple/60 rounded-2xl blur-2xl opacity-80 animate-pulse-glow" />
-                <div className="absolute -inset-[2px] bg-gradient-to-br from-primary via-neon-cyan to-neon-purple rounded-2xl opacity-70" />
-                <div className="relative bg-card/95 backdrop-blur-xl border-2 border-primary/40 rounded-2xl p-6 md:p-8 shadow-[0_0_60px_rgba(255,199,0,0.18)]">
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary/60 via-neon-purple/40 to-primary/60 rounded-2xl blur-2xl opacity-60 animate-pulse-glow" />
+                <div className="absolute -inset-[2px] bg-gradient-to-br from-primary via-neon-purple to-primary rounded-2xl opacity-70" />
+                <div className="relative bg-card/95 backdrop-blur-xl border-2 border-primary/40 rounded-2xl p-6 md:p-8 shadow-[0_0_60px_hsl(358_84%_53%_/_0.12)]">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
 
                       <div className="flex items-center gap-2 mb-1">
                         <Sparkles className="h-4 w-4 text-primary" />
-                        <span className="text-xs font-semibold tracking-wider text-primary uppercase">Free Strategy Session</span>
+                        <span className="text-xs font-semibold tracking-wider text-primary uppercase">Free Discovery Session</span>
                       </div>
-                      <h2 className="text-2xl font-bold mb-1">Book your free strategy call.</h2>
+                      <h2 className="text-2xl font-bold mb-1">Book your free IT discovery call.</h2>
                       <p className="text-sm text-muted-foreground mb-6">No obligation. We respond within 24 hours.</p>
                       <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
@@ -350,7 +352,7 @@ const Enquiry = () => {
                           <FormField control={form.control} name="email" render={({ field }) => (
                             <FormItem>
                               <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Business Email</FormLabel>
-                              <FormControl><Input type="email" placeholder="jane@brand.com" {...field} className="bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" /></FormControl>
+                              <FormControl><Input type="email" placeholder="jane@firm.co.uk" {...field} className="bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" /></FormControl>
                               <FormMessage />
                             </FormItem>
                           )} />
@@ -378,16 +380,16 @@ const Enquiry = () => {
                             <FormField control={form.control} name="company" render={({ field }) => (
                               <FormItem>
                                 <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Company</FormLabel>
-                                <FormControl><Input placeholder="Your brand" {...field} className="bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" /></FormControl>
+                                <FormControl><Input placeholder="Your firm" {...field} className="bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" /></FormControl>
                                 <FormMessage />
                               </FormItem>
                             )} />
                           </div>
                           <FormField control={form.control} name="message" render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Tell us about your requirement</FormLabel>
+                              <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Tell us about your IT setup</FormLabel>
                               <FormControl>
-                                <Textarea placeholder="What are you looking to achieve? Share your goals, challenges, or any specific requirements..." {...field} className="min-h-[100px] resize-y bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" />
+                                <Textarea placeholder="What are your current IT challenges? Share your firm size, tools and any compliance requirements..." {...field} className="min-h-[100px] resize-y bg-background/70 border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:bg-background shadow-inner transition-all" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -402,8 +404,8 @@ const Enquiry = () => {
                               <><Loader2 className="h-4 w-4 animate-spin" /> Sending…</>
                             ) : (
                               <>
-                                <span className="relative z-10">Get My Free Strategy</span>
-                                <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
+                                <span className="relative z-10">Get My Free IT Discovery</span>
+                                <ArrowRight className="h-4 w-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                               </>
                             )}
@@ -461,7 +463,7 @@ const Enquiry = () => {
                   <h2 className="text-3xl md:text-4xl font-bold">
                     Before vs. <span className="text-gradient-primary">After</span>
                   </h2>
-                  <p className="text-muted-foreground mt-3">A snapshot of measurable growth we've delivered for our clients.</p>
+                  <p className="text-muted-foreground mt-3">A snapshot of how we transform IT for regulated UK firms.</p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-5">
                   {results.map((r) => (
@@ -495,7 +497,7 @@ const Enquiry = () => {
                     <span className="text-xs font-semibold tracking-widest uppercase text-primary">Industries Served</span>
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold">
-                    Growth playbooks for <span className="text-gradient-primary">every industry</span>
+                    IT services for <span className="text-gradient-primary">regulated industries</span>
                   </h2>
                 </div>
                 <div className="flex flex-wrap justify-center gap-3">
@@ -523,10 +525,10 @@ const Enquiry = () => {
                       <span className="text-xs font-semibold tracking-widest uppercase text-primary">What we do</span>
                     </div>
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                      Full-stack <span className="text-gradient-primary">growth marketing</span>, under one roof.
+                      Managed IT, <span className="text-gradient-primary">end to end.</span>
                     </h2>
                     <p className="text-muted-foreground">
-                      Six connected services, run by a senior team that treats your brand like a portfolio company.
+                      Six connected capabilities, run by one accountable team that treats your firm like a long-term partner.
                     </p>
                   </div>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -561,7 +563,7 @@ const Enquiry = () => {
                     <span className="text-xs font-semibold tracking-widest uppercase text-primary">Why Infodot</span>
                   </div>
                   <h2 className="text-3xl md:text-5xl font-bold">
-                    Not just another agency. A <span className="text-gradient-primary">growth partner.</span>
+                    Not just another provider. A <span className="text-gradient-primary">managed IT partner.</span>
                   </h2>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
@@ -623,14 +625,14 @@ const Enquiry = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/50 to-background">
                 <div className="absolute inset-0 grid-pattern opacity-30" />
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-primary/15 blur-3xl animate-pulse-glow" />
-                <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] rounded-full bg-neon-cyan/10 blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
+                <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] rounded-full bg-neon-purple/10 blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
               </div>
               <div className="container-custom relative z-10 text-center max-w-2xl">
                 <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                  Ready to <span className="text-gradient-primary">grow?</span>
+                  Ready to <span className="text-gradient-primary">run your IT properly?</span>
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Book a free 30-minute strategy call — we'll audit your current setup and share three specific opportunities to unlock growth.
+                  Book a free 30-minute discovery call — we'll review your current setup and share three specific ways to make your IT secure, evidenced and out of your way.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3">
                   <Button
@@ -638,7 +640,7 @@ const Enquiry = () => {
                     onClick={scrollToForm}
                     className="gap-2 text-base px-8 py-6 hover-lift hover-glow group relative overflow-hidden"
                   >
-                    <span className="relative z-10">Get my free audit</span>
+                    <span className="relative z-10">Get my free discovery call</span>
                     <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Button>
