@@ -1,4 +1,5 @@
 import { Landmark, Scale, BadgePoundSterling, Rocket, Building2, Banknote } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import aadicuraLogo from "@/assets/logos/aadicura.png";
 import zeoniusLogo from "@/assets/logos/zeonius.png";
