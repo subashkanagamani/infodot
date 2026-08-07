@@ -38,15 +38,15 @@ export const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated grid background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary to-background">
-        <div className="absolute inset-0 grid-pattern opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/50 to-background">
+        <div className="absolute inset-0 grid-pattern opacity-30" />
         
         {/* Animated gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
         
         {/* Diagonal lines */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-10">
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
@@ -77,11 +77,11 @@ export const Hero = () => {
             }}
           >
             {i % 3 === 0 ? (
-              <div className="w-2 h-2 bg-primary/40 rounded-full" />
+              <div className="w-2 h-2 bg-primary/30 rounded-full" />
             ) : i % 3 === 1 ? (
-              <div className="w-3 h-3 border border-neon-cyan/40 rotate-45" />
+              <div className="w-3 h-3 border border-neon-purple/30 rotate-45" />
             ) : (
-              <div className="w-2 h-2 bg-neon-purple/40" style={{ clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)' }} />
+              <div className="w-2 h-2 bg-primary/30" style={{ clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)' }} />
             )}
           </div>
         ))}

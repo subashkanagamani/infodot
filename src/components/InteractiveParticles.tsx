@@ -38,9 +38,9 @@ export const InteractiveParticles = () => {
       const particleCount = Math.floor((window.innerWidth * window.innerHeight) / 25000);
       
       const colors = [
-        'rgba(255, 214, 0, 0.5)',    // primary - reduced opacity
-        'rgba(0, 255, 255, 0.3)',    // cyan
-        'rgba(138, 43, 226, 0.3)',   // purple
+        'rgba(236, 33, 40, 0.35)',    // primary red
+        'rgba(20, 23, 61, 0.25)',     // navy
+        'rgba(236, 33, 40, 0.2)',     // lighter red
       ];
 
       for (let i = 0; i < particleCount; i++) {
@@ -128,7 +128,7 @@ export const InteractiveParticles = () => {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(other.x, other.y);
-            ctx.strokeStyle = `rgba(255, 214, 0, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(236, 33, 40, ${0.08 * (1 - distance / 100)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
             connectionCount++;
@@ -153,7 +153,7 @@ export const InteractiveParticles = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.3 }}
+      style={{ opacity: 0.4 }}
     />
   );
 };
