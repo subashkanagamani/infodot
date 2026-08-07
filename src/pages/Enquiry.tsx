@@ -231,7 +231,6 @@ const Enquiry = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/40 to-background">
               <AmbientBackdrop intensity="bold" />
             </div>
-            </div>
 
             <div className="container-custom relative z-10 grid lg:grid-cols-[1fr_460px] gap-12 items-start">
               {/* LEFT COPY */}
