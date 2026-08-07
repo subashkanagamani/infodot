@@ -28,7 +28,7 @@ import { ParallaxSection } from "@/components/ParallaxSection";
 import { InteractiveParticles } from "@/components/InteractiveParticles";
 import { industries as trustIndustries } from "@/components/ClientLogos";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/infodot-logo-light.png.asset.json";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(100),
@@ -215,7 +215,7 @@ const Enquiry = () => {
           <header className="border-b border-border/50 bg-background/70 backdrop-blur-lg sticky top-0 z-40 animate-slide-up">
             <div className="container-custom flex items-center justify-between h-16">
               <Link to="/" className="flex items-center group">
-                <img src={logo} alt="Infodot" className="w-9 h-9 rounded-[5%] group-hover:scale-110 transition-transform" />
+                <img src={logo.url} alt="Infodot" className="h-9 w-auto group-hover:scale-110 transition-transform" />
               </Link>
               <a href="tel:+918610986622" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                 <Phone className="h-4 w-4" /> <span className="hidden sm:inline">+91 86109 86622</span>
