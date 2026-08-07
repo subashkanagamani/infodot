@@ -4,7 +4,7 @@ import { CheckCircle2, Mail, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
 import { InteractiveParticles } from "@/components/InteractiveParticles";
-import logo from "@/assets/infodot-logo-light.png.asset.json";
+import logo from "@/assets/infodot-logo-light.png";
 
 const steps = [
   "We review your enquiry and pull together a quick baseline audit.",
@@ -32,7 +32,7 @@ const ThankYou = () => {
           <header className="border-b border-border/50 bg-background/70 backdrop-blur-lg sticky top-0 z-40">
             <div className="container-custom flex items-center justify-between h-16">
               <Link to="/" className="flex items-center group">
-                <img src={logo.url} alt="Infodot" className="h-9 w-auto group-hover:scale-110 transition-transform" />
+                <img src={logo} alt="Infodot" className="h-9 w-auto group-hover:scale-110 transition-transform" />
               </Link>
               <a href="mailto:hello@infodot.uk" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                 <Mail className="h-4 w-4" /> <span className="hidden sm:inline">hello@infodot.uk</span>

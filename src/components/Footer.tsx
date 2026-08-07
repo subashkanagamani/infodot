@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Newsletter } from "@/components/Newsletter";
-import logoLight from "@/assets/infodot-logo-light.png.asset.json";
+import logoLight from "@/assets/infodot-logo-light.png";
 import { FooterContactForm } from "@/components/FooterContactForm";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 import { useSection } from "@/hooks/usePageContent";
@@ -90,7 +90,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center mb-4 group">
-              <img src={logoLight.url} alt="Infodot Technologies logo" className="h-10 w-auto group-hover:scale-105 transition-transform" />
+              <img src={logoLight} alt="Infodot Technologies logo" className="h-10 w-auto group-hover:scale-105 transition-transform" />
               <span className="ml-2 text-[10px] font-semibold text-muted-foreground align-super">UK</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
