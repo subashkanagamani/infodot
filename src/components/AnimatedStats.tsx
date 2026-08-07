@@ -52,22 +52,19 @@ const AnimatedStat = ({ end, label, Icon, index }: StatProps) => {
   return (
     <div
       ref={ref}
-      className="group relative flex flex-col justify-between rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 animate-slide-up"
+      className="group relative flex flex-col gap-3 px-6 py-7 transition-colors duration-300 hover:bg-accent-foreground/[0.04]"
       style={{ animationDelay: `${index * 70}ms` }}
     >
-      <div className="flex items-start justify-between">
-        <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-secondary">
-          <Icon className="h-5 w-5 text-primary" />
-        </span>
-        <span className="font-display text-[10px] font-bold tracking-[0.18em] text-muted-foreground">
+      <div className="flex items-center gap-2 text-accent-foreground/45">
+        <Icon className="h-4 w-4 text-primary" />
+        <span className="font-display text-[10px] font-bold tracking-[0.2em]">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>
-      <div className="mt-8 font-display text-4xl md:text-5xl font-bold tracking-tight leading-none tabular-nums">
+      <div className="font-display text-[clamp(1.6rem,2.2vw,2.25rem)] font-bold tracking-tight leading-none tabular-nums text-accent-foreground whitespace-nowrap">
         {count}
       </div>
-      <div className="mt-3 h-px w-8 bg-primary" aria-hidden />
-      <div className="mt-3 text-xs md:text-sm font-medium leading-snug text-muted-foreground">
+      <div className="text-[11px] md:text-xs font-medium uppercase tracking-[0.08em] leading-relaxed text-accent-foreground/60">
         {label}
       </div>
     </div>
@@ -85,30 +82,28 @@ export const AnimatedStats = () => {
   ];
 
   return (
-    <section className="section-spacing bg-secondary">
+    <section className="section-spacing">
       <div className="container-custom">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4 animate-slide-up">
-          <div>
-            <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-2">By the numbers</p>
-            <h2 className="font-display text-2xl md:text-4xl font-bold leading-[1.1]">
-              Standards we <span className="text-primary">hold ourselves to.</span>
-            </h2>
+        <div className="overflow-hidden rounded-3xl bg-accent text-accent-foreground animate-slide-up">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-accent-foreground/10 px-6 py-5">
+            <p className="font-display text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
+              By the numbers
+            </p>
+            <p className="text-xs text-accent-foreground/50">
+              Commitments we publish and measure — not aspirations.
+            </p>
           </div>
-          <p className="max-w-sm text-sm text-muted-foreground">
-            Commitments we publish, measure and report on — not aspirations.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {stats.map((stat, index) => (
-            <AnimatedStat
-              key={index}
-              end={stat.number}
-              label={stat.label}
-              Icon={stat.Icon}
-              index={index}
-            />
-          ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-x divide-y lg:divide-y-0 divide-accent-foreground/10">
+            {stats.map((stat, index) => (
+              <AnimatedStat
+                key={index}
+                end={stat.number}
+                label={stat.label}
+                Icon={stat.Icon}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
