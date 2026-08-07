@@ -32,6 +32,16 @@ Entity: Infodot Technologies Pvt Ltd, Bangalore, India — serving UK & EU remot
 - [Data Protection](https://infodot.co.uk/services/data-protection)
 - [Asset, Licence & Domain Management](https://infodot.co.uk/services/asset-licence-domain)
 - [Continuous Controls & Evidence](https://infodot.co.uk/services/continuous-controls-evidence)
+- [Helpdesk & IT Operations](https://infodot.co.uk/services/helpdesk-it-operations)
+- [Device Lifecycle Management](https://infodot.co.uk/services/device-lifecycle)
+- [Email Security](https://infodot.co.uk/services/email-security)
+- [Identity & Access Management](https://infodot.co.uk/services/identity-access)
+- [GDPR & Data Protection Operations](https://infodot.co.uk/services/gdpr-data-protection)
+- [FCA Operational Resilience](https://infodot.co.uk/services/fca-operational-resilience)
+- [Discovery & Phase 0](https://infodot.co.uk/services/discovery-phase0)
+- [Email Migration](https://infodot.co.uk/services/email-migration)
+- [Domain & DNS Migration](https://infodot.co.uk/services/domain-migration)
+- [How It Works — engagement models](https://infodot.co.uk/how-it-works)
 
 ## Policies
 - [Legal & Privacy](https://infodot.co.uk/privacy-policy)
