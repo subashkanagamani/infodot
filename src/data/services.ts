@@ -124,14 +124,16 @@ export const servicesData: ServiceItem[] = [
     icon: "Users",
     title: "Cyber Essentials Readiness",
     shortDescription:
-      "All five Cyber Essentials controls implemented to v3.3 and certified via an accredited body.",
+      "Certified to Cyber Essentials — and kept that way.",
     description:
-      "We implement and maintain all five Cyber Essentials controls — firewalls, secure configuration, access control, malware protection and patch management — to the current v3.3 standard, then take you through certification via an accredited certification body. Because we run the underlying IT ourselves, the controls stay true between assessments, not just on certification day.",
+      "We get you ready for Cyber Essentials and Cyber Essentials Plus to the current v3.3 requirements, and keep the controls in place year-round so recertification isn't a scramble. Cyber Essentials is the front door to public-sector and enterprise supply chains — and the 2026 requirements are stricter: all-user MFA, cloud in scope, auto-fail patching. We make certification a by-product of how we run your IT, not an annual panic.",
     features: [
-      "All five Cyber Essentials controls, implemented to v3.3",
-      "Certification managed via an accredited body",
-      "Controls maintained continuously between assessments",
-      "Applicable to Cyber Essentials and Cyber Essentials Plus",
+      "Gap assessment against the five controls",
+      "All-user MFA and cloud services in scope",
+      "Patching inside the required window",
+      "Secure configuration",
+      "Certification via an accredited body",
+      "Controls maintained continuously",
     ],
     benefits: [
       "Meets a common client and tender requirement without extra admin",
@@ -150,18 +152,21 @@ export const servicesData: ServiceItem[] = [
     icon: "Palette",
     title: "Cyber Insurance Readiness",
     shortDescription:
-      "Keep the controls insurers ask about enforced and evidenced all year, not just at renewal.",
+      "Insurers don't just want the controls. They want proof they stayed on.",
     description:
-      "Cyber cover is now underwritten on controls you attest to and must maintain continuously. When a claim is investigated, a gap between what you attested and what was actually running is a common reason cover is disputed — even when the gap didn't cause the incident. We keep the controls insurers ask about — MFA everywhere, EDR on every endpoint, tested backups, patching — enforced and evidenced through the year, with drift alerts if a control slips, and a renewal-ready evidence pack, so your questionnaire answers are true and provable when it matters.",
+      "Cyber cover is now underwritten on controls you attest to and must maintain continuously. We keep those controls enforced and evidenced through the year, so when a claim is investigated your answers were true and provable. Claims are disputed on misrepresentation, failure to maintain a stated control, or late notice — and the gap needn't have caused the incident. The fix: controls kept true, evidence kept current, drift caught early — via Assess → Remediate → Validate → Monitor. Honest scope: we make controls true and provable so a claim is less likely to be disputed — we don't advise on your policy or promise a payout. Your broker advises; you attest; we supply and maintain the evidence.",
     features: [
-      "MFA, EDR, tested backups and patching kept enforced year-round",
-      "Drift alerting if a control slips between renewals",
-      "Renewal-ready evidence pack for the insurer questionnaire",
-      "Continuous alignment between attested and actual controls",
+      "MFA enforced on every user and remote path, monitored",
+      "EDR on every endpoint, agent-health checked",
+      "Tested, immutable backups with monthly restore evidence",
+      "Critical patching inside the window, evidenced",
+      "Documented incident-response and notification process",
+      "Drift alerting when a control slips",
+      "Renewal-ready evidence pack",
     ],
     benefits: [
-      "Coalition data shows 82% of denied claims lacked full MFA — closing that gap protects your cover",
-      "NAIC data shows only around 1 in 4 closed cyber claims resulted in a payout — accurate attestations matter",
+      "Most denied claims involve incomplete MFA — closing that gap protects your cover",
+      "Only about 1 in 4 cyber claims pay out — accurate, provable attestations matter",
       "Reduces the risk of a disputed claim over a control gap",
       "Confidence at renewal time instead of a last-minute scramble",
     ],
