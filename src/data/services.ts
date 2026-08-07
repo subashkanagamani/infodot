@@ -188,13 +188,15 @@ export const servicesData: ServiceItem[] = [
       "Discovery / Phase 0: asset discovery, reverse-KT, documentation",
       "Email migration: tenant-to-tenant or to Microsoft 365, fixed-fee",
       "Domain & DNS migration into your control",
-      "Full exit pack and clean handover from your incumbent",
+      "Environment hardened during handover",
+      "Your tenancy, domain and licences stay in your name",
+      "A 10-working-day exit-pack promise, with reverse knowledge transfer",
     ],
     benefits: [
       "No knowledge lost in the switch from your current provider",
       "Fixed-fee migrations with no data loss",
       "Domain and DNS moved cleanly into your own control",
-      "A documented, low-drama transition project",
+      "You stay because the service is good, not because leaving hurts",
     ],
     metaTitle: "IT Transition, Exit & Migration Services | Infodot UK",
     metaDescription:
