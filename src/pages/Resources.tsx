@@ -13,36 +13,36 @@ export default function Resources() {
     {
       type: "Guide",
       icon: BookOpen,
-      title: "Cyber Essentials Readiness Guide",
-      description: "A practical walkthrough of the five Cyber Essentials controls and what accountancy, legal and financial services firms need to have in place.",
+      title: "Cyber Essentials v3.3 — What Changed and Why It Matters",
+      description: "The v3.3 updates in plain English, and what accountancy, legal and financial services firms need in place to pass first time.",
       format: "PDF"
     },
     {
       type: "Checklist",
       icon: FileText,
-      title: "Cyber Insurance Renewal Checklist",
-      description: "The controls insurers ask about most — MFA, EDR, tested backups and patching — and how to keep evidence current between renewals.",
+      title: "Cyber-Insurance Readiness — The Questions That Get Claims Denied",
+      description: "The controls insurers ask about most — MFA, EDR, tested backups and patching — and the answers that quietly invalidate a claim.",
       format: "PDF"
     },
     {
       type: "Checklist",
       icon: ShieldCheck,
-      title: "IT Security Baseline Checklist for Regulated Firms",
-      description: "A control-by-control checklist covering identity, endpoint hardening, email security and backup for accountancy, legal and financial services practices.",
+      title: "GDPR as an Operating Discipline — A Practical Checklist",
+      description: "DPAs, sub-processor registers, DSAR handling and breach process, treated as day-to-day operations rather than a policy folder.",
       format: "PDF"
     },
     {
-      type: "Webinar",
+      type: "Explainer",
       icon: Video,
-      title: "Understanding Continuous Controls & Evidence",
-      description: "A recorded session on why point-in-time compliance isn't enough, and how continuous evidence keeps you audit-ready year-round.",
-      format: "Video"
+      title: "What 'Audit-Ready' Really Means",
+      description: "Why point-in-time compliance isn't enough, and how continuously collected evidence turns an audit into a confirmation.",
+      format: "Guide"
     },
     {
       type: "Guide",
       icon: Headphones,
-      title: "FCA Operational Resilience — A Plain-English Guide",
-      description: "What third-party risk and incident reporting readiness under PS26/2 means in practice for financial services firms.",
+      title: "The Offshore Question, Answered Honestly",
+      description: "How remote delivery from our Bangalore team actually works — access, data residency, accountability and what stays in your ownership.",
       format: "PDF"
     },
     {
@@ -55,8 +55,8 @@ export default function Resources() {
     {
       type: "Guide",
       icon: FileText,
-      title: "GDPR & Data Protection Operations Guide",
-      description: "Practical guidance on DPAs, sub-processor registers, DSAR handling and breach process for regulated UK firms.",
+      title: "FCA Operational Resilience — A Plain-English Guide",
+      description: "What third-party risk and incident reporting readiness under PS26/2 means in practice for financial services firms.",
       format: "PDF"
     },
     {
@@ -84,9 +84,9 @@ export default function Resources() {
       <BackToTop />
       
       <SEOHead 
-        title="Free IT & Compliance Resources - Infodot UK"
-        description="Download free guides and checklists on managed IT, Cyber Essentials, cyber insurance readiness, backup/DR and GDPR for accountancy, legal and financial services firms."
-        keywords="Cyber Essentials checklist, cyber insurance readiness, IT security checklist, GDPR guide, backup disaster recovery checklist"
+        title="Resources — Readiness, in Plain English | Infodot UK"
+        description="Guides and explainers on Cyber Essentials v3.3, cyber-insurance readiness, GDPR as an operating discipline and what audit-ready really means. All free."
+        keywords="Cyber Essentials v3.3, cyber insurance readiness, GDPR checklist, audit-ready evidence, IT resources UK"
       />
 
       {/* Hero Section */}
@@ -96,10 +96,10 @@ export default function Resources() {
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
-              Free IT & Compliance Resources
+              Readiness, in Plain English
             </h1>
             <p className="text-xl text-muted-foreground">
-              Practical guides and checklists on managed IT, security and audit-readiness for regulated UK firms. All free.
+              Guides and explainers on the things regulated buyers actually get asked about — Cyber Essentials, cyber-insurance readiness, GDPR, and the evidence that backs them. New guides added regularly.
             </p>
           </div>
 

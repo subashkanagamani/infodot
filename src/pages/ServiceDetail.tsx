@@ -34,6 +34,12 @@ import {
   ShieldCheck,
   Server,
   Award,
+  Activity,
+  UserCheck,
+  Siren,
+  Crosshair,
+  Network,
+  GraduationCap,
   CheckCircle2,
   ArrowRight,
   ArrowLeft,
@@ -65,6 +71,12 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   ShieldCheck,
   Server,
   Award,
+  Activity,
+  UserCheck,
+  Siren,
+  Crosshair,
+  Network,
+  GraduationCap,
 };
 
 const ServiceDetail = () => {

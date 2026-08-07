@@ -691,6 +691,171 @@ export const servicesData: ServiceItem[] = [
     keywords:
       "ISO 27001, SOC 2, audit readiness, control mapping, compliance evidence, certification support UK",
   },
+  {
+    slug: "rmm-patch-management",
+    icon: "Activity",
+    title: "RMM & Patch Management",
+    shortDescription:
+      "Every device watched. Every patch applied. Without anyone remembering to.",
+    description:
+      "Continuous remote monitoring of every Windows and macOS device, with operating-system and application security updates detected and deployed automatically. Unpatched systems are the most common way small firms get breached, and the control insurers scrutinise most. We make patching a managed outcome, not a hopeful to-do — and we prove it ran.",
+    features: [
+      "24/7 remote monitoring of device health",
+      "Automated OS and application patching",
+      "Critical patches inside the Cyber Essentials window",
+      "Proactive alerting and remediation",
+      "Windows and macOS covered",
+      "Patch compliance evidenced monthly",
+    ],
+    benefits: [
+      "The most exploited gap closed automatically",
+      "No one has to remember to patch",
+      "Insurer and Cyber Essentials windows met",
+      "Monthly evidence that patching actually ran",
+    ],
+    metaTitle: "RMM & Patch Management for Windows and Mac | Infodot UK",
+    metaDescription:
+      "24/7 remote monitoring with automated OS and application patching across Windows and macOS, inside Cyber Essentials windows and evidenced monthly.",
+    keywords:
+      "RMM, patch management, remote monitoring, Cyber Essentials patching, Windows and Mac patching UK",
+  },
+  {
+    slug: "onboarding-exit",
+    icon: "UserCheck",
+    title: "Onboarding & Exit (Joiner–Mover–Leaver)",
+    shortDescription:
+      "Joiners ready on day one. Leavers closed the same day.",
+    description:
+      "A standard, secure process for people joining, moving and leaving — accounts, licences, devices and access provisioned and revoked cleanly and on time. Onboarding and offboarding are where access quietly sprawls and ex-staff keep logins. A disciplined joiner-mover-leaver process is both a productivity win and a security and audit control — especially with interns or contractors.",
+    features: [
+      "New-joiner accounts, licences and device setup",
+      "Correct access from day one",
+      "Role changes handled cleanly",
+      "Same-day de-provisioning for leavers",
+      "Licence reclaim on exit",
+      "Data handled correctly when people leave",
+    ],
+    benefits: [
+      "New starters productive on day one",
+      "No ex-staff logins left open",
+      "Licences reclaimed instead of quietly paid for",
+      "An access control auditors can see working",
+    ],
+    metaTitle: "Onboarding & Exit / Joiner-Mover-Leaver Process | Infodot UK",
+    metaDescription:
+      "Accounts, licences, devices and access provisioned on day one and revoked the same day people leave — a disciplined JML process run by Infodot UK.",
+    keywords:
+      "joiner mover leaver, onboarding offboarding IT, de-provisioning, access control, licence reclaim",
+  },
+  {
+    slug: "monitoring-incident-response",
+    icon: "Siren",
+    title: "Monitoring & Incident Response",
+    shortDescription: "See it early. Handle it calmly.",
+    description:
+      "Centralised monitoring and a documented incident-response process, so security events are caught early and handled to a plan rather than in a panic. The difference between an incident and a crisis is preparation. Monitoring catches things early; a rehearsed IR plan means notification lands on time — which protects both your operations and your insurance position.",
+    features: [
+      "Centralised logging and security monitoring",
+      "Alerting on suspicious activity",
+      "A documented incident-response plan",
+      "Defined roles and escalation",
+      "Notification-readiness within policy windows",
+      "Post-incident review",
+    ],
+    benefits: [
+      "Events caught early, not discovered later",
+      "A plan to follow instead of a panic",
+      "Regulatory notification inside the window",
+      "Lessons captured so it doesn't repeat",
+    ],
+    metaTitle: "Security Monitoring & Incident Response | Infodot UK",
+    metaDescription:
+      "Centralised logging, alerting and a documented incident-response plan with defined escalation, notification readiness and post-incident review.",
+    keywords:
+      "security monitoring, incident response, SIEM logging, breach notification, escalation plan UK",
+  },
+  {
+    slug: "penetration-testing-vapt",
+    icon: "Crosshair",
+    title: "Penetration Testing & VAPT",
+    shortDescription:
+      "Proof your defences hold — the report your buyers ask for.",
+    description:
+      "Periodic offensive testing and vulnerability assessment — scoped, delivered and reported by us as the point-in-time assurance layer on top of continuous vulnerability management. Vulnerability management keeps you clean day to day; a periodic pen test proves it to an outsider. It's the assurance evidence buyers, auditors and insurers increasingly require — and we scope, deliver and stand behind it as one accountable team.",
+    features: [
+      "Scoped penetration testing and VAPT",
+      "Internal and external assessment",
+      "Prioritised, plain-English findings",
+      "Remediation guidance and retest",
+      "The report ISO, PCI, insurer or client due-diligence needs",
+      "Scoped, run and reported by one accountable team",
+    ],
+    benefits: [
+      "Independent proof your defences hold",
+      "Findings you can act on, not a raw scanner dump",
+      "Retest confirms the fix landed",
+      "The evidence buyers and insurers ask for",
+    ],
+    metaTitle: "Penetration Testing & VAPT for UK Firms | Infodot UK",
+    metaDescription:
+      "Scoped internal and external penetration testing and VAPT with prioritised findings, remediation guidance and retest — reported by one accountable team.",
+    keywords:
+      "penetration testing, VAPT, vulnerability assessment, pen test report, security testing UK",
+  },
+  {
+    slug: "network-security",
+    icon: "Network",
+    title: "Network Security",
+    shortDescription: "Your network, monitored and hardened — remotely.",
+    description:
+      "Remote monitoring, hardening and configuration of your cloud-managed or remotely-accessible network devices — firewall, VPN, DNS and Wi-Fi. For cloud-first offices, network security is mostly configuration and monitoring — both of which we do remotely and well. We're honest about the line: policy and firmware from us, physical hands on site coordinated by us. Physical install, cabling or hardware replacement is coordinated through your local smart-hands — and we keep the single point of accountability throughout.",
+    features: [
+      "Firewall policy and firmware management",
+      "Secure VPN configuration",
+      "Network segmentation",
+      "DNS filtering",
+      "Wi-Fi security configuration",
+      "Monitoring and alerting",
+    ],
+    benefits: [
+      "Configuration kept correct, not drifting",
+      "Segmentation limits how far a breach travels",
+      "Malicious domains blocked at DNS",
+      "Honest scope: remote work by us, smart-hands coordinated",
+    ],
+    metaTitle: "Remote Network Security Management | Infodot UK",
+    metaDescription:
+      "Firewall policy and firmware, VPN, segmentation, DNS filtering and Wi-Fi security configured, hardened and monitored remotely by Infodot UK.",
+    keywords:
+      "network security, firewall management, VPN configuration, DNS filtering, network segmentation UK",
+  },
+  {
+    slug: "security-awareness",
+    icon: "GraduationCap",
+    title: "Security Awareness Training",
+    shortDescription: "Turn your people from the risk into the first line.",
+    description:
+      "Short, usable staff training and phishing simulation that reduce the human risk behind most breaches — without wasting anyone's afternoon. Most breaches start with a click. Regular, realistic practice — not a once-a-year video — measurably lowers that risk and shows insurers and auditors you take the human factor seriously.",
+    features: [
+      "Phishing simulation campaigns",
+      "Bite-size training modules",
+      "Results and risk reporting",
+      "Targeted follow-up for repeat clicks",
+      "Onboarding for new joiners",
+      "Optional add-on to any plan",
+    ],
+    benefits: [
+      "Measurably fewer clicks on real phishing",
+      "Training people actually finish",
+      "Repeat-risk users spotted and coached",
+      "Human-factor controls evidenced for insurers",
+    ],
+    metaTitle: "Security Awareness Training & Phishing Simulation | Infodot UK",
+    metaDescription:
+      "Bite-size staff training and realistic phishing simulation with risk reporting and targeted follow-up — reduce the human risk behind most breaches.",
+    keywords:
+      "security awareness training, phishing simulation, staff cyber training, human risk, UK",
+  },
 ];
 
 export const getServiceBySlug = (slug: string) =>

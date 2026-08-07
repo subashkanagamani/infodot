@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Industries from "./pages/Industries";
 import HowItWorks from "./pages/HowItWorks";
+import SmallOffice from "./pages/SmallOffice";
 import Legal from "./pages/Legal";
 import IndustryDetail from "./pages/IndustryDetail";
 import Portfolio from "./pages/Portfolio";
@@ -72,6 +73,7 @@ const App = () => (
               <Route path="/industries" element={<Industries />} />
               <Route path="/industries/:slug" element={<IndustryDetail />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
+              <Route path="/small-office" element={<SmallOffice />} />
               <Route path="/legal" element={<Legal />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/pricing" element={<Pricing />} />

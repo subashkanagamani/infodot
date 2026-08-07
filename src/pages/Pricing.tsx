@@ -13,47 +13,47 @@ export default function Pricing() {
   const { settings } = useSiteSettings();
   const plans = [
     {
-      name: "Co-Managed IT",
+      name: "Essentials",
       price: "Custom quote",
       period: "",
-      description: "For firms with an internal IT team that needs a layer of security-by-default discipline, patching and audit evidence alongside them.",
+      description: "Core managed IT, run and monitored — the day-to-day handled properly by one accountable team.",
       features: [
-        "Works alongside your existing IT team",
-        "MFA, EDR and hardening applied as standard",
-        "Patch management and tested backup",
-        "Audit-ready evidence, packaged monthly",
-        "No rip-and-replace of your existing tools",
-        "UK business-hours desk, delivered remotely"
+        "Helpdesk with 30-minute first response",
+        "RMM and patch management (Windows + Mac)",
+        "Microsoft 365 or Google Workspace administration",
+        "Device lifecycle and joiner–mover–leaver",
+        "Asset, licence and domain register",
+        "Delivered remotely, on your own tenancy"
       ],
       popular: false
     },
     {
-      name: "Fully Managed IT",
+      name: "Secured",
       price: "Custom quote",
       period: "",
-      description: "One team runs your entire IT stack end to end — endpoints, M365/Workspace, patching, backup, security and the desk.",
+      description: "Essentials plus the full secure-by-default layer — hardening, EDR, backup and incident response.",
       features: [
-        "One accountable team for your whole stack",
-        "Secure by default from day one — not a premium tier",
-        "Vendor coordination handled for you",
-        "Audit and insurer-ready evidence, kept current",
-        "ISO 27001:2022 certified delivery team",
-        "Exit pack and reverse KT within 10 working days if you ever leave"
+        "Everything in Essentials",
+        "Managed EDR with engineer triage",
+        "Device and email hardening, MFA and conditional access",
+        "Backup and tested disaster recovery",
+        "Monitoring and documented incident response",
+        "Security awareness and phishing simulation"
       ],
       popular: true
     },
     {
-      name: "Fully Remote",
+      name: "Audit-Ready",
       price: "Custom quote",
       period: "",
-      description: "For firms that operate entirely remotely and need IT run end to end with no on-site presence required.",
+      description: "Secured plus continuous controls and evidence — for regulated firms who get asked to prove it.",
       features: [
-        "Fully remote delivery from an ISO 27001:2022 team",
-        "Same security-by-default standards as our other models",
-        "Delivered via our Z360 delivery platform",
-        "UK & EU coverage during business hours",
-        "Audit-ready evidence produced as a matter of course",
-        "You always own your accounts, data and documentation"
+        "Everything in Secured",
+        "Continuous controls operation and evidence collection",
+        "Cyber Essentials and cyber-insurance readiness",
+        "ISO 27001 / SOC 2 audit preparation",
+        "GDPR operations and FCA operational resilience support",
+        "Evidence packaged monthly, not reconstructed"
       ],
       popular: false
     }
@@ -80,9 +80,9 @@ export default function Pricing() {
       <BackToTop />
       
       <SEOHead 
-        title="Pricing — Infodot UK Managed IT Engagement Models"
-        description="Co-Managed IT, Fully Managed IT and Fully Remote engagement models from Infodot UK. Exact quotes within 48 hours of a discovery call — no invented numbers, just the model that fits."
-        keywords="managed IT pricing UK, co-managed IT, fully managed IT, IT support quote, Infodot UK pricing"
+        title="Pricing — Priced on Scope, Not Surprises | Infodot UK"
+        description="Per-user managed IT pricing by scope, with a fixed monthly fee for small offices. Essentials, Secured and Audit-Ready — exact quote within 48 hours of a discovery call."
+        keywords="managed IT pricing UK, per user IT support pricing, small office fixed fee IT, Infodot UK pricing"
         canonicalUrl="https://infodot.co.uk/pricing"
       />
 
@@ -93,15 +93,15 @@ export default function Pricing() {
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
-              Engagement Models, Not Guesswork
+              Priced on Scope, Not Surprises
             </h1>
             <p className="text-xl text-muted-foreground">
-              Every firm's IT estate is different, so we don't publish invented numbers. Choose the model that fits, book a discovery call, and get an exact quote within 48 hours.
+              We price per user by scope, with a fixed-fee option for small offices — and we give you an exact quote within 48 hours of a discovery call. No fixed packages, no discount games.
             </p>
           </div>
 
           {/* Pricing Cards */}
-          <h2 className="sr-only">Engagement Models</h2>
+          <h2 className="sr-only">Scope Tiers</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {plans.map((plan, index) => (
               <Card 
@@ -143,11 +143,32 @@ export default function Pricing() {
             ))}
           </div>
 
+          {/* How we quote */}
+          <div className="mt-16 max-w-4xl mx-auto p-8 rounded-2xl border bg-muted/30">
+            <h2 className="text-2xl font-bold mb-3">How we quote</h2>
+            <p className="text-muted-foreground mb-4">
+              Your price reflects the scope you actually need run — not a discount off a rate card. We share indicative pricing on a discovery call and confirm an exact quote within 48 hours.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {[
+                "Per-user pricing; small offices on a fixed monthly fee",
+                "Licences managed on your tenancy, or supplied and itemised",
+                "Fixed discovery and onboarding fee by size",
+                "Regulated engagements carry more scope and evidence — and we'll be clear about why",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* FAQ Note */}
           <div className="text-center mt-16 p-8 bg-muted/30 rounded-2xl max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Not sure which model fits your firm?</h2>
+            <h2 className="text-2xl font-bold mb-4">Not sure which scope fits your firm?</h2>
             <p className="text-muted-foreground mb-6">
-              Book a 30-minute discovery call — no cost, no obligation — and we'll recommend the right engagement model with an exact quote within 48 hours.
+              Book a 30-minute discovery call — no cost, no obligation — and we'll scope it with you, then confirm an exact quote within 48 hours.
             </p>
             <Button size="lg" onClick={handleBookCall}>
               Book a Discovery Call
