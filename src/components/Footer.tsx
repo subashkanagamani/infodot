@@ -1,8 +1,7 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { Linkedin, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Newsletter } from "@/components/Newsletter";
 import logo from "@/assets/infodot-logo.png";
-import { FooterContactForm } from "@/components/FooterContactForm";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 import { useSection } from "@/hooks/usePageContent";
 
