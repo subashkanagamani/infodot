@@ -148,59 +148,42 @@ export const Services = () => {
   }
 
   return (
-    <section id="services" className="section-spacing relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-neon-cyan/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-neon-purple/20 rounded-full blur-3xl" />
-      </div>
-
+    <section id="services" className="section-spacing relative overflow-hidden bg-secondary">
       <div className="container-custom relative">
-        <div className="text-center mb-16 animate-slide-up">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+        <div className="max-w-3xl mb-12 animate-slide-up">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">
             What we do
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Every capability, <span className="text-gradient-primary relative">
-              independently buyable.
-              <span className="absolute -inset-2 bg-primary/10 blur-2xl -z-10" />
-            </span>
+          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 leading-[1.1]">
+            Every capability, <span className="text-primary">independently buyable.</span>
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-muted-foreground">
             Start with one function as a front door; expand into a managed engagement when you're ready. Your tools or ours.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => {
             const IconComponent = iconMap[service.icon || "ShieldCheck"] || ShieldCheck;
             return (
               <Card
                 key={service.id}
-                className="p-6 bg-card border-border/50 hover:border-primary/50 transition-all duration-500 group relative overflow-hidden hover-lift animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="p-7 rounded-3xl bg-card border-border shadow-[var(--shadow-card)] hover:border-primary/40 transition-all duration-500 group relative overflow-hidden hover-lift animate-slide-up"
+                style={{ animationDelay: `${Math.min(index, 8) * 0.06}s` }}
               >
-                {/* Animated border gradient */}
-                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 rounded-lg border-2 border-transparent bg-gradient-to-r from-primary via-neon-cyan to-primary bg-[length:200%_100%] animate-border-spin" style={{ WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', WebkitMaskComposite: 'xor', maskComposite: 'exclude', padding: '1px' }} />
-                </div>
-
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
-
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <IconComponent className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                  <div className="w-11 h-11 bg-secondary rounded-xl flex items-center justify-center mb-5 border border-border group-hover:bg-accent transition-colors duration-300">
+                    <IconComponent className="w-5 h-5 text-primary" />
                   </div>
-                  
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary-glow transition-colors">{service.title}</h3>
-                  <p className="text-muted-foreground mb-4 group-hover:text-foreground transition-colors">{service.description}</p>
-                  
+
+                  <h3 className="font-display text-lg font-bold mb-2">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
+
                   {service.features && service.features.length > 0 && (
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 pt-4 border-t border-border">
                       {service.features.map((feature, i) => (
-                        <li key={i} className="text-sm text-muted-foreground flex items-start gap-2 group-hover:text-muted-foreground/90 transition-colors">
-                          <span className="text-primary mt-1 group-hover:scale-125 transition-transform inline-block">•</span>
+                        <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-[0.5rem] shrink-0" />
                           <span>{feature}</span>
                         </li>
                       ))}
