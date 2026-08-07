@@ -856,6 +856,34 @@ export const servicesData: ServiceItem[] = [
     keywords:
       "security awareness training, phishing simulation, staff cyber training, human risk, UK",
   },
+  {
+    slug: "vulnerability-management",
+    icon: "Bug",
+    title: "Vulnerability Management",
+    shortDescription:
+      "Find the weaknesses on a cycle — and actually fix them.",
+    description:
+      "Continuous vulnerability scanning with prioritised remediation, so weaknesses are found and closed on a managed cycle rather than discovered at the next audit. A one-off scan is a snapshot; risk is continuous. We run vulnerability management as an ongoing cycle — scan, prioritise, fix, verify — so exposure shrinks month on month.",
+    features: [
+      "Regular authenticated vulnerability scanning",
+      "Risk-based prioritisation",
+      "Remediation driven to closure",
+      "Secure-configuration checks",
+      "Patch and config gaps tracked",
+      "Trend reporting",
+    ],
+    benefits: [
+      "Weaknesses found before an auditor or attacker does",
+      "Effort spent on what actually carries risk",
+      "Fixes verified, not just assigned",
+      "Exposure trending down month on month",
+    ],
+    metaTitle: "Continuous Vulnerability Management | Infodot UK",
+    metaDescription:
+      "Authenticated vulnerability scanning with risk-based prioritisation, remediation driven to closure, secure-configuration checks and trend reporting.",
+    keywords:
+      "vulnerability management, vulnerability scanning, remediation, secure configuration, risk prioritisation UK",
+  },
 ];
 
 export const getServiceBySlug = (slug: string) =>
