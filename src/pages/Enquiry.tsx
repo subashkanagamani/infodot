@@ -228,40 +228,9 @@ const Enquiry = () => {
           {/* HERO */}
           <section className="relative overflow-hidden py-16 md:py-24">
             {/* Animated background — matches home hero */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary to-background">
-              <div className="absolute inset-0 grid-pattern opacity-[0.07]" />
-              <div className="absolute inset-0 opacity-10">
-                {[...Array(5)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute h-px bg-gradient-to-r from-transparent via-primary to-transparent"
-                    style={{ top: `${20 + i * 15}%`, left: "-10%", right: "-10%", transform: "rotate(-15deg)" }}
-                  />
-                ))}
-              </div>
-              {/* Floating shapes */}
-              <div className="absolute inset-0 pointer-events-none">
-                {[...Array(12)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute animate-float"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 5}s`,
-                      animationDuration: `${5 + Math.random() * 5}s`,
-                    }}
-                  >
-                    {i % 3 === 0 ? (
-                      <div className="w-2 h-2 bg-primary/30 rounded-full" />
-                    ) : i % 3 === 1 ? (
-                      <div className="w-3 h-3 border border-neon-purple/30 rotate-45" />
-                    ) : (
-                      <div className="w-2 h-2 bg-primary/30" style={{ clipPath: "polygon(50% 0%, 100% 100%, 0% 100%)" }} />
-                    )}
-                  </div>
-                ))}
-              </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/40 to-background">
+              <AmbientBackdrop intensity="bold" />
+            </div>
             </div>
 
             <div className="container-custom relative z-10 grid lg:grid-cols-[1fr_460px] gap-12 items-start">
