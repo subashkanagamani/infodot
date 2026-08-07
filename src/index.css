@@ -319,6 +319,41 @@ All colors MUST be HSL.
     to { opacity: 1; transform: scale(1); filter: blur(0); }
   }
 
+  .animate-dot-drift {
+    animation: dot-drift 26s linear infinite;
+  }
+
+  .animate-ribbon-drift {
+    animation: ribbon-drift 20s var(--ease-brand) infinite alternate;
+  }
+
+  .animate-sheen-sweep {
+    animation: sheen-sweep 14s var(--ease-brand) infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-dot-drift,
+    .animate-ribbon-drift,
+    .animate-sheen-sweep {
+      animation: none;
+    }
+  }
+
+  @keyframes dot-drift {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-26px, -26px, 0); }
+  }
+
+  @keyframes ribbon-drift {
+    0% { transform: translate3d(-6%, 0, 0) scaleY(1); opacity: 0.55; }
+    100% { transform: translate3d(6%, -12px, 0) scaleY(1.15); opacity: 1; }
+  }
+
+  @keyframes sheen-sweep {
+    0% { transform: translateX(-120%); }
+    60%, 100% { transform: translateX(420%); }
+  }
+
   @keyframes fade-in {
     to {
       opacity: 1;
