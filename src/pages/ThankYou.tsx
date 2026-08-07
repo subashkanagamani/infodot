@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle2, Mail, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
-import { InteractiveParticles } from "@/components/InteractiveParticles";
+import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 import logo from "@/assets/infodot-logo-light.png";
 
 const steps = [
@@ -26,7 +26,7 @@ const ThankYou = () => {
       />
 
       <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-        <InteractiveParticles />
+        <AmbientBackdrop />
 
         <div className="relative z-10">
           <header className="border-b border-border/50 bg-background/70 backdrop-blur-lg sticky top-0 z-40">

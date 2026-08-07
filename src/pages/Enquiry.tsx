@@ -27,7 +27,7 @@ import { useHoneypot } from "@/hooks/useHoneypot";
 import { SEOHead } from "@/components/SEOHead";
 import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import { InteractiveParticles } from "@/components/InteractiveParticles";
+import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 import { industries as trustIndustries } from "@/components/ClientLogos";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "@/assets/infodot-logo.png";
@@ -210,7 +210,7 @@ const Enquiry = () => {
       />
 
       <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-        <InteractiveParticles />
+        <AmbientBackdrop />
 
         <div className="relative z-10">
           {/* Minimal top bar */}
