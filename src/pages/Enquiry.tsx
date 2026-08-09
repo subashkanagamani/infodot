@@ -221,7 +221,7 @@ const Enquiry = () => {
 
         {/* HERO */}
         <section className="bg-secondary pt-12 pb-10 md:pt-16 md:pb-14">
-          <div className="container-custom grid lg:grid-cols-[1fr_460px] gap-4 items-start">
+          <div className="container-custom grid lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] gap-4 items-start">
             {/* LEFT COPY */}
             <div className="order-2 lg:order-1 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] flex flex-col justify-between h-full animate-slide-up">
               <div className="space-y-6">
@@ -412,14 +412,14 @@ const Enquiry = () => {
                 <div key={r.brand} className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up" style={{ animationDelay: `${i * 0.08}s` }}>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-bold">{r.brand}</p>
                   <div className="flex items-center justify-between gap-3">
-                    <div className="flex-1">
+                    <div className="min-w-0 flex-1">
                       <div className="text-xs text-muted-foreground mb-1">Before</div>
-                      <div className="text-lg font-semibold text-foreground/70 line-through decoration-muted-foreground/50">{r.before}</div>
+                      <div className="text-lg font-semibold break-words text-foreground/70 line-through decoration-muted-foreground/50">{r.before}</div>
                     </div>
                     <ArrowRight className="w-5 h-5 text-primary shrink-0" />
-                    <div className="flex-1 text-right">
+                    <div className="min-w-0 flex-1 text-right">
                       <div className="text-xs text-primary mb-1">After</div>
-                      <div className="text-lg font-bold text-foreground">{r.after}</div>
+                      <div className="text-lg font-bold break-words text-foreground">{r.after}</div>
                     </div>
                   </div>
                   <p className="text-xs text-muted-foreground mt-4">{r.note}</p>
