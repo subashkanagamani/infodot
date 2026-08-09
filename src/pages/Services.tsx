@@ -252,15 +252,15 @@ const Services = () => {
                         <p className="text-muted-foreground mb-6 text-lg">{service.description}</p>
                       </div>
 
-                      <div className="lg:pl-8">
+                      <div className="min-w-0 lg:pl-8">
                         {service.features && service.features.length > 0 && (
                           <>
                             <h3 className="font-display text-xs font-bold text-primary mb-4 uppercase tracking-[0.2em]">What's Included</h3>
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                               {service.features.map((feature, i) => (
                                 <div
                                   key={i}
-                                  className="px-4 py-3 bg-secondary border border-border rounded-xl text-sm text-center"
+                                  className="px-4 py-3 bg-secondary border border-border rounded-xl text-sm text-center break-words"
                                 >
                                   {feature}
                                 </div>
