@@ -4,6 +4,31 @@ import { Newsletter } from "@/components/Newsletter";
 import logo from "@/assets/infodot-logo.png";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 import { useSection } from "@/hooks/usePageContent";
+import { services } from "@/data/services";
+import { industries } from "@/data/industries";
+
+const MAIN_PAGES: FooterLinkLike[] = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Small Office", href: "/small-office" },
+  { label: "Powered by Z360", href: "/z360" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Blog", href: "/blog" },
+  { label: "Resources", href: "/resources" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" },
+  { label: "Enquiry", href: "/enquiry" },
+  { label: "Legal & Privacy", href: "/legal" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Sign in", href: "/auth" },
+];
+
+type FooterLinkLike = { label: string; href: string };
 
 interface FooterLink { label: string; href: string }
 interface FooterColumns {
