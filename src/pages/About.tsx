@@ -129,7 +129,7 @@ const About = () => {
                 className="rounded-3xl border border-border bg-card p-6 text-center shadow-[var(--shadow-card)] animate-slide-up"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
-                <div className="font-display text-2xl md:text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2 break-words">{stat.value}</div>
                 <div className="text-muted-foreground text-sm font-medium">{stat.label}</div>
               </div>
             ))}
