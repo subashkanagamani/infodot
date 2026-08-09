@@ -116,7 +116,12 @@ const ServiceDetail = () => {
 
   const Icon = iconMap[service.icon] || Target;
   const canonical = `https://infodot.co.uk/services/${service.slug}`;
-  const related = servicesData.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const currentIndex = servicesData.findIndex((s) => s.slug === service.slug);
+  const related = [
+    ...servicesData.slice(currentIndex + 1),
+    ...servicesData.slice(0, Math.max(currentIndex, 0)),
+  ].slice(0, 3);
+  const nextService = servicesData[(currentIndex + 1) % servicesData.length];
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -148,33 +153,59 @@ const ServiceDetail = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-12">
         <div className="container-custom">
           <Breadcrumbs />
-          <div className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up">
-            <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">
-              Infodot Services
-            </p>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center border border-border">
-                <Icon className="w-8 h-8 text-primary" />
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 lg:col-span-8 rounded-3xl border border-border bg-card p-8 md:p-12 shadow-[var(--shadow-card)] animate-slide-up">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground/60">
+                  {String(currentIndex + 1).padStart(2, "0")}
+                </span>
+                <span className="h-px flex-1 bg-border" />
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                  Infodot Services
+                </span>
               </div>
-              <h1 className="font-display text-3xl md:text-5xl font-bold leading-[1.08]">
-                <span className="text-primary">{service.title}</span>
+              <h1 className="font-display text-3xl md:text-5xl font-bold leading-[1.08] tracking-tight mb-5">
+                {service.title}
               </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8">
+                {service.shortDescription}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button size="lg" className="rounded-xl press" onClick={() => navigate("/contact")}>
+                  Book a Discovery Call <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-xl press" asChild>
+                  <Link to="/services">
+                    <ArrowLeft className="mr-2 w-4 h-4" /> All Services
+                  </Link>
+                </Button>
+              </div>
             </div>
-            <p className="text-xl text-muted-foreground mb-8">
-              {service.shortDescription}
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button size="lg" className="rounded-xl press" onClick={() => navigate("/contact")}>
-                Get Started <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-xl border-2 border-accent text-accent press" asChild>
-                <Link to="/services">
-                  <ArrowLeft className="mr-2 w-4 h-4" /> All Services
-                </Link>
-              </Button>
+
+            <div
+              className="col-span-12 lg:col-span-4 rounded-3xl border border-border bg-primary text-primary-foreground p-8 shadow-[var(--shadow-card)] animate-slide-up flex flex-col justify-between"
+              style={{ animationDelay: "0.08s" }}
+            >
+              <div className="w-14 h-14 rounded-2xl bg-primary-foreground/10 border border-primary-foreground/15 flex items-center justify-center">
+                <Icon className="w-7 h-7" />
+              </div>
+              <div className="mt-8 space-y-4">
+                <div className="border-t border-primary-foreground/15 pt-4">
+                  <p className="font-display text-2xl font-bold">30 min</p>
+                  <p className="text-xs uppercase tracking-[0.18em] opacity-70">First response</p>
+                </div>
+                <div className="border-t border-primary-foreground/15 pt-4">
+                  <p className="font-display text-2xl font-bold">ISO 27001</p>
+                  <p className="text-xs uppercase tracking-[0.18em] opacity-70">Certified delivery</p>
+                </div>
+                <div className="border-t border-primary-foreground/15 pt-4">
+                  <p className="font-display text-2xl font-bold">Since 1996</p>
+                  <p className="text-xs uppercase tracking-[0.18em] opacity-70">Running UK IT</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -182,52 +213,99 @@ const ServiceDetail = () => {
 
       {/* Overview */}
       <section className="py-16 md:py-24 bg-secondary">
-        <div className="container-custom grid grid-cols-12 gap-4">
-          <div className="col-span-12 lg:col-span-8 rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up">
-            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">Overview</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {service.description}
-            </p>
+        <div className="container-custom grid grid-cols-12 gap-4 items-start">
+          <div className="col-span-12 lg:col-span-7 space-y-4">
+            <div className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up">
+              <h2 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                Overview
+              </h2>
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
 
-            <h3 className="font-display text-xl font-bold mb-4">Key Benefits</h3>
-            <ul className="space-y-3">
-              {service.benefits.map((b, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">{b}</span>
-                </li>
-              ))}
-            </ul>
+            <div
+              className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up"
+              style={{ animationDelay: "0.06s" }}
+            >
+              <h3 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">
+                Key Benefits
+              </h3>
+              <ul className="divide-y divide-border">
+                {service.benefits.map((b, i) => (
+                  <li key={i} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground leading-relaxed">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <aside
-            className="col-span-12 lg:col-span-4 rounded-3xl border border-accent bg-accent text-accent-foreground p-8 shadow-[var(--shadow-card)] animate-slide-up"
-            style={{ animationDelay: "0.08s" }}
+            className="col-span-12 lg:col-span-5 lg:sticky lg:top-28 rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up"
+            style={{ animationDelay: "0.12s" }}
           >
-            <h4 className="font-display text-xs font-bold mb-4 uppercase tracking-[0.2em] text-primary">
+            <h4 className="font-display text-xs font-bold mb-6 uppercase tracking-[0.2em] text-primary">
               What's Included
             </h4>
-            <div className="space-y-2">
+            <div className="divide-y divide-border">
               {service.features.map((f, i) => (
-                <div
-                  key={i}
-                  className="px-4 py-3 bg-card text-card-foreground border border-border rounded-xl text-sm"
-                >
-                  {f}
+                <div key={i} className="flex items-start gap-4 py-4 first:pt-0">
+                  <span className="font-display text-xs font-bold text-muted-foreground/70 pt-1 tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-sm text-foreground/85 leading-relaxed">{f}</span>
                 </div>
               ))}
             </div>
-            <Button className="w-full mt-6 rounded-xl press" onClick={() => navigate("/contact")}>
-              Talk to an Expert
-            </Button>
+            <div className="mt-8 rounded-2xl bg-secondary border border-border p-6">
+              <p className="text-sm text-muted-foreground mb-4">
+                Want this scoped for your estate? We'll send an exact quote within 48 hours.
+              </p>
+              <Button className="w-full rounded-xl press" onClick={() => navigate("/contact")}>
+                Talk to an Expert <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </div>
           </aside>
         </div>
       </section>
 
-      {/* Related */}
-      <section className="py-16 md:py-24">
+      {/* CTA band */}
+      <section className="py-16 md:py-20">
         <div className="container-custom">
-          <h2 className="font-display text-2xl md:text-3xl font-bold mb-8">Related Services</h2>
+          <div className="rounded-3xl border border-border bg-primary text-primary-foreground p-8 md:p-12 shadow-[var(--shadow-card)] flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-2">
+                Ready to hand this over?
+              </h2>
+              <p className="opacity-80 max-w-xl">
+                A short discovery call, a clear scope, and a fixed quote — no obligation.
+              </p>
+            </div>
+            <Button size="lg" variant="secondary" className="rounded-xl press shrink-0" asChild>
+              <Link to="/contact">
+                Book a Discovery Call <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Related */}
+      <section className="pb-20 md:pb-28">
+        <div className="container-custom">
+          <div className="flex items-end justify-between gap-4 mb-8">
+            <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight">
+              Related Services
+            </h2>
+            <Link
+              to={`/services/${nextService.slug}`}
+              className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-primary hover:opacity-70 transition-opacity"
+            >
+              Next: {nextService.title} <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
           <div className="grid grid-cols-12 gap-4">
             {related.map((s, index) => {
               const RIcon = iconMap[s.icon] || Target;
@@ -235,16 +313,20 @@ const ServiceDetail = () => {
                 <Link
                   key={s.slug}
                   to={`/services/${s.slug}`}
-                  className="col-span-12 md:col-span-4 group block rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] hover-lift transition-all duration-500 animate-slide-up"
+                  className="col-span-12 md:col-span-4 group flex flex-col rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] hover-lift transition-all duration-500 animate-slide-up"
                   style={{ animationDelay: `${index * 0.08}s` }}
                 >
-                  <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-4 border border-border group-hover:bg-accent transition-colors duration-300">
-                    <RIcon className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-6 border border-border group-hover:bg-primary transition-colors duration-300">
+                    <RIcon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                   </div>
-                  <h3 className="font-display font-bold text-lg mb-2">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{s.shortDescription}</p>
+                  <h3 className="font-display font-bold text-lg mb-2 leading-snug">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                    {s.shortDescription}
+                  </p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                    Explore
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Link>
               );
             })}
