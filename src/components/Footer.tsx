@@ -4,7 +4,7 @@ import { Newsletter } from "@/components/Newsletter";
 import logo from "@/assets/infodot-logo.png";
 import { useSiteSettings } from "@/hooks/useSiteSettings";
 import { useSection } from "@/hooks/usePageContent";
-import { services } from "@/data/services";
+import { servicesData } from "@/data/services";
 import { industries } from "@/data/industries";
 
 const MAIN_PAGES: FooterLinkLike[] = [
