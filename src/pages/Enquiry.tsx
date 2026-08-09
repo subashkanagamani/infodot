@@ -411,13 +411,13 @@ const Enquiry = () => {
               {results.map((r, i) => (
                 <div key={r.brand} className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up" style={{ animationDelay: `${i * 0.08}s` }}>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-bold">{r.brand}</p>
-                  <div className="flex items-center justify-between gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                     <div className="min-w-0 flex-1">
                       <div className="text-xs text-muted-foreground mb-1">Before</div>
                       <div className="text-lg font-semibold break-words text-foreground/70 line-through decoration-muted-foreground/50">{r.before}</div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-primary shrink-0" />
-                    <div className="min-w-0 flex-1 text-right">
+                    <ArrowRight className="w-5 h-5 text-primary shrink-0 rotate-90 sm:rotate-0" />
+                    <div className="min-w-0 flex-1 sm:text-right">
                       <div className="text-xs text-primary mb-1">After</div>
                       <div className="text-lg font-bold break-words text-foreground">{r.after}</div>
                     </div>
