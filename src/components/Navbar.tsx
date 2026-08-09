@@ -95,13 +95,13 @@ export const Navbar = () => {
       {/* Mega menu panel */}
       {openMenu && (
         <div
-          className="hidden md:block absolute left-0 right-0 top-16 border-b border-border bg-background shadow-lg animate-fade-in"
+          className="hidden md:block absolute left-0 right-0 top-16 max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-border bg-background shadow-lg animate-fade-in"
           onMouseEnter={() => open(openMenu)}
           onMouseLeave={scheduleClose}
         >
-          <div className="container-custom py-8">
+          <div className="container-custom py-6">
             {openMenu === "services" && (
-              <div className="grid grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
                 {serviceGroups.map((group) => (
                   <div key={group.title}>
                     <p className="mb-3 px-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
@@ -114,7 +114,7 @@ export const Navbar = () => {
                     </ul>
                   </div>
                 ))}
-                <div className="col-span-4 mt-4 border-t border-border pt-4">
+                <div className="col-span-2 lg:col-span-4 mt-2 border-t border-border pt-4">
                   <Link to="/services" onClick={close} className="text-sm font-medium text-primary hover:underline">
                     View all services →
                   </Link>
@@ -123,11 +123,11 @@ export const Navbar = () => {
             )}
 
             {openMenu === "industries" && (
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2">
                 {industryLinks.map((l) => (
                   <MenuLink key={l.href} link={l} onClick={close} />
                 ))}
-                <div className="col-span-3 border-t border-border pt-4">
+                <div className="col-span-2 lg:col-span-3 border-t border-border pt-4">
                   <Link to="/industries" onClick={close} className="text-sm font-medium text-primary hover:underline">
                     All industries →
                   </Link>
@@ -136,7 +136,7 @@ export const Navbar = () => {
             )}
 
             {openMenu === "solutions" && (
-              <div className="grid grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-2">
                 {solutionLinks.map((l) => (
                   <MenuLink key={l.href} link={l} onClick={close} />
                 ))}
@@ -144,7 +144,7 @@ export const Navbar = () => {
             )}
 
             {openMenu === "company" && (
-              <div className="grid grid-cols-4 gap-x-6 gap-y-1">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-1">
                 {companyLinks.map((l) => (
                   <MenuLink key={l.href} link={l} onClick={close} />
                 ))}
