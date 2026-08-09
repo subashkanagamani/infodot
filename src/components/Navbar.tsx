@@ -101,7 +101,7 @@ export const Navbar = () => {
         >
           <div className="container-custom py-6">
             {openMenu === "services" && (
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
+              <div className="grid grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
                 {serviceGroups.map((group) => (
                   <div key={group.title}>
                     <p className="mb-3 px-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
@@ -114,7 +114,7 @@ export const Navbar = () => {
                     </ul>
                   </div>
                 ))}
-                <div className="col-span-2 lg:col-span-4 mt-2 border-t border-border pt-4">
+                <div className="col-span-3 lg:col-span-4 mt-2 border-t border-border pt-4">
                   <Link to="/services" onClick={close} className="text-sm font-medium text-primary hover:underline">
                     View all services →
                   </Link>
