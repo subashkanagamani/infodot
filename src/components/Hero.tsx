@@ -18,7 +18,7 @@ interface HeroContent {
 const DEFAULTS: HeroContent = {
   badge: "Managed · Secure by Default · Always Audit-Ready",
   headingHtml:
-    'We run your IT <span class="text-gradient-primary">completely</span> — so it never <span class="text-gradient-primary">breaks</span> your business.',
+    'We run your IT <span class="text-gradient-primary">completely</span>, so it never <span class="text-gradient-primary">breaks</span> your business.',
   subheading:
     "A managed IT provider for the regulated UK industries we serve — accountancy, legal and financial services — run end to end and remotely from an ISO 27001-certified team. Security built in by default, and the evidence auditors, insurers and boards ask for produced as a matter of course.",
   tagsLabel: "We run your IT. You own your IT.",
