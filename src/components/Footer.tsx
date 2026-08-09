@@ -216,6 +216,49 @@ export const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-border/50 mt-16 pt-8">
+          {/* Full site directory */}
+          <div className="mb-10">
+            <h4 className="font-bold mb-6 text-primary text-sm tracking-wider">ALL PAGES</h4>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Main</p>
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                  {MAIN_PAGES.map((p) => (
+                    <li key={p.href}>
+                      <Link to={p.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        {p.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Industries</p>
+                <ul className="space-y-2">
+                  {industries.map((i) => (
+                    <li key={i.slug}>
+                      <Link to={`/industries/${i.slug}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        {i.navLabel || i.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Services</p>
+                <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-2">
+                  {servicesData.map((s) => (
+                    <li key={s.slug}>
+                      <Link to={`/services/${s.slug}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        {s.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
               {(f.copyright || FOOTER_DEFAULTS.copyright).replace("{year}", String(new Date().getFullYear()))}
