@@ -159,7 +159,7 @@ const ServiceDetail = () => {
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 lg:col-span-8 rounded-3xl border border-border bg-card p-8 md:p-12 shadow-[var(--shadow-card)] animate-slide-up">
               <div className="flex items-center gap-3 mb-8">
-                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground/60">
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground tabular-nums">
                   {String(currentIndex + 1).padStart(2, "0")}
                 </span>
                 <span className="h-px flex-1 bg-border" />
