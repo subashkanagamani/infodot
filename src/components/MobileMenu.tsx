@@ -15,7 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { serviceGroups, industryLinks, solutionLinks, companyLinks } from "@/data/siteNav";
+import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks } from "@/data/siteNav";
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -35,7 +35,7 @@ export const MobileMenu = () => {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open navigation menu">
+        <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Open navigation menu">
           <Menu className="w-5 h-5" aria-hidden="true" />
         </Button>
       </SheetTrigger>
@@ -47,44 +47,26 @@ export const MobileMenu = () => {
         <nav className="mt-6 pb-10">
           {item("Home", "/")}
           <Accordion type="multiple" className="w-full">
-            <AccordionItem value="services" className="border-border/60">
-              <AccordionTrigger className="px-3 text-sm">Services</AccordionTrigger>
-              <AccordionContent className="pb-2">
-                {item("All services", "/services")}
-                {serviceGroups.map((g) => (
-                  <div key={g.title} className="mt-3">
-                    <p className="px-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">{g.title}</p>
-                    {g.links.map((l) => item(l.label, l.href))}
-                  </div>
-                ))}
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="industries" className="border-border/60">
-              <AccordionTrigger className="px-3 text-sm">Industries</AccordionTrigger>
-              <AccordionContent className="pb-2">
-                {item("All industries", "/industries")}
-                {industryLinks.map((l) => item(l.label, l.href))}
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="solutions" className="border-border/60">
-              <AccordionTrigger className="px-3 text-sm">Solutions</AccordionTrigger>
-              <AccordionContent className="pb-2">
-                {solutionLinks.map((l) => item(l.label, l.href))}
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="company" className="border-border/60">
-              <AccordionTrigger className="px-3 text-sm">Company</AccordionTrigger>
-              <AccordionContent className="pb-2">
-                {companyLinks.map((l) => item(l.label, l.href))}
-              </AccordionContent>
-            </AccordionItem>
+            {[
+              { value: "managed-it", label: "Managed IT", links: managedItLinks, all: { label: "All services", href: "/services" } },
+              { value: "cybersecurity", label: "Cybersecurity", links: cybersecurityLinks, all: { label: "All services", href: "/services" } },
+              { value: "compliance", label: "Compliance", links: complianceLinks, all: { label: "All services", href: "/services" } },
+              { value: "industries", label: "Industries", links: industryLinks, all: { label: "All industries", href: "/industries" } },
+              { value: "resources", label: "Resources", links: resourceLinks },
+              { value: "about", label: "About", links: aboutLinks },
+            ].map((group) => (
+              <AccordionItem key={group.value} value={group.value} className="border-border/60">
+                <AccordionTrigger className="px-3 text-sm">{group.label}</AccordionTrigger>
+                <AccordionContent className="pb-2">
+                  {group.all && item(group.all.label, group.all.href)}
+                  {group.links.map((l) => item(l.label, l.href))}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
 
           <Button className="mt-6 w-full" asChild>
-            <Link to="/contact" onClick={close}>Talk to Us</Link>
+            <Link to="/contact" onClick={close}>Book Free IT Assessment</Link>
           </Button>
         </nav>
       </SheetContent>
