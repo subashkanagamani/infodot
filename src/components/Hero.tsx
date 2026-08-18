@@ -69,7 +69,7 @@ export const Hero = () => {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-secondary px-8 py-6 text-base rounded-xl press" asChild>
-                <Link to="/how-it-works">{c.secondaryCtaLabel}</Link>
+                <Link to={c.secondaryCtaHref}>{c.secondaryCtaLabel}</Link>
               </Button>
             </div>
           </div>
