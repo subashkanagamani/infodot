@@ -44,11 +44,9 @@ const CYBERSECURITY = [
 
 const COMPLIANCE = [
   "gdpr-data-protection",
-  "data-protection",
   "cyber-essentials-readiness",
   "iso27001-soc2-evidence",
   "always-audit-ready",
-  "continuous-controls-evidence",
   "cyber-insurance-readiness",
   "fca-operational-resilience",
 ];

@@ -15,7 +15,7 @@ export const servicesData: ServiceItem[] = [
   {
     slug: "managed-it",
     icon: "Target",
-    title: "Managed IT / Helpdesk & IT Operations",
+    title: "Fully Managed IT",
     shortDescription:
       "One team runs your whole IT stack — helpdesk, M365/Workspace, devices and licences — so nothing falls through the cracks.",
     description:
@@ -283,61 +283,6 @@ export const servicesData: ServiceItem[] = [
       "Infodot UK operates and hardens your Microsoft 365, Azure and AWS environments — identity, baselines, cost control, backup and monitoring.",
     keywords:
       "cloud management, Microsoft 365 management, Azure management, AWS management, cloud cost optimisation, cloud security baselines",
-  },
-  {
-    slug: "continuous-controls-evidence",
-    icon: "ClipboardCheck",
-    title: "Continuous Controls & Evidence",
-    shortDescription:
-      "Do it once and leave? That's what fails audits and claims.",
-    description:
-      "The engine behind Always Audit-Ready — the controls we run are kept enforced and captured as evidence every month, with drift alerts when something slips. Being ready once is easy; staying ready — and proving it — is the hard part, and where audits and insurance claims come undone. We treat evidence as a by-product of doing the work, so 'yes' is always provable.",
-    features: [
-      "Continuous control enforcement",
-      "Monthly evidence generation",
-      "Drift alerting when a control lapses",
-      "Mapping to your frameworks and questionnaires",
-      "A single, current evidence pack",
-      "Ready for audit, insurer or board",
-    ],
-    benefits: [
-      "No pre-audit scramble — the pack is already current",
-      "Control drift caught early, not at renewal",
-      "One evidence set answers auditors, insurers and boards",
-      "Questionnaire answers stay true and provable",
-    ],
-    metaTitle: "Continuous Controls & Compliance Evidence | Infodot UK",
-    metaDescription:
-      "Controls kept enforced and captured as monthly evidence, with drift alerting — Infodot UK keeps regulated UK firms provably audit-ready all year.",
-    keywords:
-      "continuous controls monitoring, compliance evidence, drift alerting, audit evidence pack, ISO 27001, SOC 2",
-  },
-  {
-    slug: "data-protection",
-    icon: "Lock",
-    title: "Data Protection",
-    shortDescription: "Your data, controlled — wherever it lives.",
-    description:
-      "Protection for your data across its life — encryption, secure sharing, retention and loss prevention — inside your own tenancy. Regulated buyers and their clients care where data goes and who can reach it. Sensible controls — sharing limits, retention, DLP — protect it without getting in your team's way.",
-    features: [
-      "Encryption at rest and in transit",
-      "Secure external-sharing controls",
-      "Retention and deletion policies",
-      "Data-loss prevention where appropriate",
-      "Sensitivity labelling",
-      "Access logging",
-    ],
-    benefits: [
-      "Client and regulator questions about data handling answered clearly",
-      "Sharing controlled without blocking day-to-day work",
-      "Retention and deletion handled by policy, not memory",
-      "Access is logged, so exposure can be investigated",
-    ],
-    metaTitle: "Data Protection & DLP Services | Infodot UK",
-    metaDescription:
-      "Encryption, secure sharing, retention, sensitivity labelling and DLP — Infodot UK protects your data inside your own tenancy for regulated UK firms.",
-    keywords:
-      "data protection, DLP, data loss prevention, encryption, retention policy, sensitivity labels, UK GDPR",
   },
   {
     slug: "helpdesk-it-operations",
@@ -886,5 +831,12 @@ export const servicesData: ServiceItem[] = [
   },
 ];
 
+/** Retired slugs kept alive so old links resolve to the surviving service. */
+export const serviceSlugAliases: Record<string, string> = {
+  "continuous-controls-evidence": "always-audit-ready",
+  "data-protection": "gdpr-data-protection",
+};
+
 export const getServiceBySlug = (slug: string) =>
-  servicesData.find((s) => s.slug === slug);
+  servicesData.find((s) => s.slug === slug) ??
+  servicesData.find((s) => s.slug === serviceSlugAliases[slug]);
