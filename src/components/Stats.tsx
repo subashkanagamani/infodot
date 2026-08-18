@@ -1,6 +1,6 @@
 export const Stats = () => {
   const stats = [
-    { number: "1996", label: "Running UK Managed IT Since" },
+    { number: "1996", label: "Running Managed IT Since" },
     { number: "ISO 27001:2022", label: "Certified Operations" },
     { number: "48hr", label: "Exact Quote Within" },
     { number: "10 days", label: "Documented Exit Pack & Handover" }

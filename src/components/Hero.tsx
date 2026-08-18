@@ -109,7 +109,7 @@ export const Hero = () => {
               <div className="mt-4">
                 <div className="font-display text-5xl font-bold">1996</div>
                 <p className="mt-2 font-medium text-accent-foreground/70">
-                  Running IT for regulated UK businesses for nearly three decades.
+                  Running IT for regulated businesses for nearly three decades.
                 </p>
               </div>
             </div>

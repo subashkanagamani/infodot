@@ -73,7 +73,7 @@ const AnimatedStat = ({ end, label, Icon, index }: StatProps) => {
 
 export const AnimatedStats = () => {
   const stats = [
-    { number: "1996", label: "Running UK IT Since", Icon: CalendarClock },
+    { number: "1996", label: "Running IT Since", Icon: CalendarClock },
     { number: "27001", label: "ISO 27001:2022 Certified", Icon: ShieldCheck },
     { number: "30min", label: "First Response Time", Icon: Timer },
     { number: "48hr", label: "Exact Quote Turnaround", Icon: FileClock },
