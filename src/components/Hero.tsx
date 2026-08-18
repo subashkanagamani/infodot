@@ -134,7 +134,7 @@ export const Hero = () => {
                 <span className="w-8 h-8 rounded-full bg-secondary border-2 border-card" />
               </div>
               <Link to="/services" className="text-sm font-bold underline underline-offset-4 decoration-primary decoration-2">
-                View all services
+                Explore Our Services
               </Link>
             </div>
           </div>
