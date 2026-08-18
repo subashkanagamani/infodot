@@ -66,8 +66,6 @@ const Index = () => {
       />
       <ExitIntentPopup />
       <CookieConsent />
-      
-      <ScrollProgressBar />
       <div className="min-h-screen relative">
         <AmbientBackdrop />
         <div className="relative z-10">
