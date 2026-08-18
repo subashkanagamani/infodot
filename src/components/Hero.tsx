@@ -16,11 +16,11 @@ interface HeroContent {
 }
 
 const DEFAULTS: HeroContent = {
-  badge: "Managed · Secure by Default · Always Audit-Ready",
+  badge: "Managed IT • Cybersecurity • Compliance",
   headingHtml:
-    'We run your IT <span class="text-gradient-primary">completely</span>, so it never <span class="text-gradient-primary">breaks</span> your business.',
+    'You run your business. <span class="text-gradient-primary">We run your IT.</span>',
   subheading:
-    "A managed IT provider for the regulated UK industries we serve — accountancy, legal and financial services — run end to end and remotely from an ISO 27001-certified team. Security built in by default, and the evidence auditors, insurers and boards ask for produced as a matter of course.",
+    "Managed IT, Cybersecurity & Compliance for growing UK businesses. Your IT should enable your business — not become another thing you have to manage. Infodot gives compliance-conscious UK organisations one accountable technology partner — run end to end, remotely, from an ISO 27001-certified team. Security is built in by default, and the evidence your auditors, insurers and clients ask for is produced as a matter of course.",
   tagsLabel: "We run your IT. You own your IT.",
   tags: [
     "Since 1996",
@@ -28,10 +28,10 @@ const DEFAULTS: HeroContent = {
     "UK business-hours desk, delivered remotely",
     "Exact quote within 48 hours",
   ],
-  primaryCtaLabel: "Book a 30-minute discovery call — no pitch",
+  primaryCtaLabel: "Book a Free IT & Security Assessment",
   primaryCtaHref: "/contact",
-  secondaryCtaLabel: "How It Works",
-  secondaryCtaHref: "#process",
+  secondaryCtaLabel: "Explore Our Services",
+  secondaryCtaHref: "/services",
 };
 
 export const Hero = () => {
@@ -69,7 +69,7 @@ export const Hero = () => {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-secondary px-8 py-6 text-base rounded-xl press" asChild>
-                <Link to="/how-it-works">{c.secondaryCtaLabel}</Link>
+                <Link to={c.secondaryCtaHref}>{c.secondaryCtaLabel}</Link>
               </Button>
             </div>
           </div>
@@ -134,7 +134,7 @@ export const Hero = () => {
                 <span className="w-8 h-8 rounded-full bg-secondary border-2 border-card" />
               </div>
               <Link to="/services" className="text-sm font-bold underline underline-offset-4 decoration-primary decoration-2">
-                View all services
+                Explore Our Services
               </Link>
             </div>
           </div>
