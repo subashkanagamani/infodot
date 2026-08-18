@@ -12,19 +12,24 @@ const pick = (slugs: string[]): NavLinkItem[] =>
     })
     .filter(Boolean) as NavLinkItem[];
 
-const CORE = [
+const MANAGED_IT = [
   "managed-it",
   "helpdesk-it-operations",
   "co-managed-it",
-  "device-lifecycle",
-  "rmm-patch-management",
-  "cloud-management",
   "microsoft365-google-workspace",
-  "onboarding-exit",
+  "rmm-patch-management",
   "asset-licence-domain",
+  "backup-disaster-recovery",
+  "cloud-management",
+  "device-lifecycle",
+  "onboarding-exit",
+  "discovery-phase0",
+  "it-transition-exit",
+  "email-migration",
+  "domain-migration",
 ];
 
-const SECURITY = [
+const CYBERSECURITY = [
   "secure-by-default",
   "managed-edr",
   "email-security",
@@ -35,37 +40,36 @@ const SECURITY = [
   "penetration-testing-vapt",
   "security-awareness",
   "monitoring-incident-response",
-  "backup-disaster-recovery",
 ];
 
 const COMPLIANCE = [
-  "always-audit-ready",
-  "cyber-essentials-readiness",
-  "cyber-insurance-readiness",
-  "iso27001-soc2-evidence",
-  "continuous-controls-evidence",
   "gdpr-data-protection",
-  "fca-operational-resilience",
   "data-protection",
+  "cyber-essentials-readiness",
+  "iso27001-soc2-evidence",
+  "always-audit-ready",
+  "continuous-controls-evidence",
+  "cyber-insurance-readiness",
+  "fca-operational-resilience",
 ];
 
-const MIGRATION = ["discovery-phase0", "it-transition-exit", "email-migration", "domain-migration"];
+const listed = new Set([...MANAGED_IT, ...CYBERSECURITY, ...COMPLIANCE]);
 
-const listed = new Set([...CORE, ...SECURITY, ...COMPLIANCE, ...MIGRATION]);
+export const managedItLinks: NavLinkItem[] = [
+  ...pick(MANAGED_IT),
+  ...servicesData
+    .filter((s) => !listed.has(s.slug))
+    .map((s) => ({ label: s.title, href: `/services/${s.slug}`, description: s.shortDescription })),
+];
 
+export const cybersecurityLinks: NavLinkItem[] = pick(CYBERSECURITY);
+export const complianceLinks: NavLinkItem[] = pick(COMPLIANCE);
+
+/** Grouped view kept for the /services page and mobile menu. */
 export const serviceGroups: { title: string; links: NavLinkItem[] }[] = [
-  { title: "Run & operate", links: pick(CORE) },
-  { title: "Security", links: pick(SECURITY) },
-  { title: "Compliance & evidence", links: pick(COMPLIANCE) },
-  {
-    title: "Move & transition",
-    links: [
-      ...pick(MIGRATION),
-      ...servicesData
-        .filter((s) => !listed.has(s.slug))
-        .map((s) => ({ label: s.title, href: `/services/${s.slug}`, description: s.shortDescription })),
-    ],
-  },
+  { title: "Managed IT", links: managedItLinks },
+  { title: "Cybersecurity", links: cybersecurityLinks },
+  { title: "Compliance", links: complianceLinks },
 ];
 
 export const industryLinks: NavLinkItem[] = industries.map((i) => ({
@@ -74,22 +78,24 @@ export const industryLinks: NavLinkItem[] = industries.map((i) => ({
   description: i.name,
 }));
 
-export const solutionLinks: NavLinkItem[] = [
-  { label: "Powered by Z360", href: "/z360", description: "The operations engine behind every account." },
-  { label: "Small Office", href: "/small-office", description: "For offices of 5–20 seats." },
-  { label: "How It Works", href: "/how-it-works", description: "Co-managed, fully managed or fully remote." },
-  { label: "Pricing", href: "/pricing", description: "Essentials, Secured and Audit-Ready." },
+export const resourceLinks: NavLinkItem[] = [
+  { label: "Insights", href: "/blog", description: "Notes on IT, security and compliance." },
+  { label: "Case Studies", href: "/case-studies", description: "Outcomes from regulated firms." },
+  { label: "Guides", href: "/resources", description: "Guides and checklists." },
+  { label: "Portfolio", href: "/portfolio", description: "Selected work." },
 ];
 
-export const companyLinks: NavLinkItem[] = [
-  { label: "About", href: "/about", description: "Since 1996, ISO 27001:2022 certified." },
-  { label: "Contact", href: "/contact", description: "Talk to a named UK-hours engineer." },
+export const aboutLinks: NavLinkItem[] = [
+  { label: "About Infodot", href: "/about", description: "Since 1996, ISO 27001:2022 certified." },
+  { label: "Why Infodot", href: "/z360", description: "The operations engine behind every account." },
+  { label: "Service Delivery", href: "/how-it-works", description: "Co-managed, fully managed or fully remote." },
+  { label: "Service Levels", href: "/pricing", description: "Essentials, Secured and Audit-Ready." },
+  { label: "Small Office", href: "/small-office", description: "For offices of 5–20 seats." },
   { label: "Careers", href: "/careers", description: "Join the team." },
-  { label: "Case Studies", href: "/case-studies", description: "Outcomes from regulated firms." },
-  { label: "Portfolio", href: "/portfolio", description: "Selected work." },
-  { label: "Blog", href: "/blog", description: "Notes on IT, security and compliance." },
-  { label: "Resources", href: "/resources", description: "Guides and checklists." },
-  { label: "Enquiry", href: "/enquiry", description: "Request a quote in 48 hours." },
+  { label: "Contact", href: "/contact", description: "Talk to a named UK-hours engineer." },
   { label: "Legal & Privacy", href: "/legal", description: "How we handle your data." },
-  { label: "Privacy Policy", href: "/privacy-policy", description: "Full privacy notice." },
 ];
+
+/** Legacy aliases */
+export const solutionLinks = aboutLinks.slice(1, 5);
+export const companyLinks = aboutLinks;
