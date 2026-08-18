@@ -44,31 +44,59 @@ export const Hero = () => {
       <div className="container-custom">
         <div className="grid grid-cols-12 gap-4">
           {/* Main hero tile */}
-          <div className="col-span-12 lg:col-span-8 lg:row-span-2 bg-card rounded-3xl p-8 md:p-10 flex flex-col justify-between border border-border shadow-[var(--shadow-card)] animate-slide-up">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.14em]">{c.badge}</span>
+          <div className="col-span-12 lg:col-span-8 lg:row-span-2 relative overflow-hidden bg-card rounded-3xl p-8 md:p-12 flex flex-col justify-between border border-border shadow-[var(--shadow-card)] animate-slide-up">
+            {/* soft brand glow */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -top-24 -right-16 w-[26rem] h-[26rem] rounded-full opacity-[0.07] blur-3xl bg-primary"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -bottom-32 -left-24 w-[22rem] h-[22rem] rounded-full opacity-[0.06] blur-3xl bg-accent"
+            />
+
+            <div className="relative space-y-7">
+              <div className="inline-flex items-center gap-2.5 pl-2 pr-4 py-1.5 rounded-full border border-border bg-secondary/60 backdrop-blur">
+                <span className="relative flex w-2 h-2">
+                  <span className="absolute inline-flex w-full h-full rounded-full bg-primary opacity-60 animate-ping" />
+                  <span className="relative inline-flex w-2 h-2 rounded-full bg-primary" />
+                </span>
+                <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-accent/80">
+                  {c.badge}
+                </span>
               </div>
 
               <h1
-                className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08]"
+                className="font-display text-[2.5rem] leading-[1.02] md:text-6xl lg:text-[4.25rem] font-extrabold tracking-[-0.035em] text-balance"
                 dangerouslySetInnerHTML={{ __html: c.headingHtml }}
               />
 
-              <p className="text-muted-foreground text-base md:text-lg max-w-2xl font-medium">
-                {c.subheading}
-              </p>
+              <div className="relative max-w-2xl pl-5">
+                <span aria-hidden className="absolute left-0 top-1 bottom-1 w-[3px] rounded-full bg-gradient-to-b from-primary to-accent/30" />
+                <p className="text-muted-foreground text-[15px] md:text-[17px] leading-relaxed font-medium">
+                  {c.subheading}
+                </p>
+              </div>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button size="lg" variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-base rounded-xl press" asChild>
+            <div className="relative mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="group bg-accent text-accent-foreground hover:bg-accent/90 px-7 py-6 text-[15px] font-bold rounded-2xl shadow-[0_12px_30px_-12px_hsl(var(--accent)/0.65)] transition-all hover:-translate-y-0.5 press"
+                asChild
+              >
                 <Link to={c.primaryCtaHref}>
                   {c.primaryCtaLabel}
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-secondary px-8 py-6 text-base rounded-xl press" asChild>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border border-border bg-card hover:bg-secondary hover:border-accent/40 px-7 py-6 text-[15px] font-bold rounded-2xl transition-all hover:-translate-y-0.5 press"
+                asChild
+              >
                 <Link to={c.secondaryCtaHref}>{c.secondaryCtaLabel}</Link>
               </Button>
             </div>
