@@ -219,18 +219,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/continuous-controls-evidence</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://infodot.co.uk/services/data-protection</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://infodot.co.uk/services/helpdesk-it-operations</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
