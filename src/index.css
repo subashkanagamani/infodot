@@ -86,7 +86,7 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, .font-display {
-    font-family: 'Sora', 'Manrope', system-ui, sans-serif;
+    font-family: 'Manrope', system-ui, sans-serif;
     letter-spacing: -0.03em;
   }
 }
