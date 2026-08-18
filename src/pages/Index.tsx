@@ -17,7 +17,7 @@ import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 
 import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import { ScrollProgressBar } from "@/components/ScrollProgressBar";
+
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
@@ -66,8 +66,6 @@ const Index = () => {
       />
       <ExitIntentPopup />
       <CookieConsent />
-      
-      <ScrollProgressBar />
       <div className="min-h-screen relative">
         <AmbientBackdrop />
         <div className="relative z-10">
