@@ -46,7 +46,6 @@ const FOOTER_DEFAULTS: FooterColumns = {
     { label: "Z360", href: "/z360" },
     { label: "Cyber Insurance", href: "/cyber-insurance-readiness" },
     { label: "Cyber Essentials", href: "/cyber-essentials-readiness" },
-    { label: "Powered by Z360", href: "/z360" },
   ],
   companyTitle: "COMPANY",
   companyLinks: [
