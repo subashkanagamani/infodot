@@ -198,6 +198,9 @@ export const Footer = () => {
               {f.sinceLine || FOOTER_DEFAULTS.sinceLine}
             </p>
           </div>
+          <p className="text-sm text-muted-foreground text-center mt-4">
+            Also serving India — <a href="https://infodot.co.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Infodot.co.in</a>
+          </p>
         </div>
       </div>
     </footer>
