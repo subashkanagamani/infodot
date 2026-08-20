@@ -27,7 +27,7 @@ export const WhyChoose = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 leading-[1.1]">
             What we <span className="text-primary">stand on</span>
           </h2>
-          <p className="text-muted-foreground">Four pillars. One promise.</p>
+          <p className="text-muted-foreground">Three pillars. One promise.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
