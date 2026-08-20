@@ -1,4 +1,4 @@
-import { LayoutGrid, ShieldCheck, FileCheck2, KeyRound } from "lucide-react";
+import { LayoutGrid, ShieldCheck, FileCheck2 } from "lucide-react";
 
 const benefits = [
   {
@@ -15,11 +15,6 @@ const benefits = [
     icon: FileCheck2,
     title: "Always audit-ready",
     description: "The controls we run produce the evidence auditors and insurers ask for — packaged monthly, kept current. Readiness in-house; certification via accredited partners."
-  },
-  {
-    icon: KeyRound,
-    title: "We run your IT. You own your IT.",
-    description: "Your domains, tenancy, licences and admin rights stay yours, in your name, throughout. Whenever you leave, you get a documented exit pack and full reverse knowledge-transfer within 10 working days."
   }
 ];
 
