@@ -33,7 +33,7 @@ export const WhyChoose = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
