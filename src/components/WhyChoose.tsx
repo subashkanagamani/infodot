@@ -4,17 +4,17 @@ const benefits = [
   {
     icon: LayoutGrid,
     title: "Managed",
-    description: "One team runs the whole stack — endpoints, M365 and Workspace, patching, backup, security and the desk — and coordinates your vendors. Nobody to ping-pong to."
+    description: "One team runs the whole stack and coordinates your vendors."
   },
   {
     icon: ShieldCheck,
     title: "Secure by default",
-    description: "MFA, EDR, hardening and tested backup are standard from day one — not a premium tier. It's the gap clients name most; we close it by default."
+    description: "MFA, EDR, hardening and tested backup, standard from day one."
   },
   {
     icon: FileCheck2,
     title: "Always audit-ready",
-    description: "The controls we run produce the evidence auditors and insurers ask for — packaged monthly, kept current. Readiness in-house; certification via accredited partners."
+    description: "The controls we run produce the evidence auditors ask for."
   }
 ];
 
@@ -28,9 +28,12 @@ export const WhyChoose = () => {
             What we <span className="text-primary">stand on</span>
           </h2>
           <p className="text-muted-foreground">Three pillars. One promise.</p>
+          <p className="mt-4 font-display text-lg md:text-2xl font-bold leading-snug text-balance">
+            One accountable partner. Secure by default, managed end to end, always audit-ready.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
