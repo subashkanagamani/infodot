@@ -25,7 +25,7 @@ const DEFAULTS: HeroContent = {
   tags: [
     "Since 1996",
     "ISO 27001:2022 certified",
-    "UK business-hours desk, delivered remotely",
+    "Business-hours desk, delivered remotely",
     "Exact quote within 48 hours",
   ],
   primaryCtaLabel: "Book a Free IT & Security Assessment",
@@ -102,16 +102,22 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Heritage tile */}
+          {/* Where the work is done tile */}
           <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 relative overflow-hidden animate-slide-up" style={{ animationDelay: "0.08s" }}>
-            <div className="relative z-10">
-              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Heritage</span>
-              <div className="mt-4">
-                <div className="font-display text-5xl font-bold">1996</div>
-                <p className="mt-2 font-medium text-accent-foreground/70">
-                  Running IT for regulated businesses for nearly three decades.
+            <div className="relative z-10 flex flex-col h-full">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Where's the work done</span>
+              <div className="mt-4 flex-1">
+                <h2 className="font-display text-3xl md:text-4xl font-bold leading-[1.05]">
+                  Your tenancy, not ours.
+                </h2>
+                <p className="mt-3 font-medium text-accent-foreground/80 leading-relaxed">
+                  Engineers work inside your systems. Nothing copied to Bangalore.
                 </p>
               </div>
+              <Link to="/gdpr-data-protection" className="mt-6 inline-flex items-center gap-2 text-sm font-bold underline underline-offset-4 decoration-2">
+                GDPR & offshore access
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
             <div className="absolute -right-8 -bottom-8 opacity-10" aria-hidden>
               <div className="w-32 h-32 border-[16px] border-current rounded-full" />
