@@ -5,7 +5,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
-const SITE_URL = 'https://cwpmktng.com'
+const SITE_URL = 'https://infodot.consultwithprofessionals.com'
 
 function escapeXml(s: string): string {
   return String(s ?? '')
@@ -35,12 +35,19 @@ Deno.serve(async (req) => {
       { loc: '/', changefreq: 'weekly', priority: '1.0' },
       { loc: '/about', changefreq: 'monthly', priority: '0.8' },
       { loc: '/services', changefreq: 'monthly', priority: '0.9' },
+      { loc: '/industries', changefreq: 'monthly', priority: '0.9' },
+      { loc: '/how-it-works', changefreq: 'monthly', priority: '0.8' },
+      { loc: '/small-office', changefreq: 'monthly', priority: '0.8' },
+      { loc: '/z360', changefreq: 'monthly', priority: '0.8' },
       { loc: '/portfolio', changefreq: 'weekly', priority: '0.8' },
       { loc: '/blog', changefreq: 'daily', priority: '0.9' },
       { loc: '/case-studies', changefreq: 'weekly', priority: '0.8' },
       { loc: '/pricing', changefreq: 'monthly', priority: '0.7' },
       { loc: '/careers', changefreq: 'weekly', priority: '0.6' },
       { loc: '/resources', changefreq: 'weekly', priority: '0.7' },
+      { loc: '/contact', changefreq: 'monthly', priority: '0.8' },
+      { loc: '/enquiry', changefreq: 'monthly', priority: '0.7' },
+      { loc: '/legal', changefreq: 'yearly', priority: '0.5' },
       { loc: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },
     ]
 
@@ -71,7 +78,6 @@ Deno.serve(async (req) => {
       xml += `
   <url>
     <loc>${SITE_URL}${page.loc}</loc>
-    <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`
