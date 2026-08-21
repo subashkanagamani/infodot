@@ -1,363 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://infodot.co.uk/</loc>
+    <loc>https://infodot.consultwithprofessionals.com/</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/about</loc>
+    <loc>https://infodot.consultwithprofessionals.com/about</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/managed-it</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/managed-it</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/secure-by-default</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/secure-by-default</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/backup-disaster-recovery</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/backup-disaster-recovery</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/always-audit-ready</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/always-audit-ready</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/cyber-essentials-readiness</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/cyber-essentials-readiness</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/cyber-insurance-readiness</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/cyber-insurance-readiness</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/it-transition-exit</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/it-transition-exit</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/co-managed-it</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/co-managed-it</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/portfolio</loc>
+    <loc>https://infodot.consultwithprofessionals.com/portfolio</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/blog</loc>
+    <loc>https://infodot.consultwithprofessionals.com/blog</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/case-studies</loc>
+    <loc>https://infodot.consultwithprofessionals.com/case-studies</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/pricing</loc>
+    <loc>https://infodot.consultwithprofessionals.com/pricing</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/contact</loc>
+    <loc>https://infodot.consultwithprofessionals.com/contact</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/careers</loc>
+    <loc>https://infodot.consultwithprofessionals.com/enquiry</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/careers</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/resources</loc>
+    <loc>https://infodot.consultwithprofessionals.com/resources</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/privacy-policy</loc>
+    <loc>https://infodot.consultwithprofessionals.com/privacy-policy</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <!-- Blog posts -->
   <url>
-    <loc>https://infodot.co.uk/blog/seo-guide-2025</loc>
+    <loc>https://infodot.consultwithprofessionals.com/blog/seo-guide-2025</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/blog/lead-generation-case-study</loc>
+    <loc>https://infodot.consultwithprofessionals.com/blog/lead-generation-case-study</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/blog/email-marketing-roi</loc>
+    <loc>https://infodot.consultwithprofessionals.com/blog/email-marketing-roi</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/blog/content-marketing-strategy</loc>
+    <loc>https://infodot.consultwithprofessionals.com/blog/content-marketing-strategy</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/blog/paid-advertising-2025</loc>
+    <loc>https://infodot.consultwithprofessionals.com/blog/paid-advertising-2025</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/blog/10-important-strategies-to-3x-your-social-media-engagement-in-2024</loc>
+    <loc>https://infodot.consultwithprofessionals.com/blog/10-important-strategies-to-3x-your-social-media-engagement-in-2024</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/blog/d2c-marketing-strategy</loc>
+    <loc>https://infodot.consultwithprofessionals.com/blog/d2c-marketing-strategy</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Case studies -->
   <url>
-    <loc>https://infodot.co.uk/case-studies/2d9cf39f-743b-44fb-9d8c-7aaef0466e47</loc>
+    <loc>https://infodot.consultwithprofessionals.com/case-studies/2d9cf39f-743b-44fb-9d8c-7aaef0466e47</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/case-studies/29c44946-3c31-4d81-8660-3bb6f0d12fd1</loc>
+    <loc>https://infodot.consultwithprofessionals.com/case-studies/29c44946-3c31-4d81-8660-3bb6f0d12fd1</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/case-studies/96d3f41f-6e40-48b4-85ec-1e4506b71ed1</loc>
+    <loc>https://infodot.consultwithprofessionals.com/case-studies/96d3f41f-6e40-48b4-85ec-1e4506b71ed1</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/case-studies/c8421ebc-2cae-49ff-b05f-e2ab94234d04</loc>
+    <loc>https://infodot.consultwithprofessionals.com/case-studies/c8421ebc-2cae-49ff-b05f-e2ab94234d04</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/industries</loc>
+    <loc>https://infodot.consultwithprofessionals.com/industries</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/industries/accountants</loc>
+    <loc>https://infodot.consultwithprofessionals.com/industries/accountants</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/industries/law-firms</loc>
+    <loc>https://infodot.consultwithprofessionals.com/industries/law-firms</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/industries/financial-services</loc>
+    <loc>https://infodot.consultwithprofessionals.com/industries/financial-services</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/asset-licence-domain</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/asset-licence-domain</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/cloud-management</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/cloud-management</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/helpdesk-it-operations</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/helpdesk-it-operations</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/device-lifecycle</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/device-lifecycle</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/email-security</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/email-security</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/identity-access</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/identity-access</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/gdpr-data-protection</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/gdpr-data-protection</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/fca-operational-resilience</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/fca-operational-resilience</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/discovery-phase0</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/discovery-phase0</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/email-migration</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/email-migration</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/domain-migration</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/domain-migration</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/how-it-works</loc>
+    <loc>https://infodot.consultwithprofessionals.com/how-it-works</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/managed-edr</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/managed-edr</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/it-hardening</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/it-hardening</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/microsoft365-google-workspace</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/microsoft365-google-workspace</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/iso27001-soc2-evidence</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/iso27001-soc2-evidence</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/legal</loc>
+    <loc>https://infodot.consultwithprofessionals.com/legal</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/rmm-patch-management</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/rmm-patch-management</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/onboarding-exit</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/onboarding-exit</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/monitoring-incident-response</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/monitoring-incident-response</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/penetration-testing-vapt</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/penetration-testing-vapt</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/network-security</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/network-security</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/security-awareness</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/security-awareness</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/small-office</loc>
+    <loc>https://infodot.consultwithprofessionals.com/small-office</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/services/vulnerability-management</loc>
+    <loc>https://infodot.consultwithprofessionals.com/services/vulnerability-management</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://infodot.co.uk/z360</loc>
+    <loc>https://infodot.consultwithprofessionals.com/z360</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
