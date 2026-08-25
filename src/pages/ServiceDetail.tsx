@@ -171,7 +171,17 @@ const ServiceDetail = () => {
               <h1 className="font-display text-3xl md:text-5xl font-bold leading-[1.08] tracking-tight mb-5">
                 {service.title}
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8">
+              <div className="flex flex-wrap gap-2 mb-7">
+                {promise.pains.map((p) => (
+                  <span
+                    key={p}
+                    className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary"
+                  >
+                    {p}
+                  </span>
+                ))}
+              </div>
+              <p className="border-l-2 border-primary pl-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8">
                 {service.shortDescription}
               </p>
               <div className="flex flex-wrap gap-3">
@@ -184,6 +194,16 @@ const ServiceDetail = () => {
                   </Link>
                 </Button>
               </div>
+              <div className="mt-8 border-t border-border pt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
+                <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">{promise.awareness}</p>
+                <Link
+                  to="/services/security-awareness"
+                  className="text-sm font-semibold text-primary hover:underline"
+                >
+                  See security awareness training →
+                </Link>
+              </div>
             </div>
 
             <div
@@ -193,24 +213,19 @@ const ServiceDetail = () => {
               <div className="w-14 h-14 rounded-2xl bg-primary-foreground/10 border border-primary-foreground/15 flex items-center justify-center">
                 <Icon className="w-7 h-7" />
               </div>
-              <div className="mt-8 space-y-4">
-                <div className="border-t border-primary-foreground/15 pt-4">
-                  <p className="font-display text-2xl font-bold">30 min</p>
-                  <p className="text-xs uppercase tracking-[0.18em] opacity-70">First response</p>
-                </div>
-                <div className="border-t border-primary-foreground/15 pt-4">
-                  <p className="font-display text-2xl font-bold">ISO 27001</p>
-                  <p className="text-xs uppercase tracking-[0.18em] opacity-70">Certified delivery</p>
-                </div>
-                <div className="border-t border-primary-foreground/15 pt-4">
-                  <p className="font-display text-2xl font-bold">Since 1996</p>
-                  <p className="text-xs uppercase tracking-[0.18em] opacity-70">Running IT</p>
-                </div>
+              <p className="mt-8 font-display text-2xl md:text-[1.75rem] font-bold leading-snug">
+                {promise.promise}
+              </p>
+              <div className="mt-8 border-t border-primary-foreground/15 pt-4">
+                <p className="text-xs uppercase tracking-[0.18em] opacity-70">
+                  ISO 27001 certified · Since 1996
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Overview */}
       <section className="py-16 md:py-24 bg-secondary">
