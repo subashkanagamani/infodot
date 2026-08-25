@@ -107,7 +107,7 @@ export default function Resources() {
               </p>
             </div>
             <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
-              <div className="font-display text-5xl font-bold">{resources.length}</div>
+              <div className="font-display text-5xl font-bold">{resources.length + guides.length}</div>
               <p className="mt-2 font-medium text-accent-foreground/70">Free guides, checklists and toolkits, all downloadable.</p>
             </div>
           </div>
