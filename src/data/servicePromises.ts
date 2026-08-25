@@ -68,34 +68,40 @@ export const servicePromises: Record<string, ServicePromise> = {
     awareness: "Security starts on day one — awareness, phishing, password/MFA, reporting.",
   },
   "secure-by-default": {
-    pains: ["Bolted-on security", "Inconsistent baselines", "Gaps between tools"],
-    promise: "Security switched on from day one — not sold as an upgrade.",
-    awareness: "Controls only work when people follow them — phishing, MFA, safe behaviour.",
+    pains: ["Security as an add-on", "Inconsistent baseline", "Gaps between tools"],
+    promise: "Security that's standard for everyone — not a tier you pay up for.",
+    awareness:
+      "Controls only work if your people follow them — phishing, MFA, reporting.",
   },
   "managed-edr": {
-    pains: ["Alerts nobody reads", "Slow containment", "Endpoint blind spots"],
-    promise: "Threats contained by engineers — not left sitting in a dashboard.",
-    awareness: "Most endpoint incidents start with a click — phishing, downloads, macros.",
+    pains: ["Alerts nobody reads", "No 24/7 response", "Slow containment"],
+    promise: "A human responds — not just an alert nobody reads.",
+    awareness:
+      "Most alerts start with a person clicking something — phishing, malware, unsafe downloads.",
   },
   "it-hardening": {
-    pains: ["Default configurations", "Weak access rules", "Unencrypted devices"],
-    promise: "One hardened baseline applied to every user and device.",
-    awareness: "Hardened systems still need careful users — passwords, MFA, shadow IT.",
+    pains: ["Default configurations", "Unnecessary services running", "Weak baseline settings"],
+    promise: "Systems hardened before an attacker ever gets the chance.",
+    awareness:
+      "Hardened systems still get reconfigured by well-meaning staff — awareness closes that gap.",
   },
   "email-security": {
-    pains: ["Phishing", "Spoofed domains", "Malicious attachments"],
-    promise: "Bad email stopped before it reaches an inbox.",
-    awareness: "The last filter is your people — phishing, invoice fraud, reporting.",
+    pains: ["Phishing emails", "Malicious attachments", "Business email compromise"],
+    promise: "Malicious emails stopped before your inbox ever sees them.",
+    awareness:
+      "Some phishing still gets through filters — your people are the last line. Reporting matters.",
   },
   "identity-access": {
-    pains: ["Shared logins", "Over-privileged users", "MFA gaps"],
-    promise: "The right people, the right access — and nothing more.",
-    awareness: "Identity is the new perimeter — MFA fatigue, password reuse, phishing.",
+    pains: ["Orphaned accounts", "Excess permissions", "No access audit trail"],
+    promise: "Access reviewed and provable — not just assumed.",
+    awareness:
+      "Weak or reused passwords undo strong access controls — MFA, password hygiene.",
   },
   "network-security": {
-    pains: ["Flat networks", "Unmanaged firewalls", "Unsecured remote access"],
-    promise: "Your network segmented, monitored and controlled — not just connected.",
-    awareness: "Remote and guest users need guidance too — VPN, Wi-Fi, personal devices.",
+    pains: ["Unmonitored network", "Open ports", "No intrusion detection"],
+    promise: "Your network watched and hardened, every single day.",
+    awareness:
+      "A hardened network still needs careful users — Wi-Fi sharing, remote access hygiene.",
   },
   "monitoring-incident-response": {
     pains: ["Late detection", "No response plan", "Unclear escalation"],
@@ -148,24 +154,28 @@ export const servicePromises: Record<string, ServicePromise> = {
     awareness: "Resilience depends on people knowing their part when systems fail.",
   },
   "it-transition-exit": {
-    pains: ["Vendor lock-in", "Undocumented systems", "Risky handovers"],
-    promise: "A clean handover with everything documented and handed back.",
-    awareness: "Transitions are prime phishing windows — verify before you act.",
+    pains: ["Lost knowledge", "Disrupted services", "Incomplete handover"],
+    promise: "Switch providers without losing a single thread.",
+    awareness:
+      "A secure transition includes your people — phishing, social engineering, credential protection.",
   },
   "discovery-phase0": {
-    pains: ["Unknown estate", "Hidden risk", "No baseline"],
-    promise: "A clear picture of what you have before anyone changes anything.",
-    awareness: "Discovery includes your people — how they work and where risk sits.",
+    pains: ["Unknown assets", "Hidden risks", "Incomplete documentation"],
+    promise: "See your entire IT environment before you change a thing.",
+    awareness:
+      "Find the technical gaps. Don't forget the human ones. — awareness, phishing, security culture.",
   },
   "email-migration": {
-    pains: ["Lost mail", "Downtime", "Broken delivery"],
-    promise: "Mailboxes moved with nothing lost and no working day disrupted.",
-    awareness: "Migrations attract impersonation — verify unexpected login prompts.",
+    pains: ["Lost messages", "Downtime", "Misconfigured accounts"],
+    promise: "Every mailbox migrated and validated before anyone notices.",
+    awareness:
+      "New email platform. Same phishing risk. — phishing, malicious attachments, reporting.",
   },
   "domain-migration": {
-    pains: ["DNS outages", "Expired domains", "Broken mail records"],
-    promise: "Domains and DNS moved without breaking a single record.",
-    awareness: "Domain changes get spoofed — check sender domains carefully.",
+    pains: ["Website/email downtime", "DNS errors", "Loss of control"],
+    promise: "Domain changes handled cleanly — zero surprise downtime.",
+    awareness:
+      "Protect the people who control your domains — phishing, credential theft, social engineering.",
   },
 };
 
