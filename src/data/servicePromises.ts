@@ -104,34 +104,40 @@ export const servicePromises: Record<string, ServicePromise> = {
       "A hardened network still needs careful users — Wi-Fi sharing, remote access hygiene.",
   },
   "monitoring-incident-response": {
-    pains: ["Late detection", "No response plan", "Unclear escalation"],
-    promise: "Someone is watching — and someone answers when it matters.",
-    awareness: "Fast reporting beats late detection — how and when your people escalate.",
+    pains: ["Late detection", "Panic response", "No incident process"],
+    promise: "Incidents caught early, handled calmly and by the book.",
+    awareness:
+      "Fast detection depends on people reporting what looks wrong — reporting culture matters.",
   },
   "penetration-testing-vapt": {
-    pains: ["Unknown weaknesses", "Untested defences", "Audit pressure"],
-    promise: "Findings you can fix — with retesting to prove it's closed.",
-    awareness: "Testers exploit people first — phishing, pretexting, physical access.",
+    pains: ["No test evidence", "Lost enterprise deals", "Unverified defences"],
+    promise: "The evidence report your next big deal is asking for.",
+    awareness:
+      "Testers often get in through people first — social engineering, phishing.",
   },
   "vulnerability-management": {
-    pains: ["Growing exposure", "No prioritisation", "Slow remediation"],
-    promise: "Vulnerabilities ranked by risk and closed on a schedule.",
-    awareness: "Unsupported apps and shadow IT start with users — installs, plugins, browsers.",
+    pains: ["Unscanned systems", "Known flaws unpatched", "No remediation tracking"],
+    promise: "Weaknesses found on a cycle — and closed, not just logged.",
+    awareness:
+      "Scanning finds technical gaps — your people are tested by social engineering.",
   },
   "security-awareness": {
-    pains: ["Human error", "Repeat phishing clicks", "Untracked training"],
-    promise: "Training your people actually finish — with evidence you can show.",
-    awareness: "Simulations, micro-training and reporting habits that stick.",
+    pains: ["Untrained staff", "Repeated phishing clicks", "No reporting culture"],
+    promise: "Your people become your first line of defence.",
+    awareness:
+      "Covers phishing, passwords, MFA, device hygiene, USBs and social engineering — in short, regular sessions.",
   },
   "cyber-essentials-readiness": {
-    pains: ["Failed self-assessment", "Unclear scope", "Evidence gaps"],
-    promise: "Certification-ready controls, mapped and evidenced before you apply.",
-    awareness: "Certification expects trained users — awareness is part of the scope.",
+    pains: ["No formal certification", "Lost tenders without it", "Certification lapses"],
+    promise: "Certified once, kept current — not a one-time exercise.",
+    awareness:
+      "Cyber Essentials assesses your people too — passwords, MFA, malware awareness.",
   },
   "cyber-insurance-readiness": {
-    pains: ["Declined claims", "Higher premiums", "Unmet control requirements"],
-    promise: "Meet insurer control requirements before a claim tests them.",
-    awareness: "Insurers ask about awareness training — we can prove yours.",
+    pains: ["Claims denied", "Missing evidence", "Rising premiums"],
+    promise: "Evidence ready when insurers — or a claim — come asking.",
+    awareness:
+      "Insurers increasingly ask for staff training records — a gap here can affect a claim.",
   },
   "always-audit-ready": {
     pains: ["Last-minute scrambles", "Missing evidence", "Manual reporting"],
