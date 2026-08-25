@@ -7,6 +7,8 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
+import { guides } from "@/data/guides";
 
 export default function Resources() {
   const resources = [
