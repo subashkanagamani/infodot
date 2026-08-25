@@ -69,7 +69,6 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center group cursor-pointer" onClick={close}>
             <img src={logo} alt="Infodot Technologies logo" className="h-9 w-auto group-hover:scale-105 transition-transform" />
-            <span className="ml-2 text-[10px] font-semibold text-muted-foreground align-super">UK</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-0.5">

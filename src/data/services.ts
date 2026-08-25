@@ -553,7 +553,7 @@ export const servicesData: ServiceItem[] = [
     metaDescription:
       "EDR on every endpoint with engineer triage, automated isolation, remediation and agent-health monitoring — managed detection and response from Infodot.",
     keywords:
-      "managed EDR, endpoint detection and response, MDR, threat containment, 24/7 detection, endpoint security UK",
+      "managed EDR, endpoint detection and response, MDR, threat containment, 24/7 detection, endpoint security",
   },
   {
     slug: "it-hardening",
@@ -634,7 +634,7 @@ export const servicesData: ServiceItem[] = [
     metaDescription:
       "Control mapping, continuous evidence collection, gap remediation and audit preparation for ISO 27001 and SOC 2 — audit readiness support from Infodot.",
     keywords:
-      "ISO 27001, SOC 2, audit readiness, control mapping, compliance evidence, certification support UK",
+      "ISO 27001, SOC 2, audit readiness, control mapping, compliance evidence, certification support",
   },
   {
     slug: "rmm-patch-management",
@@ -662,7 +662,7 @@ export const servicesData: ServiceItem[] = [
     metaDescription:
       "24/7 remote monitoring with automated OS and application patching across Windows and macOS, inside Cyber Essentials windows and evidenced monthly.",
     keywords:
-      "RMM, patch management, remote monitoring, Cyber Essentials patching, Windows and Mac patching UK",
+      "RMM, patch management, remote monitoring, Cyber Essentials patching, Windows and Mac patching",
   },
   {
     slug: "onboarding-exit",
@@ -717,7 +717,7 @@ export const servicesData: ServiceItem[] = [
     metaDescription:
       "Centralised logging, alerting and a documented incident-response plan with defined escalation, notification readiness and post-incident review.",
     keywords:
-      "security monitoring, incident response, SIEM logging, breach notification, escalation plan UK",
+      "security monitoring, incident response, SIEM logging, breach notification, escalation plan",
   },
   {
     slug: "penetration-testing-vapt",
@@ -741,11 +741,11 @@ export const servicesData: ServiceItem[] = [
       "Retest confirms the fix landed",
       "The evidence buyers and insurers ask for",
     ],
-    metaTitle: "Penetration Testing & VAPT for UK Firms | Infodot",
+    metaTitle: "Penetration Testing & VAPT for Regulated Firms | Infodot",
     metaDescription:
       "Scoped internal and external penetration testing and VAPT with prioritised findings, remediation guidance and retest — reported by one accountable team.",
     keywords:
-      "penetration testing, VAPT, vulnerability assessment, pen test report, security testing UK",
+      "penetration testing, VAPT, vulnerability assessment, pen test report, security testing",
   },
   {
     slug: "network-security",
@@ -772,7 +772,7 @@ export const servicesData: ServiceItem[] = [
     metaDescription:
       "Firewall policy and firmware, VPN, segmentation, DNS filtering and Wi-Fi security configured, hardened and monitored remotely by Infodot.",
     keywords:
-      "network security, firewall management, VPN configuration, DNS filtering, network segmentation UK",
+      "network security, firewall management, VPN configuration, DNS filtering, network segmentation",
   },
   {
     slug: "security-awareness",
@@ -799,7 +799,7 @@ export const servicesData: ServiceItem[] = [
     metaDescription:
       "Bite-size staff training and realistic phishing simulation with risk reporting and targeted follow-up — reduce the human risk behind most breaches.",
     keywords:
-      "security awareness training, phishing simulation, staff cyber training, human risk, UK",
+      "security awareness training, phishing simulation, staff cyber training, human risk,",
   },
   {
     slug: "vulnerability-management",
@@ -827,7 +827,7 @@ export const servicesData: ServiceItem[] = [
     metaDescription:
       "Authenticated vulnerability scanning with risk-based prioritisation, remediation driven to closure, secure-configuration checks and trend reporting.",
     keywords:
-      "vulnerability management, vulnerability scanning, remediation, secure configuration, risk prioritisation UK",
+      "vulnerability management, vulnerability scanning, remediation, secure configuration, risk prioritisation",
   },
 ];
 

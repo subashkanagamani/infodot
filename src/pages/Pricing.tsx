@@ -76,7 +76,7 @@ export default function Pricing() {
       <SEOHead 
         title="Pricing — Priced on Scope, Not Surprises | Infodot"
         description="Per-user managed IT pricing by scope, with a fixed monthly fee for small offices. Essentials, Secured and Audit-Ready — exact quote within 48 hours of a discovery call."
-        keywords="managed IT pricing UK, per user IT support pricing, small office fixed fee IT, Infodot pricing"
+        keywords="managed IT pricing, per user IT support pricing, small office fixed fee IT, Infodot pricing"
         canonicalUrl="https://infodot.co.uk/pricing"
       />
 

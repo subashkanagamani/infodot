@@ -10,7 +10,7 @@ const sections = [
     h: "1. Introduction",
     body: (
       <p className="text-muted-foreground">
-        This Privacy Policy explains how Infodot Technologies Pvt Ltd ("Infodot", "we", "us", "our"), the data controller for personal data collected through this website, processes your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Infodot provides managed IT services to regulated industries and serves clients remotely remotely from our delivery centre in Bangalore, India.
+        This Privacy Policy explains how Infodot Technologies Pvt Ltd ("Infodot", "we", "us", "our"), the data controller for personal data collected through this website, processes your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Infodot provides managed IT services to regulated industries and serves clients remotely from our delivery centre in Bangalore, India.
       </p>
     ),
   },

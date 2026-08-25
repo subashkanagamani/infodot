@@ -39,7 +39,7 @@ export const industries: Industry[] = [
     ],
     compliance:
       "Aligned to Cyber Essentials Plus and ISO 27001; ICAEW / ACCA expectations and MTD; anti-fraud email controls for HMRC and Companies House phishing.",
-    seoTitle: "IT Support for Accountants UK — IRIS, CCH, Sage, Xero | Infodot",
+    seoTitle: "IT Support for Accountants — IRIS, CCH, Sage, Xero | Infodot",
     seoDescription:
       "Managed IT for accountancy and tax practices. IRIS, CCH, Digita, Sage, Xero and MTD supported by an ISO 27001:2022 certified team. 30-minute first response.",
     keywords:
@@ -53,7 +53,7 @@ export const industries: Industry[] = [
     headline:
       "IT support for law firms — secure, SRA-ready, and fluent in your case management.",
     intro:
-      "Managed IT for UK solicitors and legal practices, delivered remotely. We support your case and practice management systems, protect client confidentiality and legal privilege, and keep you aligned to what the SRA expects.",
+      "Managed IT for solicitors and legal practices, delivered remotely. We support your case and practice management systems, protect client confidentiality and legal privilege, and keep you aligned to what the SRA expects.",
     included: [
       "Software we support: LEAP, Clio, Proclaim, PMS, Microsoft 365, document management, secure client portals",
       "Helpdesk with priority handling for time-sensitive legal work",
@@ -66,13 +66,13 @@ export const industries: Industry[] = [
     ],
     whyItMatters: [
       "We run your IT remotely and securely, so fee-earners get fast support and clients' confidential matters stay protected — with the audit trail to prove it.",
-      "A named, background-checked UK-hours team works inside your own tenancy; your data stays yours. Since 1996, ISO 27001:2022 certified, no lock-in.",
+      "A named, background-checked business-hours team works inside your own tenancy; your data stays yours. Since 1996, ISO 27001:2022 certified, no lock-in.",
     ],
     compliance:
       "SRA-aligned information security, business continuity and data protection; Cyber Essentials Plus and ISO 27001; legal privilege protected with encryption, DLP and audit trails.",
-    seoTitle: "IT Support for Law Firms UK — SRA-Ready, LEAP & Clio | Infodot",
+    seoTitle: "IT Support for Law Firms — SRA-Ready, LEAP & Clio | Infodot",
     seoDescription:
-      "Managed IT for UK solicitors. LEAP, Clio, Proclaim and Microsoft 365 supported remotely by an ISO 27001:2022 certified team, with SRA-aligned security and audit trails.",
+      "Managed IT for solicitors. LEAP, Clio, Proclaim and Microsoft 365 supported remotely by an ISO 27001:2022 certified team, with SRA-aligned security and audit trails.",
     keywords:
       "IT support for law firms, legal IT support, SRA IT compliance, LEAP support, Clio support, Proclaim support, managed IT for solicitors",
   },
@@ -84,7 +84,7 @@ export const industries: Industry[] = [
     headline:
       "IT support for financial services — FCA-ready operational resilience, run remotely.",
     intro:
-      "Managed IT for UK financial services firms, fintechs and funded startups. Secure-by-default operations, continuous compliance evidence, and the operational-resilience posture the FCA now expects from you — and from your suppliers.",
+      "Managed IT for financial services firms, fintechs and funded startups. Secure-by-default operations, continuous compliance evidence, and the operational-resilience posture the FCA now expects from you — and from your suppliers.",
     included: [
       "Platforms: Microsoft 365, Azure, back-office/portfolio, advisory & trading, comms archiving, secure remote access, Entra identity",
       "Helpdesk with SLAs designed for financial-services urgency",
@@ -96,14 +96,14 @@ export const industries: Industry[] = [
       "Onboarding and exit, and secure remote access",
     ],
     whyItMatters: [
-      "We confront the offshore question head-on: access-only, engineers inside your own UK/EU tenancy, data not copied out, a named UK-hours team, background-checked and accountable.",
+      "We confront the offshore question head-on: access-only, engineers inside your own tenancy, data not copied out, a named business-hours team, background-checked and accountable.",
       "That's exactly what a regulated buyer's diligence needs to see — ISO 27001:2022 certified, in business since 1996, no lock-in, evidence pack ready before you ask.",
     ],
     compliance:
       "FCA operational resilience (PS26/2 third-party & incident reporting); we hand you the due-diligence evidence pack and exit plan; ISO 27001 (SOC 2 in progress), GDPR with the correct transfer mechanism.",
-    seoTitle: "IT Support for Financial Services UK — FCA-Ready | Infodot",
+    seoTitle: "IT Support for Financial Services — FCA-Ready | Infodot",
     seoDescription:
-      "Managed IT for UK financial services firms, fintechs and funded startups. FCA operational resilience, continuous evidence and DR with agreed RTO/RPO, ISO 27001:2022.",
+      "Managed IT for financial services firms, fintechs and funded startups. FCA operational resilience, continuous evidence and DR with agreed RTO/RPO, ISO 27001:2022.",
     keywords:
       "IT support for financial services, FCA operational resilience IT, fintech IT support, managed IT financial services, PS26/2, third-party evidence pack",
   },

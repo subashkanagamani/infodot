@@ -49,7 +49,7 @@ const stats = [
 
 const whyChoose = [
   { icon: ShieldCheck, title: "ISO 27001:2022 Certified", description: "Security and evidence built into how we operate, not bolted on" },
-  { icon: Globe, title: "Remote Delivery, UK Hours", description: "A business-hours desk backed by our Z360 delivery platform" },
+  { icon: Globe, title: "Remote Delivery, Business Hours", description: "A business-hours desk backed by our Z360 delivery platform" },
   { icon: KeyRound, title: "An Honest Exit", description: "A full exit pack and reverse knowledge transfer within 10 working days, whenever you need it" },
 ];
 
