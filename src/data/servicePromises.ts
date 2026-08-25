@@ -140,24 +140,28 @@ export const servicePromises: Record<string, ServicePromise> = {
       "Insurers increasingly ask for staff training records — a gap here can affect a claim.",
   },
   "always-audit-ready": {
-    pains: ["Last-minute scrambles", "Missing evidence", "Manual reporting"],
-    promise: "Evidence collected continuously — audits stop being a fire drill.",
-    awareness: "Auditors ask for training records — kept current automatically.",
+    pains: ["Audit-season scramble", "Evidence scattered across tools", "Renewals catch you unprepared"],
+    promise: "Evidence generated continuously — audits confirm, not discover.",
+    awareness:
+      "Controls only produce evidence if people actually follow them — day to day.",
   },
   "iso27001-soc2-evidence": {
-    pains: ["Control gaps", "Scattered evidence", "Auditor rework"],
-    promise: "Every control mapped to evidence an auditor will accept.",
-    awareness: "Awareness training is a named control — evidenced, not assumed.",
+    pains: ["Evidence scrambled together", "Manual audit prep", "Controls not continuously proven"],
+    promise: "Evidence collected monthly — the audit just confirms it.",
+    awareness:
+      "Auditors increasingly ask for staff training records alongside technical controls.",
   },
   "gdpr-data-protection": {
-    pains: ["Unclear data flows", "Offshore access concerns", "Breach exposure"],
-    promise: "Your tenancy, your data — access controlled, logged and lawful.",
-    awareness: "Data protection is a daily habit — sharing, retention, reporting.",
+    pains: ["Policy exists, not followed", "No data mapping", "Undefined breach response"],
+    promise: "A living data map — not a policy sitting in a drawer.",
+    awareness:
+      "Most data breaches start with a person, not a system — awareness matters as much as policy.",
   },
   "fca-operational-resilience": {
-    pains: ["Impact tolerance gaps", "Third-party risk", "Regulator scrutiny"],
-    promise: "Important business services mapped, tested and defensible.",
-    awareness: "Resilience depends on people knowing their part when systems fail.",
+    pains: ["No resilience mapping", "Can't prove third-party oversight", "Rising regulatory scrutiny"],
+    promise: "The evidence pack ready before your client even asks.",
+    awareness:
+      "Operational resilience includes the people risk, not just the technical stack.",
   },
   "it-transition-exit": {
     pains: ["Lost knowledge", "Disrupted services", "Incomplete handover"],
