@@ -154,139 +154,161 @@ const ServiceDetail = () => {
       />
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-12">
+      {/* Hero — architectural layering */}
+      <section className="pt-32 pb-16 md:pb-24">
         <div className="container-custom">
           <Breadcrumbs />
-          <div className="grid grid-cols-12 gap-4">
-            <div className="col-span-12 lg:col-span-8 rounded-3xl border border-border bg-card p-8 md:p-12 shadow-[var(--shadow-card)] animate-slide-up">
-              <div className="flex items-center gap-3 mb-8">
-                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground tabular-nums">
+          <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start mt-6">
+            <div className="col-span-12 lg:col-span-7 space-y-8 animate-slide-up">
+              <div className="flex items-center gap-5">
+                <span className="font-display text-5xl font-extrabold text-foreground/[0.07] select-none tabular-nums leading-none">
                   {String(currentIndex + 1).padStart(2, "0")}
                 </span>
-                <span className="h-px flex-1 bg-border" />
-                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">
-                  Infodot Services
-                </span>
+                <div className="space-y-1.5">
+                  <div className="h-0.5 w-12 bg-primary" />
+                  <span className="block uppercase tracking-[0.2em] text-[11px] font-extrabold text-primary">
+                    Infodot Services
+                  </span>
+                </div>
               </div>
-              <h1 className="font-display text-3xl md:text-5xl font-bold leading-[1.08] tracking-tight mb-5">
+
+              <h1 className="font-display text-4xl md:text-6xl font-extrabold text-foreground leading-[1.05] tracking-tight">
                 {service.title}
               </h1>
-              <div className="flex flex-wrap gap-2 mb-7">
+
+              <div className="flex flex-wrap gap-3">
                 {promise.pains.map((p) => (
                   <span
                     key={p}
-                    className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary"
+                    className="px-4 py-1.5 bg-card border border-border rounded-full text-xs font-bold text-muted-foreground"
                   >
                     {p}
                   </span>
                 ))}
               </div>
-              <p className="border-l-2 border-primary pl-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8">
+
+              <p className="text-lg md:text-2xl text-foreground/70 font-light leading-relaxed max-w-2xl border-l-4 border-primary pl-6 md:pl-8">
                 {service.shortDescription}
               </p>
-              <div className="flex flex-wrap gap-3">
-                <Button size="lg" className="rounded-xl press" onClick={() => navigate("/contact")}>
+
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Button
+                  size="lg"
+                  className="rounded-md px-8 py-6 font-extrabold press shadow-xl shadow-primary/20"
+                  onClick={() => navigate("/contact")}
+                >
                   Book a Discovery Call <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="rounded-xl press" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-md px-8 py-6 font-extrabold press"
+                  asChild
+                >
                   <Link to="/services">
                     <ArrowLeft className="mr-2 w-4 h-4" /> All Services
                   </Link>
                 </Button>
               </div>
-              <div className="mt-8 border-t border-border pt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
-                <Users className="w-4 h-4 text-primary flex-shrink-0" />
-                <p className="text-sm text-muted-foreground">{promise.awareness}</p>
-                <Link
-                  to="/services/security-awareness"
-                  className="text-sm font-semibold text-primary hover:underline"
-                >
-                  See security awareness training →
-                </Link>
-              </div>
             </div>
 
+            {/* Promise tile with offset frame */}
             <div
-              className="col-span-12 lg:col-span-4 rounded-3xl border border-border bg-primary text-primary-foreground p-8 shadow-[var(--shadow-card)] animate-slide-up flex flex-col justify-between"
+              className="col-span-12 lg:col-span-5 relative lg:mt-14 animate-slide-up"
               style={{ animationDelay: "0.08s" }}
             >
-              <div className="w-14 h-14 rounded-2xl bg-primary-foreground/10 border border-primary-foreground/15 flex items-center justify-center">
-                <Icon className="w-7 h-7" />
-              </div>
-              <p className="mt-8 font-display text-2xl md:text-[1.75rem] font-bold leading-snug">
-                {promise.promise}
-              </p>
-              <div className="mt-8 border-t border-primary-foreground/15 pt-4">
-                <p className="text-xs uppercase tracking-[0.18em] opacity-70">
-                  ISO 27001 certified · Since 1996
+              <div className="bg-primary text-primary-foreground p-8 md:p-12 shadow-2xl relative z-10">
+                <Icon className="w-10 h-10 mb-6" />
+                <p className="font-display text-2xl md:text-[1.75rem] font-extrabold leading-snug">
+                  {promise.promise}
                 </p>
+                <div className="pt-6 mt-8 border-t border-primary-foreground/20">
+                  <span className="text-xs font-bold tracking-[0.18em] uppercase opacity-80">
+                    ISO 27001 certified · Since 1996
+                  </span>
+                </div>
               </div>
+              <div className="absolute -top-5 -right-5 w-full h-full border-2 border-foreground/80 z-0 hidden sm:block" />
             </div>
+          </div>
+
+          {/* Awareness strip */}
+          <div className="mt-16 md:mt-20 pt-8 border-t border-border flex flex-wrap items-center gap-x-3 gap-y-2">
+            <Users className="w-4 h-4 text-primary flex-shrink-0" />
+            <p className="text-sm text-muted-foreground">{promise.awareness}</p>
+            <Link
+              to="/services/security-awareness"
+              className="text-sm font-semibold text-primary hover:underline"
+            >
+              See security awareness training →
+            </Link>
           </div>
         </div>
       </section>
 
-
-      {/* Overview */}
+      {/* Content band */}
       <section className="py-16 md:py-24 bg-secondary">
-        <div className="container-custom grid grid-cols-12 gap-4 items-start">
-          <div className="col-span-12 lg:col-span-7 space-y-4">
-            <div className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up">
-              <h2 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
-                Overview
+        <div className="container-custom grid grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="col-span-12 lg:col-span-8 space-y-16 md:space-y-20">
+            <div className="space-y-6 animate-slide-up">
+              <h2 className="font-display text-xs uppercase tracking-[0.2em] font-extrabold text-primary">
+                Service Overview
               </h2>
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+              <p className="text-xl md:text-2xl text-foreground font-medium leading-snug">
                 {service.description}
               </p>
             </div>
 
-            <div
-              className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up"
-              style={{ animationDelay: "0.06s" }}
-            >
-              <h3 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">
-                Key Benefits
+            <div className="space-y-10 animate-slide-up" style={{ animationDelay: "0.06s" }}>
+              <h3 className="font-display text-2xl md:text-3xl font-extrabold text-foreground tracking-tight">
+                What's Included
               </h3>
-              <ul className="divide-y divide-border">
-                {service.benefits.map((b, i) => (
-                  <li key={i} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground leading-relaxed">{b}</span>
-                  </li>
+              <div className="grid md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-16">
+                {service.features.map((f, i) => (
+                  <div key={i} className="relative pt-2">
+                    <span className="font-display text-6xl font-black text-foreground/[0.06] absolute -top-7 -left-1 select-none tabular-nums">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <p className="relative text-base text-foreground/80 leading-relaxed">{f}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
 
           <aside
-            className="col-span-12 lg:col-span-5 lg:sticky lg:top-28 rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] animate-slide-up"
+            className="col-span-12 lg:col-span-4 lg:sticky lg:top-28 space-y-8 animate-slide-up"
             style={{ animationDelay: "0.12s" }}
           >
-            <h4 className="font-display text-xs font-bold mb-6 uppercase tracking-[0.2em] text-primary">
-              What's Included
-            </h4>
-            <div className="divide-y divide-border">
-              {service.features.map((f, i) => (
-                <div key={i} className="flex items-start gap-4 py-4 first:pt-0">
-                  <span className="font-display text-xs font-bold text-muted-foreground/70 pt-1 tabular-nums">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="text-sm text-foreground/85 leading-relaxed">{f}</span>
-                </div>
-              ))}
+            <div className="bg-card p-8 md:p-10 shadow-2xl shadow-foreground/5">
+              <h4 className="font-display text-lg font-extrabold text-foreground mb-8 border-b-2 border-primary pb-4 w-fit">
+                Key Benefits
+              </h4>
+              <ul className="space-y-6">
+                {service.benefits.map((b, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <span className="w-4 h-4 mt-1.5 bg-primary flex-shrink-0" />
+                    <span className="font-semibold text-foreground/85 leading-relaxed">{b}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="mt-8 rounded-2xl bg-secondary border border-border p-6">
-              <p className="text-sm text-muted-foreground mb-4">
+
+            <div className="bg-foreground text-background p-8 md:p-10 space-y-6">
+              <p className="text-lg font-light leading-relaxed opacity-90">
                 Want this scoped for your estate? We'll send an exact quote within 48 hours.
               </p>
-              <Button className="w-full rounded-xl press" onClick={() => navigate("/contact")}>
-                Talk to an Expert <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <button
+                onClick={() => navigate("/contact")}
+                className="w-full py-4 bg-primary text-primary-foreground font-extrabold tracking-[0.15em] uppercase text-xs hover:opacity-90 transition-opacity"
+              >
+                Talk to an Expert
+              </button>
             </div>
           </aside>
         </div>
       </section>
+
 
       {/* CTA band */}
       <section className="py-16 md:py-20">
