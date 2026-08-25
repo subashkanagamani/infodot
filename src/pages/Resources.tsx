@@ -7,6 +7,8 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
+import { guides } from "@/data/guides";
 
 export default function Resources() {
   const resources = [
@@ -105,7 +107,7 @@ export default function Resources() {
               </p>
             </div>
             <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
-              <div className="font-display text-5xl font-bold">{resources.length}</div>
+              <div className="font-display text-5xl font-bold">{resources.length + guides.length}</div>
               <p className="mt-2 font-medium text-accent-foreground/70">Free guides, checklists and toolkits, all downloadable.</p>
             </div>
           </div>
@@ -114,6 +116,42 @@ export default function Resources() {
 
       <section className="section-spacing bg-background">
         <div className="container-custom">
+          {/* Read online guides */}
+          <div className="grid grid-cols-12 gap-4 mb-4">
+            {guides.map((guide, index) => (
+              <Card
+                key={guide.slug}
+                className="col-span-12 md:col-span-6 p-7 rounded-3xl bg-card border-border shadow-[var(--shadow-card)] hover:border-primary/40 transition-all duration-500 group hover-lift animate-slide-up"
+                style={{ animationDelay: `${index * 0.06}s` }}
+              >
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-11 h-11 bg-secondary rounded-xl flex items-center justify-center border border-border group-hover:bg-accent transition-colors duration-300">
+                    <BookOpen className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-xs font-bold px-2 py-1 bg-secondary rounded-lg border border-border">
+                    {guide.type}
+                  </span>
+                </div>
+
+                <h2 className="font-display text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+                  {guide.title}
+                </h2>
+                <p className="text-muted-foreground text-sm mb-4">{guide.subtitle}</p>
+
+                <div className="flex items-center justify-between text-xs text-muted-foreground mb-4 pt-4 border-t border-border">
+                  <span>Read online</span>
+                </div>
+
+                <Button asChild className="w-full rounded-xl press border-2 border-accent text-accent hover:bg-secondary" variant="outline">
+                  <Link to={`/resources/${guide.slug}`}>
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Read the guide
+                  </Link>
+                </Button>
+              </Card>
+            ))}
+          </div>
+
           {/* Resources Grid */}
           <div className="grid grid-cols-12 gap-4">
             {resources.map((resource, index) => (
