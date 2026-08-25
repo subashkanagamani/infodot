@@ -44,6 +44,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { servicesData, getServiceBySlug, type ServiceItem } from "@/data/services";
+import { getServicePromise } from "@/data/servicePromises";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Target,
