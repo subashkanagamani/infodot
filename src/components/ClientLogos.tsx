@@ -89,7 +89,7 @@ export const ClientLogos = () => {
     <section className="section-spacing overflow-hidden" aria-labelledby="client-logos-heading">
       <div className="mb-10 md:mb-12 text-center px-4">
         <h3 id="client-logos-heading" className="text-2xl md:text-3xl font-bold">
-          Built for regulated UK industries
+          Built for regulated industries
         </h3>
         <p className="text-muted-foreground mt-2">
           25–300 user businesses that need security, evidence and accountability built in

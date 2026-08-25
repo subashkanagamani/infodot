@@ -19,8 +19,8 @@ export default function Careers() {
       department: "Managed IT",
       location: "Bangalore / Hybrid",
       type: "Full-time",
-      description: "Own the technical delivery of managed IT engagements for UK accountancy, legal and financial services clients — endpoints, Microsoft 365, patching and backup.",
-      requirements: ["5+ years in managed IT / systems administration", "Strong Microsoft 365 and Windows/Mac endpoint experience", "Comfortable working UK business hours remotely"]
+      description: "Own the technical delivery of managed IT engagements for accountancy, legal and financial services clients — endpoints, Microsoft 365, patching and backup.",
+      requirements: ["5+ years in managed IT / systems administration", "Strong Microsoft 365 and Windows/Mac endpoint experience", "Comfortable working business hours remotely"]
     },
     {
       title: "Service Desk Engineer",
@@ -86,8 +86,8 @@ export default function Careers() {
       <BackToTop />
       
       <SEOHead 
-        title="Careers - Join Infodot UK's Managed IT Team"
-        description="Join our growing managed IT team in Bangalore. Explore open engineering, service desk and security/compliance roles supporting UK accountancy, legal and financial services clients."
+        title="Careers - Join Infodot's Managed IT Team"
+        description="Join our growing managed IT team in Bangalore. Explore open engineering, service desk and security/compliance roles supporting accountancy, legal and financial services clients."
         keywords="managed IT careers, IT engineer jobs Bangalore, service desk jobs, cyber security careers, IT support jobs"
       />
 
@@ -103,7 +103,7 @@ export default function Careers() {
                 Join Our <span className="text-primary">Growing Team</span>
               </h1>
               <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl font-medium">
-                Help us run managed IT for regulated UK industries. Work with named clients, real ownership, and an ISO 27001-certified team, delivered remotely from Bangalore.
+                Help us run managed IT for regulated industries. Work with named clients, real ownership, and an ISO 27001-certified team, delivered remotely from Bangalore.
               </p>
             </div>
             <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>

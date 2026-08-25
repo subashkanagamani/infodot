@@ -13,9 +13,9 @@ const SITE_ORIGIN = "https://infodot.co.uk";
 const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/og-image.png`;
 
 export const SEOHead = ({
-  title = "Infodot UK — Managed IT for Regulated UK Industries",
-  description = "Managed IT for the regulated UK industries we serve — accountancy, legal and financial services — run remotely from an ISO 27001:2022-certified team since 1996. We run your IT. You own your IT.",
-  keywords = "managed IT UK, IT support for accountants, IT support for law firms, IT support for financial services, Cyber Essentials, ISO 27001, cyber insurance readiness, co-managed IT",
+  title = "Infodot — Managed IT for Regulated Industries",
+  description = "Managed IT for the regulated industries we serve — accountancy, legal and financial services — run remotely from an ISO 27001:2022-certified team since 1996. We run your IT. You own your IT.",
+  keywords = "managed IT, IT support for accountants, IT support for law firms, IT support for financial services, Cyber Essentials, ISO 27001, cyber insurance readiness, co-managed IT",
   ogImage = DEFAULT_OG_IMAGE,
   ogType = "website",
   canonicalUrl,

@@ -150,7 +150,7 @@ export default function BlogPost() {
       
       <SEOHead 
         title={post.title.length > 50 ? post.title : `${post.title} | Infodot Blog`}
-        description={post.excerpt || `Read ${post.title} on the Infodot UK blog.`}
+        description={post.excerpt || `Read ${post.title} on the Infodot blog.`}
         keywords={post.tags?.join(", ")}
         ogType="article"
         ogImage={post.cover_image || undefined}

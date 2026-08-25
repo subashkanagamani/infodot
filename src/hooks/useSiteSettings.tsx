@@ -33,12 +33,12 @@ interface SiteSettings {
 
 const defaultSettings: SiteSettings = {
   company: {
-    name: "Infodot UK",
+    name: "Infodot",
     tagline: "We run your IT. You own your IT.",
-    description: "Managed IT for the regulated UK industries we serve — accountancy, legal and financial services. Secure by default, always audit-ready, delivered remotely since 1996.",
+    description: "Managed IT for the regulated industries we serve — accountancy, legal and financial services. Secure by default, always audit-ready, delivered remotely since 1996.",
     email: "hello@infodot.uk",
     phone: "",
-    address: "Infodot Technologies Pvt Ltd, Bangalore, India — serving UK & EU remotely",
+    address: "Infodot Technologies Pvt Ltd, Bangalore, India — serving clients remotely",
     logo: "",
   },
   social: {
@@ -54,9 +54,9 @@ const defaultSettings: SiteSettings = {
     googleAnalyticsId: "",
   },
   seo: {
-    metaTitle: "Infodot UK — Managed IT for Regulated UK Industries",
-    metaDescription: "Managed IT, secure by default and always audit-ready, for UK accountancy, legal and financial services firms.",
-    keywords: "managed IT UK, IT support for accountants, IT support for law firms, Cyber Essentials, ISO 27001, co-managed IT",
+    metaTitle: "Infodot — Managed IT for Regulated Industries",
+    metaDescription: "Managed IT, secure by default and always audit-ready, for accountancy, legal and financial services firms.",
+    keywords: "managed IT, IT support for accountants, IT support for law firms, Cyber Essentials, ISO 27001, co-managed IT",
     ogImage: "",
   },
 };

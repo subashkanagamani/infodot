@@ -51,7 +51,7 @@ const fallbackServices = [
     icon: "Server",
     title: "Fully Managed IT",
     description: "One team runs your whole stack — endpoints, M365 and Workspace, patching, backup, security and the desk — and coordinates your vendors.",
-    features: ["Endpoint Management", "Patch Management", "Vendor Coordination", "UK-Hours Desk"]
+    features: ["Endpoint Management", "Patch Management", "Vendor Coordination", "Business-Hours Desk"]
   },
   {
     id: "3",
@@ -78,7 +78,7 @@ const fallbackServices = [
     id: "6",
     icon: "Building2",
     title: "Accountancy, Legal & Financial Services IT",
-    description: "IT run specifically for the regulated UK industries we serve, with the compliance and confidentiality needs of each sector understood.",
+    description: "IT run specifically for the regulated industries we serve, with the compliance and confidentiality needs of each sector understood.",
     features: ["Sector-Specific Controls", "Client Confidentiality", "Regulatory Awareness", "Practice Software Support"]
   },
   {
@@ -86,14 +86,14 @@ const fallbackServices = [
     icon: "Laptop",
     title: "Small Office IT",
     description: "A right-sized version of our managed service for smaller regulated offices that still need security by default and audit-ready evidence.",
-    features: ["Right-Sized Support", "Secure by Default", "Simple Onboarding", "UK-Hours Desk"]
+    features: ["Right-Sized Support", "Secure by Default", "Simple Onboarding", "Business-Hours Desk"]
   },
   {
     id: "8",
     icon: "LifeBuoy",
     title: "Fully Remote Delivery",
     description: "Delivered end to end via our Z360 platform by an ISO 27001:2022 certified team — no on-site presence required.",
-    features: ["Z360 Delivery Platform", "ISO 27001:2022 Certified", "UK & EU Coverage", "Remote-First Since 1996"]
+    features: ["Z360 Delivery Platform", "ISO 27001:2022 Certified", "Remote Coverage", "Remote-First Since 1996"]
   }
 ];
 
@@ -116,7 +116,7 @@ const Services = () => {
       badge: "Our Services",
       headingHtml: 'Managed IT, <span class="text-primary">Run Completely</span>',
       subheading:
-        "We run your IT end to end for the regulated UK industries we serve — secure by default, always audit-ready, delivered remotely by an ISO 27001:2022 certified team.",
+        "We run your IT end to end for the regulated industries we serve — secure by default, always audit-ready, delivered remotely by an ISO 27001:2022 certified team.",
       ctaLabel: "Book a Discovery Call",
     },
   );
@@ -162,9 +162,9 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="IT Services — Managed, Secure and Audit-Ready | Infodot UK"
+        title="IT Services — Managed, Secure and Audit-Ready | Infodot"
         description="Every capability, independently buyable: managed IT, secure by default, backup and disaster recovery, audit readiness, Cyber Essentials and cyber insurance readiness, transition and exit."
-        keywords="managed IT services UK, co-managed IT, backup and disaster recovery, Cyber Essentials readiness, cyber insurance readiness, IT audit evidence"
+        keywords="managed IT services, co-managed IT, backup and disaster recovery, Cyber Essentials readiness, cyber insurance readiness, IT audit evidence"
         canonicalUrl="https://infodot.co.uk/services"
       />
       <JsonLd
@@ -173,7 +173,7 @@ const Services = () => {
           id: "services-itemlist",
           data: {
             "@type": "ItemList",
-            name: "Infodot UK Services",
+            name: "Infodot Services",
             itemListElement: services.map((s, i) => ({
               "@type": "ListItem",
               position: i + 1,
@@ -181,7 +181,7 @@ const Services = () => {
                 "@type": "Service",
                 name: s.title,
                 description: s.description,
-                provider: { "@type": "Organization", name: "Infodot UK" },
+                provider: { "@type": "Organization", name: "Infodot" },
                 url: `https://infodot.co.uk/services/${slugify(s.title)}`,
               },
             })),

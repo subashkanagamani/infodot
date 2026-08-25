@@ -90,7 +90,7 @@ export const aboutLinks: NavLinkItem[] = [
   { label: "Service Levels", href: "/pricing", description: "Essentials, Secured and Audit-Ready." },
   { label: "Small Office", href: "/small-office", description: "For offices of 5–20 seats." },
   { label: "Careers", href: "/careers", description: "Join the team." },
-  { label: "Contact", href: "/contact", description: "Talk to a named UK-hours engineer." },
+  { label: "Contact", href: "/contact", description: "Talk to a named business-hours engineer." },
   { label: "Legal & Privacy", href: "/legal", description: "How we handle your data." },
 ];
 

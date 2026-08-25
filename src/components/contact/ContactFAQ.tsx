@@ -9,7 +9,7 @@ import { HelpCircle } from "lucide-react";
 const faqs = [
   {
     question: "How quickly can I expect a response?",
-    answer: "We typically respond to all inquiries within 24 hours during UK business days. For urgent matters, email us directly at hello@infodot.uk.",
+    answer: "We typically respond to all inquiries within 24 hours during business days. For urgent matters, email us directly at hello@infodot.uk.",
   },
   {
     question: "Do you offer a free discovery call?",
@@ -17,11 +17,11 @@ const faqs = [
   },
   {
     question: "What industries do you work with?",
-    answer: "We focus on the regulated UK industries we know best: accountancy, legal and financial services firms. Our controls and evidence are built around what auditors and insurers in these sectors ask for.",
+    answer: "We focus on the regulated industries we know best: accountancy, legal and financial services firms. Our controls and evidence are built around what auditors and insurers in these sectors ask for.",
   },
   {
     question: "How is IT delivered if you're based in Bangalore?",
-    answer: "We're remote by design. Your engineers are a named, background-checked team in our ISO 27001:2022 certified Bangalore centre, working UK business hours inside your own tenancy — an access-only model, so your data never gets copied out to us. We've run IT this way since 1996.",
+    answer: "We're remote by design. Your engineers are a named, background-checked team in our ISO 27001:2022 certified Bangalore centre, working business hours inside your own tenancy — an access-only model, so your data never gets copied out to us. We've run IT this way since 1996.",
   },
   {
     question: "Do you work with large enterprises?",
@@ -48,7 +48,7 @@ export const ContactFAQ = () => {
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
             <p className="text-muted-foreground">
-              Find answers to common questions about working with Infodot UK.
+              Find answers to common questions about working with Infodot.
             </p>
           </div>
 

@@ -192,7 +192,7 @@ export function TestimonialForm() {
                 <FormControl>
                   <Textarea
                     rows={5}
-                    placeholder="Tell us about your experience working with Infodot UK..."
+                    placeholder="Tell us about your experience working with Infodot..."
                     {...field}
                   />
                 </FormControl>

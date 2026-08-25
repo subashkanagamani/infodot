@@ -39,18 +39,18 @@ const Index = () => {
   return (
     <>
       <SEOHead 
-        title="Infodot UK — Managed IT for Regulated UK Industries, Run Remotely"
-        description="Infodot UK runs managed IT end-to-end for accountancy, legal and financial services firms in the UK — secure by default, always audit-ready, delivered remotely by an ISO 27001:2022 certified team since 1996."
-        keywords="managed IT UK, IT support for accountants, IT support for law firms, IT support for financial services, managed IT provider UK, ISO 27001 IT provider, co-managed IT, remote IT support UK"
+        title="Infodot — Managed IT for Regulated Industries, Run Remotely"
+        description="Infodot runs managed IT end-to-end for accountancy, legal and financial services firms — secure by default, always audit-ready, delivered remotely by an ISO 27001:2022 certified team since 1996."
+        keywords="managed IT, IT support for accountants, IT support for law firms, IT support for financial services, managed IT provider, ISO 27001 IT provider, co-managed IT, remote IT support"
         canonicalUrl="https://infodot.co.uk/"
       />
       <JsonLd 
         schema={{
           type: "Organization",
-          name: "Infodot UK",
+          name: "Infodot",
           url: "https://infodot.co.uk",
           logo: "https://infodot.co.uk/og-image.png",
-          description: "Managed IT for the regulated UK industries we serve, run remotely",
+          description: "Managed IT for the regulated industries we serve, run remotely",
           contactPoint: {
             email: "hello@infodot.uk",
             contactType: "sales"

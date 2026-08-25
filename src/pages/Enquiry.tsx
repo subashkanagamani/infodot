@@ -72,13 +72,13 @@ const why = [
   { t: "Secure by default", d: "MFA, EDR, hardening and tested backup are standard — not paid extras." },
   { t: "Always audit-ready", d: "Controls are packaged into monthly evidence packs for auditors and insurers." },
   { t: "You own your IT", d: "Your domains, tenancy, licences and admin rights stay yours throughout." },
-  { t: "Remote delivery, UK hours", d: "ISO 27001:2022-certified team working UK business hours from Bangalore." },
+  { t: "Remote delivery, business hours", d: "ISO 27001:2022-certified team working business hours from Bangalore." },
 ];
 
 const faqs = [
   { q: "How quickly can we get started?", a: "Discovery call this week, exact quote within 48 hours, and onboarding typically starts within 2–3 weeks." },
   { q: "What's your minimum engagement?", a: "We typically work with regulated firms of 25–300 users. There's no long-term lock-in — notice is 1–3 months by agreement." },
-  { q: "Do you work with international firms?", a: "We serve UK and EU regulated firms remotely from our Bangalore delivery centre." },
+  { q: "Do you work with international firms?", a: "We serve regulated firms remotely from our Bangalore delivery centre." },
   { q: "What industries do you specialise in?", a: "Accountancy, legal, financial services, fintech and professional services — the regulated industries we know best." },
 ];
 
@@ -201,8 +201,8 @@ const Enquiry = () => {
   return (
     <>
       <SEOHead
-        title="Get a Free IT Discovery Call — Infodot UK"
-        description="Book a free 30-minute IT discovery call with Infodot UK. Managed IT, security by default and audit readiness for regulated UK firms."
+        title="Get a Free IT Discovery Call — Infodot"
+        description="Book a free 30-minute IT discovery call with Infodot. Managed IT, security by default and audit readiness for regulated firms."
         canonicalUrl="https://infodot.co.uk/enquiry"
       />
 
@@ -236,7 +236,7 @@ const Enquiry = () => {
                 </h1>
 
                 <p className="text-muted-foreground text-base md:text-lg max-w-xl font-medium">
-                  We run IT completely for regulated UK firms — <span className="text-foreground font-bold">secure by default, always audit-ready, and delivered remotely</span>.
+                  We run IT completely for regulated firms — <span className="text-foreground font-bold">secure by default, always audit-ready, and delivered remotely</span>.
                 </p>
 
                 <ul className="space-y-3">
@@ -405,7 +405,7 @@ const Enquiry = () => {
               <h2 className="font-display text-3xl md:text-4xl font-bold">
                 Before vs. <span className="text-primary">After</span>
               </h2>
-              <p className="text-muted-foreground mt-3">A snapshot of how we transform IT for regulated UK firms.</p>
+              <p className="text-muted-foreground mt-3">A snapshot of how we transform IT for regulated firms.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-4">
               {results.map((r, i) => (
@@ -582,7 +582,7 @@ const Enquiry = () => {
         </section>
 
         <footer className="py-6 border-t border-border text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Infodot UK. All rights reserved. ·{" "}
+          © {new Date().getFullYear()} Infodot. All rights reserved. ·{" "}
           <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link>
         </footer>
       </div>

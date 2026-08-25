@@ -13,7 +13,7 @@ export const ContactMap = () => {
             <span className="text-primary">Remote-First</span>, Wherever You Are
           </h2>
           <p className="text-muted-foreground mt-4">
-            We work remote-first across the UK & EU, backed by our delivery centre in Bangalore, India.
+            We work remote-first remotely, backed by our delivery centre in Bangalore, India.
           </p>
         </div>
 
@@ -24,9 +24,9 @@ export const ContactMap = () => {
               <div className="w-16 h-16 rounded-2xl bg-secondary border border-border flex items-center justify-center mx-auto mb-6">
                 <Globe2 className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-display font-bold text-xl mb-2">Remote-first across the UK & EU</h3>
+              <h3 className="font-display font-bold text-xl mb-2">Remote-first delivery</h3>
               <p className="text-muted-foreground">
-                Our managed IT and support teams work remotely to serve clients throughout the UK and EU, with secure, ISO 27001:2022-certified processes.
+                Our managed IT and support teams work remotely to serve clients remotely, with secure, ISO 27001:2022-certified processes.
               </p>
             </div>
 
@@ -63,11 +63,11 @@ export const ContactMap = () => {
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  Regulated UK industries
+                  Regulated industries
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  Clients across the UK & EU
+                  Clients served remotely
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />

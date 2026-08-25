@@ -35,7 +35,7 @@ const included = [
   "Managed IT provider since 1996",
   "ISO 27001:2022 certified; SOC 2 in progress",
   "Access-only model — we work inside your tenancy",
-  "Named, background-checked engineers on UK hours",
+  "Named, background-checked engineers on business hours",
   "Your data stays in your environment, never copied out",
   "Regulated SMBs: fintech, financial and professional services",
 ];
@@ -43,13 +43,13 @@ const included = [
 const stats = [
   { value: "1996", label: "Serving clients since" },
   { value: "ISO 27001:2022", label: "Certified team" },
-  { value: "UK & EU", label: "Remotely served" },
+  { value: "Remote", label: "Remotely served" },
   { value: "48 hrs", label: "For an exact quote" }
 ];
 
 const whyChoose = [
   { icon: ShieldCheck, title: "ISO 27001:2022 Certified", description: "Security and evidence built into how we operate, not bolted on" },
-  { icon: Globe, title: "Remote Delivery, UK Hours", description: "A UK business-hours desk backed by our Z360 delivery platform" },
+  { icon: Globe, title: "Remote Delivery, Business Hours", description: "A business-hours desk backed by our Z360 delivery platform" },
   { icon: KeyRound, title: "An Honest Exit", description: "A full exit pack and reverse knowledge transfer within 10 working days, whenever you need it" },
 ];
 
@@ -61,7 +61,7 @@ const About = () => {
       badge: "Company",
       headingHtml: 'We run your IT. <span class="text-primary">You own your IT.</span>',
       subheading:
-        "Infodot is a managed IT provider serving regulated UK and EU SMBs remotely from an ISO 27001-certified team in Bangalore. Since 1996 we've run IT for organisations where getting it wrong has consequences.",
+        "Infodot is a managed IT provider serving regulated SMBs remotely from an ISO 27001-certified team in Bangalore. Since 1996 we've run IT for organisations where getting it wrong has consequences.",
     },
   );
   const story = useSection<{ headingHtml: string; paragraphs: string[]; quote: string; founderName: string; founderRole: string }>(
@@ -70,28 +70,28 @@ const About = () => {
     {
       headingHtml: 'Our <span class="text-primary">Story</span>',
       paragraphs: [
-        "We're remote by design, and honest about what that means: your engineers are a named team in our ISO 27001-certified Bangalore centre, working UK business hours, operating inside your own tenancy — your data doesn't move to us.",
-        "Since 1996 we've run IT for organisations where getting it wrong has consequences: fintech, financial and professional services SMBs across the UK and EU, backed by our own delivery platform, Z360.",
+        "We're remote by design, and honest about what that means: your engineers are a named team in our ISO 27001-certified Bangalore centre, working business hours, operating inside your own tenancy — your data doesn't move to us.",
+        "Since 1996 we've run IT for organisations where getting it wrong has consequences: fintech, financial and professional services SMBs remotely, backed by our own delivery platform, Z360.",
         "We compete on low risk, not low price, and we make ourselves easy to leave. You stay because the service is good — a full exit pack and complete reverse knowledge transfer are yours within 10 working days, whenever you ask.",
       ],
       quote:
         "We run your IT. You own your IT.",
-      founderName: "Infodot UK",
+      founderName: "Infodot",
       founderRole: "Managed IT, run remotely",
     },
   );
   const mission = useSection<{ mission: string; vision: string }>("about", "mission_vision", {
     mission:
-      "To run IT completely for the regulated UK industries we serve — secure by default, always audit-ready — so our clients' teams can focus on their business, not their infrastructure.",
+      "To run IT completely for the regulated industries we serve — secure by default, always audit-ready — so our clients' teams can focus on their business, not their infrastructure.",
     vision:
-      "To be the managed IT partner regulated UK firms trust for the long term, precisely because ownership, evidence and an honest exit are built into how we work.",
+      "To be the managed IT partner regulated firms trust for the long term, precisely because ownership, evidence and an honest exit are built into how we work.",
   });
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="About Infodot UK — Managed IT Since 1996, Run Remotely"
-        description="Infodot UK (Infodot Technologies Pvt Ltd) has run managed IT since 1996. ISO 27001:2022 certified, based in Bangalore, serving UK & EU regulated industries remotely."
-        keywords="about Infodot UK, managed IT provider, ISO 27001 IT company, remote IT delivery, Infodot Technologies"
+        title="About Infodot — Managed IT Since 1996, Run Remotely"
+        description="Infodot (Infodot Technologies Pvt Ltd) has run managed IT since 1996. ISO 27001:2022 certified, based in Bangalore, serving regulated industries remotely."
+        keywords="about Infodot, managed IT provider, ISO 27001 IT company, remote IT delivery, Infodot Technologies"
         canonicalUrl="https://infodot.co.uk/about"
       />
       <Navbar />
@@ -112,7 +112,7 @@ const About = () => {
             <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
               <div className="font-display text-5xl font-bold">1996</div>
               <p className="mt-2 font-medium text-accent-foreground/70">
-                Running IT for regulated UK businesses for nearly three decades.
+                Running IT for regulated businesses for nearly three decades.
               </p>
             </div>
           </div>
@@ -176,7 +176,7 @@ const About = () => {
             </div>
             <div className="col-span-12 lg:col-span-5 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
               <div className="flex items-center gap-4 mb-6">
-                <img src={teamNaren} alt="Infodot UK delivery team" className="w-16 h-16 rounded-full object-cover border-2 border-accent-foreground/20" />
+                <img src={teamNaren} alt="Infodot delivery team" className="w-16 h-16 rounded-full object-cover border-2 border-accent-foreground/20" />
                 <div>
                   <h3 className="font-display text-xl font-bold">{story.founderName}</h3>
                   <p className="text-primary">{story.founderRole}</p>
@@ -220,7 +220,7 @@ const About = () => {
               What We <span className="text-primary">Stand On</span>
             </h2>
             <p className="text-muted-foreground">
-              These principles guide everything we do and how we work with regulated UK clients.
+              These principles guide everything we do and how we work with regulated clients.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">

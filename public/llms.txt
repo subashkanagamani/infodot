@@ -1,10 +1,10 @@
-# Infodot UK
+# Infodot
 
-> Infodot UK is a managed IT provider for the regulated UK industries we serve — accountancy, legal and financial services. We run IT end to end and remotely from an ISO 27001-certified team, with security built in by default and the evidence auditors, insurers and boards ask for produced as a matter of course. We run your IT. You own your IT.
+> Infodot is a managed IT provider for the regulated industries we serve — accountancy, legal and financial services. We run IT end to end and remotely from an ISO 27001-certified team, with security built in by default and the evidence auditors, insurers and boards ask for produced as a matter of course. We run your IT. You own your IT.
 
 Website: https://infodot.co.uk
 Contact: hello@infodot.uk
-Entity: Infodot Technologies Pvt Ltd, Bangalore, India — serving UK & EU remotely. Operating since 1996.
+Entity: Infodot Technologies Pvt Ltd, Bangalore, India — serving clients remotely. Operating since 1996.
 
 ## Core Pages
 - [Home](https://infodot.co.uk/): Managed, secure by default, always audit-ready IT.

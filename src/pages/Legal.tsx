@@ -21,9 +21,9 @@ const Legal = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Legal, Privacy & Data Processing | Infodot UK"
-        description="How Infodot UK handles your data: privacy policy, terms of service, DPA, UK IDTA / EU SCC transfer mechanism, sub-processor list and ISO 27001:2022 governance."
-        keywords="Infodot UK legal, data processing agreement, UK IDTA, EU SCCs, sub-processor list, ISO 27001 governance"
+        title="Legal, Privacy & Data Processing | Infodot"
+        description="How Infodot handles your data: privacy policy, terms of service, DPA, UK IDTA / EU SCC transfer mechanism, sub-processor list and ISO 27001:2022 governance."
+        keywords="Infodot legal, data processing agreement, UK IDTA, EU SCCs, sub-processor list, ISO 27001 governance"
       />
       <Navbar />
       <main className="pt-24">

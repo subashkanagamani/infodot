@@ -86,9 +86,9 @@ export default function Resources() {
       <BackToTop />
       
       <SEOHead 
-        title="Resources — Readiness, in Plain English | Infodot UK"
+        title="Resources — Readiness, in Plain English | Infodot"
         description="Guides and explainers on Cyber Essentials v3.3, cyber-insurance readiness, GDPR as an operating discipline and what audit-ready really means. All free."
-        keywords="Cyber Essentials v3.3, cyber insurance readiness, GDPR checklist, audit-ready evidence, IT resources UK"
+        keywords="Cyber Essentials v3.3, cyber insurance readiness, GDPR checklist, audit-ready evidence, IT resources"
       />
 
       {/* Hero Section */}

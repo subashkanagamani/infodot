@@ -20,7 +20,7 @@ const DEFAULTS: HeroContent = {
   headingHtml:
     'You run your business. <span class="text-gradient-primary">We run your IT.</span>',
   subheading:
-    "Managed IT, Cybersecurity & Compliance for growing UK businesses. Your IT should enable your business — not become another thing you have to manage. Infodot gives compliance-conscious UK organisations one accountable technology partner — run end to end, remotely, from an ISO 27001-certified team. Security is built in by default, and the evidence your auditors, insurers and clients ask for is produced as a matter of course.",
+    "Managed IT, Cybersecurity & Compliance for growing businesses. Your IT should enable your business — not become another thing you have to manage. Infodot gives compliance-conscious organisations one accountable technology partner — run end to end, remotely, from an ISO 27001-certified team. Security is built in by default, and the evidence your auditors, insurers and clients ask for is produced as a matter of course.",
   tagsLabel: "We run your IT. You own your IT.",
   tags: [
     "Since 1996",
@@ -146,7 +146,7 @@ export const Hero = () => {
           <div className="col-span-12 md:col-span-6 bg-card rounded-3xl p-8 border border-border shadow-[var(--shadow-card)] flex flex-col justify-between animate-slide-up" style={{ animationDelay: "0.24s" }}>
             <div>
               <h2 className="font-display font-bold text-xl mb-2">Regulated expertise</h2>
-              <p className="text-muted-foreground text-sm">Sector-specific controls and evidence for high-stakes UK firms.</p>
+              <p className="text-muted-foreground text-sm">Sector-specific controls and evidence for high-stakes firms.</p>
             </div>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Accountancy", "Legal", "Financial Services", "Small Office"].map((t) => (
