@@ -24,7 +24,7 @@ interface FooterColumns {
 }
 
 const FOOTER_DEFAULTS: FooterColumns = {
-  brandBlurb: "Managed IT for the regulated UK & EU industries we serve, run remotely. We run your IT. You own your IT.",
+  brandBlurb: "Managed IT for the regulated Remote industries we serve, run remotely. We run your IT. You own your IT.",
   certsLine: "ISO 27001:2022 certified · GDPR-aligned · SOC 2 in progress",
   poweredByLine: "Powered by Z360.",
   industriesTitle: "INDUSTRIES",
@@ -55,7 +55,7 @@ const FOOTER_DEFAULTS: FooterColumns = {
     { label: "Legal & Privacy", href: "/legal" },
   ],
   quickMessageTitle: "QUICK MESSAGE",
-  copyright: "© {year} Infodot Technologies Pvt Ltd · Bangalore, India — serving UK & EU remotely.",
+  copyright: "© {year} Infodot Technologies Pvt Ltd · Bangalore, India — serving clients remotely.",
   sinceLine: "Since 1996 · infodot.co.uk",
 };
 

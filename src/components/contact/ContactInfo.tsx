@@ -30,7 +30,7 @@ export const ContactInfo = () => {
       icon: MapPin,
       title: "Visit Us",
       description: "Our office location",
-      value: "Bangalore, India — serving UK & EU remotely",
+      value: "Bangalore, India — serving clients remotely",
       href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(settings.company.address)}`,
     },
   ];
@@ -44,7 +44,7 @@ export const ContactInfo = () => {
             Multiple Ways to <span className="text-primary">Connect</span>
           </h2>
           <p className="text-muted-foreground mt-4">
-            Choose the most convenient way to reach out. We deliver remotely across UK business hours.
+            Choose the most convenient way to reach out. We deliver remotely across business hours.
           </p>
         </div>
 

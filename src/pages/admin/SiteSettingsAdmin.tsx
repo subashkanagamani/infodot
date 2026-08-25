@@ -43,13 +43,13 @@ interface SiteSettings {
 
 const defaultSettings: SiteSettings = {
   company: {
-    name: "Infodot UK",
+    name: "Infodot",
     tagline: "We Help Brands Grow Strategically",
-    description: "Managed IT services and support for regulated UK industries, delivered remotely with ISO 27001:2022-certified security.",
+    description: "Managed IT services and support for regulated industries, delivered remotely with ISO 27001:2022-certified security.",
     logo: "",
     email: "hello@infodot.uk",
     phone: "",
-    address: "Infodot Technologies Pvt Ltd, Bangalore, India — serving the UK & EU remotely"
+    address: "Infodot Technologies Pvt Ltd, Bangalore, India — serving clients remotely"
   },
   social: {
     linkedin: "",
@@ -59,10 +59,10 @@ const defaultSettings: SiteSettings = {
     youtube: ""
   },
   seo: {
-    metaTitle: "Infodot UK - Managed IT Services",
-    metaDescription: "Managed IT services and support for regulated UK industries, delivered remotely by Infodot UK. ISO 27001:2022 certified, serving clients since 1996.",
+    metaTitle: "Infodot - Managed IT Services",
+    metaDescription: "Managed IT services and support for regulated industries, delivered remotely by Infodot. ISO 27001:2022 certified, serving clients since 1996.",
     ogImage: "",
-    keywords: "managed IT services, IT support UK, regulated industries, ISO 27001"
+    keywords: "managed IT services, IT support, regulated industries, ISO 27001"
   },
   integrations: {
     calendlyLink: "",

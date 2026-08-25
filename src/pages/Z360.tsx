@@ -42,9 +42,9 @@ const Z360 = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Z360 — The Engine Behind Your Managed IT | Infodot UK"
-        description="Z360 is the operations platform behind Infodot UK's managed service: standardisation, automation and reporting that turn the controls we run into monthly evidence."
-        keywords="Z360, managed IT platform, IT automation, audit evidence, standardised IT operations UK"
+        title="Z360 — The Engine Behind Your Managed IT | Infodot"
+        description="Z360 is the operations platform behind Infodot's managed service: standardisation, automation and reporting that turn the controls we run into monthly evidence."
+        keywords="Z360, managed IT platform, IT automation, audit evidence, standardised IT operations"
         canonicalUrl="https://infodot.co.uk/z360"
       />
       <Navbar />

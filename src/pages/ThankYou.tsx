@@ -19,7 +19,7 @@ const ThankYou = () => {
   return (
     <>
       <SEOHead
-        title="Thank You — Infodot UK"
+        title="Thank You — Infodot"
         description="Thanks for reaching out. A senior strategist will be in touch within 24 hours."
         canonicalUrl="https://infodot.co.uk/thank-you"
       />

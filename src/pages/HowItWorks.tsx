@@ -51,9 +51,9 @@ const HowItWorks = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="How It Works — Co-Managed, Fully Managed or Fully Remote | Infodot UK"
-        description="Three ways to engage Infodot UK: co-managed IT alongside your team, fully managed IT, or fully remote. Secure by default, evidenced monthly, you own everything underneath."
-        keywords="co-managed IT, fully managed IT, fully remote IT support, IT engagement models UK"
+        title="How It Works — Co-Managed, Fully Managed or Fully Remote | Infodot"
+        description="Three ways to engage Infodot: co-managed IT alongside your team, fully managed IT, or fully remote. Secure by default, evidenced monthly, you own everything underneath."
+        keywords="co-managed IT, fully managed IT, fully remote IT support, IT engagement models"
       />
       <Navbar />
       <main className="pt-24">

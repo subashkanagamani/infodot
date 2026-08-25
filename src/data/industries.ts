@@ -22,10 +22,10 @@ export const industries: Industry[] = [
     headline:
       "IT support for accountancy firms — built around the software you actually run.",
     intro:
-      "Managed IT for UK accountancy and tax practices, delivered remotely by an ISO 27001-certified team. We know your practice software, your Making Tax Digital deadlines, and the security your clients' financial data demands.",
+      "Managed IT for accountancy and tax practices, delivered remotely by an ISO 27001-certified team. We know your practice software, your Making Tax Digital deadlines, and the security your clients' financial data demands.",
     included: [
       "Software we support: IRIS, CCH, Digita, Sage, Xero, QuickBooks, FreeAgent, TaxCalc, Microsoft 365, MTD",
-      "Helpdesk with a 30-minute first response, on UK hours",
+      "Helpdesk with a 30-minute first response, on business hours",
       "Monitoring and patching across Windows and Mac",
       "Microsoft 365 tenant, identity and email — run and secured",
       "MFA everywhere, hardening and managed detection & response",
@@ -35,15 +35,15 @@ export const industries: Industry[] = [
     ],
     whyItMatters: [
       "We run your whole IT function remotely, secure by default, and evidence it monthly — so your partners focus on client work, not firefighting technology.",
-      "Named, background-checked UK-hours engineers work inside your own Microsoft 365 tenancy; your data doesn't leave it. Since 1996, ISO 27001:2022 certified, no lock-in.",
+      "Named, background-checked business-hours engineers work inside your own Microsoft 365 tenancy; your data doesn't leave it. Since 1996, ISO 27001:2022 certified, no lock-in.",
     ],
     compliance:
       "Aligned to Cyber Essentials Plus and ISO 27001; ICAEW / ACCA expectations and MTD; anti-fraud email controls for HMRC and Companies House phishing.",
-    seoTitle: "IT Support for Accountants UK — IRIS, CCH, Sage, Xero | Infodot UK",
+    seoTitle: "IT Support for Accountants UK — IRIS, CCH, Sage, Xero | Infodot",
     seoDescription:
-      "Managed IT for UK accountancy and tax practices. IRIS, CCH, Digita, Sage, Xero and MTD supported by an ISO 27001:2022 certified team. 30-minute first response.",
+      "Managed IT for accountancy and tax practices. IRIS, CCH, Digita, Sage, Xero and MTD supported by an ISO 27001:2022 certified team. 30-minute first response.",
     keywords:
-      "IT support for accountants, accountancy IT support UK, IRIS support, CCH support, Sage IT support, MTD IT, managed IT for accountants",
+      "IT support for accountants, accountancy IT support, IRIS support, CCH support, Sage IT support, MTD IT, managed IT for accountants",
   },
   {
     slug: "law-firms",
@@ -70,11 +70,11 @@ export const industries: Industry[] = [
     ],
     compliance:
       "SRA-aligned information security, business continuity and data protection; Cyber Essentials Plus and ISO 27001; legal privilege protected with encryption, DLP and audit trails.",
-    seoTitle: "IT Support for Law Firms UK — SRA-Ready, LEAP & Clio | Infodot UK",
+    seoTitle: "IT Support for Law Firms UK — SRA-Ready, LEAP & Clio | Infodot",
     seoDescription:
       "Managed IT for UK solicitors. LEAP, Clio, Proclaim and Microsoft 365 supported remotely by an ISO 27001:2022 certified team, with SRA-aligned security and audit trails.",
     keywords:
-      "IT support for law firms, legal IT support UK, SRA IT compliance, LEAP support, Clio support, Proclaim support, managed IT for solicitors",
+      "IT support for law firms, legal IT support, SRA IT compliance, LEAP support, Clio support, Proclaim support, managed IT for solicitors",
   },
   {
     slug: "financial-services",
@@ -101,11 +101,11 @@ export const industries: Industry[] = [
     ],
     compliance:
       "FCA operational resilience (PS26/2 third-party & incident reporting); we hand you the due-diligence evidence pack and exit plan; ISO 27001 (SOC 2 in progress), GDPR with the correct transfer mechanism.",
-    seoTitle: "IT Support for Financial Services UK — FCA-Ready | Infodot UK",
+    seoTitle: "IT Support for Financial Services UK — FCA-Ready | Infodot",
     seoDescription:
       "Managed IT for UK financial services firms, fintechs and funded startups. FCA operational resilience, continuous evidence and DR with agreed RTO/RPO, ISO 27001:2022.",
     keywords:
-      "IT support for financial services, FCA operational resilience IT, fintech IT support UK, managed IT financial services, PS26/2, third-party evidence pack",
+      "IT support for financial services, FCA operational resilience IT, fintech IT support, managed IT financial services, PS26/2, third-party evidence pack",
   },
 ];
 

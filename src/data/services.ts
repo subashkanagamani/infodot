@@ -33,9 +33,9 @@ export const servicesData: ServiceItem[] = [
       "Devices, tenants and licences kept current automatically",
       "Clean joiner/leaver process reduces security and access risk",
     ],
-    metaTitle: "Managed IT & Helpdesk Support | Infodot UK",
+    metaTitle: "Managed IT & Helpdesk Support | Infodot",
     metaDescription:
-      "Infodot UK runs your helpdesk, Microsoft 365/Google Workspace, device lifecycle and IT asset management — delivered remotely from an ISO 27001-certified team.",
+      "Infodot runs your helpdesk, Microsoft 365/Google Workspace, device lifecycle and IT asset management — delivered remotely from an ISO 27001-certified team.",
     keywords:
       "managed IT, IT helpdesk, IT operations, Microsoft 365 management, device lifecycle, JML, IT asset management",
   },
@@ -59,9 +59,9 @@ export const servicesData: ServiceItem[] = [
       "Reduced attack surface across endpoints, email and identity",
       "Consistent baseline across every device and user",
     ],
-    metaTitle: "Secure by Default IT Security | Infodot UK",
+    metaTitle: "Secure by Default IT Security | Infodot",
     metaDescription:
-      "Managed EDR, IT hardening, email security and identity & access management, run as standard by Infodot UK — a managed IT provider for regulated UK industries.",
+      "Managed EDR, IT hardening, email security and identity & access management, run as standard by Infodot — a managed IT provider for regulated industries.",
     keywords:
       "managed EDR, IT hardening, email security, identity and access management, MFA, conditional access",
   },
@@ -87,9 +87,9 @@ export const servicesData: ServiceItem[] = [
       "Immutability protects against ransomware and deletion",
       "A tested-backup control that insurers and auditors ask about",
     ],
-    metaTitle: "Backup & Disaster Recovery Services | Infodot UK",
+    metaTitle: "Backup & Disaster Recovery Services | Infodot",
     metaDescription:
-      "Monitored, restore-tested, immutable backups and a tested DR plan (RTO/RPO) from Infodot UK, run remotely for regulated UK businesses.",
+      "Monitored, restore-tested, immutable backups and a tested DR plan (RTO/RPO) from Infodot, run remotely for regulated businesses.",
     keywords:
       "backup and disaster recovery, immutable backup, restore testing, RTO RPO, business continuity",
   },
@@ -113,9 +113,9 @@ export const servicesData: ServiceItem[] = [
       "Reduces risk of drift between what's attested and what's running",
       "Gives boards and clients confidence in your compliance posture",
     ],
-    metaTitle: "Always Audit-Ready: Continuous Compliance Evidence | Infodot UK",
+    metaTitle: "Always Audit-Ready: Continuous Compliance Evidence | Infodot",
     metaDescription:
-      "Infodot UK keeps continuous controls and evidence for ISO 27001, SOC 2 and GDPR — so accountancy, legal and financial services firms are always audit-ready.",
+      "Infodot keeps continuous controls and evidence for ISO 27001, SOC 2 and GDPR — so accountancy, legal and financial services firms are always audit-ready.",
     keywords:
       "continuous compliance, ISO 27001 evidence, SOC 2 evidence, GDPR compliance, audit ready, controls monitoring",
   },
@@ -141,9 +141,9 @@ export const servicesData: ServiceItem[] = [
       "Straightforward path to certification via accredited partners",
       "Builds the foundation for wider security and insurance readiness",
     ],
-    metaTitle: "Cyber Essentials Readiness & Certification | Infodot UK",
+    metaTitle: "Cyber Essentials Readiness & Certification | Infodot",
     metaDescription:
-      "Infodot UK implements all five Cyber Essentials controls to v3.3 and manages certification via an accredited body — for regulated UK businesses.",
+      "Infodot implements all five Cyber Essentials controls to v3.3 and manages certification via an accredited body — for regulated businesses.",
     keywords:
       "Cyber Essentials, Cyber Essentials Plus, v3.3, cyber essentials certification, accredited certification body",
   },
@@ -170,9 +170,9 @@ export const servicesData: ServiceItem[] = [
       "Reduces the risk of a disputed claim over a control gap",
       "Confidence at renewal time instead of a last-minute scramble",
     ],
-    metaTitle: "Cyber Insurance Readiness Services | Infodot UK",
+    metaTitle: "Cyber Insurance Readiness Services | Infodot",
     metaDescription:
-      "Infodot UK keeps the controls cyber insurers require — MFA, EDR, backups, patching — enforced and evidenced year-round, so renewal answers stay true.",
+      "Infodot keeps the controls cyber insurers require — MFA, EDR, backups, patching — enforced and evidenced year-round, so renewal answers stay true.",
     keywords:
       "cyber insurance readiness, cyber insurance renewal, insurer questionnaire, MFA, EDR, cyber cover",
   },
@@ -198,9 +198,9 @@ export const servicesData: ServiceItem[] = [
       "Domain and DNS moved cleanly into your own control",
       "You stay because the service is good, not because leaving hurts",
     ],
-    metaTitle: "IT Transition, Exit & Migration Services | Infodot UK",
+    metaTitle: "IT Transition, Exit & Migration Services | Infodot",
     metaDescription:
-      "Infodot UK manages IT provider transitions, Phase 0 discovery, and email and domain migration — a clean, fixed-fee switch with no data lost.",
+      "Infodot manages IT provider transitions, Phase 0 discovery, and email and domain migration — a clean, fixed-fee switch with no data lost.",
     keywords:
       "IT transition, IT provider switch, phase 0 discovery, email migration, domain migration, reverse knowledge transfer",
   },
@@ -222,11 +222,11 @@ export const servicesData: ServiceItem[] = [
       "Adds specialist security and compliance capability without replacing your team",
       "No rip-and-replace of tools you've already invested in",
       "Clear boundaries avoid duplicated effort or gaps",
-      "A low-risk way to start working with Infodot UK",
+      "A low-risk way to start working with Infodot",
     ],
-    metaTitle: "Co-Managed IT Services | Infodot UK",
+    metaTitle: "Co-Managed IT Services | Infodot",
     metaDescription:
-      "Infodot UK runs the security and operations layer alongside your in-house IT team, with a clear ownership matrix — your tools or ours.",
+      "Infodot runs the security and operations layer alongside your in-house IT team, with a clear ownership matrix — your tools or ours.",
     keywords:
       "co-managed IT, IT support for in-house teams, shared IT support, managed security services",
   },
@@ -251,9 +251,9 @@ export const servicesData: ServiceItem[] = [
       "Shadow IT surfaced before it becomes a risk",
       "Audit and due-diligence questions answered from one register",
     ],
-    metaTitle: "IT Asset, Licence & Domain Management | Infodot UK",
+    metaTitle: "IT Asset, Licence & Domain Management | Infodot",
     metaDescription:
-      "A live register of every device, licence, subscription, domain and DNS record — renewals tracked and shadow IT surfaced. Infodot UK, ISO 27001:2022 certified.",
+      "A live register of every device, licence, subscription, domain and DNS record — renewals tracked and shadow IT surfaced. Infodot, ISO 27001:2022 certified.",
     keywords:
       "IT asset management, software licence management, domain and DNS management, renewal tracking, shadow IT",
   },
@@ -278,9 +278,9 @@ export const servicesData: ServiceItem[] = [
       "Configuration and access stay accountable and documented",
       "Issues surfaced by monitoring, not by users",
     ],
-    metaTitle: "Cloud Management: Microsoft 365, Azure & AWS | Infodot UK",
+    metaTitle: "Cloud Management: Microsoft 365, Azure & AWS | Infodot",
     metaDescription:
-      "Infodot UK operates and hardens your Microsoft 365, Azure and AWS environments — identity, baselines, cost control, backup and monitoring.",
+      "Infodot operates and hardens your Microsoft 365, Azure and AWS environments — identity, baselines, cost control, backup and monitoring.",
     keywords:
       "cloud management, Microsoft 365 management, Azure management, AWS management, cloud cost optimisation, cloud security baselines",
   },
@@ -305,9 +305,9 @@ export const servicesData: ServiceItem[] = [
       "A clear record of what was asked and what was done",
       "Monthly reporting shows where time actually goes",
     ],
-    metaTitle: "IT Helpdesk & IT Operations Support | Infodot UK",
+    metaTitle: "IT Helpdesk & IT Operations Support | Infodot",
     metaDescription:
-      "One tracked channel for every IT request, named engineers and a 30-minute first response in business hours — Infodot UK helpdesk for regulated UK firms.",
+      "One tracked channel for every IT request, named engineers and a 30-minute first response in business hours — Infodot helpdesk for regulated firms.",
     keywords:
       "IT helpdesk, IT support desk, managed IT operations, named engineers, ticketing, service reporting",
   },
@@ -332,9 +332,9 @@ export const servicesData: ServiceItem[] = [
       "New starters are productive on day one",
       "Refresh and warranty planned, not reactive",
     ],
-    metaTitle: "Device Lifecycle & Endpoint Management | Infodot UK",
+    metaTitle: "Device Lifecycle & Endpoint Management | Infodot",
     metaDescription:
-      "Enrolment, encryption, compliance baselines, remote wipe and secure retirement for every managed device — endpoint lifecycle management from Infodot UK.",
+      "Enrolment, encryption, compliance baselines, remote wipe and secure retirement for every managed device — endpoint lifecycle management from Infodot.",
     keywords:
       "device lifecycle management, endpoint management, Intune, disk encryption, remote wipe, device refresh",
   },
@@ -359,9 +359,9 @@ export const servicesData: ServiceItem[] = [
       "Malicious links and attachments checked at click time",
       "Reported messages get handled, not ignored",
     ],
-    metaTitle: "Managed Email Security & Anti-Phishing | Infodot UK",
+    metaTitle: "Managed Email Security & Anti-Phishing | Infodot",
     metaDescription:
-      "Anti-phishing, SPF/DKIM/DMARC enforcement, safe links and impersonation controls — managed email security from Infodot UK for regulated UK firms.",
+      "Anti-phishing, SPF/DKIM/DMARC enforcement, safe links and impersonation controls — managed email security from Infodot for regulated firms.",
     keywords:
       "email security, anti-phishing, SPF DKIM DMARC, safe links, spoofing protection, Microsoft 365 email security",
   },
@@ -386,9 +386,9 @@ export const servicesData: ServiceItem[] = [
       "Privileged sessions are logged and reviewable",
       "Access reviews produce evidence insurers accept",
     ],
-    metaTitle: "Identity & Access Management (MFA, PAM) | Infodot UK",
+    metaTitle: "Identity & Access Management (MFA, PAM) | Infodot",
     metaDescription:
-      "MFA everywhere, role-based access, conditional access and privileged access management with evidence — identity and access management from Infodot UK.",
+      "MFA everywhere, role-based access, conditional access and privileged access management with evidence — identity and access management from Infodot.",
     keywords:
       "identity and access management, MFA, conditional access, privileged access management, access reviews, least privilege",
   },
@@ -413,9 +413,9 @@ export const servicesData: ServiceItem[] = [
       "A breach process rehearsed before you need it",
       "Regulator and client questions answered with evidence",
     ],
-    metaTitle: "UK GDPR & Data Protection Operations | Infodot UK",
+    metaTitle: "UK GDPR & Data Protection Operations | Infodot",
     metaDescription:
-      "DPAs, sub-processor registers, DSAR support, breach notification and retention run as ongoing operations — UK GDPR data protection support from Infodot UK.",
+      "DPAs, sub-processor registers, DSAR support, breach notification and retention run as ongoing operations — UK GDPR data protection support from Infodot.",
     keywords:
       "UK GDPR, data protection operations, DSAR, data processing agreement, sub-processor register, breach notification",
   },
@@ -441,9 +441,9 @@ export const servicesData: ServiceItem[] = [
       "Incident reporting rehearsed against the timelines",
       "Your provider's resilience posture already evidenced",
     ],
-    metaTitle: "FCA Operational Resilience & Third-Party Support | Infodot UK",
+    metaTitle: "FCA Operational Resilience & Third-Party Support | Infodot",
     metaDescription:
-      "Third-party mapping, due-diligence packs, incident-reporting readiness and documented exit plans for FCA operational resilience — support from Infodot UK.",
+      "Third-party mapping, due-diligence packs, incident-reporting readiness and documented exit plans for FCA operational resilience — support from Infodot.",
     keywords:
       "FCA operational resilience, critical third parties, third-party reporting, exit plan, due diligence pack, impact tolerance",
   },
@@ -468,9 +468,9 @@ export const servicesData: ServiceItem[] = [
       "Ownership of domains, licences and access confirmed",
       "Everything that follows is planned on facts",
     ],
-    metaTitle: "IT Discovery & Phase 0 Documentation | Infodot UK",
+    metaTitle: "IT Discovery & Phase 0 Documentation | Infodot",
     metaDescription:
-      "Agent-based discovery, provider handover, asset and licence registers and security-gap findings on a fixed fee — Phase 0 discovery from Infodot UK.",
+      "Agent-based discovery, provider handover, asset and licence registers and security-gap findings on a fixed fee — Phase 0 discovery from Infodot.",
     keywords:
       "IT discovery, phase 0, IT documentation, asset register, knowledge transfer, MSP handover",
   },
@@ -495,9 +495,9 @@ export const servicesData: ServiceItem[] = [
       "Co-existence keeps people working through cutover",
       "Authentication and mail flow stay intact",
     ],
-    metaTitle: "Email Migration to Microsoft 365 | Infodot UK",
+    metaTitle: "Email Migration to Microsoft 365 | Infodot",
     metaDescription:
-      "Fixed-fee tenant-to-tenant, Exchange and Google Workspace email migrations with co-existence and mail-flow planning — email migration from Infodot UK.",
+      "Fixed-fee tenant-to-tenant, Exchange and Google Workspace email migrations with co-existence and mail-flow planning — email migration from Infodot.",
     keywords:
       "email migration, tenant to tenant migration, Exchange to Microsoft 365, Google Workspace migration, mailbox migration",
   },
@@ -522,9 +522,9 @@ export const servicesData: ServiceItem[] = [
       "Every DNS record documented, not guessed",
       "A clean handover into ongoing management",
     ],
-    metaTitle: "Domain & DNS Migration Services | Infodot UK",
+    metaTitle: "Domain & DNS Migration Services | Infodot",
     metaDescription:
-      "Move your domain and DNS into your own ownership with SPF/DKIM/DMARC preserved and zero-downtime cutover planning — domain migration from Infodot UK.",
+      "Move your domain and DNS into your own ownership with SPF/DKIM/DMARC preserved and zero-downtime cutover planning — domain migration from Infodot.",
     keywords:
       "domain migration, DNS migration, domain transfer, SPF DKIM DMARC, zero downtime cutover, domain ownership",
   },
@@ -549,9 +549,9 @@ export const servicesData: ServiceItem[] = [
       "Root cause found so the same gap doesn't reopen",
       "Coverage evidenced for insurers and auditors",
     ],
-    metaTitle: "Managed EDR & 24/7 Threat Response | Infodot UK",
+    metaTitle: "Managed EDR & 24/7 Threat Response | Infodot",
     metaDescription:
-      "EDR on every endpoint with engineer triage, automated isolation, remediation and agent-health monitoring — managed detection and response from Infodot UK.",
+      "EDR on every endpoint with engineer triage, automated isolation, remediation and agent-health monitoring — managed detection and response from Infodot.",
     keywords:
       "managed EDR, endpoint detection and response, MDR, threat containment, 24/7 detection, endpoint security UK",
   },
@@ -576,9 +576,9 @@ export const servicesData: ServiceItem[] = [
       "The foundation compliance frameworks start from",
       "Insurer questionnaires answered from real settings",
     ],
-    metaTitle: "IT Hardening & Security Baselines | Infodot UK",
+    metaTitle: "IT Hardening & Security Baselines | Infodot",
     metaDescription:
-      "MFA, conditional access, encryption, CIS-aligned device baselines and email authentication enforced as standard — IT hardening from Infodot UK.",
+      "MFA, conditional access, encryption, CIS-aligned device baselines and email authentication enforced as standard — IT hardening from Infodot.",
     keywords:
       "IT hardening, CIS baselines, security configuration, conditional access, disk encryption, secure defaults",
   },
@@ -603,9 +603,9 @@ export const servicesData: ServiceItem[] = [
       "Sharing stays secure without blocking collaboration",
       "The tenancy stays in your ownership throughout",
     ],
-    metaTitle: "Microsoft 365 & Google Workspace Management | Infodot UK",
+    metaTitle: "Microsoft 365 & Google Workspace Management | Infodot",
     metaDescription:
-      "Full tenant administration for Microsoft 365 and Google Workspace — email, files, identity, licensing and security baselines, run by Infodot UK inside your own tenancy.",
+      "Full tenant administration for Microsoft 365 and Google Workspace — email, files, identity, licensing and security baselines, run by Infodot inside your own tenancy.",
     keywords:
       "Microsoft 365 management, Google Workspace management, tenant administration, SharePoint, Entra identity, licence management",
   },
@@ -630,9 +630,9 @@ export const servicesData: ServiceItem[] = [
       "Gaps remediated before an auditor finds them",
       "Certification through accredited bodies, never self-certified",
     ],
-    metaTitle: "ISO 27001 & SOC 2 Evidence and Audit Readiness | Infodot UK",
+    metaTitle: "ISO 27001 & SOC 2 Evidence and Audit Readiness | Infodot",
     metaDescription:
-      "Control mapping, continuous evidence collection, gap remediation and audit preparation for ISO 27001 and SOC 2 — audit readiness support from Infodot UK.",
+      "Control mapping, continuous evidence collection, gap remediation and audit preparation for ISO 27001 and SOC 2 — audit readiness support from Infodot.",
     keywords:
       "ISO 27001, SOC 2, audit readiness, control mapping, compliance evidence, certification support UK",
   },
@@ -658,7 +658,7 @@ export const servicesData: ServiceItem[] = [
       "Insurer and Cyber Essentials windows met",
       "Monthly evidence that patching actually ran",
     ],
-    metaTitle: "RMM & Patch Management for Windows and Mac | Infodot UK",
+    metaTitle: "RMM & Patch Management for Windows and Mac | Infodot",
     metaDescription:
       "24/7 remote monitoring with automated OS and application patching across Windows and macOS, inside Cyber Essentials windows and evidenced monthly.",
     keywords:
@@ -686,9 +686,9 @@ export const servicesData: ServiceItem[] = [
       "Licences reclaimed instead of quietly paid for",
       "An access control auditors can see working",
     ],
-    metaTitle: "Onboarding & Exit / Joiner-Mover-Leaver Process | Infodot UK",
+    metaTitle: "Onboarding & Exit / Joiner-Mover-Leaver Process | Infodot",
     metaDescription:
-      "Accounts, licences, devices and access provisioned on day one and revoked the same day people leave — a disciplined JML process run by Infodot UK.",
+      "Accounts, licences, devices and access provisioned on day one and revoked the same day people leave — a disciplined JML process run by Infodot.",
     keywords:
       "joiner mover leaver, onboarding offboarding IT, de-provisioning, access control, licence reclaim",
   },
@@ -713,7 +713,7 @@ export const servicesData: ServiceItem[] = [
       "Regulatory notification inside the window",
       "Lessons captured so it doesn't repeat",
     ],
-    metaTitle: "Security Monitoring & Incident Response | Infodot UK",
+    metaTitle: "Security Monitoring & Incident Response | Infodot",
     metaDescription:
       "Centralised logging, alerting and a documented incident-response plan with defined escalation, notification readiness and post-incident review.",
     keywords:
@@ -741,7 +741,7 @@ export const servicesData: ServiceItem[] = [
       "Retest confirms the fix landed",
       "The evidence buyers and insurers ask for",
     ],
-    metaTitle: "Penetration Testing & VAPT for UK Firms | Infodot UK",
+    metaTitle: "Penetration Testing & VAPT for UK Firms | Infodot",
     metaDescription:
       "Scoped internal and external penetration testing and VAPT with prioritised findings, remediation guidance and retest — reported by one accountable team.",
     keywords:
@@ -768,9 +768,9 @@ export const servicesData: ServiceItem[] = [
       "Malicious domains blocked at DNS",
       "Honest scope: remote work by us, smart-hands coordinated",
     ],
-    metaTitle: "Remote Network Security Management | Infodot UK",
+    metaTitle: "Remote Network Security Management | Infodot",
     metaDescription:
-      "Firewall policy and firmware, VPN, segmentation, DNS filtering and Wi-Fi security configured, hardened and monitored remotely by Infodot UK.",
+      "Firewall policy and firmware, VPN, segmentation, DNS filtering and Wi-Fi security configured, hardened and monitored remotely by Infodot.",
     keywords:
       "network security, firewall management, VPN configuration, DNS filtering, network segmentation UK",
   },
@@ -795,7 +795,7 @@ export const servicesData: ServiceItem[] = [
       "Repeat-risk users spotted and coached",
       "Human-factor controls evidenced for insurers",
     ],
-    metaTitle: "Security Awareness Training & Phishing Simulation | Infodot UK",
+    metaTitle: "Security Awareness Training & Phishing Simulation | Infodot",
     metaDescription:
       "Bite-size staff training and realistic phishing simulation with risk reporting and targeted follow-up — reduce the human risk behind most breaches.",
     keywords:
@@ -823,7 +823,7 @@ export const servicesData: ServiceItem[] = [
       "Fixes verified, not just assigned",
       "Exposure trending down month on month",
     ],
-    metaTitle: "Continuous Vulnerability Management | Infodot UK",
+    metaTitle: "Continuous Vulnerability Management | Infodot",
     metaDescription:
       "Authenticated vulnerability scanning with risk-based prioritisation, remediation driven to closure, secure-configuration checks and trend reporting.",
     keywords:

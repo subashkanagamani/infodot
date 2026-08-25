@@ -140,7 +140,7 @@ export default function CaseStudyDetail() {
       
       <SEOHead 
         title={`${study.client || study.title} — Case Study | Infodot`}
-        description={study.description || `See how Infodot UK helped ${study.client} achieve remarkable results.`}
+        description={study.description || `See how Infodot helped ${study.client} achieve remarkable results.`}
         keywords={study.technologies?.join(", ")}
         ogType="article"
         ogImage={study.cover_image || undefined}

@@ -16,7 +16,7 @@ export const faqs = [
   },
   {
     question: "Who actually works on our systems?",
-    answer: "A named, background-checked Infodot team working UK business hours from our ISO 27001-certified operations centre — not an anonymous rotating pool. You'll know your engineers by name from onboarding."
+    answer: "A named, background-checked Infodot team working business hours from our ISO 27001-certified operations centre — not an anonymous rotating pool. You'll know your engineers by name from onboarding."
   },
   {
     question: "How do you handle GDPR and offshore access?",
@@ -42,7 +42,7 @@ export const FAQ = () => {
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
             <p className="text-muted-foreground">
-              The questions UK directors actually ask.
+              The questions directors actually ask.
             </p>
           </div>
 

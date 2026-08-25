@@ -28,9 +28,9 @@ const SmallOffice = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Small Office IT Support — Fixed Monthly Fee | Infodot UK"
+        title="Small Office IT Support — Fixed Monthly Fee | Infodot"
         description="For offices from five seats up: clean control of your IT in about 30 days, run remotely for a fixed monthly fee scoped to your size — with your keys staying yours."
-        keywords="small office IT support UK, fixed fee managed IT, 5-20 seat IT support, remote IT management"
+        keywords="small office IT support, fixed fee managed IT, 5-20 seat IT support, remote IT management"
         canonicalUrl="https://infodot.co.uk/small-office"
       />
       <Navbar />

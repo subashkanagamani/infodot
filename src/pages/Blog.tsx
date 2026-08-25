@@ -100,16 +100,16 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="IT & Compliance Insights - Infodot UK"
+        title="IT & Compliance Insights - Infodot"
         description="Practical guidance on managed IT, cyber security, Cyber Essentials, cyber insurance readiness and compliance evidence for accountancy, legal and financial services firms."
         keywords="managed IT blog, cyber security, Cyber Essentials, ISO 27001, compliance evidence, IT support for accountants, IT support for law firms"
       />
       <JsonLd 
         schema={{
           type: "Organization",
-          name: "Infodot UK",
+          name: "Infodot",
           url: window.location.origin,
-          description: "Managed IT provider for regulated UK industries, run remotely by an ISO 27001-certified team",
+          description: "Managed IT provider for regulated industries, run remotely by an ISO 27001-certified team",
           logo: `${window.location.origin}/og-image.png`,
         }}
       />

@@ -12,8 +12,8 @@ const NotFound = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-secondary p-4">
       <SEOHead
-        title="Page Not Found (404) | Infodot UK"
-        description="The page you're looking for doesn't exist. Return to Infodot UK's homepage to explore our managed IT, security and compliance services for regulated UK industries."
+        title="Page Not Found (404) | Infodot"
+        description="The page you're looking for doesn't exist. Return to Infodot's homepage to explore our managed IT, security and compliance services for regulated industries."
       />
       <div className="w-full max-w-md rounded-3xl border border-border bg-card p-10 text-center shadow-[var(--shadow-card)] animate-slide-up">
         <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">Error</span>

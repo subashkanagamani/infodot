@@ -132,7 +132,7 @@ const ServiceDetail = () => {
     serviceType: service.title,
     provider: {
       "@type": "Organization",
-      name: "Infodot UK",
+      name: "Infodot",
       url: "https://infodot.co.uk",
     },
     areaServed: "Global",
@@ -203,7 +203,7 @@ const ServiceDetail = () => {
                 </div>
                 <div className="border-t border-primary-foreground/15 pt-4">
                   <p className="font-display text-2xl font-bold">Since 1996</p>
-                  <p className="text-xs uppercase tracking-[0.18em] opacity-70">Running UK IT</p>
+                  <p className="text-xs uppercase tracking-[0.18em] opacity-70">Running IT</p>
                 </div>
               </div>
             </div>

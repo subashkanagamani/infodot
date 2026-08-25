@@ -14,9 +14,9 @@ const Contact = () => {
   return (
     <>
       <SEOHead
-        title="Contact Infodot UK — Book a Discovery Call"
-        description="Talk to Infodot UK about running your IT completely. Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours."
-        keywords="contact Infodot UK, managed IT provider UK, book a discovery call, IT support quote, hello@infodot.uk"
+        title="Contact Infodot — Book a Discovery Call"
+        description="Talk to Infodot about running your IT completely. Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours."
+        keywords="contact Infodot, managed IT provider, book a discovery call, IT support quote, hello@infodot.uk"
         canonicalUrl="https://infodot.co.uk/contact"
       />
       <div className="min-h-screen">

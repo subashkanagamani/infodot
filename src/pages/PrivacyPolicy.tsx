@@ -10,7 +10,7 @@ const sections = [
     h: "1. Introduction",
     body: (
       <p className="text-muted-foreground">
-        This Privacy Policy explains how Infodot Technologies Pvt Ltd ("Infodot UK", "we", "us", "our"), the data controller for personal data collected through this website, processes your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Infodot UK provides managed IT services to regulated UK industries and serves clients across the UK and EU remotely from our delivery centre in Bangalore, India.
+        This Privacy Policy explains how Infodot Technologies Pvt Ltd ("Infodot", "we", "us", "our"), the data controller for personal data collected through this website, processes your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Infodot provides managed IT services to regulated industries and serves clients remotely remotely from our delivery centre in Bangalore, India.
       </p>
     ),
   },
@@ -131,8 +131,8 @@ export default function PrivacyPolicy() {
       <BackToTop />
 
       <SEOHead
-        title="Privacy Policy | Infodot UK"
-        description="Read Infodot UK's privacy policy to understand how we collect, use, and protect your personal information."
+        title="Privacy Policy | Infodot"
+        description="Read Infodot's privacy policy to understand how we collect, use, and protect your personal information."
         keywords="privacy policy, data protection, personal information"
       />
 

@@ -16,7 +16,7 @@ export default function Industries() {
     <>
       <SEOHead
         title="Industries We Serve — Accountancy, Legal & Financial Services"
-        description="Managed IT for regulated UK industries: accountancy and tax practices, law firms and financial services. Delivered remotely by an ISO 27001:2022 certified team."
+        description="Managed IT for regulated industries: accountancy and tax practices, law firms and financial services. Delivered remotely by an ISO 27001:2022 certified team."
         keywords="managed IT for regulated industries, IT support accountants, IT support law firms, IT support financial services"
         canonicalUrl="https://infodot.co.uk/industries"
       />
@@ -30,7 +30,7 @@ export default function Industries() {
                 <div className="col-span-12 lg:col-span-8 bg-card rounded-3xl p-8 md:p-10 border border-border shadow-[var(--shadow-card)] animate-slide-up">
                   <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Industries</p>
                   <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 leading-[1.08]">
-                    Built for the regulated UK industries <span className="text-primary">we serve</span>
+                    Built for the regulated industries <span className="text-primary">we serve</span>
                   </h1>
                   <p className="text-muted-foreground text-base md:text-lg">
                     We run IT end to end and remotely for accountancy practices, law firms and

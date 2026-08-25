@@ -18,7 +18,7 @@ const steps = [
     icon: ShieldCheck,
     number: "02",
     title: "Run & Secure",
-    description: "One team runs the whole stack — helpdesk, patching, backup, EDR, MFA and hardening — as UK business-hours desk delivered remotely, standard from day one."
+    description: "One team runs the whole stack — helpdesk, patching, backup, EDR, MFA and hardening — as business-hours desk delivered remotely, standard from day one."
   },
   {
     icon: FileCheck2,

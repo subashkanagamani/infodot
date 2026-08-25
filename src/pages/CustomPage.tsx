@@ -248,7 +248,7 @@ export default function CustomPage() {
   return (
     <>
       <SEOHead
-        title={`${page.title} | Infodot UK`}
+        title={`${page.title} | Infodot`}
         description={page.meta_description || page.title}
         ogImage={page.og_image || undefined}
         canonicalUrl={`https://infodot.co.uk/${page.slug}`}

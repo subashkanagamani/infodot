@@ -117,7 +117,7 @@ export default function IndustryDetail() {
                   Book a 30-minute discovery call
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Exact quote within 48 hours. Infodot UK · Powered by Z360 · ISO 27001:2022 certified.
+                  Exact quote within 48 hours. Infodot · Powered by Z360 · ISO 27001:2022 certified.
                 </p>
                 <Button size="lg" className="rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90" asChild>
                   <Link to="/contact">Talk to Us</Link>

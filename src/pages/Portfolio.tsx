@@ -96,8 +96,8 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Client Outcomes - Managed IT Engagements | Infodot UK"
-        description="Engagement snapshots showing how Infodot UK runs managed IT, security and compliance evidence for accountancy, legal and financial services firms."
+        title="Client Outcomes - Managed IT Engagements | Infodot"
+        description="Engagement snapshots showing how Infodot runs managed IT, security and compliance evidence for accountancy, legal and financial services firms."
         keywords="managed IT case studies, Cyber Essentials, cyber insurance readiness, IT support for accountants, IT support for law firms, IT support for financial services"
       />
       <JsonLd
@@ -106,7 +106,7 @@ const Portfolio = () => {
           id: "portfolio-collection",
           data: {
             "@type": "CollectionPage",
-            name: "Infodot UK Client Outcomes",
+            name: "Infodot Client Outcomes",
             url: "https://infodot.co.uk/portfolio",
             description: "Engagement snapshots showing managed IT, security and compliance outcomes for accountancy, legal and financial services firms.",
             hasPart: filteredItems.map((item) => ({
@@ -133,7 +133,7 @@ const Portfolio = () => {
                 Engagement <span className="text-primary">Snapshots</span>
               </h1>
               <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl font-medium">
-                Generic, anonymised snapshots showing how we run managed IT, security and compliance evidence for regulated UK firms.
+                Generic, anonymised snapshots showing how we run managed IT, security and compliance evidence for regulated firms.
               </p>
             </div>
             <div className="col-span-12 lg:col-span-4 bg-accent text-accent-foreground rounded-3xl p-8 flex flex-col justify-center animate-slide-up" style={{ animationDelay: "0.08s" }}>
