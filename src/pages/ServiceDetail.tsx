@@ -116,6 +116,7 @@ const ServiceDetail = () => {
   }
 
   const Icon = iconMap[service.icon] || Target;
+  const promise = getServicePromise(service.slug);
   const canonical = `https://infodot.co.uk/services/${service.slug}`;
   const currentIndex = servicesData.findIndex((s) => s.slug === service.slug);
   const related = [
