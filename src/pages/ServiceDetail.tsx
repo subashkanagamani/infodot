@@ -218,18 +218,22 @@ const ServiceDetail = () => {
               </div>
             </div>
 
-            {/* Promise tile with offset frame */}
+            {/* Promise tile — navy, home-page style */}
             <div
-              className="col-span-12 lg:col-span-5 relative lg:mt-14 animate-slide-up"
+              className="col-span-12 lg:col-span-5 relative lg:mt-10 animate-slide-up"
               style={{ animationDelay: "0.08s" }}
             >
-              <div className="bg-primary text-primary-foreground p-8 md:p-12 shadow-2xl relative z-10">
-                <Icon className="w-10 h-10 mb-6" />
-                <p className="font-display text-2xl md:text-[1.75rem] font-extrabold leading-snug">
+              <div className="relative overflow-hidden bg-accent text-accent-foreground rounded-3xl p-8 md:p-12 shadow-[var(--shadow-card)]">
+                <span className="relative z-10 w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-6">
+                  <Icon className="w-6 h-6 text-primary-foreground" />
+                </span>
+                <p className="relative z-10 font-display text-2xl md:text-[1.75rem] font-bold leading-snug">
                   {promise.promise}
                 </p>
+                <div className="absolute -right-10 -bottom-10 opacity-10" aria-hidden>
+                  <div className="w-40 h-40 border-[18px] border-current rounded-full" />
+                </div>
               </div>
-              <div className="absolute -top-5 -right-5 w-full h-full border-2 border-foreground/80 z-0 hidden sm:block" />
             </div>
           </div>
 
@@ -281,30 +285,36 @@ const ServiceDetail = () => {
             className="col-span-12 lg:col-span-4 lg:sticky lg:top-28 space-y-8 animate-slide-up"
             style={{ animationDelay: "0.12s" }}
           >
-            <div className="bg-card p-8 md:p-10 shadow-2xl shadow-foreground/5">
-              <h4 className="font-display text-lg font-extrabold text-foreground mb-8 border-b-2 border-primary pb-4 w-fit">
+            <div className="relative overflow-hidden bg-accent text-accent-foreground rounded-3xl p-8 md:p-10 shadow-[var(--shadow-card)]">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">
                 Key Benefits
-              </h4>
-              <ul className="space-y-6">
+              </span>
+              <ul className="mt-6 space-y-4">
                 {service.benefits.map((b, i) => (
-                  <li key={i} className="flex items-start gap-4">
-                    <span className="w-4 h-4 mt-1.5 bg-primary flex-shrink-0" />
-                    <span className="font-semibold text-foreground/85 leading-relaxed">{b}</span>
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-6 h-6 mt-0.5 rounded-md bg-primary flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-primary-foreground" />
+                    </span>
+                    <span className="text-sm font-semibold leading-relaxed text-accent-foreground/90">{b}</span>
                   </li>
                 ))}
               </ul>
+              <div className="absolute -right-8 -bottom-8 opacity-10" aria-hidden>
+                <div className="w-32 h-32 border-[16px] border-current rounded-full" />
+              </div>
             </div>
 
-            <div className="bg-foreground text-background p-8 md:p-10 space-y-6">
-              <p className="text-lg font-light leading-relaxed opacity-90">
+            <div className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] space-y-6">
+              <p className="text-base font-medium leading-relaxed text-muted-foreground">
                 Want this scoped for your estate? We'll send an exact quote within 48 hours.
               </p>
-              <button
+              <Button
+                size="lg"
+                className="w-full py-6 rounded-2xl font-bold press"
                 onClick={() => navigate("/contact")}
-                className="w-full py-4 bg-primary text-primary-foreground font-extrabold tracking-[0.15em] uppercase text-xs hover:opacity-90 transition-opacity"
               >
-                Talk to an Expert
-              </button>
+                Talk to an Expert <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
             </div>
           </aside>
         </div>
