@@ -189,8 +189,9 @@ const ServiceDetail = () => {
               </div>
 
               <p className="text-lg md:text-2xl text-foreground/70 font-light leading-relaxed max-w-2xl border-l-4 border-primary pl-6 md:pl-8">
-                {service.shortDescription}
+                {heroLead}
               </p>
+
 
               <div className="flex flex-wrap gap-4 pt-2">
                 <Button
