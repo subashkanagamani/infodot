@@ -204,6 +204,8 @@ export const getServicePromise = (slug: string): ServicePromise =>
 export interface ServiceHeroCopy {
   eyebrow: string;
   headline: string;
+  /** Editorial lead paragraph shown under the pain chips */
+  lead?: string;
 }
 
 export const serviceHeroCopy: Record<string, ServiceHeroCopy> = {
@@ -230,7 +232,11 @@ export const serviceHeroCopy: Record<string, ServiceHeroCopy> = {
   "cyber-essentials-readiness": { eyebrow: "Cyber Essentials Readiness", headline: "Pass first time." },
   "cyber-insurance-readiness": { eyebrow: "Cyber Insurance Readiness", headline: "Answer the insurer honestly." },
   "always-audit-ready": { eyebrow: "Always Audit-Ready", headline: "Evidence, continuously." },
-  "iso27001-soc2-evidence": { eyebrow: "ISO 27001 & SOC 2 Evidence", headline: "Make the audit a formality." },
+  "iso27001-soc2-evidence": {
+    eyebrow: "ISO 27001 & SOC 2 Evidence",
+    headline: "Make the audit a formality.",
+    lead: "Monthly audit evidence and quarterly management review, generated as a by-product of how we run your IT — not assembled the week before an auditor calls.",
+  },
   "gdpr-data-protection": { eyebrow: "GDPR & Data Protection", headline: "GDPR as an operating discipline." },
   "fca-operational-resilience": { eyebrow: "FCA Operational Resilience", headline: "Resilience you can evidence." },
   "it-transition-exit": { eyebrow: "IT Transition & Exit", headline: "Switch without the drama." },
