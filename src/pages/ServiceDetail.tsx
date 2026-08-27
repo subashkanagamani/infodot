@@ -237,17 +237,6 @@ const ServiceDetail = () => {
             </div>
           </div>
 
-          {/* Awareness strip */}
-          <div className="mt-16 md:mt-20 pt-8 border-t border-border flex flex-wrap items-center gap-x-3 gap-y-2">
-            <Users className="w-4 h-4 text-primary flex-shrink-0" />
-            <p className="text-sm text-muted-foreground">{promise.awareness}</p>
-            <Link
-              to="/services/security-awareness"
-              className="text-sm font-semibold text-primary hover:underline"
-            >
-              See security awareness training →
-            </Link>
-          </div>
         </div>
       </section>
 
