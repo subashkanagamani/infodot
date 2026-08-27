@@ -218,18 +218,22 @@ const ServiceDetail = () => {
               </div>
             </div>
 
-            {/* Promise tile with offset frame */}
+            {/* Promise tile — navy, home-page style */}
             <div
-              className="col-span-12 lg:col-span-5 relative lg:mt-14 animate-slide-up"
+              className="col-span-12 lg:col-span-5 relative lg:mt-10 animate-slide-up"
               style={{ animationDelay: "0.08s" }}
             >
-              <div className="bg-primary text-primary-foreground p-8 md:p-12 shadow-2xl relative z-10">
-                <Icon className="w-10 h-10 mb-6" />
-                <p className="font-display text-2xl md:text-[1.75rem] font-extrabold leading-snug">
+              <div className="relative overflow-hidden bg-accent text-accent-foreground rounded-3xl p-8 md:p-12 shadow-[var(--shadow-card)]">
+                <span className="relative z-10 w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-6">
+                  <Icon className="w-6 h-6 text-primary-foreground" />
+                </span>
+                <p className="relative z-10 font-display text-2xl md:text-[1.75rem] font-bold leading-snug">
                   {promise.promise}
                 </p>
+                <div className="absolute -right-10 -bottom-10 opacity-10" aria-hidden>
+                  <div className="w-40 h-40 border-[18px] border-current rounded-full" />
+                </div>
               </div>
-              <div className="absolute -top-5 -right-5 w-full h-full border-2 border-foreground/80 z-0 hidden sm:block" />
             </div>
           </div>
 
