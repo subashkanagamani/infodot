@@ -118,6 +118,12 @@ const ServiceDetail = () => {
   const Icon = iconMap[service.icon] || Target;
   const promise = getServicePromise(service.slug);
   const heroCopy = getServiceHeroCopy(service.slug, service.title);
+  const heroLead =
+    heroCopy.lead ??
+    (service.shortDescription.trim().toLowerCase() !== heroCopy.headline.trim().toLowerCase()
+      ? service.shortDescription
+      : (service.description.split(/(?<=\.)\s+/).slice(0, 2).join(" ") || service.description));
+
   const canonical = `https://infodot.co.uk/services/${service.slug}`;
   const currentIndex = servicesData.findIndex((s) => s.slug === service.slug);
   const related = [
