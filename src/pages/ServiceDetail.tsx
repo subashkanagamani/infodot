@@ -44,7 +44,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { servicesData, getServiceBySlug, type ServiceItem } from "@/data/services";
-import { getServicePromise } from "@/data/servicePromises";
+import { getServicePromise, getServiceHeroCopy } from "@/data/servicePromises";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Target,
@@ -117,6 +117,7 @@ const ServiceDetail = () => {
 
   const Icon = iconMap[service.icon] || Target;
   const promise = getServicePromise(service.slug);
+  const heroCopy = getServiceHeroCopy(service.slug, service.title);
   const canonical = `https://infodot.co.uk/services/${service.slug}`;
   const currentIndex = servicesData.findIndex((s) => s.slug === service.slug);
   const related = [
@@ -167,13 +168,13 @@ const ServiceDetail = () => {
                 <div className="space-y-1.5">
                   <div className="h-0.5 w-12 bg-primary" />
                   <span className="block uppercase tracking-[0.2em] text-[11px] font-extrabold text-primary">
-                    Infodot Services
+                    {heroCopy.eyebrow}
                   </span>
                 </div>
               </div>
 
               <h1 className="font-display text-4xl md:text-6xl font-extrabold text-foreground leading-[1.05] tracking-tight">
-                {service.title}
+                {heroCopy.headline}
               </h1>
 
               <div className="flex flex-wrap gap-3">
@@ -197,7 +198,7 @@ const ServiceDetail = () => {
                   className="rounded-md px-8 py-6 font-extrabold press shadow-xl shadow-primary/20"
                   onClick={() => navigate("/contact")}
                 >
-                  Book a Discovery Call <ArrowRight className="ml-2 w-4 h-4" />
+                  Book a free assessment <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <Button
                   size="lg"
@@ -205,9 +206,7 @@ const ServiceDetail = () => {
                   className="rounded-md px-8 py-6 font-extrabold press"
                   asChild
                 >
-                  <Link to="/services">
-                    <ArrowLeft className="mr-2 w-4 h-4" /> All Services
-                  </Link>
+                  <Link to="/contact">Talk to an expert</Link>
                 </Button>
               </div>
             </div>
