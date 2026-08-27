@@ -118,6 +118,12 @@ const ServiceDetail = () => {
   const Icon = iconMap[service.icon] || Target;
   const promise = getServicePromise(service.slug);
   const heroCopy = getServiceHeroCopy(service.slug, service.title);
+  const heroLead =
+    heroCopy.lead ??
+    (service.shortDescription.trim().toLowerCase() !== heroCopy.headline.trim().toLowerCase()
+      ? service.shortDescription
+      : (service.description.split(/(?<=\.)\s+/).slice(0, 2).join(" ") || service.description));
+
   const canonical = `https://infodot.co.uk/services/${service.slug}`;
   const currentIndex = servicesData.findIndex((s) => s.slug === service.slug);
   const related = [
@@ -189,8 +195,9 @@ const ServiceDetail = () => {
               </div>
 
               <p className="text-lg md:text-2xl text-foreground/70 font-light leading-relaxed max-w-2xl border-l-4 border-primary pl-6 md:pl-8">
-                {service.shortDescription}
+                {heroLead}
               </p>
+
 
               <div className="flex flex-wrap gap-4 pt-2">
                 <Button
@@ -221,11 +228,6 @@ const ServiceDetail = () => {
                 <p className="font-display text-2xl md:text-[1.75rem] font-extrabold leading-snug">
                   {promise.promise}
                 </p>
-                <div className="pt-6 mt-8 border-t border-primary-foreground/20">
-                  <span className="text-xs font-bold tracking-[0.18em] uppercase opacity-80">
-                    ISO 27001 certified · Since 1996
-                  </span>
-                </div>
               </div>
               <div className="absolute -top-5 -right-5 w-full h-full border-2 border-foreground/80 z-0 hidden sm:block" />
             </div>
