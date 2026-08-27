@@ -228,11 +228,6 @@ const ServiceDetail = () => {
                 <p className="font-display text-2xl md:text-[1.75rem] font-extrabold leading-snug">
                   {promise.promise}
                 </p>
-                <div className="pt-6 mt-8 border-t border-primary-foreground/20">
-                  <span className="text-xs font-bold tracking-[0.18em] uppercase opacity-80">
-                    ISO 27001 certified · Since 1996
-                  </span>
-                </div>
               </div>
               <div className="absolute -top-5 -right-5 w-full h-full border-2 border-foreground/80 z-0 hidden sm:block" />
             </div>
