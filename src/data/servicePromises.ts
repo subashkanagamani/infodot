@@ -195,3 +195,49 @@ export const getServicePromise = (slug: string): ServicePromise =>
     promise: "One accountable team, with clear ownership from day one.",
     awareness: "Security starts with your people — phishing, passwords, MFA.",
   };
+
+/**
+ * Per-service hero eyebrow (kicker) and outcome headline, matching the
+ * approved service-hero reference: a small labelled kicker above a short,
+ * benefit-led headline instead of the raw service title.
+ */
+export interface ServiceHeroCopy {
+  eyebrow: string;
+  headline: string;
+}
+
+export const serviceHeroCopy: Record<string, ServiceHeroCopy> = {
+  "managed-it": { eyebrow: "Fully Managed IT", headline: "IT that just works." },
+  "helpdesk-it-operations": { eyebrow: "Helpdesk & IT Operations", headline: "Help that actually answers." },
+  "co-managed-it": { eyebrow: "Co-Managed IT", headline: "Extend your IT team." },
+  "microsoft365-google-workspace": { eyebrow: "Cloud Workspace", headline: "Your cloud, properly configured." },
+  "rmm-patch-management": { eyebrow: "Monitoring & Patch Management", headline: "Patched before it bites." },
+  "asset-licence-domain": { eyebrow: "Asset, Licence & Domain", headline: "Know what you own." },
+  "backup-disaster-recovery": { eyebrow: "Backup & Disaster Recovery", headline: "Restores you can prove." },
+  "cloud-management": { eyebrow: "Cloud Management", headline: "Cloud, under control." },
+  "device-lifecycle": { eyebrow: "Device Lifecycle", headline: "Every device accounted for." },
+  "onboarding-exit": { eyebrow: "Onboarding & Exit", headline: "Access on day one, gone on day last." },
+  "secure-by-default": { eyebrow: "Secure by Default", headline: "Security isn't an upgrade." },
+  "managed-edr": { eyebrow: "Managed EDR", headline: "Someone actually responds." },
+  "it-hardening": { eyebrow: "IT Hardening", headline: "Close the door first." },
+  "email-security": { eyebrow: "Email Security", headline: "Stop it before the inbox." },
+  "identity-access": { eyebrow: "Identity & Access", headline: "Prove who has access." },
+  "network-security": { eyebrow: "Network Security", headline: "Watched, every day." },
+  "monitoring-incident-response": { eyebrow: "Monitoring & Incident Response", headline: "Caught early, handled calmly." },
+  "penetration-testing-vapt": { eyebrow: "Penetration Testing & VAPT", headline: "The report buyers ask for." },
+  "vulnerability-management": { eyebrow: "Vulnerability Management", headline: "Found, fixed, evidenced." },
+  "security-awareness": { eyebrow: "Security Awareness Training", headline: "Make people the control." },
+  "cyber-essentials-readiness": { eyebrow: "Cyber Essentials Readiness", headline: "Pass first time." },
+  "cyber-insurance-readiness": { eyebrow: "Cyber Insurance Readiness", headline: "Answer the insurer honestly." },
+  "always-audit-ready": { eyebrow: "Always Audit-Ready", headline: "Evidence, continuously." },
+  "iso27001-soc2-evidence": { eyebrow: "ISO 27001 & SOC 2 Evidence", headline: "Make the audit a formality." },
+  "gdpr-data-protection": { eyebrow: "GDPR & Data Protection", headline: "GDPR as an operating discipline." },
+  "fca-operational-resilience": { eyebrow: "FCA Operational Resilience", headline: "Resilience you can evidence." },
+  "it-transition-exit": { eyebrow: "IT Transition & Exit", headline: "Switch without the drama." },
+  "discovery-phase0": { eyebrow: "Discovery — Phase 0", headline: "See it before you change it." },
+  "email-migration": { eyebrow: "Email Migration", headline: "Migrated before anyone notices." },
+  "domain-migration": { eyebrow: "Domain & DNS Migration", headline: "No surprise downtime." },
+};
+
+export const getServiceHeroCopy = (slug: string, fallbackTitle: string): ServiceHeroCopy =>
+  serviceHeroCopy[slug] ?? { eyebrow: fallbackTitle, headline: fallbackTitle };
