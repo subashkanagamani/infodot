@@ -337,7 +337,7 @@ export const serviceHeroCopy: Record<string, ServiceHeroCopy> = {
   "fca-operational-resilience": {
     eyebrow: "ALWAYS AUDIT-READY",
     headline: "For the FCA's new third-party rules — be the supplier that's ready.",
-    lead: "Support for financial firms preparing for the FCA's operational-resilience and third-party reporting rules — mapping, evidence and exit planning for the services we provide you.",
+    lead: "A due-diligence evidence pack your regulated clients can hand their own supervisors — proof you're the supplier that's already ready, not scrambling to catch up.",
   },
   "it-transition-exit": {
     eyebrow: "SWITCH · PROJECTS & MIGRATIONS",
