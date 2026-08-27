@@ -281,30 +281,36 @@ const ServiceDetail = () => {
             className="col-span-12 lg:col-span-4 lg:sticky lg:top-28 space-y-8 animate-slide-up"
             style={{ animationDelay: "0.12s" }}
           >
-            <div className="bg-card p-8 md:p-10 shadow-2xl shadow-foreground/5">
-              <h4 className="font-display text-lg font-extrabold text-foreground mb-8 border-b-2 border-primary pb-4 w-fit">
+            <div className="relative overflow-hidden bg-accent text-accent-foreground rounded-3xl p-8 md:p-10 shadow-[var(--shadow-card)]">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary">
                 Key Benefits
-              </h4>
-              <ul className="space-y-6">
+              </span>
+              <ul className="mt-6 space-y-4">
                 {service.benefits.map((b, i) => (
-                  <li key={i} className="flex items-start gap-4">
-                    <span className="w-4 h-4 mt-1.5 bg-primary flex-shrink-0" />
-                    <span className="font-semibold text-foreground/85 leading-relaxed">{b}</span>
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-6 h-6 mt-0.5 rounded-md bg-primary flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-primary-foreground" />
+                    </span>
+                    <span className="text-sm font-semibold leading-relaxed text-accent-foreground/90">{b}</span>
                   </li>
                 ))}
               </ul>
+              <div className="absolute -right-8 -bottom-8 opacity-10" aria-hidden>
+                <div className="w-32 h-32 border-[16px] border-current rounded-full" />
+              </div>
             </div>
 
-            <div className="bg-foreground text-background p-8 md:p-10 space-y-6">
-              <p className="text-lg font-light leading-relaxed opacity-90">
+            <div className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] space-y-6">
+              <p className="text-base font-medium leading-relaxed text-muted-foreground">
                 Want this scoped for your estate? We'll send an exact quote within 48 hours.
               </p>
-              <button
+              <Button
+                size="lg"
+                className="w-full py-6 rounded-2xl font-bold press"
                 onClick={() => navigate("/contact")}
-                className="w-full py-4 bg-primary text-primary-foreground font-extrabold tracking-[0.15em] uppercase text-xs hover:opacity-90 transition-opacity"
               >
-                Talk to an Expert
-              </button>
+                Talk to an Expert <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
             </div>
           </aside>
         </div>
