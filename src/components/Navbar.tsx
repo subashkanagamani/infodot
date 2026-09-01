@@ -7,7 +7,7 @@ import { SearchDialog } from "@/components/SearchDialog";
 import { useSection } from "@/hooks/usePageContent";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/infodot-logo.png";
-import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks, NavLinkItem } from "@/data/siteNav";
+import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks, topLevelLinks, NavLinkItem } from "@/data/siteNav";
 
 interface NavContent { ctaLabel: string; ctaHref: string }
 const NAV_DEFAULTS: NavContent = { ctaLabel: "Book Free IT Assessment", ctaHref: "/contact" };

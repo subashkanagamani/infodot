@@ -15,7 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks } from "@/data/siteNav";
+import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks, topLevelLinks } from "@/data/siteNav";
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -64,6 +64,8 @@ export const MobileMenu = () => {
               </AccordionItem>
             ))}
           </Accordion>
+          {topLevelLinks.map((l) => item(l.label, l.href))}
+
 
           <Button className="mt-6 w-full" asChild>
             <Link to="/contact" onClick={close}>Book Free IT Assessment</Link>
