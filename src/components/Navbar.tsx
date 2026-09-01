@@ -7,7 +7,7 @@ import { SearchDialog } from "@/components/SearchDialog";
 import { useSection } from "@/hooks/usePageContent";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/infodot-logo.png";
-import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks, NavLinkItem } from "@/data/siteNav";
+import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks, topLevelLinks, NavLinkItem } from "@/data/siteNav";
 
 interface NavContent { ctaLabel: string; ctaHref: string }
 const NAV_DEFAULTS: NavContent = { ctaLabel: "Book Free IT Assessment", ctaHref: "/contact" };
@@ -88,7 +88,19 @@ export const Navbar = () => {
                 <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", openMenu === t.key && "rotate-180")} />
               </button>
             ))}
+            {topLevelLinks.map((l) => (
+              <Link
+                key={l.href}
+                to={l.href}
+                onClick={close}
+                onMouseEnter={close}
+                className="rounded-lg px-2.5 py-2 text-sm whitespace-nowrap transition-colors hover:text-primary"
+              >
+                {l.label}
+              </Link>
+            ))}
           </div>
+
 
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" onClick={() => setSearchOpen(true)} className="hidden lg:inline-flex" aria-label="Open search">

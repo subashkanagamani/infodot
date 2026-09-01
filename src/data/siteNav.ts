@@ -85,15 +85,20 @@ export const resourceLinks: NavLinkItem[] = [
 
 export const aboutLinks: NavLinkItem[] = [
   { label: "About Infodot", href: "/about", description: "Since 1996, ISO 27001:2022 certified." },
-  { label: "Why Infodot", href: "/z360", description: "The operations engine behind every account." },
   { label: "Service Delivery", href: "/how-it-works", description: "Co-managed, fully managed or fully remote." },
-  { label: "Service Levels", href: "/pricing", description: "Essentials, Secured and Audit-Ready." },
   { label: "Small Office", href: "/small-office", description: "For offices of 5–20 seats." },
   { label: "Careers", href: "/careers", description: "Join the team." },
   { label: "Contact", href: "/contact", description: "Talk to a named business-hours engineer." },
   { label: "Legal & Privacy", href: "/legal", description: "How we handle your data." },
 ];
 
+/** Top-level nav links (no dropdown) */
+export const topLevelLinks: NavLinkItem[] = [
+  { label: "Z360", href: "/z360", description: "The operations engine behind every account." },
+  { label: "Pricing", href: "/pricing", description: "Essentials, Secured and Audit-Ready." },
+];
+
 /** Legacy aliases */
 export const solutionLinks = aboutLinks.slice(1, 5);
 export const companyLinks = aboutLinks;
+
