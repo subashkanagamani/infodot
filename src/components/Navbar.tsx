@@ -88,7 +88,19 @@ export const Navbar = () => {
                 <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", openMenu === t.key && "rotate-180")} />
               </button>
             ))}
+            {topLevelLinks.map((l) => (
+              <Link
+                key={l.href}
+                to={l.href}
+                onClick={close}
+                onMouseEnter={close}
+                className="rounded-lg px-2.5 py-2 text-sm whitespace-nowrap transition-colors hover:text-primary"
+              >
+                {l.label}
+              </Link>
+            ))}
           </div>
+
 
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" onClick={() => setSearchOpen(true)} className="hidden lg:inline-flex" aria-label="Open search">
