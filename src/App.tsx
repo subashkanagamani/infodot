@@ -11,6 +11,10 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Industries from "./pages/Industries";
 import HowItWorks from "./pages/HowItWorks";
 import SmallOffice from "./pages/SmallOffice";
+import SupplyChainAssurance from "./pages/SupplyChainAssurance";
+import ResilienceBill from "./pages/ResilienceBill";
+import NisEssentialServices from "./pages/NisEssentialServices";
+import HealthcareNhs from "./pages/HealthcareNhs";
 import Legal from "./pages/Legal";
 import Z360 from "./pages/Z360";
 import IndustryDetail from "./pages/IndustryDetail";
@@ -73,7 +77,11 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/industries" element={<Industries />} />
+              <Route path="/industries/healthcare-nhs" element={<HealthcareNhs />} />
               <Route path="/industries/:slug" element={<IndustryDetail />} />
+              <Route path="/compliance/supply-chain-assurance" element={<SupplyChainAssurance />} />
+              <Route path="/compliance/cyber-resilience-bill" element={<ResilienceBill />} />
+              <Route path="/compliance/nis-essential-services" element={<NisEssentialServices />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/small-office" element={<SmallOffice />} />
               <Route path="/legal" element={<Legal />} />

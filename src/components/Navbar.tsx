@@ -46,7 +46,7 @@ export const Navbar = () => {
     { key: "managed-it", label: "Managed IT", href: "/services" },
     { key: "cybersecurity", label: "Cybersecurity", href: "/services" },
     { key: "compliance", label: "Compliance", href: "/services" },
-    { key: "industries", label: "Industries", href: "/industries" },
+    { key: "industries", label: "Who We Serve", href: "/industries" },
     { key: "resources", label: "Resources", href: "/resources" },
     { key: "about", label: "About", href: "/about" },
   ];
@@ -55,7 +55,7 @@ export const Navbar = () => {
     "managed-it": { links: managedItLinks, footer: { label: "View all services", href: "/services" } },
     cybersecurity: { links: cybersecurityLinks, footer: { label: "View all services", href: "/services" } },
     compliance: { links: complianceLinks, footer: { label: "View all services", href: "/services" } },
-    industries: { links: industryLinks, footer: { label: "All industries", href: "/industries" } },
+    industries: { links: industryLinks, footer: { label: "All sectors we serve", href: "/industries" } },
     resources: { links: resourceLinks },
     about: { links: aboutLinks },
   };
