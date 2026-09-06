@@ -44,7 +44,7 @@ const FOOTER_DEFAULTS: FooterColumns = {
   ],
   solutionsTitle: "SOLUTIONS",
   solutionsLinks: [
-    { label: "Small Office", href: "/small-office" },
+    { label: "Small & Growing Firms", href: "/small-office" },
     { label: "Z360", href: "/z360" },
     { label: "Cyber Insurance", href: "/cyber-insurance-readiness" },
     { label: "Cyber Essentials", href: "/cyber-essentials-readiness" },
