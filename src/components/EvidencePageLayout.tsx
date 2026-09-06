@@ -75,6 +75,14 @@ export const EvidencePageLayout = ({ data, chips }: Props) => {
                   <div className="w-11 h-11 rounded-xl bg-primary text-primary-foreground flex items-center justify-center mb-6">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
+                  {data.heroBadge && (
+                    <div className="mb-6 rounded-2xl border border-accent-foreground/20 bg-accent-foreground/5 px-4 py-3">
+                      <p className="font-display text-2xl font-bold leading-none">{data.heroBadge.big}</p>
+                      <p className="mt-1 text-xs uppercase tracking-wide text-accent-foreground/70">
+                        {data.heroBadge.small}
+                      </p>
+                    </div>
+                  )}
                   <div className="space-y-6">
                     {data.stats.map((s) => (
                       <div key={s.small}>
@@ -83,6 +91,7 @@ export const EvidencePageLayout = ({ data, chips }: Props) => {
                       </div>
                     ))}
                   </div>
+
                 </div>
               </div>
             </div>
