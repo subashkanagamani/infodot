@@ -329,6 +329,8 @@ export const healthcareNhs: EvidencePageData = {
     "If you handle NHS patient data — as a trust, a GP practice, a clinic, or a supplier in the NHS chain — the Data Security & Protection Toolkit is non-negotiable. We run the IT estate underneath it against the National Data Guardian standards, with the evidence captured continuously — so your annual DSPT submission is something you confirm, not something you scramble to assemble. We don't submit it for you, and we're not your Clinical Safety Officer — we make sure the estate behind it is ready.",
   primaryCta: { label: "Book a DSPT readiness check", href: "/contact" },
   secondaryCta: { label: "Talk to us first", href: "/contact" },
+  heroBadge: { big: "DSPT", small: "ready · every month" },
+
   stats: [
     { big: "1×/yr", small: "Mandatory DSPT submission for NHS-data handlers" },
     { big: "10", small: "National Data Guardian standards aligned" },
