@@ -133,7 +133,25 @@ export const supplyChainAssurance: EvidencePageData = {
   standard: {
     eyebrow: "We're a low-risk supplier ourselves",
     heading: "You're bringing us into your supply chain. We hold ourselves to the standard we get you to.",
-    points: selfStandard,
+    points: [
+      {
+        title: "Cyber Essentials on ourselves",
+        body: "The same five control areas we prepare you for.",
+      },
+      {
+        title: "Named team, JML enforced",
+        body: "Least-privilege access, same-day revocation on role change.",
+      },
+      {
+        title: "Your data stays in your tenancy",
+        body: "We administer in place — we don't copy your data out to our systems.",
+      },
+      {
+        title: "Right to verify",
+        body: "Full audit trail on every action in your environment, available to you.",
+      },
+    ],
+
   },
   ownership: {
     eyebrow: "What we own — and what stays with you",
