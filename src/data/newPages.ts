@@ -194,6 +194,14 @@ export const resilienceBill: EvidencePageData = {
     "The UK's Cyber Security & Resilience Bill turns managed service providers into a regulated category — with a 24-hour incident clock and penalties that reach millions. We don't audit, and we don't wait for the deadline. We run your IT estate with the controls and evidence already in place — so when the rules bite, there's nothing to scramble for, and your MSP isn't the weak link in your supply chain.",
   primaryCta: { label: "Start your readiness assessment", href: "/contact" },
   secondaryCta: { label: "Talk to us first", href: "/contact" },
+  heroBadge: { big: "24h", small: "notify · then 72h" },
+  callout: {
+    eyebrow: "Why this lands on you",
+    heading: "You don't have to be a bank or a hospital for this to matter.",
+    body:
+      "If an auditor, an insurer or a customer examines your supply chain, your MSP is now part of the regulated surface. A supplier who can't evidence their controls — or can't move inside a 24-hour clock — becomes your exposure. We make sure the answer to \u201cis your IT provider ready for this?\u201d is yes, in writing.",
+  },
+
   stats: [
     { big: "Named", small: "MSPs written into UK law for the first time" },
     { big: "24h", small: "Initial incident notification window" },
