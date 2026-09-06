@@ -62,6 +62,8 @@ export const supplyChainAssurance: EvidencePageData = {
     "Your enterprise customers are under their own regulation — and they now vet your cyber hygiene before they'll sign or renew. If you can't evidence it, the deal stalls in vendor onboarding. We run your IT estate to a demonstrable standard and keep the evidence pack current, so you clear supplier due diligence and win the contract. We don't audit you — we make the review a formality.",
   primaryCta: { label: "Book a supplier-readiness review", href: "/contact" },
   secondaryCta: { label: "Talk to us first", href: "/contact" },
+  heroBadge: { big: "✓", small: "you — the verified link in the chain" },
+
   stats: [
     { big: "1 pack", small: "One living evidence pack answers every questionnaire" },
     { big: "SIG · CAIQ", small: "Security questionnaires answered, not reinvented" },
