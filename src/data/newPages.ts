@@ -441,6 +441,8 @@ export const nisEssentialServices: EvidencePageData = {
     "If you operate in energy, water, health, transport or digital infrastructure, the NIS Regulations already hold you to appropriate security measures and incident reporting — and the incoming Cyber Security & Resilience Bill raises the bar again. We run the network and information systems underneath those obligations with the evidence captured continuously, so an inspection or an incident finds you ready. We don't file your regulatory return — we make sure the estate behind it stands up.",
   primaryCta: { label: "Book a NIS readiness assessment", href: "/contact" },
   secondaryCta: { label: "Talk to us first", href: "/contact" },
+  heroBadge: { big: "24/7", small: "monitored · 24/7" },
+
   stats: [
     { big: "5", small: "Essential-service sectors in scope of NIS" },
     { big: "24/7", small: "Monitoring so incidents are caught, not reconstructed" },
