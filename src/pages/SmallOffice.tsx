@@ -152,8 +152,21 @@ const SmallOffice = () => {
                     </Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="rounded-xl press border-2 border-accent text-accent whitespace-normal">
-                    <Link to="/pricing">See pricing</Link>
+                    <a href="#packages">See the packages</a>
                   </Button>
+                </div>
+                <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-border pt-6">
+                  {[
+                    { big: "20–75", small: "Seats we're built for" },
+                    { big: "NCSC", small: "Small Business Guide + 10 Steps aligned" },
+                    { big: "CE-ready", small: "Cyber Essentials readiness built in" },
+                    { big: "1 / mo", small: "Plain-English security & health report" },
+                  ].map((s) => (
+                    <div key={s.big}>
+                      <p className="font-display text-xl font-bold leading-tight">{s.big}</p>
+                      <p className="mt-1 text-xs text-muted-foreground">{s.small}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
               <div
@@ -169,8 +182,19 @@ const SmallOffice = () => {
                   <p className="text-sm text-accent-foreground/75">
                     Big-MSP discipline, without big-MSP overhead — three tiers you can start and step up.
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {["Baseline", "Compliance", "Governance"].map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-full border border-accent-foreground/25 px-3 py-1 text-xs font-semibold uppercase tracking-wide"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
