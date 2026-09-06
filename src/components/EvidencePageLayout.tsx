@@ -121,8 +121,24 @@ export const EvidencePageLayout = ({ data, chips }: Props) => {
                 </div>
               ))}
             </div>
+            {data.callout && (
+              <div className="mt-10 grid grid-cols-12 gap-4">
+                <div className="col-span-12 md:col-span-5 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
+                  <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">
+                    {data.callout.eyebrow}
+                  </p>
+                  <h3 className="font-display text-xl md:text-2xl font-bold leading-[1.15]">
+                    {data.callout.heading}
+                  </h3>
+                </div>
+                <div className="col-span-12 md:col-span-7 rounded-3xl bg-accent text-accent-foreground p-8 shadow-[var(--shadow-card)]">
+                  <p className="text-sm md:text-base text-accent-foreground/85">{data.callout.body}</p>
+                </div>
+              </div>
+            )}
           </div>
         </section>
+
 
         {/* Process */}
         <section className="section-padding bg-secondary">
