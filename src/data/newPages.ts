@@ -13,6 +13,9 @@ export interface EvidencePageData {
   lead: string;
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
+  heroBadge?: { big: string; small: string };
+  callout?: { eyebrow: string; heading: string; body: string };
+
   stats: EvidenceStat[];
   whySection: { eyebrow: string; heading: string; body: string; points: EvidencePoint[] };
   process: { eyebrow: string; heading: string; steps: EvidenceStep[] };
@@ -59,6 +62,8 @@ export const supplyChainAssurance: EvidencePageData = {
     "Your enterprise customers are under their own regulation — and they now vet your cyber hygiene before they'll sign or renew. If you can't evidence it, the deal stalls in vendor onboarding. We run your IT estate to a demonstrable standard and keep the evidence pack current, so you clear supplier due diligence and win the contract. We don't audit you — we make the review a formality.",
   primaryCta: { label: "Book a supplier-readiness review", href: "/contact" },
   secondaryCta: { label: "Talk to us first", href: "/contact" },
+  heroBadge: { big: "✓", small: "you — the verified link in the chain" },
+
   stats: [
     { big: "1 pack", small: "One living evidence pack answers every questionnaire" },
     { big: "SIG · CAIQ", small: "Security questionnaires answered, not reinvented" },
@@ -128,7 +133,25 @@ export const supplyChainAssurance: EvidencePageData = {
   standard: {
     eyebrow: "We're a low-risk supplier ourselves",
     heading: "You're bringing us into your supply chain. We hold ourselves to the standard we get you to.",
-    points: selfStandard,
+    points: [
+      {
+        title: "Cyber Essentials on ourselves",
+        body: "The same five control areas we prepare you for.",
+      },
+      {
+        title: "Named team, JML enforced",
+        body: "Least-privilege access, same-day revocation on role change.",
+      },
+      {
+        title: "Your data stays in your tenancy",
+        body: "We administer in place — we don't copy your data out to our systems.",
+      },
+      {
+        title: "Right to verify",
+        body: "Full audit trail on every action in your environment, available to you.",
+      },
+    ],
+
   },
   ownership: {
     eyebrow: "What we own — and what stays with you",
@@ -171,6 +194,14 @@ export const resilienceBill: EvidencePageData = {
     "The UK's Cyber Security & Resilience Bill turns managed service providers into a regulated category — with a 24-hour incident clock and penalties that reach millions. We don't audit, and we don't wait for the deadline. We run your IT estate with the controls and evidence already in place — so when the rules bite, there's nothing to scramble for, and your MSP isn't the weak link in your supply chain.",
   primaryCta: { label: "Start your readiness assessment", href: "/contact" },
   secondaryCta: { label: "Talk to us first", href: "/contact" },
+  heroBadge: { big: "24h", small: "notify · then 72h" },
+  callout: {
+    eyebrow: "Why this lands on you",
+    heading: "You don't have to be a bank or a hospital for this to matter.",
+    body:
+      "If an auditor, an insurer or a customer examines your supply chain, your MSP is now part of the regulated surface. A supplier who can't evidence their controls — or can't move inside a 24-hour clock — becomes your exposure. We make sure the answer to \u201cis your IT provider ready for this?\u201d is yes, in writing.",
+  },
+
   stats: [
     { big: "Named", small: "MSPs written into UK law for the first time" },
     { big: "24h", small: "Initial incident notification window" },
@@ -298,6 +329,8 @@ export const healthcareNhs: EvidencePageData = {
     "If you handle NHS patient data — as a trust, a GP practice, a clinic, or a supplier in the NHS chain — the Data Security & Protection Toolkit is non-negotiable. We run the IT estate underneath it against the National Data Guardian standards, with the evidence captured continuously — so your annual DSPT submission is something you confirm, not something you scramble to assemble. We don't submit it for you, and we're not your Clinical Safety Officer — we make sure the estate behind it is ready.",
   primaryCta: { label: "Book a DSPT readiness check", href: "/contact" },
   secondaryCta: { label: "Talk to us first", href: "/contact" },
+  heroBadge: { big: "DSPT", small: "ready · every month" },
+
   stats: [
     { big: "1×/yr", small: "Mandatory DSPT submission for NHS-data handlers" },
     { big: "10", small: "National Data Guardian standards aligned" },
@@ -408,6 +441,8 @@ export const nisEssentialServices: EvidencePageData = {
     "If you operate in energy, water, health, transport or digital infrastructure, the NIS Regulations already hold you to appropriate security measures and incident reporting — and the incoming Cyber Security & Resilience Bill raises the bar again. We run the network and information systems underneath those obligations with the evidence captured continuously, so an inspection or an incident finds you ready. We don't file your regulatory return — we make sure the estate behind it stands up.",
   primaryCta: { label: "Book a NIS readiness assessment", href: "/contact" },
   secondaryCta: { label: "Talk to us first", href: "/contact" },
+  heroBadge: { big: "24/7", small: "monitored · 24/7" },
+
   stats: [
     { big: "5", small: "Essential-service sectors in scope of NIS" },
     { big: "24/7", small: "Monitoring so incidents are caught, not reconstructed" },
