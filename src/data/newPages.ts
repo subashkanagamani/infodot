@@ -13,6 +13,9 @@ export interface EvidencePageData {
   lead: string;
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
+  heroBadge?: { big: string; small: string };
+  callout?: { eyebrow: string; heading: string; body: string };
+
   stats: EvidenceStat[];
   whySection: { eyebrow: string; heading: string; body: string; points: EvidencePoint[] };
   process: { eyebrow: string; heading: string; steps: EvidenceStep[] };
