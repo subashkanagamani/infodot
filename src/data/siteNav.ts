@@ -61,7 +61,24 @@ export const managedItLinks: NavLinkItem[] = [
 ];
 
 export const cybersecurityLinks: NavLinkItem[] = pick(CYBERSECURITY);
-export const complianceLinks: NavLinkItem[] = pick(COMPLIANCE);
+export const complianceLinks: NavLinkItem[] = [
+  ...pick(COMPLIANCE),
+  {
+    label: "Supply-Chain Assurance",
+    href: "/compliance/supply-chain-assurance",
+    description: "Pass the security review with one living evidence pack.",
+  },
+  {
+    label: "Cyber Security & Resilience Bill",
+    href: "/compliance/cyber-resilience-bill",
+    description: "Relevant-MSP readiness and the 24-hour incident clock.",
+  },
+  {
+    label: "NIS / Essential Services",
+    href: "/compliance/nis-essential-services",
+    description: "Readiness for operators of essential services.",
+  },
+];
 
 /** Grouped view kept for the /services page and mobile menu. */
 export const serviceGroups: { title: string; links: NavLinkItem[] }[] = [
@@ -70,11 +87,24 @@ export const serviceGroups: { title: string; links: NavLinkItem[] }[] = [
   { title: "Compliance", links: complianceLinks },
 ];
 
-export const industryLinks: NavLinkItem[] = industries.map((i) => ({
-  label: i.navLabel || i.name,
-  href: `/industries/${i.slug}`,
-  description: i.name,
-}));
+/** "Who We Serve" — was "Industries". Small & Growing Firms leads. */
+export const industryLinks: NavLinkItem[] = [
+  {
+    label: "Small & Growing Firms",
+    href: "/small-office",
+    description: "Enterprise-grade, audit-ready IT at your scale.",
+  },
+  ...industries.map((i) => ({
+    label: i.navLabel || i.name,
+    href: `/industries/${i.slug}`,
+    description: i.name,
+  })),
+  {
+    label: "Healthcare / NHS suppliers",
+    href: "/industries/healthcare-nhs",
+    description: "DSPT-ready IT, every day.",
+  },
+];
 
 export const resourceLinks: NavLinkItem[] = [
   { label: "Insights", href: "/blog", description: "Notes on IT, security and compliance." },

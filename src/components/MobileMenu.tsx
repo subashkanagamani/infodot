@@ -51,7 +51,7 @@ export const MobileMenu = () => {
               { value: "managed-it", label: "Managed IT", links: managedItLinks, all: { label: "All services", href: "/services" } },
               { value: "cybersecurity", label: "Cybersecurity", links: cybersecurityLinks, all: { label: "All services", href: "/services" } },
               { value: "compliance", label: "Compliance", links: complianceLinks, all: { label: "All services", href: "/services" } },
-              { value: "industries", label: "Industries", links: industryLinks, all: { label: "All industries", href: "/industries" } },
+              { value: "industries", label: "Who We Serve", links: industryLinks, all: { label: "All sectors we serve", href: "/industries" } },
               { value: "resources", label: "Resources", links: resourceLinks },
               { value: "about", label: "About", links: aboutLinks },
             ].map((group) => (

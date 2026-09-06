@@ -27,11 +27,13 @@ const FOOTER_DEFAULTS: FooterColumns = {
   brandBlurb: "Managed IT for the regulated Remote industries we serve, run remotely. We run your IT. You own your IT.",
   certsLine: "ISO 27001:2022 certified · GDPR-aligned · SOC 2 in progress",
   poweredByLine: "Powered by Z360.",
-  industriesTitle: "INDUSTRIES",
+  industriesTitle: "WHO WE SERVE",
   industriesLinks: [
+    { label: "Small & Growing Firms", href: "/small-office" },
     { label: "Accountants", href: "/industries/accountants" },
     { label: "Law firms", href: "/industries/law-firms" },
     { label: "Financial services", href: "/industries/financial-services" },
+    { label: "Healthcare / NHS suppliers", href: "/industries/healthcare-nhs" },
   ],
   servicesTitle: "SERVICES",
   serviceLinks: [
