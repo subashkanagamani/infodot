@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -272,8 +273,8 @@ const SmallOffice = () => {
                 </thead>
                 <tbody>
                   {compareGroups.map((group) => (
-                    <>
-                      <tr key={group.title} className="bg-secondary">
+                    <Fragment key={group.title}>
+                      <tr className="bg-secondary">
                         <td colSpan={4} className="px-6 py-3 font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
                           {group.title}
                         </td>
@@ -292,7 +293,7 @@ const SmallOffice = () => {
                           ))}
                         </tr>
                       ))}
-                    </>
+                    </Fragment>
                   ))}
                 </tbody>
               </table>
