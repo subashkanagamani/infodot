@@ -218,7 +218,8 @@ const SmallOffice = () => {
         </section>
 
         {/* Tiers */}
-        <section className="section-padding bg-secondary">
+        <section id="packages" className="section-padding bg-secondary scroll-mt-24">
+
           <div className="container-custom">
             <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">
               Three ways to work with us — NCSC-aligned
