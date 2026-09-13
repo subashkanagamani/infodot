@@ -120,48 +120,6 @@
     <priority>0.3</priority>
   </url>
   <!-- Blog posts -->
-  <url>
-    <loc>https://infodot.consultwithprofessionals.com/blog/seo-guide-2025</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://infodot.consultwithprofessionals.com/blog/lead-generation-case-study</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://infodot.consultwithprofessionals.com/blog/email-marketing-roi</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://infodot.consultwithprofessionals.com/blog/content-marketing-strategy</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://infodot.consultwithprofessionals.com/blog/paid-advertising-2025</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://infodot.consultwithprofessionals.com/blog/10-important-strategies-to-3x-your-social-media-engagement-in-2024</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://infodot.consultwithprofessionals.com/blog/d2c-marketing-strategy</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Case studies -->
   <url>
     <loc>https://infodot.consultwithprofessionals.com/case-studies/2d9cf39f-743b-44fb-9d8c-7aaef0466e47</loc>
@@ -542,5 +500,85 @@
     <loc>https://infodot.consultwithprofessionals.com/resources/governance-and-compliance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/outsourcing-managed-it</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/outgrown-ad-hoc-it-support</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/switching-it-providers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/it-estate-secure-baseline</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/endpoint-is-the-pain-point</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/endpoint-security-audit-evidence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/email-security-phishing-spoofing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/email-data-leak-dlp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/protecting-business-data-gdpr</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/access-controls-mfa-audit-evidence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/recover-from-ransomware-backup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/microsoft-365-security-checklist</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/how-to-get-cyber-essentials-certified</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/always-audit-ready-evidence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/cyber-insurance-requirements</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://infodot.consultwithprofessionals.com/blog/pass-security-questionnaire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
