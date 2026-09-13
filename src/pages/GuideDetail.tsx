@@ -12,9 +12,9 @@ import { getGuide, guides } from "@/data/guides";
 const slugify = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
-export default function GuideDetail() {
+export default function GuideDetail({ slugOverride }: { slugOverride?: string } = {}) {
   const { slug } = useParams();
-  const guide = getGuide(slug);
+  const guide = getGuide(slugOverride ?? slug);
 
   if (!guide) return <Navigate to="/resources" replace />;
 

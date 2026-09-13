@@ -27,6 +27,7 @@ import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Careers from "./pages/Careers";
 import Resources from "./pages/Resources";
 import GuideDetail from "./pages/GuideDetail";
+import ResourceTopic from "./pages/ResourceTopic";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -94,7 +95,8 @@ const App = () => (
               <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/resources" element={<Resources />} />
-              <Route path="/resources/:slug" element={<GuideDetail />} />
+              <Route path="/resources/:pillar" element={<ResourceTopic />} />
+              <Route path="/resources/:pillar/:article" element={<ResourceTopic />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/enquiry" element={<Enquiry />} />

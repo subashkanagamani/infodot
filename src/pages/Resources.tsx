@@ -8,6 +8,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { guides } from "@/data/guides";
+import { hubTiles } from "@/data/resources";
 
 export default function Resources() {
   const resources = [
@@ -98,18 +99,18 @@ export default function Resources() {
                 </span>
                 <div className="space-y-1.5">
                   <div className="h-0.5 w-12 bg-primary" />
-                  <span className="block uppercase tracking-[0.2em] text-[11px] font-extrabold text-primary">
-                    Infodot Resources
+                   <span className="block uppercase tracking-[0.2em] text-[11px] font-extrabold text-primary">
+                    Resources · Securing your IT estate
                   </span>
                 </div>
               </div>
 
               <h1 className="font-display text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-tight">
-                Readiness, in <span className="text-primary">Plain English</span>
+                Straight answers about the IT you're <span className="text-primary">responsible for</span>
               </h1>
 
               <p className="text-lg md:text-2xl text-foreground/70 font-light leading-relaxed max-w-2xl border-l-4 border-primary pl-6 md:pl-8">
-                Guides and explainers on the things regulated buyers actually get asked about — Cyber Essentials, cyber-insurance readiness, GDPR, and the evidence that backs them.
+                Most security advice online is either a sales pitch in disguise or written for engineers, not the person who signs the cheque. This is the plain-English version: what each part of your IT actually needs, why it matters, and what tends to go wrong when it's left alone — written by the people who run it for a living.
               </p>
             </div>
 
@@ -120,10 +121,10 @@ export default function Resources() {
               <div className="bg-primary text-primary-foreground p-8 md:p-12 shadow-2xl relative z-10">
                 <BookOpen className="w-10 h-10 mb-6" />
                 <div className="font-display text-6xl font-extrabold tabular-nums leading-none">
-                  {resources.length + guides.length}
+                   {16}
                 </div>
                 <p className="font-display text-xl font-extrabold leading-snug mt-4">
-                  Free guides, checklists and toolkits — no gate, no sales call.
+                  layers of your IT estate, explained — plus checklists and toolkits. No gate, no sales call.
                 </p>
                 <div className="pt-6 mt-8 border-t border-primary-foreground/20">
                   <span className="text-xs font-bold tracking-[0.18em] uppercase opacity-80">
@@ -133,6 +134,43 @@ export default function Resources() {
               </div>
               <div className="absolute -top-5 -right-5 w-full h-full border-2 border-foreground/80 z-0 hidden sm:block" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Securing your IT estate — 16 layers */}
+      <section className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="space-y-3 mb-10 md:mb-14">
+            <h2 className="font-display text-xs uppercase tracking-[0.2em] font-extrabold text-primary">
+              Securing your IT estate
+            </h2>
+            <p className="font-display text-2xl md:text-4xl font-extrabold tracking-tight max-w-2xl">
+              Sixteen layers, each explained in plain English.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+            {hubTiles.map((tile, index) => (
+              <Link
+                key={tile.slug}
+                to={`/resources/${tile.slug}`}
+                className="group bg-card p-7 flex flex-col animate-slide-up transition-colors hover:bg-secondary"
+                style={{ animationDelay: `${Math.min(index, 8) * 0.03}s` }}
+              >
+                <span className="font-display text-2xl font-black tabular-nums text-foreground/20">
+                  {tile.index}
+                </span>
+                <h3 className="font-display text-lg font-extrabold leading-snug mt-4 group-hover:text-primary transition-colors">
+                  {tile.title}
+                </h3>
+                <p className="text-sm text-foreground/70 leading-relaxed mt-2 flex-1">{tile.blurb}</p>
+                <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.15em] text-primary mt-6">
+                  Read the guides
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -150,6 +188,7 @@ export default function Resources() {
               </p>
             </div>
           </div>
+
 
           <div className="grid grid-cols-12 gap-8 lg:gap-10">
             {guides.map((guide, index) => (
