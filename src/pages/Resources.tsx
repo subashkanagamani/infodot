@@ -137,6 +137,43 @@ export default function Resources() {
         </div>
       </section>
 
+      {/* Securing your IT estate — 16 layers */}
+      <section className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="space-y-3 mb-10 md:mb-14">
+            <h2 className="font-display text-xs uppercase tracking-[0.2em] font-extrabold text-primary">
+              Securing your IT estate
+            </h2>
+            <p className="font-display text-2xl md:text-4xl font-extrabold tracking-tight max-w-2xl">
+              Sixteen layers, each explained in plain English.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+            {hubTiles.map((tile, index) => (
+              <Link
+                key={tile.slug}
+                to={`/resources/${tile.slug}`}
+                className="group bg-card p-7 flex flex-col animate-slide-up transition-colors hover:bg-secondary"
+                style={{ animationDelay: `${Math.min(index, 8) * 0.03}s` }}
+              >
+                <span className="font-display text-2xl font-black tabular-nums text-foreground/20">
+                  {tile.index}
+                </span>
+                <h3 className="font-display text-lg font-extrabold leading-snug mt-4 group-hover:text-primary transition-colors">
+                  {tile.title}
+                </h3>
+                <p className="text-sm text-foreground/70 leading-relaxed mt-2 flex-1">{tile.blurb}</p>
+                <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.15em] text-primary mt-6">
+                  Read the guides
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Read online */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container-custom">
@@ -150,6 +187,7 @@ export default function Resources() {
               </p>
             </div>
           </div>
+
 
           <div className="grid grid-cols-12 gap-8 lg:gap-10">
             {guides.map((guide, index) => (
