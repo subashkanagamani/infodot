@@ -1,5 +1,6 @@
 import { servicesData } from "@/data/services";
 import { industries } from "@/data/industries";
+import { hubTiles } from "@/data/resources";
 
 export interface NavLinkItem { label: string; href: string; description?: string }
 
@@ -107,9 +108,14 @@ export const industryLinks: NavLinkItem[] = [
 ];
 
 export const resourceLinks: NavLinkItem[] = [
+  { label: "Resources hub", href: "/resources", description: "Straight answers about the IT you're responsible for." },
+  ...hubTiles.map((t) => ({
+    label: t.title,
+    href: `/resources/${t.slug}`,
+    description: t.blurb,
+  })),
   { label: "Insights", href: "/blog", description: "Notes on IT, security and compliance." },
   { label: "Case Studies", href: "/case-studies", description: "Outcomes from regulated firms." },
-  { label: "Guides", href: "/resources", description: "Guides and checklists." },
   { label: "Portfolio", href: "/portfolio", description: "Selected work." },
 ];
 
