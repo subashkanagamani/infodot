@@ -18,7 +18,7 @@ export default function ResourceTopic() {
   if (doc) return <ResourceDocLayout doc={doc} children={getChildren(doc.slug)} />;
 
   // Legacy downloadable guides also live at /resources/:slug
-  if (getGuide(pillar)) return <GuideDetail />;
+  if (getGuide(pillar)) return <GuideDetail slugOverride={pillar} />;
 
   return <Navigate to="/resources" replace />;
 }
