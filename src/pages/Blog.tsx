@@ -25,7 +25,7 @@ export default function Blog() {
       <SEOHead
         title="IT & Compliance Insights — Infodot Blog"
         description="Plain-English notes on managed IT, cybersecurity and compliance for UK businesses — from a team that's been running IT since 1996."
-        canonical="https://infodot.co.uk/blog"
+        canonicalUrl="https://infodot.co.uk/blog"
       />
       <Navbar />
 

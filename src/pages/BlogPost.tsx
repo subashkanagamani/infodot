@@ -26,20 +26,24 @@ export default function BlogPost() {
       <SEOHead
         title={`${post.title} — Infodot Insights`}
         description={post.excerpt}
-        canonical={`https://infodot.co.uk/blog/${post.slug}`}
-        type="article"
+        canonicalUrl={`https://infodot.co.uk/blog/${post.slug}`}
+        ogType="article"
       />
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: post.title,
-          description: post.excerpt,
-          datePublished: post.published,
-          dateModified: post.published,
-          author: { "@type": "Organization", name: "Infodot", url: "https://infodot.co.uk" },
-          publisher: { "@type": "Organization", name: "Infodot", url: "https://infodot.co.uk" },
-          mainEntityOfPage: `https://infodot.co.uk/blog/${post.slug}`,
+        schema={{
+          type: "Raw",
+          id: `article-${post.slug}`,
+          data: {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.published,
+            dateModified: post.published,
+            author: { "@type": "Organization", name: "Infodot", url: "https://infodot.co.uk" },
+            publisher: { "@type": "Organization", name: "Infodot", url: "https://infodot.co.uk" },
+            mainEntityOfPage: `https://infodot.co.uk/blog/${post.slug}`,
+          },
         }}
       />
       <Navbar />
