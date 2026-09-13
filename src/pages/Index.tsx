@@ -1,47 +1,34 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { ClientLogos } from "@/components/ClientLogos";
-import { Services } from "@/components/Services";
 import { WhyChoose } from "@/components/WhyChoose";
-import { AnimatedStats } from "@/components/AnimatedStats";
 import { Process } from "@/components/Process";
-import { Portfolio } from "@/components/Portfolio";
-import { TeamProfiles } from "@/components/TeamProfiles";
+import { RemoteDelivery } from "@/components/home/RemoteDelivery";
+import { HomeSectors } from "@/components/home/HomeSectors";
+import { HomeCompliance } from "@/components/home/HomeCompliance";
+import { HomeTrust } from "@/components/home/HomeTrust";
+import { HomeOwnership } from "@/components/home/HomeOwnership";
+import { HomeCta } from "@/components/home/HomeCta";
 import { FAQ, faqs } from "@/components/FAQ";
 
-import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { AmbientBackdrop } from "@/components/AmbientBackdrop";
 
 import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
-import { ParallaxSection } from "@/components/ParallaxSection";
 
 import { SEOHead } from "@/components/SEOHead";
 import { JsonLd } from "@/components/JsonLd";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { CookieConsent } from "@/components/CookieConsent";
-import { lazy, Suspense } from "react";
-
-// Lazy load heavy components
-const LazyPortfolio = lazy(() => import("@/components/Portfolio").then(module => ({ default: module.Portfolio })));
-const LazyTeamProfiles = lazy(() => import("@/components/TeamProfiles").then(module => ({ default: module.TeamProfiles })));
-
-// Loading fallback component
-const SectionLoader = () => (
-  <div className="section-spacing flex items-center justify-center">
-    <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
-  </div>
-);
 
 const Index = () => {
   return (
     <>
       <SEOHead 
-        title="Infodot — Managed IT for Regulated Industries, Run Remotely"
-        description="Infodot runs managed IT end-to-end for accountancy, legal and financial services firms — secure by default, always audit-ready, delivered remotely by an ISO 27001:2022 certified team since 1996."
-        keywords="managed IT, IT support for accountants, IT support for law firms, IT support for financial services, managed IT provider, ISO 27001 IT provider, co-managed IT, remote IT support"
+        title="Infodot — Managed IT for UK Businesses, Run Remotely"
+        description="Managed IT, cybersecurity and compliance — delivered remotely to UK businesses from our ISO 27001:2022 certified operations centre. Secure by default. Always audit-ready."
+        keywords="managed IT UK, IT support for accountants, IT support for law firms, IT support for financial services, managed IT provider, ISO 27001 IT provider, remote IT support, Cyber Essentials"
         canonicalUrl="https://infodot.co.uk/"
       />
       <JsonLd 
@@ -50,9 +37,9 @@ const Index = () => {
           name: "Infodot",
           url: "https://infodot.co.uk",
           logo: "https://infodot.co.uk/og-image.png",
-          description: "Managed IT for the regulated industries we serve, run remotely",
+          description: "Managed IT, cybersecurity and compliance, delivered remotely to UK businesses",
           contactPoint: {
-            email: "hello@infodot.uk",
+            email: "hello@infodot.co.uk",
             contactType: "sales"
           },
           sameAs: []
@@ -71,69 +58,43 @@ const Index = () => {
         <div className="relative z-10">
           <Navbar />
           <Hero />
-          
-          <ScrollAnimationWrapper animation="fade-in" threshold={0.2}>
-            <ParallaxSection speed={0.3} direction="up">
-              <ClientLogos />
-            </ParallaxSection>
-          </ScrollAnimationWrapper>
-          
+
           <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
-            <ParallaxSection speed={0.4} direction="down">
-              <Services />
-            </ParallaxSection>
+            <WhyChoose />
           </ScrollAnimationWrapper>
-          
-          <ScrollAnimationWrapper animation="slide-in-left" threshold={0.15}>
-            <ParallaxSection speed={0.3} direction="up">
-              <WhyChoose />
-            </ParallaxSection>
-          </ScrollAnimationWrapper>
-          
-          <ScrollAnimationWrapper animation="scale-in" threshold={0.2}>
-            <ParallaxSection speed={0.5} direction="down">
-              <AnimatedStats />
-            </ParallaxSection>
-          </ScrollAnimationWrapper>
-          
+
           <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
-            <ParallaxSection speed={0.4} direction="up">
-              <Process />
-            </ParallaxSection>
+            <Process />
           </ScrollAnimationWrapper>
-          
-          <ScrollAnimationWrapper animation="slide-in-right" threshold={0.1}>
-            <ParallaxSection speed={0.35} direction="down">
-              <Suspense fallback={<SectionLoader />}>
-                <LazyPortfolio />
-              </Suspense>
-            </ParallaxSection>
-          </ScrollAnimationWrapper>
-          
-          {/* Team section temporarily hidden
+
           <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
-            <ParallaxSection speed={0.3} direction="up">
-              <Suspense fallback={<SectionLoader />}>
-                <LazyTeamProfiles />
-              </Suspense>
-            </ParallaxSection>
+            <RemoteDelivery />
           </ScrollAnimationWrapper>
-          */}
-          
-          
-          <ScrollAnimationWrapper animation="slide-up" threshold={0.2}>
-            <ParallaxSection speed={0.3} direction="up">
-              <FAQ />
-            </ParallaxSection>
+
+          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
+            <HomeSectors />
           </ScrollAnimationWrapper>
-          
-          
-          <ScrollAnimationWrapper animation="slide-up" threshold={0.2}>
-            <ParallaxSection speed={0.3} direction="up">
-              <ContactForm />
-            </ParallaxSection>
+
+          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
+            <HomeCompliance />
           </ScrollAnimationWrapper>
-          
+
+          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
+            <HomeTrust />
+          </ScrollAnimationWrapper>
+
+          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
+            <HomeOwnership />
+          </ScrollAnimationWrapper>
+
+          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
+            <FAQ />
+          </ScrollAnimationWrapper>
+
+          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
+            <HomeCta />
+          </ScrollAnimationWrapper>
+
           <Footer />
           <WhatsAppButton />
           <BackToTop />

@@ -7,28 +7,28 @@ import {
 
 export const faqs = [
   {
-    question: "Where is our data held?",
-    answer: "In your tenancy — Microsoft 365, Google Workspace, your cloud. We manage it; we don't move it. Access is logged, least-privilege and revocable by you at any time."
-  },
-  {
-    question: "You're remote — who fixes hardware?",
-    answer: "Over 95% of managed IT needs no site visit. For physical tasks we coordinate your local hardware vendor or smart-hands provider under our work order — you keep one point of accountability, and it's us."
+    question: "What if we need someone on-site?",
+    answer: "Over 95% of managed IT needs no site visit. For physical tasks we coordinate your local hardware vendor or smart-hands provider under our work order, so you keep a single point of accountability."
   },
   {
     question: "Who actually works on our systems?",
-    answer: "A named, background-checked Infodot team working business hours from our ISO 27001-certified operations centre — not an anonymous rotating pool. You'll know your engineers by name from onboarding."
+    answer: "A named, background-checked Infodot team in our ISO 27001-certified Bangalore centre, working UK business hours — not an anonymous rotating pool. You'll know your engineers by name from onboarding."
   },
   {
-    question: "How do you handle GDPR and offshore access?",
-    answer: "A signed data processing agreement governs every engagement, with the appropriate transfer mechanism, a documented sub-processor list and breach-notification commitments. Operations are ISO 27001:2022 certified; SOC 2 in progress."
+    question: "How do you handle UK GDPR and our data?",
+    answer: "A signed data processing agreement governs every engagement, with a documented sub-processor list and breach-notification commitments. Operations are ISO 27001:2022 certified; SOC 2 attestation is in progress. We manage your data; we don't move it — access is least-privilege and revocable by you at any time."
   },
   {
-    question: "Co-managed or fully managed — what's the difference?",
-    answer: "Co-Managed IT runs the security and operations layer alongside your in-house team, with a clear who-owns-what matrix. Fully Managed IT means we run everything — your complete IT function, delivered remotely and evidenced monthly, one team, one point of accountability. Start with either; land, then expand."
+    question: "What hours do you cover?",
+    answer: "Full UK business-day coverage as standard, with overnight monitoring and escalation. Requests late in your day are often finished before your next morning."
   },
   {
-    question: "Are we locked in?",
-    answer: "No. Notice is 1–3 months by agreement, and whenever you leave you get a documented exit pack and full reverse knowledge-transfer within 10 working days. Your keys were always yours."
+    question: "How quickly can you take over?",
+    answer: "Onboarding takes about 30 days from signature, including a documented handover from your incumbent. We've run hundreds of transitions."
+  },
+  {
+    question: "What does it cost, and how easy is it to leave?",
+    answer: "Pricing is simple and predictable — a flat monthly fee for smaller teams, moving to transparent per-device pricing as you scale; see our Pricing page. Leaving is simple too: 60 days' notice, then a documented exit pack within 10 working days, with all your domains, tenancies, licences and admin rights already in your name."
   }
 ];
 
@@ -38,12 +38,10 @@ export const FAQ = () => {
       <div className="container-custom">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Frequently Asked <span className="text-primary">Questions</span>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Common questions</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+              What UK businesses ask <span className="text-primary">before switching</span>
             </h2>
-            <p className="text-muted-foreground">
-              The questions directors actually ask.
-            </p>
           </div>
 
           <Accordion type="single" collapsible className="w-full">
