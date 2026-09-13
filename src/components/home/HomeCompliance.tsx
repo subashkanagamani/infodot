@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ShieldCheck, FileLock2, BadgeCheck, ListChecks } from "lucide-react";
 
 const frameworks = [
@@ -5,19 +6,19 @@ const frameworks = [
     icon: ShieldCheck,
     title: "Cyber Essentials / CE+",
     description: "Readiness, remediation and evidence to pass — and stay passed.",
-    href: "/cyber-essentials-readiness",
+    href: "/services/cyber-essentials-readiness",
   },
   {
     icon: FileLock2,
     title: "UK GDPR",
     description: "Technical controls, a signed DPA and a documented sub-processor list.",
-    href: "/gdpr-data-protection",
+    href: "/services/gdpr-data-protection",
   },
   {
     icon: BadgeCheck,
     title: "ISO 27001",
     description: "ISO 27001:2022-certified operations; readiness support for your own certification.",
-    href: "/iso-27001-readiness",
+    href: "/services/iso27001-soc2-evidence",
   },
   {
     icon: ListChecks,
@@ -43,9 +44,9 @@ export const HomeCompliance = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {frameworks.map((framework, index) => (
-            <a
+            <Link
               key={framework.title}
-              href={framework.href}
+              to={framework.href}
               className="group bg-card border border-border rounded-3xl p-8 flex flex-col gap-4 hover-lift animate-slide-up"
               style={{ animationDelay: `${index * 0.08}s` }}
             >
@@ -58,7 +59,7 @@ export const HomeCompliance = () => {
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{framework.description}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
