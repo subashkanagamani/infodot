@@ -16,22 +16,22 @@ interface HeroContent {
 }
 
 const DEFAULTS: HeroContent = {
-  badge: "Managed IT • Cybersecurity • Compliance",
+  badge: "Remote-first · UK managed IT, security & compliance",
   headingHtml:
     'You run your business. <span class="text-gradient-primary">We run your IT.</span>',
   subheading:
-    "Managed IT, Cybersecurity & Compliance for growing businesses. Your IT should enable your business — not become another thing you have to manage. Infodot gives compliance-conscious organisations one accountable technology partner — run end to end, remotely, from an ISO 27001-certified team. Security is built in by default, and the evidence your auditors, insurers and clients ask for is produced as a matter of course.",
+    "Managed IT, cybersecurity and compliance — delivered remotely to UK businesses from our ISO 27001-certified operations centre. Secure by default. Always audit-ready.",
   tagsLabel: "We run your IT. You own your IT.",
   tags: [
-    "Since 1996",
+    "Serving UK businesses remotely",
+    "Running IT since 1996",
     "ISO 27001:2022 certified",
-    "Business-hours desk, delivered remotely",
-    "Exact quote within 48 hours",
+    "Cyber Essentials & UK GDPR aligned",
   ],
   primaryCtaLabel: "Book a Free IT & Security Assessment",
   primaryCtaHref: "/contact",
-  secondaryCtaLabel: "Explore Our Services",
-  secondaryCtaHref: "/services",
+  secondaryCtaLabel: "Talk to an IT Specialist",
+  secondaryCtaHref: "/contact",
 };
 
 export const Hero = () => {
