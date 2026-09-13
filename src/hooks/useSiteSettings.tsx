@@ -35,10 +35,10 @@ const defaultSettings: SiteSettings = {
   company: {
     name: "Infodot",
     tagline: "We run your IT. You own your IT.",
-    description: "Managed IT for the regulated industries we serve — accountancy, legal and financial services. Secure by default, always audit-ready, delivered remotely since 1996.",
-    email: "hello@infodot.uk",
+    description: "You run your business. We run your IT.",
+    email: "hello@infodot.co.uk",
     phone: "",
-    address: "Infodot Technologies Pvt Ltd, Bangalore, India — serving clients remotely",
+    address: "Infodot Technologies Pvt Ltd · Bangalore, India · serving UK businesses remotely",
     logo: "",
   },
   social: {

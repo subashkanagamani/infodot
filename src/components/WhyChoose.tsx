@@ -1,20 +1,25 @@
-import { LayoutGrid, ShieldCheck, FileCheck2 } from "lucide-react";
+import { Wrench, ShieldCheck, FileCheck2, Zap } from "lucide-react";
 
 const benefits = [
   {
-    icon: LayoutGrid,
+    icon: Wrench,
     title: "Managed",
-    description: "One team runs the whole stack and coordinates your vendors."
+    description: "Your day-to-day IT run properly — helpdesk, endpoints, cloud and users — by a named team."
   },
   {
     icon: ShieldCheck,
-    title: "Secure by default",
-    description: "MFA, EDR, hardening and tested backup, standard from day one."
+    title: "Secure by Default",
+    description: "Hardening and security are standard in everything we run, never a premium add-on."
   },
   {
     icon: FileCheck2,
-    title: "Always audit-ready",
-    description: "The controls we run produce the evidence auditors ask for."
+    title: "Always Audit-Ready",
+    description: "The proof auditors, insurers and clients ask for is produced as a matter of course."
+  },
+  {
+    icon: Zap,
+    title: "Powered by Z360",
+    description: "Automation and operational intelligence keep the service consistent and improving."
   }
 ];
 
@@ -23,21 +28,20 @@ export const WhyChoose = () => {
     <section id="about" className="section-spacing bg-background relative overflow-hidden">
       <div className="container-custom relative">
         <div className="max-w-3xl mb-12 animate-slide-up">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Our promise</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">What we stand on</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 leading-[1.1]">
-            What we <span className="text-primary">stand on</span>
+            Four pillars behind <span className="text-primary">every engagement</span>
           </h2>
-          <p className="text-muted-foreground">Three pillars. One promise.</p>
-          <p className="mt-4 font-display text-lg md:text-2xl font-bold leading-snug text-balance">
-            One accountable partner. Secure by default, managed end to end, always audit-ready.
+          <p className="text-muted-foreground">
+            One team, one SLA, one point of accountability — with security and evidence built in, not bolted on.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className={`flex gap-4 group p-8 rounded-3xl border transition-all duration-500 hover-lift animate-slide-up ${
+              className={`flex flex-col gap-4 group p-8 rounded-3xl border transition-all duration-500 hover-lift animate-slide-up ${
                 index === 0
                   ? "bg-accent text-accent-foreground border-accent"
                   : "bg-secondary border-border"
@@ -53,12 +57,6 @@ export const WhyChoose = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-4 rounded-3xl border border-border bg-card p-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-          <p className="text-muted-foreground">
-            Most providers quietly make themselves impossible to leave. We do the opposite, in writing. Your domains, tenancy, licences and admin rights stay yours, in your name, throughout — we operate them, we never own them. Notice is 1–3 months by agreement; the exit stays clean either way, for businesses of 25–300 users, without a rip-and-replace of the tools you already run.
-          </p>
         </div>
       </div>
     </section>
