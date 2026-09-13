@@ -27,6 +27,7 @@ import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Careers from "./pages/Careers";
 import Resources from "./pages/Resources";
 import GuideDetail from "./pages/GuideDetail";
+import ResourceTopic from "./pages/ResourceTopic";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
