@@ -68,7 +68,7 @@ export const blogPosts: BlogPost[] = [
     howInfodot: "",
     ctaLine: "Book a free IT & security assessment.",
     links: [
-      { label: "Managed IT services", href: "/services/managed-it-support" },
+      { label: "Managed IT services", href: "/services/managed-it" },
       { label: "Resources hub", href: "/resources" },
     ],
     published: "2026-09-10",
@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
     ],
     howInfodot: "We start with a full discovery of your estate, fix the baseline, then run it proactively — so problems are prevented, not chased.",
     ctaLine: "Book a free IT & security assessment — we'll show you what's really going on across your IT.",
-    links: [{ label: "Managed IT services", href: "/services/managed-it-support" }],
+    links: [{ label: "Managed IT services", href: "/services/managed-it" }],
     published: "2026-08-27",
   },
   {
@@ -391,7 +391,7 @@ export const blogPosts: BlogPost[] = [
     ctaLine: "Book a free IT & security assessment — we'll flag every account without MFA and every leaver still active.",
     links: [
       { label: "Identity & access guide", href: "/resources/identity-and-access" },
-      { label: "Identity & Access service", href: "/services/identity-access-management" },
+      { label: "Identity & Access service", href: "/services/identity-access" },
     ],
     published: "2026-05-07",
   },
@@ -464,7 +464,7 @@ export const blogPosts: BlogPost[] = [
     ctaLine: "Book a free IT & security assessment — we'll review your tenant and show you what's exposed.",
     links: [
       { label: "Cloud security guide", href: "/resources/cloud-security" },
-      { label: "Microsoft 365 / Workspace service", href: "/services/microsoft-365-google-workspace" },
+      { label: "Microsoft 365 / Workspace service", href: "/services/microsoft365-google-workspace" },
     ],
     published: "2026-04-09",
   },
