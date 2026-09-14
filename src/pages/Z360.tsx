@@ -421,7 +421,23 @@ const Z360 = () => {
           </div>
         </section>
 
+        {/* Explore the platform */}
+        <section className="pt-16 pb-4 bg-background">
+          <div className="container-custom">
+            <div className="rounded-3xl border border-border p-8 md:p-12 animate-slide-up">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Explore the platform</p>
+              <h2 className="font-display text-2xl md:text-3xl font-bold leading-[1.1]">
+                Z360 is getting its own home.
+              </h2>
+              <p className="mt-4 max-w-3xl text-muted-foreground">
+                A dedicated site for the full platform is on the way at www.infodotz360.com (coming soon).
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
+
         <section className="pb-20 pt-4 md:pt-6 bg-background">
           <div className="container-custom">
             <div className="rounded-3xl border border-border bg-secondary p-8 md:p-12 animate-slide-up">
