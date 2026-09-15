@@ -15,7 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks, topLevelLinks } from "@/data/siteNav";
+import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, insightsLinks, aboutLinks, topLevelLinks } from "@/data/siteNav";
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -53,6 +53,7 @@ export const MobileMenu = () => {
               { value: "compliance", label: "Compliance", links: complianceLinks, all: { label: "All services", href: "/services" } },
               { value: "industries", label: "Who We Serve", links: industryLinks, all: { label: "All sectors we serve", href: "/industries" } },
               { value: "resources", label: "Resources", links: resourceLinks },
+              { value: "insights", label: "Insights", links: insightsLinks },
               { value: "about", label: "About", links: aboutLinks },
             ].map((group) => (
               <AccordionItem key={group.value} value={group.value} className="border-border/60">
