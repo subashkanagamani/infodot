@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { guides } from "@/data/guides";
 import { hubTiles } from "@/data/resources";
+import { blogPosts } from "@/data/blogPosts";
 
 export default function Resources() {
   const resources = [
