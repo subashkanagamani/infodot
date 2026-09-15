@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { guides } from "@/data/guides";
 import { hubTiles } from "@/data/resources";
+import { blogPosts } from "@/data/blogPosts";
 
 export default function Resources() {
   const resources = [
@@ -217,6 +218,56 @@ export default function Resources() {
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Insights — all articles */}
+      <section className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="flex flex-wrap items-end justify-between gap-6 mb-10 md:mb-14">
+            <div className="space-y-3">
+              <h2 className="font-display text-xs uppercase tracking-[0.2em] font-extrabold text-primary">
+                Insights
+              </h2>
+              <p className="font-display text-2xl md:text-4xl font-extrabold tracking-tight max-w-2xl">
+                Every article, in one place.
+              </p>
+            </div>
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 text-sm font-extrabold text-primary hover:underline"
+            >
+              Open the Insights hub <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+            {blogPosts.map((post, index) => (
+              <Link
+                key={post.slug}
+                to={`/blog/${post.slug}`}
+                className="group bg-card p-7 flex flex-col animate-slide-up transition-colors hover:bg-secondary"
+                style={{ animationDelay: `${Math.min(index, 8) * 0.03}s` }}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary">
+                    {post.category}
+                  </span>
+                  <span className="font-display text-sm font-black tabular-nums text-foreground/20">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <h3 className="font-display text-lg font-extrabold leading-snug mt-4 group-hover:text-primary transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-sm text-foreground/70 leading-relaxed mt-2 flex-1">{post.excerpt}</p>
+                <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.15em] text-primary mt-6">
+                  Read the article
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
               </Link>
             ))}
           </div>

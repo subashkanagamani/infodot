@@ -114,6 +114,11 @@ export const resourceLinks: NavLinkItem[] = [
     href: `/resources/${t.slug}`,
     description: t.blurb,
   })),
+  { label: "Insights (all articles)", href: "/blog", description: "Every article, listed under the resources hub." },
+];
+
+/** Insights, Case Studies and Portfolio — separate from the Resources guides. */
+export const insightsLinks: NavLinkItem[] = [
   { label: "Insights", href: "/blog", description: "Notes on IT, security and compliance." },
   { label: "Case Studies", href: "/case-studies", description: "Outcomes from regulated firms." },
   { label: "Portfolio", href: "/portfolio", description: "Selected work." },

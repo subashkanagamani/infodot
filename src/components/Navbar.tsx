@@ -7,12 +7,12 @@ import { SearchDialog } from "@/components/SearchDialog";
 import { useSection } from "@/hooks/usePageContent";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/infodot-logo.png";
-import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, aboutLinks, topLevelLinks, NavLinkItem } from "@/data/siteNav";
+import { managedItLinks, cybersecurityLinks, complianceLinks, industryLinks, resourceLinks, insightsLinks, aboutLinks, topLevelLinks, NavLinkItem } from "@/data/siteNav";
 
 interface NavContent { ctaLabel: string; ctaHref: string }
 const NAV_DEFAULTS: NavContent = { ctaLabel: "Book Free IT Assessment", ctaHref: "/contact" };
 
-type MenuKey = "managed-it" | "cybersecurity" | "compliance" | "industries" | "resources" | "about";
+type MenuKey = "managed-it" | "cybersecurity" | "compliance" | "industries" | "resources" | "insights" | "about";
 
 const MenuLink = ({ link, onClick }: { link: NavLinkItem; onClick: () => void }) => (
   <Link
@@ -48,6 +48,7 @@ export const Navbar = () => {
     { key: "compliance", label: "Compliance", href: "/services" },
     { key: "industries", label: "Who We Serve", href: "/industries" },
     { key: "resources", label: "Resources", href: "/resources" },
+    { key: "insights", label: "Insights", href: "/blog" },
     { key: "about", label: "About", href: "/about" },
   ];
 
@@ -56,7 +57,8 @@ export const Navbar = () => {
     cybersecurity: { links: cybersecurityLinks, footer: { label: "View all services", href: "/services" } },
     compliance: { links: complianceLinks, footer: { label: "View all services", href: "/services" } },
     industries: { links: industryLinks, footer: { label: "All sectors we serve", href: "/industries" } },
-    resources: { links: resourceLinks },
+    resources: { links: resourceLinks, footer: { label: "Browse the resources hub", href: "/resources" } },
+    insights: { links: insightsLinks },
     about: { links: aboutLinks },
   };
 
