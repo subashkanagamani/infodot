@@ -88,6 +88,10 @@ const Index = () => {
           </ScrollAnimationWrapper>
 
           <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
+            <MarketingPartner showAboutLink />
+          </ScrollAnimationWrapper>
+
+          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
             <FAQ />
           </ScrollAnimationWrapper>
 
