@@ -197,6 +197,8 @@ const About = () => {
 
       <TeamProfiles />
 
+      <MarketingPartner />
+
       {/* Social Links */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container-custom">
