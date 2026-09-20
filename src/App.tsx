@@ -127,6 +127,7 @@ const App = () => (
               <Route path="/:slug" element={<CustomPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <SiteFooter />
           </PageWrapper>
         </BrowserRouter>
       </TooltipProvider>
