@@ -9,6 +9,7 @@ import { HomeTrust } from "@/components/home/HomeTrust";
 import { HomeOwnership } from "@/components/home/HomeOwnership";
 import { HomeCta } from "@/components/home/HomeCta";
 import { FAQ, faqs } from "@/components/FAQ";
+import { MarketingPartner } from "@/components/MarketingPartner";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
@@ -84,6 +85,10 @@ const Index = () => {
 
           <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
             <HomeOwnership />
+          </ScrollAnimationWrapper>
+
+          <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>
+            <MarketingPartner showAboutLink />
           </ScrollAnimationWrapper>
 
           <ScrollAnimationWrapper animation="slide-up" threshold={0.1}>

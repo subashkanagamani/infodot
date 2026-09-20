@@ -7,6 +7,7 @@ import { Target, Eye, ShieldCheck, Users, Globe, KeyRound, FileCheck2, Check, Li
 import teamNaren from "@/assets/team-naren.png";
 import { useSection } from "@/hooks/usePageContent";
 import { TeamProfiles } from "@/components/TeamProfiles";
+import { MarketingPartner } from "@/components/MarketingPartner";
 
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -196,6 +197,8 @@ const About = () => {
       </section>
 
       <TeamProfiles />
+
+      <MarketingPartner />
 
       {/* Social Links */}
       <section className="py-16 md:py-24 bg-background">
