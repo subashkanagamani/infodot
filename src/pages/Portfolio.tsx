@@ -1,6 +1,5 @@
 import { useState, useMemo } from "react";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { Card } from "@/components/ui/card";
@@ -266,7 +265,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { BackToTop } from "@/components/BackToTop";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -40,7 +39,6 @@ const Contact = () => {
             <ContactFAQ />
           </ScrollAnimationWrapper>
         </main>
-        <Footer />
         <WhatsAppButton />
         <BackToTop />
       </div>

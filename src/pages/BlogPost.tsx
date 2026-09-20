@@ -1,7 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, Calendar, Check, ChevronRight, Clock, StickyNote } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
@@ -197,7 +196,6 @@ export default function BlogPost() {
         </div>
       </article>
 
-      <Footer />
       <WhatsAppButton />
       <BackToTop />
     </div>

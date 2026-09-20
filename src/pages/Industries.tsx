@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Landmark, Scale, Banknote, ShieldCheck } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BackToTop } from "@/components/BackToTop";
@@ -93,7 +92,6 @@ export default function Industries() {
             </div>
           </section>
         </main>
-        <Footer />
         <WhatsAppButton />
         <BackToTop />
       </div>

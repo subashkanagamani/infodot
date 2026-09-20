@@ -1,7 +1,6 @@
 import { FileText, Download, BookOpen, Video, Headphones, ShieldCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
@@ -352,7 +351,6 @@ export default function Resources() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
