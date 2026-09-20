@@ -4,7 +4,6 @@ import { TrendingUp, Users, DollarSign, Target, ArrowLeft, Quote, Building, Load
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
@@ -101,7 +100,6 @@ export default function CaseStudyDetail() {
         <div className="container-custom py-32 flex justify-center">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
         </div>
-        <Footer />
       </div>
     );
   }
@@ -121,7 +119,6 @@ export default function CaseStudyDetail() {
             <Link to="/case-studies">Back to Case Studies</Link>
           </Button>
         </div>
-        <Footer />
       </div>
     );
   }
@@ -312,7 +309,6 @@ export default function CaseStudyDetail() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

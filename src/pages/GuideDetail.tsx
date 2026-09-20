@@ -1,7 +1,6 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Check, X, BookOpen } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
@@ -243,7 +242,6 @@ export default function GuideDetail({ slugOverride }: { slugOverride?: string } 
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -10,7 +10,6 @@ import { HomeOwnership } from "@/components/home/HomeOwnership";
 import { HomeCta } from "@/components/home/HomeCta";
 import { FAQ, faqs } from "@/components/FAQ";
 
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { AmbientBackdrop } from "@/components/AmbientBackdrop";
@@ -95,7 +94,6 @@ const Index = () => {
             <HomeCta />
           </ScrollAnimationWrapper>
 
-          <Footer />
           <WhatsAppButton />
           <BackToTop />
         </div>

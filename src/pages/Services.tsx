@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { Button } from "@/components/ui/button";
@@ -299,7 +298,6 @@ const Services = () => {
         </div>
       </section>
 
-      <Footer />
       <WhatsAppButton />
       <BackToTop />
     </div>

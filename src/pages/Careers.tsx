@@ -3,7 +3,6 @@ import { Briefcase, MapPin, Clock, ArrowRight, Heart, TrendingUp, Users, Zap } f
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
@@ -202,7 +201,6 @@ export default function Careers() {
         onClose={() => setSelectedPosition(null)}
       />
 
-      <Footer />
     </div>
   );
 }

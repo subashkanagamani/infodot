@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
@@ -261,7 +260,6 @@ export default function CustomPage() {
           return <Cmp key={s.id} c={s.content || {}} />;
         })}
       </main>
-      <Footer />
     </>
   );
 }

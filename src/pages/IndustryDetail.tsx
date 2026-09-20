@@ -1,7 +1,6 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { Check, ShieldCheck, FileCheck2, ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BackToTop } from "@/components/BackToTop";
@@ -152,7 +151,6 @@ export default function IndustryDetail() {
             </section>
           </div>
         </main>
-        <Footer />
         <WhatsAppButton />
         <BackToTop />
       </div>

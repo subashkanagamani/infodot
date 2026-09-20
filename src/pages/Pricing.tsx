@@ -2,7 +2,6 @@ import { Check, Clock, CalendarClock, FileCheck2, Layers, ShieldCheck, BadgePerc
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
@@ -294,7 +293,6 @@ export default function Pricing() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
