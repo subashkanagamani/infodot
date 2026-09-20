@@ -59,6 +59,7 @@ import CustomPagesAdmin from "./pages/admin/CustomPagesAdmin";
 import { Analytics } from "@/components/Analytics";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { PageWrapper } from "@/components/PageWrapper";
+import { SiteFooter } from "@/components/SiteFooter";
 
 const queryClient = new QueryClient();
 
