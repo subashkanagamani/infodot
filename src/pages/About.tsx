@@ -198,6 +198,49 @@ const About = () => {
 
       <TeamProfiles />
 
+      {/* Social Links */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container-custom">
+          <div className="max-w-3xl mb-10 animate-slide-up">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Connect</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1]">
+              Follow <span className="text-primary">Infodot</span>
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <a
+              href="https://www.instagram.com/infodot.technologies/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-5 rounded-3xl border border-border bg-card p-6 md:p-8 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up"
+            >
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-secondary rounded-2xl flex items-center justify-center border border-border group-hover:bg-primary group-hover:text-white transition-colors">
+                <InstagramIcon className="w-7 h-7 md:w-8 md:h-8 text-primary group-hover:text-white transition-colors" />
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-bold">Instagram</h3>
+                <p className="text-muted-foreground text-sm mt-1">@infodot.technologies</p>
+              </div>
+            </a>
+            <a
+              href="https://share.google/dN7u67MVQy6veJKSZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-5 rounded-3xl border border-border bg-card p-6 md:p-8 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up"
+              style={{ animationDelay: "0.08s" }}
+            >
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-secondary rounded-2xl flex items-center justify-center border border-border group-hover:bg-primary group-hover:text-white transition-colors">
+                <Linkedin className="w-7 h-7 md:w-8 md:h-8 text-primary group-hover:text-white transition-colors" />
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-bold">LinkedIn</h3>
+                <p className="text-muted-foreground text-sm mt-1">Infodot Technologies</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container-custom">
