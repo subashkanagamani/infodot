@@ -54,6 +54,7 @@ const FOOTER_DEFAULTS: FooterColumns = {
     { label: "About", href: "/about" },
     { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
+    { label: "Partners", href: "/about#partners" },
     { label: "Legal & Privacy", href: "/legal" },
   ],
   quickMessageTitle: "QUICK MESSAGE",
@@ -198,6 +199,20 @@ export const Footer = () => {
             <p className="text-sm text-muted-foreground text-center md:text-right">
               {f.sinceLine || FOOTER_DEFAULTS.sinceLine}
             </p>
+          </div>
+          <div className="mt-4 flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 md:justify-end">
+            <span className="text-sm text-muted-foreground">Marketing by</span>
+            <a
+              href="https://www.essenzimedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display text-base font-bold tracking-tight text-primary hover:underline"
+            >
+              Essenzi Media Ltd
+            </a>
+            <span className="font-display text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+              United Kingdom
+            </span>
           </div>
           <p className="text-sm text-muted-foreground text-center mt-4">
             Also serving India — <a href="https://infodot.co.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Infodot.co.in</a>
