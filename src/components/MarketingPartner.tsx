@@ -29,7 +29,7 @@ interface MarketingPartnerProps {
 
 export const MarketingPartner = ({ showAboutLink = false }: MarketingPartnerProps) => {
   return (
-    <section className="section-spacing">
+    <section id="partners" className="section-spacing scroll-mt-28">
       <div className="container-custom">
         <p className="font-display text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
           Marketing partner
