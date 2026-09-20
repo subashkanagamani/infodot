@@ -54,6 +54,7 @@ const FOOTER_DEFAULTS: FooterColumns = {
     { label: "About", href: "/about" },
     { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
+    { label: "Partners", href: "/about#partners" },
     { label: "Legal & Privacy", href: "/legal" },
   ],
   quickMessageTitle: "QUICK MESSAGE",
