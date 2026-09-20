@@ -7,6 +7,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Target, Eye, ShieldCheck, Users, Globe, KeyRound, FileCheck2, Check } from "lucide-react";
 import teamNaren from "@/assets/team-naren.png";
 import { useSection } from "@/hooks/usePageContent";
+import { TeamProfiles } from "@/components/TeamProfiles";
 
 const values = [
   {
@@ -187,6 +188,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <TeamProfiles />
 
       {/* Mission & Vision */}
       <section className="py-16 md:py-24 bg-secondary">

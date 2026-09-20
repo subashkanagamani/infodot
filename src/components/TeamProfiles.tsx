@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { Linkedin, Twitter, Loader2 } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import { Linkedin, Twitter } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { LazyImage } from "@/components/LazyImage";
-import narenImage from "@/assets/team-naren.png";
+import managementTeamAsset from "@/assets/infodot-management-team.jpg.asset.json";
 
 interface TeamMember {
   id: string;
@@ -15,33 +13,24 @@ interface TeamMember {
   twitter: string | null;
 }
 
-// Fallback data - removed placeholder URLs
-const fallbackTeam: TeamMember[] = [
-  {
-    id: "1",
-    name: "Naren",
-    role: "Founder & Chief Strategist",
-    avatar: narenImage,
-    bio: "15+ years driving digital growth for Fortune 500 companies. Strategic marketing expert with a passion for data-driven growth.",
-    linkedin: "https://www.linkedin.com/in/naren-ethiraj-14834514b/",
-    twitter: null
-  },
-];
-
 export const TeamProfiles = () => {
   const [team, setTeam] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState(true);
+  const [groupPhoto, setGroupPhoto] = useState(managementTeamAsset.url);
 
   useEffect(() => {
     const fetchTeam = async () => {
-      // Use the public RPC that excludes the email column.
-      const { data, error } = await supabase
-        .rpc("get_public_team_members");
+      const [teamResult, photoResult] = await Promise.all([
+        supabase.rpc("get_public_team_members"),
+        supabase.from("site_settings").select("value").eq("key", "management_team_photo").maybeSingle(),
+      ]);
 
-      if (error || !data || data.length === 0) {
-        setTeam(fallbackTeam);
-      } else {
-        setTeam(data as TeamMember[]);
+      if (!teamResult.error && teamResult.data) {
+        setTeam(teamResult.data as TeamMember[]);
+      }
+
+      if (!photoResult.error && typeof photoResult.data?.value === "string" && photoResult.data.value) {
+        setGroupPhoto(photoResult.data.value);
       }
       setLoading(false);
     };
@@ -49,85 +38,64 @@ export const TeamProfiles = () => {
     fetchTeam();
   }, []);
 
-  if (loading) {
-    return (
-      <section className="section-spacing bg-muted/30 relative overflow-hidden">
-        <div className="container-custom flex justify-center py-20">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section className="section-spacing bg-muted/30 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neon-purple/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="container-custom relative">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Meet the Team Behind Your <span className="text-gradient-primary relative">
-              Growth
-              <span className="absolute -inset-2 bg-primary/10 blur-2xl -z-10" />
-            </span>
+    <section className="py-16 md:py-24 bg-background" aria-labelledby="management-team-heading">
+      <div className="container-custom">
+        <div className="mb-10 max-w-3xl animate-slide-up">
+          <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Leadership</p>
+          <h2 id="management-team-heading" className="font-display text-3xl md:text-5xl font-bold leading-[1.1]">
+            Management <span className="text-primary">Team</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Industry veterans with proven track records in scaling businesses across every digital channel.
-          </p>
         </div>
 
-        <div className={`grid gap-8 ${team.length === 1 ? 'max-w-md mx-auto' : team.length === 2 ? 'md:grid-cols-2 max-w-2xl mx-auto' : team.length === 3 ? 'md:grid-cols-3 max-w-4xl mx-auto' : 'md:grid-cols-2 lg:grid-cols-4'}`}>
-          {team.map((member, index) => (
-            <Card 
-              key={member.id} 
-              className="overflow-hidden group hover:shadow-2xl transition-all duration-500 relative hover-lift animate-scale-in border-border/50 hover:border-primary/50"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-neon-cyan/0 group-hover:from-primary/10 group-hover:to-neon-cyan/10 transition-all duration-500 pointer-events-none" />
-              
-              <div className="aspect-square overflow-hidden relative">
-                <LazyImage 
-                  src={member.avatar || "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"} 
-                  alt={member.name}
-                  className="w-full h-full group-hover:scale-110 transition-transform duration-700"
-                />
-                {/* Overlay gradient on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500" />
-              </div>
-              <div className="p-6 relative">
-                <h3 className="text-xl font-bold mb-1 group-hover:text-primary-glow transition-colors">{member.name}</h3>
-                <p className="text-primary font-semibold text-sm mb-3">{member.role}</p>
-                <p className="text-sm text-muted-foreground mb-4 group-hover:text-foreground/80 transition-colors">{member.bio}</p>
-                <div className="flex gap-3">
-                  {member.linkedin && (
-                    <a 
-                      href={member.linkedin} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-8 h-8 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:rotate-12 transition-all duration-300"
-                    >
-                      <Linkedin className="w-4 h-4" />
-                    </a>
-                  )}
-                  {member.twitter && (
-                    <a 
-                      href={member.twitter} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-8 h-8 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:-rotate-12 transition-all duration-300"
-                    >
-                      <Twitter className="w-4 h-4" />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </Card>
-          ))}
+        <div className={team.length > 0 ? "grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.65fr)] lg:items-start" : ""}>
+          <figure className="overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] animate-slide-up">
+            <img
+              src={groupPhoto}
+              alt="Infodot management team"
+              className="aspect-[3/2] w-full object-cover object-center"
+            />
+          </figure>
+
+          {loading ? (
+            <div className="space-y-4" aria-label="Loading management profiles">
+              {[0, 1, 2].map((item) => (
+                <div key={item} className="h-28 animate-pulse rounded-2xl border border-border bg-secondary" />
+              ))}
+            </div>
+          ) : team.length > 0 ? (
+            <div className="divide-y divide-border border-y border-border animate-slide-up">
+              {team.map((member, index) => (
+                <article key={member.id} className="py-6 first:pt-0 last:pb-0">
+                  <div className="flex items-start gap-4">
+                    {member.avatar && (
+                      <img src={member.avatar} alt="" className="h-14 w-14 flex-none rounded-full object-cover" />
+                    )}
+                    <div className="min-w-0 flex-1">
+                      <p className="mb-2 text-xs font-bold text-primary">{String(index + 1).padStart(2, "0")}</p>
+                      <h3 className="font-display text-xl font-bold">{member.name}</h3>
+                      {member.role && <p className="mt-1 text-sm font-semibold text-primary">{member.role}</p>}
+                      {member.bio && <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{member.bio}</p>}
+                      {(member.linkedin || member.twitter) && (
+                        <div className="mt-4 flex gap-2">
+                          {member.linkedin && (
+                            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on LinkedIn`} className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary">
+                              <Linkedin className="h-4 w-4" />
+                            </a>
+                          )}
+                          {member.twitter && (
+                            <a href={member.twitter} target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on X`} className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary">
+                              <Twitter className="h-4 w-4" />
+                            </a>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </section>
