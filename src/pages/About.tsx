@@ -4,10 +4,17 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Target, Eye, ShieldCheck, Users, Globe, KeyRound, FileCheck2, Check } from "lucide-react";
+import { Target, Eye, ShieldCheck, Users, Globe, KeyRound, FileCheck2, Check, Linkedin } from "lucide-react";
 import teamNaren from "@/assets/team-naren.png";
 import { useSection } from "@/hooks/usePageContent";
 import { TeamProfiles } from "@/components/TeamProfiles";
+
+const InstagramIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Z" />
+    <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+  </svg>
+);
 
 const values = [
   {
@@ -190,6 +197,49 @@ const About = () => {
       </section>
 
       <TeamProfiles />
+
+      {/* Social Links */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container-custom">
+          <div className="max-w-3xl mb-10 animate-slide-up">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Connect</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold leading-[1.1]">
+              Follow <span className="text-primary">Infodot</span>
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <a
+              href="https://www.instagram.com/infodot.technologies/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-5 rounded-3xl border border-border bg-card p-6 md:p-8 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up"
+            >
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-secondary rounded-2xl flex items-center justify-center border border-border group-hover:bg-primary group-hover:text-white transition-colors">
+                <InstagramIcon className="w-7 h-7 md:w-8 md:h-8 text-primary group-hover:text-white transition-colors" />
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-bold">Instagram</h3>
+                <p className="text-muted-foreground text-sm mt-1">@infodot.technologies</p>
+              </div>
+            </a>
+            <a
+              href="https://share.google/dN7u67MVQy6veJKSZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-5 rounded-3xl border border-border bg-card p-6 md:p-8 shadow-[var(--shadow-card)] hover-lift transition-all animate-slide-up"
+              style={{ animationDelay: "0.08s" }}
+            >
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-secondary rounded-2xl flex items-center justify-center border border-border group-hover:bg-primary group-hover:text-white transition-colors">
+                <Linkedin className="w-7 h-7 md:w-8 md:h-8 text-primary group-hover:text-white transition-colors" />
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-bold">LinkedIn</h3>
+                <p className="text-muted-foreground text-sm mt-1">Infodot Technologies</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Mission & Vision */}
       <section className="py-16 md:py-24 bg-secondary">
