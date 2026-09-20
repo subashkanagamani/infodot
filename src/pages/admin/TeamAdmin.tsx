@@ -12,6 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Plus, Pencil, Trash2, Loader2 } from "lucide-react";
 import { ImageUpload } from "@/components/admin/ImageUpload";
 import { AdminSearch } from "@/components/admin/AdminSearch";
+import managementTeamAsset from "@/assets/infodot-management-team.jpg.asset.json";
 
 interface TeamMember {
   id: string;
@@ -33,6 +34,8 @@ export default function TeamAdmin() {
   const [saving, setSaving] = useState(false);
   const [editingMember, setEditingMember] = useState<TeamMember | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [groupPhoto, setGroupPhoto] = useState(managementTeamAsset.url);
+  const [savingPhoto, setSavingPhoto] = useState(false);
   const { toast } = useToast();
 
   const [form, setForm] = useState({
@@ -49,7 +52,36 @@ export default function TeamAdmin() {
 
   useEffect(() => {
     fetchMembers();
+    fetchGroupPhoto();
   }, []);
+
+  const fetchGroupPhoto = async () => {
+    const { data } = await supabase
+      .from("site_settings")
+      .select("value")
+      .eq("key", "management_team_photo")
+      .maybeSingle();
+
+    if (typeof data?.value === "string" && data.value) setGroupPhoto(data.value);
+  };
+
+  const handleSaveGroupPhoto = async () => {
+    setSavingPhoto(true);
+    const { data: existing } = await supabase
+      .from("site_settings")
+      .select("id")
+      .eq("key", "management_team_photo")
+      .maybeSingle();
+
+    const { error } = existing
+      ? await supabase.from("site_settings").update({ value: groupPhoto }).eq("key", "management_team_photo")
+      : await supabase.from("site_settings").insert({ key: "management_team_photo", value: groupPhoto });
+
+    setSavingPhoto(false);
+    toast(error
+      ? { variant: "destructive", title: "Could not save photo", description: error.message }
+      : { title: "Management team photo updated" });
+  };
 
   const fetchMembers = async () => {
     const { data } = await supabase.from("team_members").select("*").order("sort_order");
@@ -205,6 +237,25 @@ export default function TeamAdmin() {
             placeholder="Search team members..."
           />
         </div>
+
+        <Card>
+          <CardContent className="space-y-4 pt-6">
+            <div>
+              <h2 className="text-lg font-semibold">Management team photo</h2>
+              <p className="text-sm text-muted-foreground">Shown as the main photograph in the About page management section.</p>
+            </div>
+            <ImageUpload
+              label="Group photo"
+              value={groupPhoto}
+              onChange={setGroupPhoto}
+              folder="team"
+            />
+            <Button onClick={handleSaveGroupPhoto} disabled={savingPhoto || !groupPhoto}>
+              {savingPhoto && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              Save group photo
+            </Button>
+          </CardContent>
+        </Card>
 
         {loading ? (
           <div className="flex justify-center py-12"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>
