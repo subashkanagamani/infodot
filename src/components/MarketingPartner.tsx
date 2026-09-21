@@ -50,40 +50,52 @@ export const MarketingPartner = ({ showAboutLink = false }: MarketingPartnerProp
         </p>
 
         <div className="mt-10 grid overflow-hidden rounded-3xl border border-border lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
-          <div className="bg-accent px-6 py-10 text-accent-foreground sm:px-10">
-            <p className="font-display text-[10px] font-bold uppercase tracking-[0.24em] text-accent-foreground/50">
-              In partnership with
-            </p>
-            <p className="mt-5 font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              Essenzi Media
-            </p>
-            <p className="mt-3 font-display text-[10px] font-bold uppercase tracking-[0.24em] text-accent-foreground/50">
-              United Kingdom
-            </p>
-            <div className="mt-6 h-px w-14 bg-accent-foreground/25" />
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-accent-foreground/70">
-              A creative house working with professional services and technology companies across
-              branding, digital and campaigns.
-            </p>
-            <a
-              href="https://www.essenzimedia.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group mt-8 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-[0.18em] text-accent-foreground underline-offset-8 hover:text-primary hover:underline"
-            >
-              www.essenzimedia.com
-              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="https://www.instagram.com/essenzimedia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group mt-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-[0.18em] text-accent-foreground underline-offset-8 hover:text-primary hover:underline"
-            >
-              <InstagramIcon className="h-3.5 w-3.5" />
-              @essenzimedia
-              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </a>
+          <div className="relative flex flex-col justify-between overflow-hidden border-l-8 border-primary bg-accent px-6 py-10 text-accent-foreground sm:px-10">
+            <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/[0.06] blur-3xl" />
+            <div className="relative z-10">
+              <p className="font-display text-[10px] font-extrabold uppercase tracking-[0.2em] text-accent-foreground/50">
+                In partnership with
+              </p>
+              <p className="mt-2 font-display text-4xl font-extrabold leading-none tracking-tighter text-primary sm:text-5xl">
+                Essenzi Media
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <span className="h-px w-8 bg-accent-foreground/20" />
+                <p className="font-display text-[11px] font-bold uppercase tracking-widest text-accent-foreground/40">
+                  United Kingdom
+                </p>
+              </div>
+              <p className="mt-10 max-w-sm text-base font-medium leading-relaxed text-accent-foreground/80">
+                A creative house working with professional services and technology companies across
+                branding, digital and campaigns.
+              </p>
+            </div>
+            <div className="relative z-10 mt-10 flex flex-col gap-4">
+              <a
+                href="https://www.essenzimedia.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between rounded-2xl border border-accent-foreground/10 bg-accent-foreground/5 px-5 py-4 transition-all duration-300 hover:bg-accent-foreground/10"
+              >
+                <span className="font-display text-sm font-semibold tracking-wide text-accent-foreground">
+                  www.essenzimedia.com
+                </span>
+                <ArrowRight className="h-5 w-5 text-accent-foreground/40 transition-all group-hover:translate-x-1 group-hover:text-primary" />
+              </a>
+              <a
+                href="https://www.instagram.com/essenzimedia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 px-5 py-1 transition-opacity hover:opacity-80"
+              >
+                <span className="flex h-5 w-5 items-center justify-center rounded-md border border-accent-foreground/40 transition-colors group-hover:border-accent-foreground">
+                  <InstagramIcon className="h-3 w-3 text-accent-foreground" />
+                </span>
+                <span className="font-display text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground/60">
+                  @essenzimedia
+                </span>
+              </a>
+            </div>
           </div>
 
           <div className="bg-card px-6 py-10 sm:px-10">
