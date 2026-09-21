@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Globe, Layout, MessageCircle } from "lucide-react";
+import { ArrowRight, Globe, Instagram, Layout, MessageCircle } from "lucide-react";
 
 const capabilities = [
   {
