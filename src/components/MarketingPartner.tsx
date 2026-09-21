@@ -74,6 +74,16 @@ export const MarketingPartner = ({ showAboutLink = false }: MarketingPartnerProp
               www.essenzimedia.com
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </a>
+            <a
+              href="https://www.instagram.com/essenzimedia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-[0.18em] text-accent-foreground underline-offset-8 hover:text-primary hover:underline"
+            >
+              <InstagramIcon className="h-3.5 w-3.5" />
+              @essenzimedia
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
 
           <div className="bg-card px-6 py-10 sm:px-10">
