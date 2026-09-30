@@ -47,8 +47,8 @@ const defaultSettings: SiteSettings = {
     tagline: "We Help Brands Grow Strategically",
     description: "Managed IT services and support for regulated industries, delivered remotely with ISO 27001:2022-certified security.",
     logo: "",
-    email: "hello@infodot.uk",
-    phone: "",
+    email: "sales@infodot.co.in",
+    phone: "+91 93437 35067",
     address: "Infodot Technologies Pvt Ltd, Bangalore, India — serving clients remotely"
   },
   social: {

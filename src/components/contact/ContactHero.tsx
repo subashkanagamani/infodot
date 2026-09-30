@@ -14,7 +14,7 @@ export const ContactHero = () => {
         "Tell us where your IT hurts. We'll map the gaps, tell you the two that matter most, and send an exact quote within 48 hours.",
       primaryLabel: "Send a Message",
       phoneLabel: "Email Us",
-      phoneHref: "mailto:hello@infodot.uk",
+      phoneHref: "mailto:sales@infodot.co.in",
     },
   );
   const scrollToForm = () => {

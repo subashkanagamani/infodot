@@ -213,8 +213,8 @@ const Enquiry = () => {
             <Link to="/" className="flex items-center group">
               <img src={logo} alt="Infodot" className="h-9 w-auto group-hover:scale-110 transition-transform" />
             </Link>
-            <a href="tel:+918610986622" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-              <Phone className="h-4 w-4" /> <span className="hidden sm:inline">+91 86109 86622</span>
+            <a href="tel:+919343735067" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+              <Phone className="h-4 w-4" /> <span className="hidden sm:inline">+91 93437 35067</span>
             </a>
           </div>
         </header>
@@ -569,12 +569,12 @@ const Enquiry = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Button>
                 <Button size="lg" variant="outline" className="text-base px-8 py-6 rounded-xl press border-2 border-accent-foreground/40 text-accent-foreground hover:bg-accent-foreground/10" asChild>
-                  <a href="tel:+918610986622"><Phone className="mr-2 h-4 w-4" /> Call us</a>
+                  <a href="tel:+919343735067"><Phone className="mr-2 h-4 w-4" /> Call us</a>
                 </Button>
               </div>
               <div className="mt-10 text-sm text-accent-foreground/70 flex items-center justify-center gap-6 flex-wrap">
-                <a href="mailto:hello@infodot.co.uk" className="hover:text-primary transition-colors flex items-center gap-2">
-                  <Mail className="h-4 w-4" /> hello@infodot.co.uk
+                <a href="mailto:sales@infodot.co.in" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Mail className="h-4 w-4" /> sales@infodot.co.in
                 </a>
               </div>
             </div>

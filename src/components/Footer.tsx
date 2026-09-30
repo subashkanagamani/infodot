@@ -59,7 +59,7 @@ const FOOTER_DEFAULTS: FooterColumns = {
   ],
   quickMessageTitle: "QUICK MESSAGE",
   copyright: "© {year} Infodot Technologies Pvt Ltd · Bangalore, India · serving UK businesses remotely",
-  sinceLine: "hello@infodot.co.uk · Since 1996",
+  sinceLine: "sales@infodot.co.in · Since 1996",
 };
 
 export const Footer = () => {

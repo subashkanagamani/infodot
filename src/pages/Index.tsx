@@ -39,7 +39,7 @@ const Index = () => {
           logo: "https://infodot.co.uk/og-image.png",
           description: "Managed IT, cybersecurity and compliance, delivered remotely to UK businesses",
           contactPoint: {
-            email: "hello@infodot.co.uk",
+            email: "sales@infodot.co.in",
             contactType: "sales"
           },
           sameAs: []
