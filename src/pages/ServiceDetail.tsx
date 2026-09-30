@@ -41,9 +41,14 @@ import {
   CheckCircle2,
   ArrowRight,
   ArrowLeft,
+  Home,
+  ChevronRight,
 } from "lucide-react";
 import { servicesData, getServiceBySlug, type ServiceItem } from "@/data/services";
 import { getServicePromise, getServiceHeroCopy } from "@/data/servicePromises";
+import { cyberEssentialsIncluded, cyberEssentialsChanges, cyberEssentialsSteps, cyberEssentialsFaqs } from "@/data/cyberEssentials";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { JsonLd } from "@/components/JsonLd";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Target,
@@ -114,6 +119,7 @@ const ServiceDetail = () => {
   }
 
   const Icon = iconMap[service.icon] || Target;
+  const isCyberEssentials = service.slug === "cyber-essentials-readiness";
   const promise = getServicePromise(service.slug);
   const heroCopy = getServiceHeroCopy(service.slug, service.title);
   const heroLead =
@@ -142,7 +148,7 @@ const ServiceDetail = () => {
       name: "Infodot",
       url: "https://infodot.co.uk",
     },
-    areaServed: "Global",
+    areaServed: isCyberEssentials ? "GB" : "Global",
   };
 
   return (
@@ -157,12 +163,31 @@ const ServiceDetail = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
+      {isCyberEssentials && <JsonLd schema={{ type: "FAQPage", questions: cyberEssentialsFaqs }} />}
       <Navbar />
 
       {/* Hero — architectural layering */}
       <section className="pt-32 pb-16 md:pb-24">
         <div className="container-custom">
-          <Breadcrumbs />
+          {isCyberEssentials ? (
+            <>
+              <JsonLd schema={{ type: "BreadcrumbList", items: [
+                { name: "Home", url: "https://infodot.co.uk/" },
+                { name: "Services", url: "https://infodot.co.uk/services" },
+                { name: "Always Audit-Ready", url: "https://infodot.co.uk/services/always-audit-ready" },
+                { name: "Cyber Essentials Readiness", url: canonical },
+              ] }} />
+              <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 py-4 text-sm text-muted-foreground">
+                <Link to="/" aria-label="Home" className="hover:text-primary"><Home className="h-4 w-4" /></Link>
+                <ChevronRight className="h-4 w-4" />
+                <Link to="/services" className="hover:text-primary">Services</Link>
+                <ChevronRight className="h-4 w-4" />
+                <Link to="/services/always-audit-ready" className="hover:text-primary">Always Audit-Ready</Link>
+                <ChevronRight className="h-4 w-4" />
+                <span className="font-medium text-foreground">Cyber Essentials Readiness</span>
+              </nav>
+            </>
+          ) : <Breadcrumbs />}
           <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start mt-6">
             <div className="col-span-12 lg:col-span-7 space-y-8 animate-slide-up">
               <div className="flex items-center gap-5">
@@ -203,7 +228,7 @@ const ServiceDetail = () => {
                   className="rounded-md px-8 py-6 font-extrabold press shadow-xl shadow-primary/20"
                   onClick={() => navigate("/contact")}
                 >
-                  Book a free assessment <ArrowRight className="ml-2 w-4 h-4" />
+                  {isCyberEssentials ? "Book a Free IT & Security Assessment" : "Book a free assessment"} <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
                 <Button
                   size="lg"
@@ -261,7 +286,12 @@ const ServiceDetail = () => {
                     <span className="font-display text-6xl font-black text-foreground/[0.06] absolute -top-7 -left-1 select-none tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <p className="relative text-base text-foreground/80 leading-relaxed">{f}</p>
+                    {isCyberEssentials ? (
+                      <div className="relative space-y-2">
+                        <h4 className="font-bold text-foreground">{cyberEssentialsIncluded[i].title}</h4>
+                        <p className="text-base text-foreground/80 leading-relaxed">{cyberEssentialsIncluded[i].body}</p>
+                      </div>
+                    ) : <p className="relative text-base text-foreground/80 leading-relaxed">{f}</p>}
                   </div>
                 ))}
               </div>
@@ -307,9 +337,68 @@ const ServiceDetail = () => {
         </div>
       </section>
 
+      {isCyberEssentials && (
+        <>
+          <section className="py-16 md:py-24 bg-background">
+            <div className="container-custom">
+              <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-4">What changed in 2026</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-10">The rules got stricter in April.</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {cyberEssentialsChanges.map((change, i) => (
+                  <div key={change.title} className="border-t-2 border-primary pt-6">
+                    <span className="text-sm font-bold text-primary">0{i + 1}</span>
+                    <h3 className="font-display text-xl font-bold mt-4 mb-3">{change.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{change.body}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-8 text-sm text-muted-foreground italic">Source: IASME, “Important update: changes to Cyber Essentials for April 2026”.</p>
+            </div>
+          </section>
+
+          <section className="py-16 md:py-24 bg-secondary">
+            <div className="container-custom">
+              <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-4">How it works</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-10">Four steps. The last one never stops.</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {cyberEssentialsSteps.map((step, i) => (
+                  <div key={step.title} className="border-t border-border pt-5">
+                    <span className="font-display text-3xl font-bold text-primary">0{i + 1}</span>
+                    <h3 className="font-display text-lg font-bold mt-4 mb-2">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-12 border-l-4 border-primary pl-6 font-bold max-w-3xl">We don't issue certificates — only IASME certification bodies can. And we won't tell you you'll pass before we've seen your estate.</p>
+            </div>
+          </section>
+
+          <section className="py-16 md:py-24 bg-background">
+            <div className="container-custom grid lg:grid-cols-[1fr_2fr] gap-12">
+              <div>
+                <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-4">Pricing</p>
+                <p className="text-lg leading-relaxed">Part of the Audit-Ready scope — from £699 a month for 15 devices or fewer, or £55 per device above that. The certification body’s assessment fee is paid to them and itemised separately.</p>
+                <Button asChild className="mt-6"><Link to="/pricing">View Pricing <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+              </div>
+              <div>
+                <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>
+                <h2 className="font-display text-3xl font-bold mb-6">What firms ask us about Cyber Essentials</h2>
+                <Accordion type="single" collapsible className="border-t border-border">
+                  {cyberEssentialsFaqs.map((faq, i) => (
+                    <AccordionItem key={faq.question} value={`faq-${i}`}>
+                      <AccordionTrigger className="text-left font-bold">{faq.question}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed">{faq.answer}</AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* CTA band */}
-      <section className="py-16 md:py-20">
+      {!isCyberEssentials && <section className="py-16 md:py-20">
         <div className="container-custom">
           <div className="rounded-3xl border border-border bg-primary text-primary-foreground p-8 md:p-12 shadow-[var(--shadow-card)] flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
@@ -327,7 +416,7 @@ const ServiceDetail = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* Related */}
       <section className="pb-20 md:pb-28">
