@@ -49,7 +49,7 @@ const defaultSettings: SiteSettings = {
     youtube: "",
   },
   integrations: {
-    whatsappNumber: "+919343735067",
+    whatsappNumber: "",
     calendlyLink: "",
     googleAnalyticsId: "",
   },
