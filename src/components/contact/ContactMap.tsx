@@ -51,9 +51,9 @@ export const ContactMap = () => {
             <div className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] animate-slide-up" style={{ animationDelay: "0.08s" }}>
               <h3 className="font-display font-bold text-lg mb-4">Get in Touch</h3>
               <Button className="w-full gap-2 rounded-xl press" asChild>
-                <a href="mailto:hello@infodot.uk">
+                <a href="mailto:sales@infodot.co.in">
                   <Mail className="w-4 h-4" />
-                  hello@infodot.uk
+                  sales@infodot.co.in
                 </a>
               </Button>
             </div>

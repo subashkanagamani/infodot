@@ -30,8 +30,8 @@ const ThankYou = () => {
             <Link to="/" className="flex items-center group">
               <img src={logo} alt="Infodot" className="h-9 w-auto group-hover:scale-110 transition-transform" />
             </Link>
-            <a href="mailto:hello@infodot.uk" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-              <Mail className="h-4 w-4" /> <span className="hidden sm:inline">hello@infodot.uk</span>
+            <a href="mailto:sales@infodot.co.in" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+              <Mail className="h-4 w-4" /> <span className="hidden sm:inline">sales@infodot.co.in</span>
             </a>
           </div>
         </header>
@@ -70,7 +70,7 @@ const ThankYou = () => {
 
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <Button asChild size="lg" className="flex-1 gap-2 rounded-xl press bg-accent text-accent-foreground hover:bg-accent/90">
-                  <a href="mailto:hello@infodot.uk"><Mail className="h-4 w-4" /> Email us</a>
+                  <a href="mailto:sales@infodot.co.in"><Mail className="h-4 w-4" /> Email us</a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="flex-1 gap-2 rounded-xl press border-2 border-accent text-accent hover:bg-secondary">
                   <Link to="/services">Explore our services</Link>

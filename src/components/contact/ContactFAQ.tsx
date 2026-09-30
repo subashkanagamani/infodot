@@ -9,7 +9,7 @@ import { HelpCircle } from "lucide-react";
 const faqs = [
   {
     question: "How quickly can I expect a response?",
-    answer: "We typically respond to all inquiries within 24 hours during business days. For urgent matters, email us directly at hello@infodot.uk.",
+    answer: "We typically respond to all inquiries within 24 hours during business days. For urgent matters, email us directly at sales@infodot.co.in.",
   },
   {
     question: "Do you offer a free discovery call?",
@@ -79,7 +79,7 @@ export const ContactFAQ = () => {
               Can't find what you're looking for? We're here to help!
             </p>
             <a
-              href="mailto:hello@infodot.uk"
+              href="mailto:sales@infodot.co.in"
               className="text-primary hover:underline font-bold"
             >
               Email us directly →

@@ -114,7 +114,7 @@ const sections = [
           If you have any questions about this Privacy Policy, please contact us:
         </p>
         <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4 mt-4">
-          <li>By email: hello@infodot.uk</li>
+          <li>By email: sales@infodot.co.in</li>
           <li>By visiting this page on our website: Contact Us</li>
         </ul>
       </>
