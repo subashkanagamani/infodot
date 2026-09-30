@@ -128,8 +128,8 @@ export const servicePromises: Record<string, ServicePromise> = {
       "Covers phishing, passwords, MFA, device hygiene, USBs and social engineering — in short, regular sessions.",
   },
   "cyber-essentials-readiness": {
-    pains: ["No formal certification", "Lost tenders without it", "Certification lapses"],
-    promise: "Certified once, kept current — not a one-time exercise.",
+    pains: ["No certificate to show clients", "Controls slip between renewals", "Stricter assessment rules"],
+    promise: "Controls in place. Evidence ready.",
     awareness:
       "Cyber Essentials assesses your people too — passwords, MFA, malware awareness.",
   },
@@ -311,8 +311,8 @@ export const serviceHeroCopy: Record<string, ServiceHeroCopy> = {
   },
   "cyber-essentials-readiness": {
     eyebrow: "CYBER ESSENTIALS READINESS",
-    headline: "Certified to Cyber Essentials — and kept that way.",
-    lead: "Infodot gets you certified against the five Cyber Essentials controls — and keeps you certified, year after year, not as a one-off exercise.",
+    headline: "Ready for Cyber Essentials. Every year.",
+    lead: "We make you audit-ready for Cyber Essentials and Cyber Essentials Plus: a gap assessment, the fixes, the evidence, and your assessment booked with an IASME certification body. Then we keep the controls running year-round, so each renewal is routine.",
   },
   "cyber-insurance-readiness": {
     eyebrow: "CYBER INSURANCE READINESS",

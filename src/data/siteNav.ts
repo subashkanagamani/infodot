@@ -41,7 +41,6 @@ const CYBERSECURITY = [
   "penetration-testing-vapt",
   "security-awareness",
   "monitoring-incident-response",
-  "cyber-essentials-readiness",
   "cyber-insurance-readiness",
 ];
 
@@ -49,6 +48,7 @@ const COMPLIANCE = [
   "gdpr-data-protection",
   "iso27001-soc2-evidence",
   "always-audit-ready",
+  "cyber-essentials-readiness",
   "fca-operational-resilience",
 ];
 

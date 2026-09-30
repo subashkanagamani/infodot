@@ -124,28 +124,28 @@ export const servicesData: ServiceItem[] = [
     icon: "Users",
     title: "Cyber Essentials Readiness",
     shortDescription:
-      "Certified to Cyber Essentials — and kept that way.",
+      "Ready for Cyber Essentials. Every year.",
     description:
-      "We get you ready for Cyber Essentials and Cyber Essentials Plus to the current v3.3 requirements, and keep the controls in place year-round so recertification isn't a scramble. Cyber Essentials is the front door to public-sector and enterprise supply chains — and the 2026 requirements are stricter: all-user MFA, cloud in scope, auto-fail patching. We make certification a by-product of how we run your IT, not an annual panic.",
+      "Cyber Essentials is the UK government-backed baseline that clients, insurers and public-sector buyers increasingly ask for. Basic certification is a self-assessment a director signs and an independent assessor marks; Cyber Essentials Plus adds a hands-on technical audit. We run the controls as part of managing your IT, so the evidence exists before the questionnaire does — then we arrange the assessment and stay with you through it.",
     features: [
       "Gap assessment against the five controls",
-      "All-user MFA and cloud services in scope",
-      "Patching inside the required window",
-      "Secure configuration",
-      "Certification via an accredited body",
-      "Controls maintained continuously",
+      "MFA on every cloud service",
+      "Patching inside 14 days",
+      "Scope set properly",
+      "Evidence and draft answers",
+      "Assessment arranged, controls kept running",
     ],
     benefits: [
-      "Meets a common client and tender requirement without extra admin",
-      "Controls are lived day to day, not just demonstrated at assessment",
-      "Straightforward path to certification via accredited partners",
-      "Builds the foundation for wider security and insurance readiness",
+      "Answer the tender or client question with a certificate, not a promise",
+      "No surprises from the stricter 2026 rules",
+      "Controls lived day to day, not staged for assessment day",
+      "A foundation for cyber insurance, ISO 27001 and client due diligence",
     ],
-    metaTitle: "Cyber Essentials Readiness & Certification | Infodot",
+    metaTitle: "Cyber Essentials Readiness & Certification Support | Infodot",
     metaDescription:
-      "Infodot implements all five Cyber Essentials controls to v3.3 and manages certification via an accredited body — for regulated businesses.",
+      "We make UK firms audit-ready for Cyber Essentials and Cyber Essentials Plus: controls in place, evidence ready, kept current all year. Book a free assessment.",
     keywords:
-      "Cyber Essentials, Cyber Essentials Plus, v3.3, cyber essentials certification, accredited certification body",
+      "cyber essentials certification, cyber essentials plus, cyber essentials readiness, cyber essentials 2026 changes, v3.3",
   },
   {
     slug: "cyber-insurance-readiness",
