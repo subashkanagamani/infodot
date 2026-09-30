@@ -192,7 +192,7 @@ const ServiceDetail = () => {
             <div className="col-span-12 lg:col-span-7 space-y-8 animate-slide-up">
               <div className="flex items-center gap-5">
                 <span className="font-display text-5xl font-extrabold text-foreground/[0.07] select-none tabular-nums leading-none">
-                  {String(currentIndex + 1).padStart(2, "0")}
+                  {isCyberEssentials ? "05" : String(currentIndex + 1).padStart(2, "0")}
                 </span>
                 <div className="space-y-1.5">
                   <div className="h-0.5 w-12 bg-primary" />
@@ -248,7 +248,7 @@ const ServiceDetail = () => {
             >
               <div className="relative overflow-hidden bg-accent text-accent-foreground rounded-3xl p-8 md:p-12 shadow-[var(--shadow-card)]">
                 <span className="relative z-10 w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-6">
-                  <Icon className="w-6 h-6 text-primary-foreground" />
+                  {isCyberEssentials ? <CheckCircle2 className="w-6 h-6 text-primary-foreground" /> : <Icon className="w-6 h-6 text-primary-foreground" />}
                 </span>
                 <p className="relative z-10 font-display text-2xl md:text-[1.75rem] font-bold leading-snug">
                   {promise.promise}
@@ -378,7 +378,6 @@ const ServiceDetail = () => {
               <div>
                 <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-4">Pricing</p>
                 <p className="text-lg leading-relaxed">Part of the Audit-Ready scope — from £699 a month for 15 devices or fewer, or £55 per device above that. The certification body’s assessment fee is paid to them and itemised separately.</p>
-                <Button asChild className="mt-6"><Link to="/pricing">View Pricing <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
               </div>
               <div>
                 <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-4">FAQs</p>

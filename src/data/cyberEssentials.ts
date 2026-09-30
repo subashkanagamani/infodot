@@ -21,7 +21,7 @@ export const cyberEssentialsSteps = [
 ];
 
 export const cyberEssentialsFaqs = [
-  { question: "What's the difference between Cyber Essentials and Cyber Essentials Plus?", answer: "Both cover the same five controls. Basic Cyber Essentials is a self-assessment: a director signs to confirm the answers are true, and an independent assessor marks them. Plus adds a technical audit — vulnerability scans and hands-on checks of a sample of your devices — and must be completed within three months of basic certification." },
+  { question: "What's the difference between Cyber Essentials and Cyber Essentials Plus?", answer: "Both cover the same five controls. Basic Cyber Essentials is a self-assessment: a director signs to confirm the answers are true, and an independent assessor marks them. Plus adds a technical audit – vulnerability scans and hands-on checks of a sample of your devices – and must be completed within three months of basic certification." },
   { question: "Do you issue the certificate?", answer: "No. Only IASME certification bodies can. We make you audit-ready, arrange the assessment and support you through it." },
   { question: "Can you guarantee we'll pass?", answer: "No honest provider can before seeing your estate. We don't book the assessment until our gap assessment shows every control in place." },
   { question: "What changed in April 2026?", answer: "Cyber Essentials v3.3 made MFA mandatory on every cloud service that offers it, confirmed cloud services can't be excluded from scope, and added automatic-fail questions for patching within 14 days." },

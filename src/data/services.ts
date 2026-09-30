@@ -145,7 +145,7 @@ export const servicesData: ServiceItem[] = [
     metaDescription:
       "We make UK firms audit-ready for Cyber Essentials and Cyber Essentials Plus: controls in place, evidence ready, kept current all year. Book a free assessment.",
     keywords:
-      "cyber essentials certification, cyber essentials plus, cyber essentials readiness, cyber essentials 2026 changes, v3.3",
+      "cyber essentials certification / cyber essentials plus, cyber essentials readiness, cyber essentials 2026 changes, v3.3",
   },
   {
     slug: "cyber-insurance-readiness",
