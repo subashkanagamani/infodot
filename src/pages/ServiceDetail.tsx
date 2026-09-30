@@ -266,7 +266,7 @@ const ServiceDetail = () => {
       {/* Content band */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container-custom grid grid-cols-12 gap-10 lg:gap-16 items-start">
-          <div className="col-span-12 lg:col-span-8 space-y-16 md:space-y-20">
+           <div className="col-span-12 lg:col-span-8 min-w-0 space-y-16 md:space-y-20">
             <div className="space-y-6 animate-slide-up">
               <h2 className="font-display text-xs uppercase tracking-[0.2em] font-extrabold text-primary">
                 Service Overview
@@ -298,8 +298,8 @@ const ServiceDetail = () => {
             </div>
           </div>
 
-          <aside
-            className="col-span-12 lg:col-span-4 lg:sticky lg:top-28 space-y-8 animate-slide-up"
+           <aside
+             className="col-span-12 lg:col-span-4 min-w-0 lg:sticky lg:top-28 space-y-8 animate-slide-up"
             style={{ animationDelay: "0.12s" }}
           >
             <div className="relative overflow-hidden bg-accent text-accent-foreground rounded-3xl p-8 md:p-10 shadow-[var(--shadow-card)]">
