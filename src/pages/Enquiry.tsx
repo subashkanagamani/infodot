@@ -203,7 +203,7 @@ const Enquiry = () => {
       <SEOHead
         title="Get a Free IT Discovery Call — Infodot"
         description="Book a free 30-minute IT discovery call with Infodot. Managed IT, security by default and audit readiness for regulated firms."
-        canonicalUrl="https://infodot.co.uk/enquiry"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/enquiry"
       />
 
       <div className="min-h-screen bg-background text-foreground">

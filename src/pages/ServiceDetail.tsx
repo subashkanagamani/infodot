@@ -128,7 +128,7 @@ const ServiceDetail = () => {
       ? service.shortDescription
       : (service.description.split(/(?<=\.)\s+/).slice(0, 2).join(" ") || service.description));
 
-  const canonical = `https://infodot.co.uk/services/${service.slug}`;
+  const canonical = `https://infodot.consultwithprofessionals.com/services/${service.slug}`;
   const currentIndex = servicesData.findIndex((s) => s.slug === service.slug);
   const related = [
     ...servicesData.slice(currentIndex + 1),
@@ -146,7 +146,7 @@ const ServiceDetail = () => {
     provider: {
       "@type": "Organization",
       name: "Infodot",
-      url: "https://infodot.co.uk",
+      url: "https://infodot.consultwithprofessionals.com",
     },
     areaServed: isCyberEssentials ? "GB" : "Global",
   };
@@ -172,9 +172,9 @@ const ServiceDetail = () => {
           {isCyberEssentials ? (
             <>
               <JsonLd schema={{ type: "BreadcrumbList", items: [
-                { name: "Home", url: "https://infodot.co.uk/" },
-                { name: "Services", url: "https://infodot.co.uk/services" },
-                { name: "Always Audit-Ready", url: "https://infodot.co.uk/services/always-audit-ready" },
+                { name: "Home", url: "https://infodot.consultwithprofessionals.com/" },
+                { name: "Services", url: "https://infodot.consultwithprofessionals.com/services" },
+                { name: "Always Audit-Ready", url: "https://infodot.consultwithprofessionals.com/services/always-audit-ready" },
                 { name: "Cyber Essentials Readiness", url: canonical },
               ] }} />
               <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 py-4 text-sm text-muted-foreground">

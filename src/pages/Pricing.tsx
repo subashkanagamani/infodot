@@ -121,7 +121,7 @@ export default function Pricing() {
         title="Pricing — Priced on Scope, Not Surprises | Infodot"
         description="Per-device managed IT pricing by scope, with a flat monthly rate for offices of 15 devices or fewer. Essentials from £25/device, Secured from £39/device, Audit-Ready from £55/device."
         keywords="managed IT pricing, per device IT support pricing, small office fixed fee IT, Infodot pricing"
-        canonicalUrl="https://infodot.co.uk/pricing"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/pricing"
       />
 
       {/* Hero Section */}

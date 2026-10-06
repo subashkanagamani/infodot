@@ -374,7 +374,7 @@ export default function BlogAdmin() {
                     </div>
                     <div className="space-y-2">
                       <Label>Canonical URL</Label>
-                      <Input value={form.canonical_url} onChange={(e) => setForm({ ...form, canonical_url: e.target.value })} placeholder="https://infodot.co.uk/blog/..." />
+                      <Input value={form.canonical_url} onChange={(e) => setForm({ ...form, canonical_url: e.target.value })} placeholder="https://infodot.consultwithprofessionals.com/blog/..." />
                     </div>
                   </div>
                   <TagInput label="Secondary Keywords" value={form.secondary_keywords} onChange={(secondary_keywords) => setForm({ ...form, secondary_keywords })} placeholder="Add keyword and press Enter" />

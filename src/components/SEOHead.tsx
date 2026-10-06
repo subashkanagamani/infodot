@@ -9,7 +9,7 @@ interface SEOHeadProps {
   canonicalUrl?: string;
 }
 
-const SITE_ORIGIN = "https://infodot.co.uk";
+const SITE_ORIGIN = "https://infodot.consultwithprofessionals.com";
 const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/og-image.png`;
 
 export const SEOHead = ({

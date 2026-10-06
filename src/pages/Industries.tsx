@@ -17,7 +17,7 @@ export default function Industries() {
         title="Industries We Serve — Accountancy, Legal & Financial Services"
         description="Managed IT for regulated industries: accountancy and tax practices, law firms and financial services. Delivered remotely by an ISO 27001:2022 certified team."
         keywords="managed IT for regulated industries, IT support accountants, IT support law firms, IT support financial services"
-        canonicalUrl="https://infodot.co.uk/industries"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/industries"
       />
       <div className="min-h-screen">
         <Navbar />

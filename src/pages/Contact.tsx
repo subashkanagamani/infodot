@@ -16,7 +16,7 @@ const Contact = () => {
         title="Contact Infodot — Book a Discovery Call"
         description="Talk to Infodot about running your IT completely. Book a 30-minute discovery call — no cost, no obligation — and get an exact quote within 48 hours."
         keywords="contact Infodot, managed IT provider, book a discovery call, IT support quote, sales@infodot.co.in"
-        canonicalUrl="https://infodot.co.uk/contact"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/contact"
       />
       <div className="min-h-screen">
         <Navbar />

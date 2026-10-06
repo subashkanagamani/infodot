@@ -54,7 +54,7 @@ export const supplyChainAssurance: EvidencePageData = {
       "Clear supplier due diligence with one living evidence pack. Security questionnaires answered, Cyber Essentials and ISO 27001 / SOC 2 evidence kept current — so the review is a formality.",
     keywords:
       "supply chain assurance, supplier security review, security questionnaire, SIG CAIQ, vendor due diligence, Cyber Essentials",
-    canonical: "https://infodot.co.uk/compliance/supply-chain-assurance",
+    canonical: "https://infodot.consultwithprofessionals.com/compliance/supply-chain-assurance",
   },
   eyebrow: "Compliance · Supply-Chain Assurance",
   headline: "Be the supplier that passes the security review.",
@@ -186,7 +186,7 @@ export const resilienceBill: EvidencePageData = {
       "The Cyber Security & Resilience Bill makes managed service providers a regulated category, with a 24-hour incident clock. We run your estate with the controls and evidence already in place.",
     keywords:
       "Cyber Security and Resilience Bill, Relevant MSP, 24 hour incident reporting, MSP regulation, NCSC notification",
-    canonical: "https://infodot.co.uk/compliance/cyber-resilience-bill",
+    canonical: "https://infodot.consultwithprofessionals.com/compliance/cyber-resilience-bill",
   },
   eyebrow: "Compliance · Cyber Security & Resilience Bill",
   headline: "The law is coming for MSPs. Ours is already built for it.",
@@ -321,7 +321,7 @@ export const healthcareNhs: EvidencePageData = {
     description:
       "DSPT-ready IT for trusts, GP practices, clinics and NHS suppliers. We run the estate to National Data Guardian standards with evidence captured continuously — DTAC and Cyber Essentials included.",
     keywords: "DSPT readiness, NHS IT support, DTAC, National Data Guardian, healthcare managed IT, NHS supplier compliance",
-    canonical: "https://infodot.co.uk/industries/healthcare-nhs",
+    canonical: "https://infodot.consultwithprofessionals.com/industries/healthcare-nhs",
   },
   eyebrow: "Who we serve · Healthcare & NHS suppliers",
   headline: "DSPT-ready IT. Every day, not every deadline.",
@@ -433,7 +433,7 @@ export const nisEssentialServices: EvidencePageData = {
     description:
       "Managed IT and security for operators of essential services. Appropriate security measures, continuous evidence and incident reporting inside the clock — mapped forward to the CSR Bill.",
     keywords: "NIS Regulations, operators of essential services, significant incident reporting, competent authority, CSR Bill",
-    canonical: "https://infodot.co.uk/compliance/nis-essential-services",
+    canonical: "https://infodot.consultwithprofessionals.com/compliance/nis-essential-services",
   },
   eyebrow: "Compliance · NIS & Essential Services",
   headline: "Essential services can't afford an evidence gap.",

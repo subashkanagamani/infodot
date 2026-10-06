@@ -164,7 +164,7 @@ const Services = () => {
         title="IT Services — Managed, Secure and Audit-Ready | Infodot"
         description="Every capability, independently buyable: managed IT, secure by default, backup and disaster recovery, audit readiness, Cyber Essentials and cyber insurance readiness, transition and exit."
         keywords="managed IT services, co-managed IT, backup and disaster recovery, Cyber Essentials readiness, cyber insurance readiness, IT audit evidence"
-        canonicalUrl="https://infodot.co.uk/services"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/services"
       />
       <JsonLd
         schema={{
@@ -181,7 +181,7 @@ const Services = () => {
                 name: s.title,
                 description: s.description,
                 provider: { "@type": "Organization", name: "Infodot" },
-                url: `https://infodot.co.uk/services/${slugify(s.title)}`,
+                url: `https://infodot.consultwithprofessionals.com/services/${slugify(s.title)}`,
               },
             })),
           },

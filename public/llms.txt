@@ -2,58 +2,58 @@
 
 > Infodot is a managed IT provider for the regulated industries we serve — accountancy, legal and financial services. We run IT end to end and remotely from an ISO 27001-certified team, with security built in by default and the evidence auditors, insurers and boards ask for produced as a matter of course. We run your IT. You own your IT.
 
-Website: https://infodot.co.uk
+Website: https://infodot.consultwithprofessionals.com
 Contact: sales@infodot.co.in · +91 93437 35067
 Entity: Infodot Technologies Pvt Ltd, Bangalore, India — serving clients remotely. Operating since 1996.
 
 ## Core Pages
-- [Home](https://infodot.co.uk/): Managed, secure by default, always audit-ready IT.
-- [About](https://infodot.co.uk/about): Our story, delivery model and ownership/exit promise.
-- [Services](https://infodot.co.uk/services): Every capability, independently buyable.
-- [Pricing](https://infodot.co.uk/pricing): Engagement models — Co-Managed, Fully Managed, Fully Remote.
-- [Contact](https://infodot.co.uk/contact): Book a 30-minute discovery call.
+- [Home](https://infodot.consultwithprofessionals.com/): Managed, secure by default, always audit-ready IT.
+- [About](https://infodot.consultwithprofessionals.com/about): Our story, delivery model and ownership/exit promise.
+- [Services](https://infodot.consultwithprofessionals.com/services): Every capability, independently buyable.
+- [Pricing](https://infodot.consultwithprofessionals.com/pricing): Engagement models — Co-Managed, Fully Managed, Fully Remote.
+- [Contact](https://infodot.consultwithprofessionals.com/contact): Book a 30-minute discovery call.
 
 ## Industries
-- [Industries overview](https://infodot.co.uk/industries)
-- [IT support for accountants](https://infodot.co.uk/industries/accountants): IRIS, CCH, Digita, Sage, Xero, QuickBooks, FreeAgent, TaxCalc, Microsoft 365, MTD. 30-minute first response, peak-season cover, Cyber Essentials Plus / ICAEW / ACCA alignment.
-- [IT support for law firms](https://infodot.co.uk/industries/law-firms): LEAP, Clio, Proclaim, PMS, document management, secure client portals. SRA-aligned security, encryption, DLP and audit trails.
-- [IT support for financial services](https://infodot.co.uk/industries/financial-services): Microsoft 365, Azure, back-office/portfolio, advisory & trading, comms archiving, Entra identity. FCA operational resilience (PS26/2), DR with agreed RTO/RPO, due-diligence evidence pack.
+- [Industries overview](https://infodot.consultwithprofessionals.com/industries)
+- [IT support for accountants](https://infodot.consultwithprofessionals.com/industries/accountants): IRIS, CCH, Digita, Sage, Xero, QuickBooks, FreeAgent, TaxCalc, Microsoft 365, MTD. 30-minute first response, peak-season cover, Cyber Essentials Plus / ICAEW / ACCA alignment.
+- [IT support for law firms](https://infodot.consultwithprofessionals.com/industries/law-firms): LEAP, Clio, Proclaim, PMS, document management, secure client portals. SRA-aligned security, encryption, DLP and audit trails.
+- [IT support for financial services](https://infodot.consultwithprofessionals.com/industries/financial-services): Microsoft 365, Azure, back-office/portfolio, advisory & trading, comms archiving, Entra identity. FCA operational resilience (PS26/2), DR with agreed RTO/RPO, due-diligence evidence pack.
 
 ## Services
-- [Managed IT](https://infodot.co.uk/services/managed-it)
-- [Secure by Default](https://infodot.co.uk/services/secure-by-default)
-- [Backup & Disaster Recovery](https://infodot.co.uk/services/backup-disaster-recovery)
-- [Always Audit-Ready](https://infodot.co.uk/services/always-audit-ready)
-- [Cyber Essentials Readiness](https://infodot.co.uk/services/cyber-essentials-readiness)
-- [Cyber Insurance Readiness](https://infodot.co.uk/services/cyber-insurance-readiness)
-- [IT Transition & Exit](https://infodot.co.uk/services/it-transition-exit)
-- [Co-Managed IT](https://infodot.co.uk/services/co-managed-it)
-- [Cloud Management](https://infodot.co.uk/services/cloud-management)
-- [Asset, Licence & Domain Management](https://infodot.co.uk/services/asset-licence-domain)
-- [Helpdesk & IT Operations](https://infodot.co.uk/services/helpdesk-it-operations)
-- [Device Lifecycle Management](https://infodot.co.uk/services/device-lifecycle)
-- [Email Security](https://infodot.co.uk/services/email-security)
-- [Identity & Access Management](https://infodot.co.uk/services/identity-access)
-- [GDPR & Data Protection Operations](https://infodot.co.uk/services/gdpr-data-protection)
-- [FCA Operational Resilience](https://infodot.co.uk/services/fca-operational-resilience)
-- [Discovery & Phase 0](https://infodot.co.uk/services/discovery-phase0)
-- [Email Migration](https://infodot.co.uk/services/email-migration)
-- [Domain & DNS Migration](https://infodot.co.uk/services/domain-migration)
-- [How It Works — engagement models](https://infodot.co.uk/how-it-works)
-- [Managed EDR](https://infodot.co.uk/services/managed-edr)
-- [IT Hardening](https://infodot.co.uk/services/it-hardening)
-- [Microsoft 365 & Google Workspace Management](https://infodot.co.uk/services/microsoft365-google-workspace)
-- [ISO 27001 & SOC 2 Evidence](https://infodot.co.uk/services/iso27001-soc2-evidence)
-- [RMM & Patch Management](https://infodot.co.uk/services/rmm-patch-management)
-- [Onboarding & Exit (JML)](https://infodot.co.uk/services/onboarding-exit)
-- [Monitoring & Incident Response](https://infodot.co.uk/services/monitoring-incident-response)
-- [Penetration Testing & VAPT](https://infodot.co.uk/services/penetration-testing-vapt)
-- [Network Security](https://infodot.co.uk/services/network-security)
-- [Security Awareness Training](https://infodot.co.uk/services/security-awareness)
-- [Vulnerability Management](https://infodot.co.uk/services/vulnerability-management)
-- [Z360 — the engine behind your managed IT](https://infodot.co.uk/z360)
-- [Small Office IT — fixed monthly fee](https://infodot.co.uk/small-office)
-- [Legal, privacy & data processing](https://infodot.co.uk/legal)
+- [Managed IT](https://infodot.consultwithprofessionals.com/services/managed-it)
+- [Secure by Default](https://infodot.consultwithprofessionals.com/services/secure-by-default)
+- [Backup & Disaster Recovery](https://infodot.consultwithprofessionals.com/services/backup-disaster-recovery)
+- [Always Audit-Ready](https://infodot.consultwithprofessionals.com/services/always-audit-ready)
+- [Cyber Essentials Readiness](https://infodot.consultwithprofessionals.com/services/cyber-essentials-readiness)
+- [Cyber Insurance Readiness](https://infodot.consultwithprofessionals.com/services/cyber-insurance-readiness)
+- [IT Transition & Exit](https://infodot.consultwithprofessionals.com/services/it-transition-exit)
+- [Co-Managed IT](https://infodot.consultwithprofessionals.com/services/co-managed-it)
+- [Cloud Management](https://infodot.consultwithprofessionals.com/services/cloud-management)
+- [Asset, Licence & Domain Management](https://infodot.consultwithprofessionals.com/services/asset-licence-domain)
+- [Helpdesk & IT Operations](https://infodot.consultwithprofessionals.com/services/helpdesk-it-operations)
+- [Device Lifecycle Management](https://infodot.consultwithprofessionals.com/services/device-lifecycle)
+- [Email Security](https://infodot.consultwithprofessionals.com/services/email-security)
+- [Identity & Access Management](https://infodot.consultwithprofessionals.com/services/identity-access)
+- [GDPR & Data Protection Operations](https://infodot.consultwithprofessionals.com/services/gdpr-data-protection)
+- [FCA Operational Resilience](https://infodot.consultwithprofessionals.com/services/fca-operational-resilience)
+- [Discovery & Phase 0](https://infodot.consultwithprofessionals.com/services/discovery-phase0)
+- [Email Migration](https://infodot.consultwithprofessionals.com/services/email-migration)
+- [Domain & DNS Migration](https://infodot.consultwithprofessionals.com/services/domain-migration)
+- [How It Works — engagement models](https://infodot.consultwithprofessionals.com/how-it-works)
+- [Managed EDR](https://infodot.consultwithprofessionals.com/services/managed-edr)
+- [IT Hardening](https://infodot.consultwithprofessionals.com/services/it-hardening)
+- [Microsoft 365 & Google Workspace Management](https://infodot.consultwithprofessionals.com/services/microsoft365-google-workspace)
+- [ISO 27001 & SOC 2 Evidence](https://infodot.consultwithprofessionals.com/services/iso27001-soc2-evidence)
+- [RMM & Patch Management](https://infodot.consultwithprofessionals.com/services/rmm-patch-management)
+- [Onboarding & Exit (JML)](https://infodot.consultwithprofessionals.com/services/onboarding-exit)
+- [Monitoring & Incident Response](https://infodot.consultwithprofessionals.com/services/monitoring-incident-response)
+- [Penetration Testing & VAPT](https://infodot.consultwithprofessionals.com/services/penetration-testing-vapt)
+- [Network Security](https://infodot.consultwithprofessionals.com/services/network-security)
+- [Security Awareness Training](https://infodot.consultwithprofessionals.com/services/security-awareness)
+- [Vulnerability Management](https://infodot.consultwithprofessionals.com/services/vulnerability-management)
+- [Z360 — the engine behind your managed IT](https://infodot.consultwithprofessionals.com/z360)
+- [Small Office IT — fixed monthly fee](https://infodot.consultwithprofessionals.com/small-office)
+- [Legal, privacy & data processing](https://infodot.consultwithprofessionals.com/legal)
 
 ## Policies
-- [Legal & Privacy](https://infodot.co.uk/privacy-policy)
+- [Legal & Privacy](https://infodot.consultwithprofessionals.com/privacy-policy)

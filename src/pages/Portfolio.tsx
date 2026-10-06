@@ -106,7 +106,7 @@ const Portfolio = () => {
           data: {
             "@type": "CollectionPage",
             name: "Infodot Client Outcomes",
-            url: "https://infodot.co.uk/portfolio",
+            url: "https://infodot.consultwithprofessionals.com/portfolio",
             description: "Engagement snapshots showing managed IT, security and compliance outcomes for accountancy, legal and financial services firms.",
             hasPart: filteredItems.map((item) => ({
               "@type": "CreativeWork",

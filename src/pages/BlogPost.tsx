@@ -25,7 +25,7 @@ export default function BlogPost() {
       <SEOHead
         title={`${post.title} — Infodot Insights`}
         description={post.excerpt}
-        canonicalUrl={`https://infodot.co.uk/blog/${post.slug}`}
+        canonicalUrl={`https://infodot.consultwithprofessionals.com/blog/${post.slug}`}
         ogType="article"
       />
       <JsonLd
@@ -39,9 +39,9 @@ export default function BlogPost() {
             description: post.excerpt,
             datePublished: post.published,
             dateModified: post.published,
-            author: { "@type": "Organization", name: "Infodot", url: "https://infodot.co.uk" },
-            publisher: { "@type": "Organization", name: "Infodot", url: "https://infodot.co.uk" },
-            mainEntityOfPage: `https://infodot.co.uk/blog/${post.slug}`,
+            author: { "@type": "Organization", name: "Infodot", url: "https://infodot.consultwithprofessionals.com" },
+            publisher: { "@type": "Organization", name: "Infodot", url: "https://infodot.consultwithprofessionals.com" },
+            mainEntityOfPage: `https://infodot.consultwithprofessionals.com/blog/${post.slug}`,
           },
         }}
       />

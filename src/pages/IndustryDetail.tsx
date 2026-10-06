@@ -22,7 +22,7 @@ export default function IndustryDetail() {
         title={industry.seoTitle}
         description={industry.seoDescription}
         keywords={industry.keywords}
-        canonicalUrl={`https://infodot.co.uk/industries/${industry.slug}`}
+        canonicalUrl={`https://infodot.consultwithprofessionals.com/industries/${industry.slug}`}
       />
       <div className="min-h-screen">
         <Navbar />

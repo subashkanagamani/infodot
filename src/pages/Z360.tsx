@@ -137,7 +137,7 @@ const Z360 = () => {
         title="Z360 — The Engine Behind Your Managed IT | Infodot"
         description="Z360 is Infodot's unified operations platform. It connects the tools that run your IT into one place, so incidents, patching, email, security and backup are visible, standardised and turned into evidence."
         keywords="Z360, managed IT platform, IT operations platform, unified IT view, audit evidence, standardised IT operations"
-        canonicalUrl="https://infodot.co.uk/z360"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/z360"
       />
       <Navbar />
       <main className="pt-24">

@@ -121,7 +121,7 @@ const SmallOffice = () => {
         title="Small & Growing Firms — Enterprise-Grade, Audit-Ready IT | Infodot"
         description="Enterprise-grade, audit-ready managed IT and security for small and growing firms. Aligned to the NCSC Small Business Guide and Cyber Essentials, in three clear tiers."
         keywords="small business IT support, NCSC small business guide, Cyber Essentials, audit-ready IT, managed IT for small firms"
-        canonicalUrl="https://infodot.co.uk/small-office"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/small-office"
       />
       <Navbar />
       <main className="pt-24">
