@@ -88,6 +88,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const { data: servicePageOverrides } = usePageContent("service_pages");
   const [service, setService] = useState<ServiceItem | undefined>(() =>
     slug ? getServiceBySlug(slug) : undefined
   );
