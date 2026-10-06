@@ -46,6 +46,7 @@ import {
 } from "lucide-react";
 import { servicesData, getServiceBySlug, type ServiceItem } from "@/data/services";
 import { getServicePromise, getServiceHeroCopy } from "@/data/servicePromises";
+import { usePageContent } from "@/hooks/usePageContent";
 import { cyberEssentialsIncluded, cyberEssentialsChanges, cyberEssentialsSteps, cyberEssentialsFaqs } from "@/data/cyberEssentials";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { JsonLd } from "@/components/JsonLd";
@@ -87,6 +88,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const { data: servicePageOverrides } = usePageContent("service_pages");
   const [service, setService] = useState<ServiceItem | undefined>(() =>
     slug ? getServiceBySlug(slug) : undefined
   );
@@ -120,15 +122,27 @@ const ServiceDetail = () => {
 
   const Icon = iconMap[service.icon] || Target;
   const isCyberEssentials = service.slug === "cyber-essentials-readiness";
-  const promise = getServicePromise(service.slug);
-  const heroCopy = getServiceHeroCopy(service.slug, service.title);
+  const override = (servicePageOverrides?.[service.slug] || {}) as Record<string, any>;
+  const basePromise = getServicePromise(service.slug);
+  const baseHero = getServiceHeroCopy(service.slug, service.title);
+  const promise = {
+    ...basePromise,
+    ...(Array.isArray(override.pains) && override.pains.length ? { pains: override.pains } : {}),
+    ...(override.promise ? { promise: override.promise } : {}),
+  };
+  const heroCopy = {
+    ...baseHero,
+    ...(override.eyebrow ? { eyebrow: override.eyebrow } : {}),
+    ...(override.headline ? { headline: override.headline } : {}),
+    ...(override.lead ? { lead: override.lead } : {}),
+  };
   const heroLead =
     heroCopy.lead ??
     (service.shortDescription.trim().toLowerCase() !== heroCopy.headline.trim().toLowerCase()
       ? service.shortDescription
       : (service.description.split(/(?<=\.)\s+/).slice(0, 2).join(" ") || service.description));
 
-  const canonical = `https://infodot.co.uk/services/${service.slug}`;
+  const canonical = `https://infodot.consultwithprofessionals.com/services/${service.slug}`;
   const currentIndex = servicesData.findIndex((s) => s.slug === service.slug);
   const related = [
     ...servicesData.slice(currentIndex + 1),
@@ -146,7 +160,7 @@ const ServiceDetail = () => {
     provider: {
       "@type": "Organization",
       name: "Infodot",
-      url: "https://infodot.co.uk",
+      url: "https://infodot.consultwithprofessionals.com",
     },
     areaServed: isCyberEssentials ? "GB" : "Global",
   };
@@ -172,9 +186,9 @@ const ServiceDetail = () => {
           {isCyberEssentials ? (
             <>
               <JsonLd schema={{ type: "BreadcrumbList", items: [
-                { name: "Home", url: "https://infodot.co.uk/" },
-                { name: "Services", url: "https://infodot.co.uk/services" },
-                { name: "Always Audit-Ready", url: "https://infodot.co.uk/services/always-audit-ready" },
+                { name: "Home", url: "https://infodot.consultwithprofessionals.com/" },
+                { name: "Services", url: "https://infodot.consultwithprofessionals.com/services" },
+                { name: "Always Audit-Ready", url: "https://infodot.consultwithprofessionals.com/services/always-audit-ready" },
                 { name: "Cyber Essentials Readiness", url: canonical },
               ] }} />
               <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 py-4 text-sm text-muted-foreground">

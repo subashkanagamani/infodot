@@ -250,7 +250,7 @@ export default function CustomPage() {
         title={`${page.title} | Infodot`}
         description={page.meta_description || page.title}
         ogImage={page.og_image || undefined}
-        canonicalUrl={`https://infodot.co.uk/${page.slug}`}
+        canonicalUrl={`https://infodot.consultwithprofessionals.com/${page.slug}`}
       />
       <Navbar />
       <main className="pt-20">

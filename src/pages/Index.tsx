@@ -29,14 +29,14 @@ const Index = () => {
         title="Infodot — Managed IT for UK Businesses, Run Remotely"
         description="Managed IT, cybersecurity and compliance — delivered remotely to UK businesses from our ISO 27001:2022 certified operations centre. Secure by default. Always audit-ready."
         keywords="managed IT UK, IT support for accountants, IT support for law firms, IT support for financial services, managed IT provider, ISO 27001 IT provider, remote IT support, Cyber Essentials"
-        canonicalUrl="https://infodot.co.uk/"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/"
       />
       <JsonLd 
         schema={{
           type: "Organization",
           name: "Infodot",
-          url: "https://infodot.co.uk",
-          logo: "https://infodot.co.uk/og-image.png",
+          url: "https://infodot.consultwithprofessionals.com",
+          logo: "https://infodot.consultwithprofessionals.com/og-image.png",
           description: "Managed IT, cybersecurity and compliance, delivered remotely to UK businesses",
           contactPoint: {
             email: "sales@infodot.co.in",

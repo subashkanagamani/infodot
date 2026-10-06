@@ -100,7 +100,7 @@ const About = () => {
         title="About Infodot — Managed IT Since 1996, Run Remotely"
         description="Infodot (Infodot Technologies Pvt Ltd) has run managed IT since 1996. ISO 27001:2022 certified, based in Bangalore, serving regulated industries remotely."
         keywords="about Infodot, managed IT provider, ISO 27001 IT company, remote IT delivery, Infodot Technologies"
-        canonicalUrl="https://infodot.co.uk/about"
+        canonicalUrl="https://infodot.consultwithprofessionals.com/about"
       />
       <Navbar />
 

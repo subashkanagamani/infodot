@@ -12,6 +12,27 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Plus, Pencil, Trash2, Sparkles } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import { servicesData } from "@/data/services";
+import { getServicePromise, getServiceHeroCopy } from "@/data/servicePromises";
+
+const SEO_PATHS = [
+  "/", "/about", "/services", "/industries", "/industries/healthcare-nhs",
+  "/compliance/supply-chain-assurance", "/compliance/cyber-resilience-bill",
+  "/compliance/nis-essential-services", "/how-it-works", "/small-office", "/legal",
+  "/z360", "/portfolio", "/pricing", "/blog", "/case-studies", "/careers",
+  "/resources", "/privacy-policy", "/contact", "/enquiry",
+  ...servicesData.map((s) => `/services/${s.slug}`),
+];
+const liveServiceContent = (slug: string) => {
+  const svc = servicesData.find((s) => s.slug === slug);
+  const p = getServicePromise(slug);
+  const h = getServiceHeroCopy(slug, svc?.title ?? slug);
+  return { eyebrow: h.eyebrow, headline: h.headline, lead: h.lead ?? svc?.shortDescription ?? "", pains: p.pains, promise: p.promise };
+};
+const liveSeoContent = (path: string) => {
+  const svc = path.startsWith("/services/") ? servicesData.find((s) => `/services/${s.slug}` === path) : undefined;
+  return { title: (svc as any)?.metaTitle ?? "", description: (svc as any)?.metaDescription ?? "", keywords: "", ogImage: "" };
+};
 
 interface Row {
   id: string;
@@ -35,6 +56,8 @@ const PAGES = [
   { key: "privacy", label: "Privacy Policy" },
   { key: "nav", label: "Navigation" },
   { key: "footer", label: "Footer" },
+  { key: "service_pages", label: "Service Pages" },
+  { key: "seo", label: "SEO (per page)" },
 ];
 
 // Skeleton content for each known section. Keys here drive the "Seed" button
@@ -130,9 +153,13 @@ const SUGGESTED_SECTIONS: Record<string, string[]> = {
   privacy: ["hero", "body"],
   nav: ["menu", "cta"],
   footer: ["about", "columns", "social", "contact", "legal"],
+  service_pages: servicesData.map((s) => s.slug),
+  seo: SEO_PATHS,
 };
 
-const templateFor = (page: string, section: string) =>
+const templateFor = (page: string, section: string): Record<string, any> =>
+  page === "service_pages" ? liveServiceContent(section) :
+  page === "seo" ? liveSeoContent(section) :
   SECTION_TEMPLATES[`${page}:${section}`] ?? {
     heading: "",
     subheading: "",
@@ -251,7 +278,8 @@ export default function PageContentAdmin() {
       page_key: activePage,
       section_key,
       content: templateFor(activePage, section_key),
-      published: false,
+      // Live-site copies are safe to publish: they match what visitors already see.
+      published: activePage === "service_pages" || activePage === "seo",
       updated_by: user?.id ?? null,
     }));
     const { error } = await supabase

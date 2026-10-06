@@ -141,7 +141,7 @@ export default function CaseStudyDetail() {
         keywords={study.technologies?.join(", ")}
         ogType="article"
         ogImage={study.cover_image || undefined}
-        canonicalUrl={`https://infodot.co.uk/case-studies/${study.slug || id}`}
+        canonicalUrl={`https://infodot.consultwithprofessionals.com/case-studies/${study.slug || id}`}
       />
       
       <JsonLd 

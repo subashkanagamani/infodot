@@ -61,8 +61,8 @@ export const ResourceDocLayout = ({ doc, parent, children = [] }: Props) => {
             <span className="text-foreground/70">{doc.navLabel}</span>
           </nav>
 
-          <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start mt-8">
-            <div className="col-span-12 lg:col-span-8 space-y-7 animate-slide-up">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mt-8">
+            <div className="min-w-0 lg:col-span-8 space-y-7 animate-slide-up">
               <div className="space-y-1.5">
                 <div className="h-0.5 w-12 bg-primary" />
                 <span className="block uppercase tracking-[0.2em] text-[11px] font-extrabold text-primary">
@@ -87,7 +87,7 @@ export const ResourceDocLayout = ({ doc, parent, children = [] }: Props) => {
               </p>
             </div>
 
-            <div className="col-span-12 lg:col-span-4 relative lg:mt-4 animate-slide-up" style={{ animationDelay: "0.08s" }}>
+            <div className="min-w-0 lg:col-span-4 relative lg:mt-4 animate-slide-up" style={{ animationDelay: "0.08s" }}>
               <div className="bg-foreground text-background p-8 md:p-10 relative z-10">
                 <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary">
                   The short answer
@@ -102,8 +102,8 @@ export const ResourceDocLayout = ({ doc, parent, children = [] }: Props) => {
 
       {/* Body */}
       <section className="py-14 md:py-20 bg-secondary">
-        <div className="container-custom grid grid-cols-12 gap-10 lg:gap-16 items-start">
-          <aside className="col-span-12 lg:col-span-3 lg:sticky lg:top-28 animate-slide-up">
+        <div className="container-custom grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <aside className="min-w-0 lg:col-span-3 lg:sticky lg:top-28 animate-slide-up">
             <h2 className="font-display text-xs uppercase tracking-[0.2em] font-extrabold text-primary mb-6">
               On this page
             </h2>
@@ -141,7 +141,7 @@ export const ResourceDocLayout = ({ doc, parent, children = [] }: Props) => {
             )}
           </aside>
 
-          <div className="col-span-12 lg:col-span-9 space-y-12 md:space-y-16">
+          <div className="min-w-0 lg:col-span-9 space-y-12 md:space-y-16">
             {doc.sections.map((section, i) => (
               <article
                 key={section.heading}
