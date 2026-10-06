@@ -36,8 +36,8 @@ export default function GuideDetail({ slugOverride }: { slugOverride?: string } 
         <div className="container-custom">
           <Breadcrumbs />
 
-          <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start mt-6">
-            <div className="col-span-12 lg:col-span-8 space-y-8 animate-slide-up">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mt-6">
+            <div className="min-w-0 lg:col-span-8 space-y-8 animate-slide-up">
               <div className="flex items-center gap-5">
                 <span className="font-display text-5xl font-extrabold text-foreground/[0.07] select-none tabular-nums leading-none">
                   {String(guides.findIndex((g) => g.slug === guide.slug) + 1).padStart(2, "0")}
@@ -73,7 +73,7 @@ export default function GuideDetail({ slugOverride }: { slugOverride?: string } 
             </div>
 
             <div
-              className="col-span-12 lg:col-span-4 relative lg:mt-12 animate-slide-up"
+              className="min-w-0 lg:col-span-4 relative lg:mt-12 animate-slide-up"
               style={{ animationDelay: "0.08s" }}
             >
               <div className="bg-primary text-primary-foreground p-8 md:p-10 shadow-2xl relative z-10">
@@ -98,9 +98,9 @@ export default function GuideDetail({ slugOverride }: { slugOverride?: string } 
 
       {/* Body */}
       <section className="py-16 md:py-24 bg-secondary">
-        <div className="container-custom grid grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="container-custom grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Contents */}
-          <aside className="col-span-12 lg:col-span-3 lg:sticky lg:top-28 animate-slide-up">
+          <aside className="min-w-0 lg:col-span-3 lg:sticky lg:top-28 animate-slide-up">
             <h2 className="font-display text-xs uppercase tracking-[0.2em] font-extrabold text-primary mb-6">
               Contents
             </h2>
@@ -121,7 +121,7 @@ export default function GuideDetail({ slugOverride }: { slugOverride?: string } 
             </ol>
           </aside>
 
-          <div className="col-span-12 lg:col-span-9 space-y-14 md:space-y-20">
+          <div className="min-w-0 lg:col-span-9 space-y-14 md:space-y-20">
             {guide.sections.map((section, i) => (
               <article
                 key={section.heading}
