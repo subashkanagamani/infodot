@@ -46,6 +46,7 @@ import {
 } from "lucide-react";
 import { servicesData, getServiceBySlug, type ServiceItem } from "@/data/services";
 import { getServicePromise, getServiceHeroCopy } from "@/data/servicePromises";
+import { usePageContent } from "@/hooks/usePageContent";
 import { cyberEssentialsIncluded, cyberEssentialsChanges, cyberEssentialsSteps, cyberEssentialsFaqs } from "@/data/cyberEssentials";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { JsonLd } from "@/components/JsonLd";
@@ -120,8 +121,20 @@ const ServiceDetail = () => {
 
   const Icon = iconMap[service.icon] || Target;
   const isCyberEssentials = service.slug === "cyber-essentials-readiness";
-  const promise = getServicePromise(service.slug);
-  const heroCopy = getServiceHeroCopy(service.slug, service.title);
+  const override = (servicePageOverrides?.[service.slug] || {}) as Record<string, any>;
+  const basePromise = getServicePromise(service.slug);
+  const baseHero = getServiceHeroCopy(service.slug, service.title);
+  const promise = {
+    ...basePromise,
+    ...(Array.isArray(override.pains) && override.pains.length ? { pains: override.pains } : {}),
+    ...(override.promise ? { promise: override.promise } : {}),
+  };
+  const heroCopy = {
+    ...baseHero,
+    ...(override.eyebrow ? { eyebrow: override.eyebrow } : {}),
+    ...(override.headline ? { headline: override.headline } : {}),
+    ...(override.lead ? { lead: override.lead } : {}),
+  };
   const heroLead =
     heroCopy.lead ??
     (service.shortDescription.trim().toLowerCase() !== heroCopy.headline.trim().toLowerCase()

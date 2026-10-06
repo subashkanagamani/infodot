@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { usePageContent } from "@/hooks/usePageContent";
 
 interface SEOHeadProps {
   title?: string;
@@ -20,6 +22,14 @@ export const SEOHead = ({
   ogType = "website",
   canonicalUrl,
 }: SEOHeadProps) => {
+  // Admin overrides: Page Content → "SEO (per page)", section key = page path.
+  const { pathname } = useLocation();
+  const { data: seoOverrides } = usePageContent("seo");
+  const o = seoOverrides?.[pathname] || {};
+  if (o.title?.trim()) title = o.title;
+  if (o.description?.trim()) description = o.description;
+  if (o.keywords?.trim()) keywords = o.keywords;
+  if (o.ogImage?.trim()) ogImage = o.ogImage;
   useEffect(() => {
     document.title = title;
 
